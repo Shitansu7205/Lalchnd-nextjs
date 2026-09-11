@@ -1,9 +1,9 @@
-import Footer3 from "@/components/footers/Footer3";
 import Header1 from "@/components/headers/Header1";
 import Topbar1 from "@/components/headers/Topbar1";
 import BreadcrumbBanner from "@/components/common/BreadcrumbBanner";
 import React from "react";
 import GalleryGridPopup from "@/components/common/GalleryGridPopup";
+import Footer2 from "@/components/footers/Footer2";
 export const metadata = {
     title: "Gallery || Vemus - Jewelry Ecommerce React Nextjs Template",
     description: "Vemus - Jewelry Ecommerce React Nextjs Template",
@@ -19,7 +19,7 @@ export default function page() {
                 image="https://lalchnd.com/wp-content/uploads/2026/09/Desktop-2560-x-931.jpg.jpeg"
             />
             <GalleryGridPopup />
-            <Footer3 />
+            <Footer2 />
         </>
     );
 }
