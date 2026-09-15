@@ -23,26 +23,26 @@ const FilterToggle = () => {
     };
 
     const openButtons = document.querySelectorAll(
-      ".tf-btn-filter, .sidebar-btn"
+      ".tf-btn-filter, .sidebar-btn",
     );
     const closeButtons = document.querySelectorAll(
-      ".close-filter, .overlay-filter"
+      ".close-filter, .overlay-filter",
     );
 
     openButtons.forEach((btn) =>
-      btn.addEventListener("click", handleOpenClick)
+      btn.addEventListener("click", handleOpenClick),
     );
     closeButtons.forEach((btn) =>
-      btn.addEventListener("click", handleCloseClick)
+      btn.addEventListener("click", handleCloseClick),
     );
 
     // Cleanup on unmount
     return () => {
       openButtons.forEach((btn) =>
-        btn.removeEventListener("click", handleOpenClick)
+        btn.removeEventListener("click", handleOpenClick),
       );
       closeButtons.forEach((btn) =>
-        btn.removeEventListener("click", handleCloseClick)
+        btn.removeEventListener("click", handleCloseClick),
       );
       handleCloseClick();
     };

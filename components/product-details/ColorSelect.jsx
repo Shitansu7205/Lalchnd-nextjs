@@ -44,8 +44,8 @@ export default function ColorSelect({ activeColor, setActiveColor }) {
                 ? "active"
                 : ""
               : selectedColor === color.colorKey
-              ? "active"
-              : ""
+                ? "active"
+                : ""
           }`}
           data-color={color.colorKey}
           data-price={color.price}

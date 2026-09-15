@@ -19,7 +19,7 @@ export default function ProductsModal() {
         document.getElementById("autoProduct"),
         {
           keyboard: false,
-        }
+        },
       );
 
       // Show the modal after a delay using a promise

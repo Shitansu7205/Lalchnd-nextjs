@@ -14,7 +14,7 @@ export default function NewsLetter() {
         document.getElementById("newsletterPopup"),
         {
           keyboard: false,
-        }
+        },
       );
 
       // Show the modal after a delay using a promise
@@ -45,7 +45,7 @@ export default function NewsLetter() {
         "https://express-brevomail.vercel.app/api/contacts",
         {
           email,
-        }
+        },
       );
 
       if ([200, 201].includes(response.status)) {

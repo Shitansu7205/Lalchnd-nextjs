@@ -16,13 +16,13 @@ export default function Lookbook() {
   useEffect(() => {
     const swiperButtons = document.querySelectorAll(".swiper-button");
     const cards = document.querySelectorAll(
-      ".tf-swiper .card_product--V01.style_2"
+      ".tf-swiper .card_product--V01.style_2",
     );
 
     const handleMouseEnter = (e) => {
       const slideIndex = parseInt(
         e.currentTarget.getAttribute("data-slide"),
-        10
+        10,
       );
       if (!isNaN(slideIndex)) {
         cards.forEach((card) => card.classList.remove("active"));

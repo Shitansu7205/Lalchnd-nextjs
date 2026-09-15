@@ -34,7 +34,7 @@ export default function Sidebar({ allProps }) {
                     {category
                       ?.split("-")
                       .map(
-                        (word) => word.charAt(0).toUpperCase() + word.slice(1)
+                        (word) => word.charAt(0).toUpperCase() + word.slice(1),
                       )
                       .join(" ")}{" "}
                     <span className="icon icon-close" />
@@ -52,7 +52,7 @@ export default function Sidebar({ allProps }) {
                     {material
                       .split("-")
                       .map(
-                        (word) => word.charAt(0).toUpperCase() + word.slice(1)
+                        (word) => word.charAt(0).toUpperCase() + word.slice(1),
                       )
                       .join(" ")}{" "}
                     <span className="icon icon-close" />
@@ -80,12 +80,12 @@ export default function Sidebar({ allProps }) {
                   {allProps.price === "u-500"
                     ? "Under $500"
                     : allProps.price === "u-1000"
-                    ? "Under $1000"
-                    : allProps.price === "u-2000"
-                    ? "Under $2000"
-                    : allProps.price === "up-2000"
-                    ? "Over $2000"
-                    : null}{" "}
+                      ? "Under $1000"
+                      : allProps.price === "u-2000"
+                        ? "Under $2000"
+                        : allProps.price === "up-2000"
+                          ? "Over $2000"
+                          : null}{" "}
                   <span className="icon icon-close" />
                 </span>
               )}
@@ -137,7 +137,7 @@ export default function Sidebar({ allProps }) {
                           products15.filter(
                             (el) =>
                               el.availability.toLowerCase() ==
-                              option.toLowerCase()
+                              option.toLowerCase(),
                           ).length
                         }
                       </span>{" "}
@@ -187,7 +187,8 @@ export default function Sidebar({ allProps }) {
                       {category
                         .split("-")
                         .map(
-                          (word) => word.charAt(0).toUpperCase() + word.slice(1)
+                          (word) =>
+                            word.charAt(0).toUpperCase() + word.slice(1),
                         )
                         .join(" ")}
                     </span>
@@ -240,7 +241,7 @@ export default function Sidebar({ allProps }) {
                           .split("-")
                           .map(
                             (word) =>
-                              word.charAt(0).toUpperCase() + word.slice(1)
+                              word.charAt(0).toUpperCase() + word.slice(1),
                           )
                           .join(" ")}
                       </span>
@@ -256,7 +257,7 @@ export default function Sidebar({ allProps }) {
                       </span>
                     </label>
                   </li>
-                )
+                ),
               )}
             </ul>
           </div>
@@ -303,7 +304,7 @@ export default function Sidebar({ allProps }) {
                       <span className="count">
                         {
                           products15.filter((el) =>
-                            el.filterColors.includes(color)
+                            el.filterColors.includes(color),
                           ).length
                         }
                       </span>{" "}
@@ -354,11 +355,11 @@ export default function Sidebar({ allProps }) {
                         {option.id.includes("up")
                           ? [...products15].filter(
                               (elm) =>
-                                elm.price >= Number(option.id.split("-")[1])
+                                elm.price >= Number(option.id.split("-")[1]),
                             ).length
                           : [...products15].filter(
                               (elm) =>
-                                elm.price <= Number(option.id.split("-")[1])
+                                elm.price <= Number(option.id.split("-")[1]),
                             ).length}
                       </span>{" "}
                       ]

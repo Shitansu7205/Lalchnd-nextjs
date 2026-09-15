@@ -14,7 +14,7 @@ export default function BeforeLeave() {
         document.getElementById("beforeYouLeave"),
         {
           keyboard: false,
-        }
+        },
       );
 
       // Show the modal after a delay using a promise

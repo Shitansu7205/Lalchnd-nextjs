@@ -84,7 +84,7 @@ export default function ShopCart() {
                                   onClick={() =>
                                     updateQuantity(
                                       product.id,
-                                      product.quantity - 1
+                                      product.quantity - 1,
                                     )
                                   }
                                 >
@@ -102,7 +102,7 @@ export default function ShopCart() {
                                   onClick={() =>
                                     updateQuantity(
                                       product.id,
-                                      product.quantity + 1
+                                      product.quantity + 1,
                                     )
                                   }
                                 >

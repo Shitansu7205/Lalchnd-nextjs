@@ -5,21 +5,25 @@ import React from "react";
 import AwardGridPopup from "@/components/common/AwardGridPopup";
 import Footer2 from "@/components/footers/Footer2";
 export const metadata = {
-    title: "Awards || Vemus - Jewelry Ecommerce React Nextjs Template",
-    description: "Vemus - Jewelry Ecommerce React Nextjs Template",
+  title: "Awards & Achievements | Lalchnd Jewellers",
+  description:
+    "Explore the awards and achievements that reflect Lalchnd Jewellers' excellence in jewellery craftsmanship, trusted service, and timeless design.",
+  alternates: {
+    canonical: "https://lalchnd.com/award/",
+  },
 };
 export default function page() {
-    return (
-        <>
-            <Topbar1 />
-            <Header1 parentClass="tf-header" />
-            <BreadcrumbBanner
-                title="Our Awards & Achievements"
-                current="Awards"
-                image="https://lalchnd.com/wp-content/uploads/2025/07/WhatsApp-Image-2025-06-23-at-6.03.24-PM-1.jpeg"
-            />
-            <AwardGridPopup />
-            <Footer2 />
-        </>
-    );
+  return (
+    <>
+      <Topbar1 />
+      <Header1 parentClass="tf-header" />
+      <BreadcrumbBanner
+        title="Our Awards & Achievements"
+        current="Awards"
+        image="https://lalchnd.com/wp-content/uploads/2025/07/WhatsApp-Image-2025-06-23-at-6.03.24-PM-1.jpeg"
+      />
+      <AwardGridPopup />
+      <Footer2 />
+    </>
+  );
 }

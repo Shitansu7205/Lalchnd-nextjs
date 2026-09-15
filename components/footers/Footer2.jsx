@@ -3,7 +3,15 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import CurrencySelect from "../common/CurrencySelect";
-import { Mail, Phone, Clock, MapPin, Store } from "lucide-react";
+import {
+  Download,
+  Mail,
+  Phone,
+  Clock,
+  MapPin,
+  Smartphone,
+  Store,
+} from "lucide-react";
 
 export default function Footer2() {
   useEffect(() => {
@@ -44,7 +52,7 @@ export default function Footer2() {
                 <Link href={`/home-2`} className="logo-site d-inline-block">
                   <Image
                     alt=""
-                    src="/images/logo/logo-white.svg"
+                    src="/images/lalchnd/blogs/logo.png"
                     width={122}
                     height={31}
                   />
@@ -56,14 +64,17 @@ export default function Footer2() {
                     elevate every <br className="d-none d-xl-block" />
                     occasion
                   </span>
-                  , from <span className="text-white">timeless classics</span>{" "}
+                  , from <span className="text-white">
+                    timeless classics
+                  </span>{" "}
                   to <span className="text-white">contemporary designs</span>.
                   Explore <br className="d-none d-xl-block" />
-                  and find the{" "}
-                  <span className="text-white">perfect jewel</span> to express your{" "}
-                  <span className="text-white">unique</span> style.
+                  and find the <span className="text-white">
+                    perfect jewel
+                  </span>{" "}
+                  to express your <span className="text-white">unique</span>{" "}
+                  style.
                 </p>
-
               </div>
               <ul className="tf-social-icon style-white">
                 <li>
@@ -89,20 +100,13 @@ export default function Footer2() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.youtube.com/channel/UCrO61El0o9WsM3fw3r7lolw/featured" target="_blank" className="social-x">
-                    <span className="icon">
-                      <i className="icon-x" />
-                    </span>
-                  </a>
-                </li>
-                <li>
                   <a
-                    href="https://www.snapchat.com/"
+                    href="https://www.youtube.com/channel/UCrO61El0o9WsM3fw3r7lolw/featured"
                     target="_blank"
-                    className="social-snapchat"
+                    className="social-x"
                   >
                     <span className="icon">
-                      <i className="icon-snapchat" />
+                      <i className="icon-x" />
                     </span>
                   </a>
                 </li>
@@ -242,7 +246,11 @@ export default function Footer2() {
                   </li>
 
                   <li className="text-caption d-flex align-items-center gap-2">
-                    <MapPin size={16} strokeWidth={1.8} className="text-white" />
+                    <MapPin
+                      size={16}
+                      strokeWidth={1.8}
+                      className="text-white"
+                    />
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
@@ -260,7 +268,7 @@ export default function Footer2() {
                       href="#"
                       className="text-white link fw-normal"
                     >
-                      9:00AM - 9:00PM   <i className="icon-arrow-right-2 fs-16" />
+                      9:00AM - 9:00PM <i className="icon-arrow-right-2 fs-16" />
                     </a>
                   </li>
                 </ul>
@@ -274,14 +282,15 @@ export default function Footer2() {
 
               <div className="tf-collapse-content">
                 <ul className="footer-menu-list">
-
                   {/* Bhubaneswar */}
                   <li className="store-location">
                     <div className="d-flex align-items-center gap-2 mb-1">
-                      <MapPin size={17} strokeWidth={1.8} className="text-white" />
-                      <span className="fw-medium text-white">
-                        Bhubaneswar
-                      </span>
+                      <MapPin
+                        size={17}
+                        strokeWidth={1.8}
+                        className="text-white"
+                      />
+                      <span className="fw-medium text-white">Bhubaneswar</span>
                     </div>
 
                     <ul className="ps-4">
@@ -312,10 +321,12 @@ export default function Footer2() {
                   {/* Cuttack */}
                   <li className="store-location">
                     <div className="d-flex align-items-center gap-2 mb-1">
-                      <MapPin size={17} strokeWidth={1.8} className="text-white" />
-                      <span className="fw-medium text-white">
-                        Cuttack
-                      </span>
+                      <MapPin
+                        size={17}
+                        strokeWidth={1.8}
+                        className="text-white"
+                      />
+                      <span className="fw-medium text-white">Cuttack</span>
                     </div>
 
                     <ul className="ps-4">
@@ -352,9 +363,7 @@ export default function Footer2() {
                       className="text-white link d-flex align-items-center gap-2"
                     >
                       <MapPin size={17} strokeWidth={1.8} />
-                      <span className="fw-medium">
-                        Berhampur
-                      </span>
+                      <span className="fw-medium">Berhampur</span>
                     </a>
                   </li>
 
@@ -367,26 +376,48 @@ export default function Footer2() {
                       className="text-white link d-flex align-items-center gap-2"
                     >
                       <MapPin size={17} strokeWidth={1.8} />
-                      <span className="fw-medium">
-                        Delhi
-                      </span>
+                      <span className="fw-medium">Delhi</span>
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
-
           </div>
         </div>
       </div>
       <div className="footer-bottom">
         <div className="container">
           <div className="footer-bottom-wrap">
-            <p className="text-nocopy text-white">
+            <p className="text-nocopy text-white footer-app-title">
               All Rights Reserved By <strong>Lalchnd Groups</strong>.
             </p>
             <div className="tf-currencies">
-              <CurrencySelect light />
+              <div className="footer-app-promo">
+                <div className="footer-app-brand">
+                  {/* <Image
+                    src="/images/logo/short-logo-white.svg"
+                    alt="Lalchnd"
+                    width={34}
+                    height={34}
+                  /> */}
+                  <div>
+                    <p className="footer-app-title">Install our mobile app</p>
+                  </div>
+                </div>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.acme.jewelloApp.lalchndJw&pcampaignid=web_share&pli=1."
+                  className="footer-app-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Image
+                    src="/images/lalchnd/icons/playstore.webp"
+                    alt="Google Play Store"
+                    width={120}
+                    height={40}
+                  />
+                </a>
+              </div>
             </div>
             <ul className="paymend-method-list">
               <li>

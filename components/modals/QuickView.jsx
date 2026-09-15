@@ -143,7 +143,7 @@ export default function QuickView() {
                       quantity={
                         isAddedToCartProducts(quickViewItem.id)
                           ? cartProducts.filter(
-                              (elm) => elm.id == quickViewItem.id
+                              (elm) => elm.id == quickViewItem.id,
                             )[0].quantity
                           : quantity
                       }

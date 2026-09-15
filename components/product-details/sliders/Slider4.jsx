@@ -137,7 +137,7 @@ export default function Slider4({
       if (swiperRef.current) {
         swiperRef.current.slideTo(1);
         swiperRef.current.slideTo(
-          items.filter((elm) => elm.color == activeColor)[0]?.id - 1
+          items.filter((elm) => elm.color == activeColor)[0]?.id - 1,
         );
       }
     });

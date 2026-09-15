@@ -39,7 +39,7 @@ export default function DropdownFilter({ allProps }) {
                         products15.filter(
                           (el) =>
                             el.availability.toLowerCase() ==
-                            option.toLowerCase()
+                            option.toLowerCase(),
                         ).length
                       }
                     </span>{" "}
@@ -89,7 +89,7 @@ export default function DropdownFilter({ allProps }) {
                     {category
                       .split("-")
                       .map(
-                        (word) => word.charAt(0).toUpperCase() + word.slice(1)
+                        (word) => word.charAt(0).toUpperCase() + word.slice(1),
                       )
                       .join(" ")}
                   </span>
@@ -141,7 +141,8 @@ export default function DropdownFilter({ allProps }) {
                       {material
                         .split("-")
                         .map(
-                          (word) => word.charAt(0).toUpperCase() + word.slice(1)
+                          (word) =>
+                            word.charAt(0).toUpperCase() + word.slice(1),
                         )
                         .join(" ")}
                     </span>
@@ -157,7 +158,7 @@ export default function DropdownFilter({ allProps }) {
                     </span>
                   </label>
                 </li>
-              )
+              ),
             )}
           </ul>
         </div>
@@ -202,7 +203,7 @@ export default function DropdownFilter({ allProps }) {
                     <span className="count">
                       {
                         products15.filter((el) =>
-                          el.filterColors.includes(color)
+                          el.filterColors.includes(color),
                         ).length
                       }
                     </span>{" "}
@@ -253,11 +254,11 @@ export default function DropdownFilter({ allProps }) {
                       {option.id.includes("up")
                         ? [...products15].filter(
                             (elm) =>
-                              elm.price >= Number(option.id.split("-")[1])
+                              elm.price >= Number(option.id.split("-")[1]),
                           ).length
                         : [...products15].filter(
                             (elm) =>
-                              elm.price <= Number(option.id.split("-")[1])
+                              elm.price <= Number(option.id.split("-")[1]),
                           ).length}
                     </span>{" "}
                     ]

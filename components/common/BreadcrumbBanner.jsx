@@ -26,9 +26,7 @@ export default function BreadcrumbBanner({
             <li aria-current="page">{current}</li>
           </ul> */}
         </nav>
-        <h1 className="breadcrumb-banner__title heading fw-normal" >
-          {title}
-        </h1>
+        <h1 className="breadcrumb-banner__title heading fw-normal">{title}</h1>
       </div>
     </section>
   );

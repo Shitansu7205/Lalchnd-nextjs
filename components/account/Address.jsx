@@ -81,8 +81,8 @@ export default function Address() {
     if (editingId) {
       setAddresses((prev) =>
         prev.map((item) =>
-          item.id === editingId ? { ...formData, id: editingId } : item
-        )
+          item.id === editingId ? { ...formData, id: editingId } : item,
+        ),
       );
     } else {
       setAddresses((prev) => [...prev, { ...formData, id: Date.now() }]);

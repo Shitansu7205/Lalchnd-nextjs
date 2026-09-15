@@ -17,7 +17,7 @@ export default function ScrollTop() {
       if (borderProgress) {
         borderProgress.style.setProperty(
           "--progress-angle",
-          `${progressAngle}deg`
+          `${progressAngle}deg`,
         );
       }
 

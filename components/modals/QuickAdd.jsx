@@ -91,7 +91,7 @@ export default function QuickAdd() {
                       quantity={
                         isAddedToCartProducts(product.id)
                           ? cartProducts.filter(
-                              (elm) => elm.id == product.id
+                              (elm) => elm.id == product.id,
                             )[0].quantity
                           : quantity
                       }

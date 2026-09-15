@@ -67,14 +67,14 @@ export default function Products2() {
     },
     removeCategory: (newCategory) => {
       const updated = [...categories].filter(
-        (category) => category != newCategory
+        (category) => category != newCategory,
       );
 
       dispatch({ type: "SET_CATEGORIES", payload: updated });
     },
     removeMaterial: (newMaterial) => {
       const updated = [...materials].filter(
-        (material) => material != newMaterial
+        (material) => material != newMaterial,
       );
 
       dispatch({ type: "SET_MATERIAL", payload: updated });
@@ -90,8 +90,8 @@ export default function Products2() {
     setCurrentPage: (value) =>
       dispatch({ type: "SET_CURRENT_PAGE", payload: value }),
     setItemPerPage: (value) => {
-      dispatch({ type: "SET_CURRENT_PAGE", payload: 1 }),
-        dispatch({ type: "SET_ITEM_PER_PAGE", payload: value });
+      (dispatch({ type: "SET_CURRENT_PAGE", payload: 1 }),
+        dispatch({ type: "SET_ITEM_PER_PAGE", payload: value }));
     },
     clearFilter: () => {
       dispatch({ type: "CLEAR_FILTER" });
@@ -103,25 +103,25 @@ export default function Products2() {
 
     if (categories.length) {
       const filteredByCategories = [...products15].filter((elm) =>
-        categories.includes(elm.category)
+        categories.includes(elm.category),
       );
       filteredArrays = [...filteredArrays, filteredByCategories];
     }
     if (materials.length) {
       const filteredByCategories = [...products15].filter((elm) =>
-        materials.includes(elm.material)
+        materials.includes(elm.material),
       );
       filteredArrays = [...filteredArrays, filteredByCategories];
     }
     if (availability !== "All") {
       const filteredByavailability = [...products15].filter(
-        (elm) => availability.toLowerCase() === elm.availability.toLowerCase()
+        (elm) => availability.toLowerCase() === elm.availability.toLowerCase(),
       );
       filteredArrays = [...filteredArrays, filteredByavailability];
     }
     if (color.length) {
       const filteredByColor = [...products15].filter((elm) =>
-        color.every((el) => elm.filterColors.includes(el))
+        color.every((el) => elm.filterColors.includes(el)),
       );
       filteredArrays = [...filteredArrays, filteredByColor];
     }
@@ -132,18 +132,18 @@ export default function Products2() {
 
     if (price.includes("u-")) {
       const filteredByPrice = [...products15].filter(
-        (elm) => elm.price >= Number(price.split("-")[1])
+        (elm) => elm.price >= Number(price.split("-")[1]),
       );
       filteredArrays = [...filteredArrays, filteredByPrice];
     } else if (price.includes("up-")) {
       const filteredByPrice = [...products15].filter(
-        (elm) => elm.price <= Number(price.split("-")[1])
+        (elm) => elm.price <= Number(price.split("-")[1]),
       );
       filteredArrays = [...filteredArrays, filteredByPrice];
     }
 
     const commonItems = [...products15].filter((item) =>
-      filteredArrays.every((array) => array.includes(item))
+      filteredArrays.every((array) => array.includes(item)),
     );
     dispatch({ type: "SET_FILTERED", payload: commonItems });
   }, [price, availability, color, materials, size, categories]);

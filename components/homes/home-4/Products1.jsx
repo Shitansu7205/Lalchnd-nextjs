@@ -18,7 +18,7 @@ export default function Products1() {
   const [filtered, setFiltered] = useState(products8);
   useEffect(() => {
     setFiltered(
-      products8.filter((elm) => elm.filterCategories.includes(activeTab))
+      products8.filter((elm) => elm.filterCategories.includes(activeTab)),
     );
   }, [activeTab]);
 

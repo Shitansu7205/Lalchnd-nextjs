@@ -33,7 +33,7 @@ export default function Footer1() {
         "https://express-brevomail.vercel.app/api/contacts",
         {
           email,
-        }
+        },
       );
 
       if ([200, 201].includes(response.status)) {

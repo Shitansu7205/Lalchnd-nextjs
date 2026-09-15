@@ -123,7 +123,7 @@ export default function Details5({ product }) {
                       quantity={
                         isAddedToCartProducts(product.id)
                           ? cartProducts.filter(
-                              (elm) => elm.id == product.id
+                              (elm) => elm.id == product.id,
                             )[0].quantity
                           : quantity
                       }

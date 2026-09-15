@@ -3,81 +3,77 @@ import Link from "next/link";
 import Image from "next/image";
 import CommentForm from "./CommentForm";
 
-
-
 export default function BlogDetails({ blogEntry }) {
-    return (
-        <section className="flat-spacing-14">
-            <div className="container">
-                <div className="s-blog-detail align-items-start">
-                    <div className="blog-single">
-                        <div className="single-wrap flat-spacing-3 pt-0">
-                            <div className="box-title">
-                                <ul className="entry_meta">
-                                    <li>
-                                        <span className="icon">
-                                            <i className="icon-author" />
-                                        </span>
-                                        <a href="#" className="link">
-                                            By {blogEntry?.author?.name || "Unknown Author"}
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <span className="icon">
-                                            <i className="icon-calender" />
-                                        </span>
-                                        <p>19 Sep 24</p>
-                                    </li>
-                                    <li>
-                                        <span className="icon">
-                                            <i className="icon-tag" />
-                                        </span>
-                                        <p className="text-caption">JewelryTrends, Craftsmanship</p>
-                                    </li>
-                                    <li>
-                                        <span className="icon">
-                                            <i className="icon-comment" />
-                                        </span>
-                                        <p className="text-caption">No Comment</p>
-                                    </li>
-                                </ul>
-                                <div className="box-text">
-                                    {blogEntry?.intro?.map((paragraph, index) => (
-                                        <p
-                                            className="text-main-4 text-justify"
-                                            key={index}
-                                            dangerouslySetInnerHTML={{ __html: paragraph }}
-                                        />
-                                    ))}
+  return (
+    <section className="flat-spacing-14">
+      <div className="container">
+        <div className="s-blog-detail align-items-start">
+          <div className="blog-single">
+            <div className="single-wrap flat-spacing-3 pt-0">
+              <div className="box-title">
+                <ul className="entry_meta">
+                  <li>
+                    <span className="icon">
+                      <i className="icon-author" />
+                    </span>
+                    <a href="#" className="link">
+                      By {blogEntry?.author?.name || "Unknown Author"}
+                    </a>
+                  </li>
+                  <li>
+                    <span className="icon">
+                      <i className="icon-calender" />
+                    </span>
+                    <p>19 Sep 24</p>
+                  </li>
+                  <li>
+                    <span className="icon">
+                      <i className="icon-tag" />
+                    </span>
+                    <p className="text-caption">JewelryTrends, Craftsmanship</p>
+                  </li>
+                  <li>
+                    <span className="icon">
+                      <i className="icon-comment" />
+                    </span>
+                    <p className="text-caption">No Comment</p>
+                  </li>
+                </ul>
+                <div className="box-text">
+                  {blogEntry?.intro?.map((paragraph, index) => (
+                    <p
+                      className="text-main-4 text-justify"
+                      key={index}
+                      dangerouslySetInnerHTML={{ __html: paragraph }}
+                    />
+                  ))}
+                </div>
+              </div>
+              <div className="entry_image blog-detail-image">
+                <Image
+                  src={
+                    blogEntry?.image?.src || "/images/blog/blog-single-1.jpg"
+                  }
+                  alt={blogEntry?.title || "Blog image"}
+                  className="lazyload"
+                  width={2176}
+                  height={790}
+                />
+              </div>
+              {blogEntry?.content?.map((section, index) => (
+                <div className="box-text" key={index}>
+                  <h4 className="text-uppercase">{section.heading}</h4>
 
-
-                                </div>
-                            </div>
-                            <div className="entry_image blog-detail-image">
-                                <Image
-                                    src={blogEntry?.image?.src || "/images/blog/blog-single-1.jpg"}
-                                    alt={blogEntry?.title || "Blog image"}
-                                    className="lazyload"
-                                    width={2176}
-                                    height={790}
-                                />
-                            </div>
-                            {blogEntry?.content?.map((section, index) => (
-                                <div className="box-text" key={index}>
-                                    <h4 className="text-uppercase">
-                                        {section.heading}
-                                    </h4>
-
-                                    {section.paragraphs?.map((paragraph, paragraphIndex) => (
-                                        <p
-                                            className="text-main-4 text-justify"
-                                            key={paragraphIndex}
-                                            dangerouslySetInnerHTML={{ __html: paragraph }}
-                                        />
-                                    ))}
-                                </div>
-                            ))}
-                            {/* <div className="box-text">
+                  {section.paragraphs?.map((paragraph, paragraphIndex) => (
+                    <p
+                      className="text-main-4 text-justify"
+                      key={paragraphIndex}
+                      dangerouslySetInnerHTML={{ __html: paragraph }}
+                    />
+                  ))}
+                </div>
+              ))}
+              {/* <div className="box-text">
                                 <h4 className="text-uppercase">
                                     The Inspiration Behind Our Iconic Pieces
                                 </h4>
@@ -202,198 +198,217 @@ export default function BlogDetails({ blogEntry }) {
                                     </div>
                                 </div>
                             </div> */}
-                            <div className="bottom">
-                                <div className="entry_media">
-                                    <ul className="entry_tag">
-                                        <li>
-                                            <a href="#" className="text-caption">
-                                                JewelryTrends
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" className="text-caption">
-                                                Craftsmanship
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <div className="entry_social">
-                                        <p>Share:</p>
-                                        <ul className="tf-social-icon style-large">
-                                            <li>
-                                                <a href="https://www.facebook.com/LalchndJewellersPvtLtd" className="social-facebook">
-                                                    <span className="icon">
-                                                        <i className="icon-facebook" />
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.instagram.com/lalchnd.jewellers/" className="social-instagram">
-                                                    <span className="icon">
-                                                        <i className="icon-instagram" />
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" className="social-x">
-                                                    <span className="icon">
-                                                        <i className="icon-x" />
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" className="social-linkin">
-                                                    <span className="icon">
-                                                        <i className="icon-linkin" />
-                                                    </span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div className="related-post">
-                                    <a href="#" className="post prev text-black link">
-                                        <span className="icon">
-                                            <i className="icon-arrow-left" />
-                                        </span>
-                                        <p className="fw-normal">PREVIOUS POST</p>
-                                    </a>
-                                    <a href="#" className="post prev text-black link">
-                                        <p className="fw-normal">NEXT POST</p>
-                                        <span className="icon">
-                                            <i className="icon-arrow-right" />
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <CommentForm />
-                    </div>
-                    <div className="blog-sidebar sidebar-content-wrap d-none d-lg-block sticky-top">
-                        <div className="sidebar-item">
-                            <div className="sb-author text-center">
-                                <div className="entry_author">
-                                    <div className="avatar">
-                                        <Image
-                                            src="/images/lalchnd/blogs/blog-icons-ava.png"
-                                            alt=""
-                                            className="lazyload"
-                                            width={400}
-                                            height={400}
-                                        />
-                                    </div>
-                                    <div className="infor">
-                                        <p className="name">{blogEntry?.author?.name || "Author Name"} Groups</p>
-                                        <p className="duty text-main-4">{blogEntry?.date || "Date"}</p>
-                                    </div>
-                                </div>
-                                <ul className="tf-social-icon">
-                                    <li>
-                                        <a href="https://www.facebook.com/LalchndJewellersPvtLtd" className="social-facebook">
-                                            <span className="icon">
-                                                <i className="icon-facebook" />
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com/lalchnd.jewellers/" className="social-instagram">
-                                            <span className="icon">
-                                                <i className="icon-instagram" />
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.youtube.com/channel/UCrO61El0o9WsM3fw3r7lolw" className="social-x">
-                                            <span className="icon">
-                                                <i className="icon-x" />
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="sidebar-item">
-                            <h5 className="sb-title text-uppercase fw-normal">Categories</h5>
-                            <ul className="sb-category">
-                                <li>
-                                    <a href="#" className="text-main-4 link">
-                                        Craftsmanship &amp; Design
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" className="text-main-4 link">
-                                        Inspiration &amp; Trends
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" className="text-main-4 link">
-                                        Customer Stories
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" className="text-main-4 link">
-                                        Behind the Brand
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" className="text-main-4 link">
-                                        Care &amp; Maintenance
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="sidebar-item">
-                            <h5 className="sb-title text-uppercase fw-normal">tags</h5>
-                            <ul className="sb-tag">
-                                <li>
-                                    <a href="#" className="text-body text-main-4 link">
-                                        JewelryTrends
-                                    </a>
-                                </li>
-                                <li>
-                                    <span className="text-body text-main-4">/</span>
-                                </li>
-                                <li>
-                                    <a href="#" className="text-body text-main-4 link">
-                                        TimelessElegance
-                                    </a>
-                                </li>
-                                <li>
-                                    <span className="text-body text-main-4">/</span>
-                                </li>
-                                <li>
-                                    <a href="#" className="text-body text-main-4 link">
-                                        Craftsmanship
-                                    </a>
-                                </li>
-                                <li>
-                                    <span className="text-body text-main-4">/</span>
-                                </li>
-                                <li>
-                                    <a href="#" className="text-body text-main-4 link">
-                                        JewelryCare
-                                    </a>
-                                </li>
-                                <li>
-                                    <span className="text-body text-main-4">/</span>
-                                </li>
-                                <li>
-                                    <a href="#" className="text-body text-main-4 link">
-                                        LuxuryDesign
-                                    </a>
-                                </li>
-                                <li>
-                                    <span className="text-body text-main-4">/</span>
-                                </li>
-                                <li>
-                                    <a href="#" className="text-body text-main-4 link">
-                                        BehindTheSparkle
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+              <div className="bottom">
+                <div className="entry_media">
+                  <ul className="entry_tag">
+                    <li>
+                      <a href="#" className="text-caption">
+                        JewelryTrends
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-caption">
+                        Craftsmanship
+                      </a>
+                    </li>
+                  </ul>
+                  <div className="entry_social">
+                    <p>Share:</p>
+                    <ul className="tf-social-icon style-large">
+                      <li>
+                        <a
+                          href="https://www.facebook.com/LalchndJewellersPvtLtd"
+                          className="social-facebook"
+                        >
+                          <span className="icon">
+                            <i className="icon-facebook" />
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.instagram.com/lalchnd.jewellers/"
+                          className="social-instagram"
+                        >
+                          <span className="icon">
+                            <i className="icon-instagram" />
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" className="social-x">
+                          <span className="icon">
+                            <i className="icon-x" />
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" className="social-linkin">
+                          <span className="icon">
+                            <i className="icon-linkin" />
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
+                <div className="related-post">
+                  <a href="#" className="post prev text-black link">
+                    <span className="icon">
+                      <i className="icon-arrow-left" />
+                    </span>
+                    <p className="fw-normal">PREVIOUS POST</p>
+                  </a>
+                  <a href="#" className="post prev text-black link">
+                    <p className="fw-normal">NEXT POST</p>
+                    <span className="icon">
+                      <i className="icon-arrow-right" />
+                    </span>
+                  </a>
+                </div>
+              </div>
             </div>
-        </section>
-    );
+            <CommentForm />
+          </div>
+          <div className="blog-sidebar sidebar-content-wrap d-none d-lg-block sticky-top">
+            <div className="sidebar-item">
+              <div className="sb-author text-center">
+                <div className="entry_author">
+                  <div className="avatar">
+                    <Image
+                      src="/images/lalchnd/blogs/blog-icons-ava.png"
+                      alt=""
+                      className="lazyload"
+                      width={400}
+                      height={400}
+                    />
+                  </div>
+                  <div className="infor">
+                    <p className="name">
+                      {blogEntry?.author?.name || "Author Name"} Groups
+                    </p>
+                    <p className="duty text-main-4">
+                      {blogEntry?.date || "Date"}
+                    </p>
+                  </div>
+                </div>
+                <ul className="tf-social-icon">
+                  <li>
+                    <a
+                      href="https://www.facebook.com/LalchndJewellersPvtLtd"
+                      className="social-facebook"
+                    >
+                      <span className="icon">
+                        <i className="icon-facebook" />
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/lalchnd.jewellers/"
+                      className="social-instagram"
+                    >
+                      <span className="icon">
+                        <i className="icon-instagram" />
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.youtube.com/channel/UCrO61El0o9WsM3fw3r7lolw"
+                      className="social-x"
+                    >
+                      <span className="icon">
+                        <i className="icon-x" />
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="sidebar-item">
+              <h5 className="sb-title text-uppercase fw-normal">Categories</h5>
+              <ul className="sb-category">
+                <li>
+                  <a href="#" className="text-main-4 link">
+                    Craftsmanship &amp; Design
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-main-4 link">
+                    Inspiration &amp; Trends
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-main-4 link">
+                    Customer Stories
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-main-4 link">
+                    Behind the Brand
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-main-4 link">
+                    Care &amp; Maintenance
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="sidebar-item">
+              <h5 className="sb-title text-uppercase fw-normal">tags</h5>
+              <ul className="sb-tag">
+                <li>
+                  <a href="#" className="text-body text-main-4 link">
+                    JewelryTrends
+                  </a>
+                </li>
+                <li>
+                  <span className="text-body text-main-4">/</span>
+                </li>
+                <li>
+                  <a href="#" className="text-body text-main-4 link">
+                    TimelessElegance
+                  </a>
+                </li>
+                <li>
+                  <span className="text-body text-main-4">/</span>
+                </li>
+                <li>
+                  <a href="#" className="text-body text-main-4 link">
+                    Craftsmanship
+                  </a>
+                </li>
+                <li>
+                  <span className="text-body text-main-4">/</span>
+                </li>
+                <li>
+                  <a href="#" className="text-body text-main-4 link">
+                    JewelryCare
+                  </a>
+                </li>
+                <li>
+                  <span className="text-body text-main-4">/</span>
+                </li>
+                <li>
+                  <a href="#" className="text-body text-main-4 link">
+                    LuxuryDesign
+                  </a>
+                </li>
+                <li>
+                  <span className="text-body text-main-4">/</span>
+                </li>
+                <li>
+                  <a href="#" className="text-body text-main-4 link">
+                    BehindTheSparkle
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

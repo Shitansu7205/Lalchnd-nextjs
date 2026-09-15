@@ -124,7 +124,7 @@ export default function Grid1({
     // Find the element with the specific data-value attribute
     const heightScroll = window.scrollY;
     const targetElement = document.querySelector(
-      `[data-scroll='${activeColor}']`
+      `[data-scroll='${activeColor}']`,
     );
 
     // Check if the element exists
