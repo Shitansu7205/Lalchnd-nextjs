@@ -3,6 +3,8 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import CurrencySelect from "../common/CurrencySelect";
+import { Mail, Phone, Clock, MapPin, Store } from "lucide-react";
+
 export default function Footer2() {
   useEffect(() => {
     const headings = document.querySelectorAll(".footer-heading-mobile");
@@ -33,7 +35,7 @@ export default function Footer2() {
   }, []); // Empty dependency array means this will run only once on mount
 
   return (
-    <footer className="tf-footer style-2 bg-dark-brown">
+    <footer className="tf-footer style-2 bg-dark-blue">
       <div className="footer-body p-xl-0">
         <div className="container">
           <div className="footer-inner-wrap d-xl-flex flex-xl-nowrap">
@@ -48,26 +50,25 @@ export default function Footer2() {
                   />
                 </Link>
                 <p className="text-main-5 lt-sp-nor">
-                  <span className="text-white">Explore</span> our curated
-                  collections designed to{" "}
+                  <span className="text-white">Discover</span> our exquisite
+                  collections crafted to{" "}
                   <span className="text-white">
                     elevate every <br className="d-none d-xl-block" />
-                    look
-                  </span>{" "}
-                  , from <span className="text-white">
-                    timeless essentials
-                  </span>{" "}
-                  to <span className="text-white">trendsetting pieces</span> .
-                  Step <br className="d-none d-xl-block" />
-                  in and find the{" "}
-                  <span className="text-white">perfect match</span> for your{" "}
+                    occasion
+                  </span>
+                  , from <span className="text-white">timeless classics</span>{" "}
+                  to <span className="text-white">contemporary designs</span>.
+                  Explore <br className="d-none d-xl-block" />
+                  and find the{" "}
+                  <span className="text-white">perfect jewel</span> to express your{" "}
                   <span className="text-white">unique</span> style.
                 </p>
+
               </div>
               <ul className="tf-social-icon style-white">
                 <li>
                   <a
-                    href="https://www.facebook.com/"
+                    href="https://www.facebook.com/LalchndJewellersPvtLtd"
                     target="_blank"
                     className="social-facebook"
                   >
@@ -78,7 +79,7 @@ export default function Footer2() {
                 </li>
                 <li>
                   <a
-                    href="https://www.instagram.com/"
+                    href="https://www.instagram.com/lalchnd.jewellers/"
                     target="_blank"
                     className="social-instagram"
                   >
@@ -88,7 +89,7 @@ export default function Footer2() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://x.com/" target="_blank" className="social-x">
+                  <a href="https://www.youtube.com/channel/UCrO61El0o9WsM3fw3r7lolw/featured" target="_blank" className="social-x">
                     <span className="icon">
                       <i className="icon-x" />
                     </span>
@@ -109,7 +110,7 @@ export default function Footer2() {
             </div>
             <div className="footer-col-block">
               <p className="footer-heading footer-heading-mobile text-white font-2">
-                Explore
+                Categories
               </p>
               <div className="tf-collapse-content">
                 <ul className="footer-menu-list">
@@ -118,7 +119,7 @@ export default function Footer2() {
                       href={`/shop-collection-list`}
                       className="text-white link"
                     >
-                      Bracelets
+                      Gold
                     </Link>
                   </li>
                   <li>
@@ -126,7 +127,7 @@ export default function Footer2() {
                       href={`/shop-collection-list`}
                       className="text-white link"
                     >
-                      Rings
+                      Silver
                     </Link>
                   </li>
                   <li>
@@ -134,7 +135,7 @@ export default function Footer2() {
                       href={`/shop-collection-list`}
                       className="text-white link"
                     >
-                      Necklaces
+                      Diamond
                     </Link>
                   </li>
                   <li>
@@ -142,7 +143,7 @@ export default function Footer2() {
                       href={`/shop-collection-list`}
                       className="text-white link"
                     >
-                      Earrings
+                      Watches
                     </Link>
                   </li>
                   <li>
@@ -150,7 +151,7 @@ export default function Footer2() {
                       href={`/shop-collection-list`}
                       className="text-white link"
                     >
-                      Gifts
+                      Gifts Items
                     </Link>
                   </li>
                   <li>
@@ -158,7 +159,7 @@ export default function Footer2() {
                       href={`/shop-collection-list`}
                       className="text-white link"
                     >
-                      Collections
+                      All Jewellery
                     </Link>
                   </li>
                 </ul>
@@ -166,20 +167,26 @@ export default function Footer2() {
             </div>
             <div className="footer-col-block">
               <p className="footer-heading footer-heading-mobile text-white font-2">
-                HELP
+                Useful Links
               </p>
               <div className="tf-collapse-content">
                 <ul className="footer-menu-list">
                   <li>
-                    <Link href={`/faq`} className="text-white link">
-                      FAQs
+                    <Link href={`/gallery`} className="text-white link">
+                      Gallery
                     </Link>
                   </li>
                   <li>
-                    <Link href={`/term-condition`} className="text-white link">
-                      Terms &amp; Conditions
+                    <Link href={`/media`} className="text-white link">
+                      Media
                     </Link>
                   </li>
+                  <li>
+                    <Link href={`/awards`} className="text-white link">
+                      Awards
+                    </Link>
+                  </li>
+
                   <li>
                     <Link href={`/privacy`} className="text-white link">
                       Privacy Policies
@@ -191,8 +198,8 @@ export default function Footer2() {
                     </Link>
                   </li>
                   <li>
-                    <Link href={`/shipping`} className="text-white link">
-                      Shipping
+                    <Link href={`/term-condition`} className="text-white link">
+                      Terms &amp; Conditions
                     </Link>
                   </li>
                 </ul>
@@ -200,52 +207,175 @@ export default function Footer2() {
             </div>
             <div className="footer-col-block">
               <p className="footer-heading footer-heading-mobile text-white font-2">
-                Store Information
+                Visit Us
               </p>
               <div className="tf-collapse-content">
                 <ul className="footer-menu-list">
-                  <li className="text-caption">
+                  <li className="text-caption d-flex align-items-center gap-2">
+                    <Mail size={16} strokeWidth={1.8} className="text-white" />
                     <span className="fw-medium text-white">Email: </span>
                     <a
-                      href="mailto:clientcare@ecom.com"
+                      href="mailto:info@example.com"
                       className="text-white link fw-normal"
                     >
-                      clientcare@ecom.com
+                      info@lalchnd.com
                     </a>
                   </li>
-                  <li className="text-caption">
+
+                  <li className="text-caption d-flex align-items-center gap-2">
+                    <Phone size={16} strokeWidth={1.8} className="text-white" />
                     <span className="fw-medium text-white">Phone: </span>
                     <a
-                      href="tel:18888383022"
+                      href="tel:18002108383"
                       className="text-white link fw-normal"
                     >
-                      1.888.838.3022
+                      0674 - 2534016 / 17 / 18
                     </a>
                   </li>
-                  <li className="text-caption">
+
+                  <li className="text-caption d-flex align-items-center gap-2">
+                    <Clock size={16} strokeWidth={1.8} className="text-white" />
+                    <span className="fw-medium text-white">Hours: </span>
+                    <span className="text-white fw-normal">
+                      11:00AM - 8:30PM
+                    </span>
+                  </li>
+
+                  <li className="text-caption d-flex align-items-center gap-2">
+                    <MapPin size={16} strokeWidth={1.8} className="text-white" />
                     <a
                       target="_blank"
-                      href="https://www.google.com/maps?q=123+Yarran+st,Punchbowl,NSW+2196,Australia"
+                      rel="noopener noreferrer"
+                      href="#"
                       className="text-white link fw-normal"
                     >
-                      <span className="fw-medium text-white">Address: </span>
-                      123 Yarran st, Punchbowl,
-                      <br className="d-none d-xl-block" />
-                      NSW 2196, Australia
+                      Station Square, Unit- 3, Bhubaneswar
                     </a>
                   </li>
-                  <li>
-                    <Link
-                      href={`/our-store`}
-                      className="tf-btn-line style-white"
+                  <li className="text-caption d-flex align-items-center gap-2">
+                    <Store size={16} strokeWidth={1.8} className="text-white" />
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="#"
+                      className="text-white link fw-normal"
                     >
-                      <span className="text-caption"> Get direction </span>
-                      <i className="icon-arrow-right-2 fs-16" />
-                    </Link>
+                      9:00AM - 9:00PM   <i className="icon-arrow-right-2 fs-16" />
+                    </a>
                   </li>
                 </ul>
               </div>
             </div>
+
+            <div className="footer-col-block">
+              <p className="footer-heading footer-heading-mobile text-white font-2">
+                Store Information
+              </p>
+
+              <div className="tf-collapse-content">
+                <ul className="footer-menu-list">
+
+                  {/* Bhubaneswar */}
+                  <li className="store-location">
+                    <div className="d-flex align-items-center gap-2 mb-1">
+                      <MapPin size={17} strokeWidth={1.8} className="text-white" />
+                      <span className="fw-medium text-white">
+                        Bhubaneswar
+                      </span>
+                    </div>
+
+                    <ul className="ps-4">
+                      <li>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://www.google.com/maps/search/?api=1&query=Master+Canteen+Bhubaneswar"
+                          className="text-white link fw-normal"
+                        >
+                          Master Canteen
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://www.google.com/maps/search/?api=1&query=Raghunathpur+Bhubaneswar"
+                          className="text-white link fw-normal"
+                        >
+                          Raghunathpur
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  {/* Cuttack */}
+                  <li className="store-location">
+                    <div className="d-flex align-items-center gap-2 mb-1">
+                      <MapPin size={17} strokeWidth={1.8} className="text-white" />
+                      <span className="fw-medium text-white">
+                        Cuttack
+                      </span>
+                    </div>
+
+                    <ul className="ps-4">
+                      <li>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://www.google.com/maps/search/?api=1&query=CDA+Cuttack"
+                          className="text-white link fw-normal"
+                        >
+                          CDA
+                        </a>
+                      </li>
+
+                      <li>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://www.google.com/maps/search/?api=1&query=Cantonment+Road+Cuttack"
+                          className="text-white link fw-normal"
+                        >
+                          Cantonment Road
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  {/* Berhampur */}
+                  <li className="store-location">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://www.google.com/maps/search/?api=1&query=Berhampur+Odisha"
+                      className="text-white link d-flex align-items-center gap-2"
+                    >
+                      <MapPin size={17} strokeWidth={1.8} />
+                      <span className="fw-medium">
+                        Berhampur
+                      </span>
+                    </a>
+                  </li>
+
+                  {/* Delhi */}
+                  <li className="store-location">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://www.google.com/maps/search/?api=1&query=Delhi+India"
+                      className="text-white link d-flex align-items-center gap-2"
+                    >
+                      <MapPin size={17} strokeWidth={1.8} />
+                      <span className="fw-medium">
+                        Delhi
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -253,7 +383,7 @@ export default function Footer2() {
         <div className="container">
           <div className="footer-bottom-wrap">
             <p className="text-nocopy text-white">
-              All Rights Reserved 2025 VEMUS.
+              All Rights Reserved By <strong>Lalchnd Groups</strong>.
             </p>
             <div className="tf-currencies">
               <CurrencySelect light />
@@ -369,7 +499,7 @@ export default function Footer2() {
             <Image
               className="lazyload"
               alt="Logo"
-              src="/images/logo/logo-very-large.svg"
+              src="/images/logo/logo-very-large.webp"
               width={1422}
               height={185}
             />
