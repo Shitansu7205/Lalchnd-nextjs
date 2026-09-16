@@ -1,0 +1,51 @@
+export const storeLocations = [
+    {
+        title: "Master Canteen",
+        city: "Bhubaneswar",
+        location: "Station Square, Unit 3, Bhubaneswar",
+        phone: "0674 - 2534016 / 17 / 18",
+        image: "/images/lalchnd/store/bhubaneswar/master-canteen/1.webp",
+        url: "/master-canteen",
+      
+    },
+    {
+        title: "Raghunathpur",
+        city: "Bhubaneswar",
+        location: "Raghunathpur, Nandankanan Road, Bhubaneswar",
+        phone: "0674 - 2746910 / 51 / 52",
+        image: "/images/lalchnd/store/bhubaneswar/raghunathpur/1.webp",
+        url: "/raghunathpur",
+    },
+    {
+        title: "Cantonment Road",
+        city: "Cuttack",
+        location: "Cantonment Road, Cuttack, Odisha",
+        phone: "0671 - 2309258 / 2309259",
+        image: "/images/lalchnd/store/cuttack/cantonment/1.webp",
+        url: "/cantonmentroad",
+    },
+    {
+        title: "CDA Sector VI",
+        city: "Cuttack",
+        location: "CDA Sector VI, Cuttack, Odisha",
+        phone: "0671 - 2503717 / 72 / 73",
+        image: "/images/lalchnd/store/cuttack/cda/1.webp",
+        url: "/cda",
+    },
+    {
+        title: "Berhampur",
+        city: "Berhampur",
+        location: "Dharma Nagar, Aska Road, Berhampur, Odisha",
+        phone: "0680 - 2221404 / 02 / 03",
+        image: "/images/lalchnd/store/berhampur/1.webp",
+        url: "/brahmapur",
+    },
+    {
+        title: "New Delhi",
+        city: "Delhi",
+        location: "A-57B, Vasant Kunj Marg, Mahipalpur, New Delhi",
+        phone: "+91 8800488800",
+        image: "/images/lalchnd/store/delhi/1.webp",
+        url: "/delhi",
+    },
+];

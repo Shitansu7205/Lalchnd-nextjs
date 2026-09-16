@@ -66,7 +66,7 @@ const slides = [
 
 export default function Slider2({
   activeColor = "Black",
-  setActiveColor = () => {},
+  setActiveColor = () => { },
   firstItem,
   slideItems = slides,
 }) {

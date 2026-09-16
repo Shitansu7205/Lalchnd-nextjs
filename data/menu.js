@@ -151,27 +151,27 @@ export const morePages = [
     heading: "LALCHND STORES",
     links: [
       {
-        href: "https://www.google.com/maps/search/?api=1&query=Master+Canteen+Bhubaneswar",
+        href: "/master-canteen",
         label: "Master Canteen - Bhubaneswar",
       },
       {
-        href: "https://www.google.com/maps/search/?api=1&query=Raghunathpur+Bhubaneswar",
+        href: "/raghunathpur",
         label: "Raghunathpur - Bhubaneswar",
       },
       {
-        href: "https://www.google.com/maps/search/?api=1&query=CDA+Cuttack",
+        href: "/cda",
         label: "CDA - Cuttack",
       },
       {
-        href: "https://www.google.com/maps/search/?api=1&query=Cantonment+Road+Cuttack",
+        href: "/cantonmentroad",
         label: "Cantonment Road - Cuttack",
       },
       {
-        href: "https://www.google.com/maps/search/?api=1&query=Berhampur+Odisha",
+        href: "/brahmapur",
         label: "Berhampur",
       },
       {
-        href: "https://www.google.com/maps/search/?api=1&query=Delhi+India",
+        href: "/delhi",
         label: "Delhi",
       },
     ],
@@ -189,7 +189,20 @@ export const morePages = [
   },
 ];
 
-
+export const moreMenuImages = [
+  {
+    id: 1,
+    imgSrc: "/images/lalchnd/gallery/6.webp",
+    hoverImgSrc: "/images/lalchnd/gallery/7.webp",
+    title: "Explore Lalchnd",
+  },
+  {
+    id: 2,
+     imgSrc: "/images/lalchnd/gallery/8.webp",
+    hoverImgSrc: "/images/lalchnd/gallery/9.webp",
+    title: "wards & Achievements",
+  },
+]
 
 export const otherPages = [
   { href: "/about-us", label: "About Us" },
@@ -218,3 +231,7 @@ export const accountLinks = [
   { href: "/account-addresses", text: "Addresses", isActive: false },
   { href: "/", text: "Log Out", isActive: false },
 ];
+
+
+
+

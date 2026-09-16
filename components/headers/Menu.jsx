@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import QuickView from "../common/QuickView";
+import { moreMenuImages } from "@/data/menu";
 import {
     blogMenuLinks,
     demoPages,
@@ -349,7 +350,7 @@ export default function Menu({ megaMarginRight = true }) {
                     }`}
             >
                 <a href="#" className="item-link">
-                 More
+                    More
                     <i className="icon icon-arrow-angle-down" />
                 </a>
                 <div className="sub-menu mega-menu mega-menu-product">
@@ -388,11 +389,11 @@ export default function Menu({ megaMarginRight = true }) {
                                 ))}
                             </div>
                             <div className="wrapper-sub-collection">
-                                {products5.slice(0, 2).map((product, i) => (
+                                {moreMenuImages.slice(0, 2).map((product, i) => (
                                     <div key={i} className="card_product--V01">
                                         <div className="card_product-wrapper aspect-ratio-1">
                                             <Link
-                                                href={`/product-default/${product.id}`}
+                                                href="/gallery"
                                                 className="product-img"
                                             >
                                                 <Image
@@ -410,30 +411,6 @@ export default function Menu({ megaMarginRight = true }) {
                                                     height={900}
                                                 />
                                             </Link>
-                                            <ul className="list-product-btn center">
-                                                <li>
-                                                    <QuickView product={product} />
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div className="card_product-info">
-                                            <Link
-                                                href={`/product-default/${product.id}`}
-                                                className="name-product h5 fw-normal link text-line-clamp-2"
-                                            >
-                                                Engagement Ring in 18k Yellow Gold
-                                            </Link>
-                                            <div className="price-wrap">
-                                                <span className="price-new h5">
-                                                    ${product.price.toFixed(2)}
-                                                </span>
-                                                {product.oldPrice && (
-                                                    <span className="price-old fw-normal">
-                                                        {" "}
-                                                        ${product.oldPrice.toFixed(2)}
-                                                    </span>
-                                                )}
-                                            </div>
                                         </div>
                                     </div>
                                 ))}

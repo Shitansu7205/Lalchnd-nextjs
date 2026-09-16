@@ -101,15 +101,32 @@ export default function Footer2() {
                 </li>
                 <li>
                   <a
-                    href="https://www.youtube.com/channel/UCrO61El0o9WsM3fw3r7lolw/featured"
+                    href="https://www.linkedin.com/in/lalchnd-jewelers-74842420a/"
                     target="_blank"
-                    className="social-x"
+                    className="social-linkin"
                   >
                     <span className="icon">
-                      <i className="icon-x" />
+                      <i className="icon-linkin" />
                     </span>
                   </a>
                 </li>
+                <li>
+                  <a href="https://www.youtube.com/channel/UCrO61El0o9WsM3fw3r7lolw" >
+                    <span className="icon">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                      >
+                        <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z" />
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+
               </ul>
             </div>
             <div className="footer-col-block">
@@ -192,8 +209,8 @@ export default function Footer2() {
                   </li>
 
                   <li>
-                    <Link href={`/privacy`} className="text-white link">
-                      Privacy Policies
+                    <Link href={`/our-stores`} className="text-white link">
+                      Our Stores
                     </Link>
                   </li>
                   <li>
@@ -295,25 +312,23 @@ export default function Footer2() {
 
                     <ul className="ps-4">
                       <li>
-                        <a
-                          target="_blank"
+                        <Link
                           rel="noopener noreferrer"
-                          href="https://www.google.com/maps/search/?api=1&query=Master+Canteen+Bhubaneswar"
+                          href="/master-canteen"
                           className="text-white link fw-normal"
                         >
                           Master Canteen
-                        </a>
+                        </Link>
                       </li>
 
                       <li>
-                        <a
-                          target="_blank"
+                        <Link
                           rel="noopener noreferrer"
-                          href="https://www.google.com/maps/search/?api=1&query=Raghunathpur+Bhubaneswar"
+                          href="/raghunathpur"
                           className="text-white link fw-normal"
                         >
                           Raghunathpur
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
@@ -331,53 +346,49 @@ export default function Footer2() {
 
                     <ul className="ps-4">
                       <li>
-                        <a
-                          target="_blank"
+                        <Link
                           rel="noopener noreferrer"
-                          href="https://www.google.com/maps/search/?api=1&query=CDA+Cuttack"
+                          href="/cda"
                           className="text-white link fw-normal"
                         >
                           CDA
-                        </a>
+                        </Link>
                       </li>
 
                       <li>
-                        <a
-                          target="_blank"
+                        <Link
                           rel="noopener noreferrer"
-                          href="https://www.google.com/maps/search/?api=1&query=Cantonment+Road+Cuttack"
+                          href="/cantonmentroad"
                           className="text-white link fw-normal"
                         >
                           Cantonment Road
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
 
                   {/* Berhampur */}
                   <li className="store-location">
-                    <a
-                      target="_blank"
+                    <Link
                       rel="noopener noreferrer"
-                      href="https://www.google.com/maps/search/?api=1&query=Berhampur+Odisha"
+                      href="/brahmapur"
                       className="text-white link d-flex align-items-center gap-2"
                     >
                       <MapPin size={17} strokeWidth={1.8} />
                       <span className="fw-medium">Berhampur</span>
-                    </a>
+                    </Link>
                   </li>
 
                   {/* Delhi */}
                   <li className="store-location">
-                    <a
-                      target="_blank"
+                    <Link
                       rel="noopener noreferrer"
-                      href="https://www.google.com/maps/search/?api=1&query=Delhi+India"
+                      href="/delhi"
                       className="text-white link d-flex align-items-center gap-2"
                     >
                       <MapPin size={17} strokeWidth={1.8} />
                       <span className="fw-medium">Delhi</span>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

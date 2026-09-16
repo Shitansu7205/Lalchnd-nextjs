@@ -293,6 +293,7 @@ export const products6 = [
     textColor: "",
   },
 ];
+
 export const productsVideo = [
   {
     id: 26,
@@ -320,6 +321,57 @@ export const productsVideo = [
     oldPrice: 3799.0,
     videoUrl: "https://www.youtube.com/watch?v=MLpWrANjFbI",
     stockLeft: 5,
+  },
+];
+
+export const storeDetails = [
+  {
+    id: 26,
+    imgSrc: "/images/lalchnd/store/bhubaneswar/master-canteen/1.webp",
+    title: "Master Canteen",
+    description:
+      "Discover timeless jewellery and exceptional craftsmanship at our Master Canteen showroom.",
+    url: "/master-canteen",
+  },
+  {
+    id: 27,
+    imgSrc: "/images/store/raghunathpur.webp",
+    title: "Raghunathpur",
+    description:
+      "Explore elegant jewellery collections crafted to celebrate every special moment.",
+    url: "/raghunathpur",
+  },
+  {
+    id: 28,
+    imgSrc: "/images/store/CDA.webp",
+    title: "CDA, Cuttack",
+    description:
+      "Visit our CDA showroom for exquisite designs, trusted service, and timeless elegance.",
+    url: "/cda-cuttack",
+  },
+  {
+    id: 29,
+    imgSrc: "/images/store/Cantonment-Road.webp",
+    title: "Cantonment Road, Cuttack",
+    description:
+      "Find beautifully crafted jewellery and signature collections at our Cantonment Road showroom.",
+    url: "/cantonment-road-cuttack",
+  },
+  {
+    id: 30,
+    imgSrc: "/images/store/barampur.webp",
+    title: "Brahmapur",
+    description:
+      "Experience refined jewellery designs and personalized service at our Brahmapur showroom.",
+    url: "/brahmapur",
+  },
+  {
+    id: 31,
+    imgSrc: "/images/store/delhi.webp",
+    title: "Delhi",
+    description:
+      "Discover contemporary elegance and timeless jewellery at our Delhi showroom.",
+    url: "/delhi",
   },
 ];
 
@@ -1098,10 +1150,10 @@ export const allProducts = [
   ...products4,
   ...products5,
   ...products6,
-  ...productsVideo,
   ...products7,
   ...products8,
   ...videoProducts,
+  ...productsVideo,
   ...products9,
   ...products10,
   ...products11,

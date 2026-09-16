@@ -894,6 +894,34 @@
   }
 }
 
+.store-action-buttons {
+  .tag-wrap {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .tag-wrap li {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .store-map-button {
+    width: 100%;
+    min-height: 52px;
+    padding: 13px 18px;
+    font-size: 13px;
+    gap: 8px;
+    white-space: nowrap;
+    border: 1px solid var(--line);
+  }
+
+  .btn-fill-white:hover {
+    background-color: var(--main);
+    color: var(--white);
+    border-color: var(--main);
+  }
+}
+
 .tf-product-total-quantity {
   margin-bottom: 32px;
 
