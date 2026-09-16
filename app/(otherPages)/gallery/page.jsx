@@ -1,9 +1,9 @@
-import Header1 from "@/components/headers/Header1";
 import Topbar1 from "@/components/headers/Topbar1";
 import BreadcrumbBanner from "@/components/common/BreadcrumbBanner";
 import React from "react";
 import GalleryGridPopup from "@/components/common/GalleryGridPopup";
 import Footer2 from "@/components/footers/Footer2";
+import Header from "@/components/headers/Header";
 export const metadata = {
   title: "Gallery - Lalchnd Jewellers",
   description:
@@ -16,7 +16,7 @@ export default function page() {
   return (
     <>
       <Topbar1 />
-      <Header1 parentClass="tf-header" />
+      <Header parentClass="tf-header" />
       <BreadcrumbBanner
         title="Our Beautiful Moments"
         current="Gallery"

@@ -615,3 +615,396 @@ export const blogEntries = [
       "Whether you're dressing up for a special event or looking for everyday elegance, the right jewelry can elevate any outfit. Learn expert styling...",
   },
 ];
+
+
+export const blogGrids = [
+  {
+    slug: "more-than-designs-what-defines-a-good-jewellery-shop-in-bhubaneswar",
+    image: {
+      src: "/images/lalchnd/blogs/featured-img/1.webp",
+      alt: "More Than Designs: What Defines a Good Jewellery Shop in Bhubaneswar?",
+      width: 972,
+      height: 790,
+    },
+    category: "Jewellery Shopping",
+    tags: ["Jewellery Trends", "Craftsmanship", "Bhubaneswar"],
+    author: {
+      name: "Lalchnd",
+      img: "/images/lalchnd/blogs/blog-icons-ava.png",
+    },
+    headingLevel: "h4",
+    title: "More Than Designs: What Defines a Good Jewellery Shop in Bhubaneswar?",
+    excerpt:
+      "A jewellery shop can have beautiful pieces behind its counters, but that alone does not define what makes it a preferred destination.",
+    date: "19 September 2024",
+    metaTitle: "Finding the Right Jewellery Shop in Bhubaneswar - Lalchnd Jewellers",
+    metaDescription:
+      "A good jewellery shop offers more than designs - variety, convenience and trust matter too, reflected in Lalchnd Jewellers' Bhubaneswar showrooms.",
+    canonicalUrl:
+      "https://lalchnd.com/more-than-designs-what-defines-a-good-jewellery-shop-in-bhubaneswar",
+    metaRobots: "index, follow",
+  },
+
+  {
+    slug: "how-to-choose-gold-jewellery-that-you-will-still-love-years-from-now",
+    image: {
+      src: "/images/lalchnd/blogs/featured-img/2.webp",
+      alt: "How to Choose Gold Jewellery That You Will Still Love Years from Now",
+      width: 972,
+      height: 790,
+    },
+    category: "Gold Jewellery",
+    tags: ["Gold Jewellery", "Buying Guide", "Jewellery Tips"],
+    author: {
+      name: "Lalchnd",
+      img: "/images/lalchnd/blogs/blog-icons-ava.png",
+    },
+    headingLevel: "h4",
+    title: "How to Choose Gold Jewellery That You Will Still Love Years from Now",
+    excerpt:
+      "Gold jewellery is an important purchase, so choosing a design that continues to feel right over time requires careful consideration.",
+    date: "July 2026",
+    metaTitle: "Timeless Gold Jewellery Buying Guide by Lalchnd Jewellers",
+    metaDescription:
+      "Choose gold jewellery with confidence through expert insights on timeless designs, superior craftsmanship, lasting comfort, and enduring value from Lalchnd Jewellers.",
+    canonicalUrl:
+      "https://lalchnd.com/how-to-choose-gold-jewellery-that-you-will-still-love-years-from-now",
+    metaRobots: "index, follow",
+  },
+
+  {
+    slug: "why-lalchnd-is-one-of-the-most-trusted-jewellery-brands-in-odisha",
+    image: {
+      src: "/images/lalchnd/blogs/featured-img/3.webp",
+      alt: "Why Lalchnd Is One of the Most Trusted Jewellery Brands in Odisha",
+      width: 972,
+      height: 790,
+    },
+    category: "Lalchnd Jewellers",
+    tags: ["Lalchnd", "Jewellery Brand", "Odisha"],
+    author: {
+      name: "Lalchnd",
+      img: "/images/lalchnd/blogs/blog-icons-ava.png",
+    },
+    headingLevel: "h4",
+    title: "Why Lalchnd Is One of the Most Trusted Jewellery Brands in Odisha",
+    excerpt:
+      "Trust is an important part of jewellery shopping. Explore what makes Lalchnd a trusted jewellery brand in Odisha.",
+    date: "June 2026",
+    metaTitle: "Timeless Gold Jewellery Buying Guide by Lalchnd Jewellers",
+    metaDescription:
+      "Choose gold jewellery with confidence through expert insights on timeless designs, superior craftsmanship, lasting comfort, and enduring value from Lalchnd Jewellers.",
+    canonicalUrl:
+      "https://lalchnd.com/why-lalchnd-is-one-of-the-most-trusted-jewellery-brands-in-odisha",
+    metaRobots: "index, follow",
+  },
+
+  {
+    slug: "jewellery-traditions-that-still-matter-today-in-odisha",
+    image: {
+      src: "/images/lalchnd/blogs/featured-img/4.webp",
+      alt: "Jewellery Traditions That Still Matter Today in Odisha",
+      width: 972,
+      height: 790,
+    },
+    category: "Jewellery Traditions",
+    tags: ["Odisha", "Tradition", "Indian Jewellery"],
+    author: {
+      name: "Lalchnd",
+      img: "/images/lalchnd/blogs/blog-icons-ava.png",
+    },
+    headingLevel: "h4",
+    title: "Jewellery Traditions That Still Matter Today in Odisha",
+    excerpt:
+      "Odisha has a rich cultural identity where jewellery continues to play an important role in traditions and celebrations.",
+    date: "May 2026",
+    metaTitle: "Jewellery Traditions That Still Matter Today in Odisha - Lalchnd Jewellers",
+    metaDescription:
+      "Odisha has a rich cultural identity where jewellery continues to play an important role in traditions and celebrations.",
+    canonicalUrl:
+      "https://lalchnd.com/jewellery-traditions-that-still-matter-today-in-odisha",
+    metaRobots: "index, follow",
+  },
+
+  {
+    slug: "why-more-families-are-choosing-lalchnd-jewellers-for-weddingjewellery",
+    image: {
+      src: "/images/lalchnd/blogs/featured-img/5.webp",
+      alt: "Why More Families Are Choosing Lalchnd Jewellers for Wedding Jewellery",
+      width: 972,
+      height: 790,
+    },
+    category: "Wedding Jewellery",
+    tags: ["Wedding Jewellery", "Bridal Jewellery", "Family Jewellery"],
+    author: {
+      name: "Lalchnd",
+      img: "/images/lalchnd/blogs/blog-icons-ava.png",
+    },
+    headingLevel: "h4",
+    title: "Why More Families Are Choosing Lalchnd Jewellers for Wedding Jewellery",
+    excerpt:
+      "For most families, wedding preparations involve thoughtful jewellery choices for different ceremonies and occasions.",
+    date: "April 2026",
+    metaTitle: "Why More Families Are Choosing Lalchnd Jewellers for WeddingJewellery - Lalchnd Jewellers",
+    metaDescription:
+      "For most families, wedding preparations involve thoughtful jewellery choices for different ceremonies and occasions.",
+    canonicalUrl:
+      "https://lalchnd.com/why-more-families-are-choosing-lalchnd-jewellers-for-weddingjewellery",
+    metaRobots: "index, follow",
+  },
+
+  {
+    slug: "trending-couple-jewellery-ideas-for-weddings-andengagements",
+    image: {
+      src: "/images/lalchnd/blogs/featured-img/6.webp",
+      alt: "Trending Couple Jewellery Ideas for Weddings and Engagements",
+      width: 972,
+      height: 790,
+    },
+    category: "Wedding Jewellery",
+    tags: ["Couple Jewellery", "Wedding Trends", "Engagement Jewellery"],
+    author: {
+      name: "Lalchnd",
+      img: "/images/lalchnd/blogs/blog-icons-ava.png",
+    },
+    headingLevel: "h4",
+    title: "Trending ‘Couple Jewellery’ Ideas for Weddings and Engagements",
+    excerpt:
+      "Weddings and engagements are among the most special occasions, making couple jewellery an increasingly popular choice.",
+    date: "March 2026",
+    metaTitle: "Trending ‘Couple Jewellery’ Ideas for Weddings andEngagements - Lalchnd Jewellers",
+    metaDescription:
+      "Weddings and engagements are among the most special occasions, making couple jewellery an increasingly popular choice.",
+    canonicalUrl:
+      "https://lalchnd.com/trending-couple-jewellery-ideas-for-weddings-andengagements",
+    metaRobots: "index, follow",
+  },
+
+  {
+    slug: "gold-jewellery-designs-that-make-everyone-ask-where-did-you-buy-this",
+    image: {
+      src: "/images/lalchnd/blogs/featured-img/7.webp",
+      alt: "Gold Jewellery Designs That Make Everyone Ask, Where Did You Buy This?",
+      width: 972,
+      height: 790,
+    },
+    category: "Gold Jewellery",
+    tags: ["Gold Jewellery", "Jewellery Designs", "Trending Jewellery"],
+    author: {
+      name: "Lalchnd",
+      img: "/images/lalchnd/blogs/blog-icons-ava.png",
+    },
+    headingLevel: "h4",
+    title:
+      "Gold Jewellery Designs That Make Everyone Ask, ‘Where Did You Buy This?’",
+    excerpt:
+      "There is something timeless about gold jewellery. Discover designs that can make a lasting impression.",
+    date: "February 2026",
+    metaTitle: "Gold Jewellery Designs That Make Everyone Ask, ‘Where Did You Buy This?’ - Lalchnd Jewellers",
+    metaDescription:
+      "There is something timeless about gold jewellery. Discover designs that can make a lasting impression.",
+    canonicalUrl:
+      "https://lalchnd.com/gold-jewellery-designs-that-make-everyone-ask-where-did-you-buy-this",
+    metaRobots: "index, follow",
+  },
+
+  {
+    slug: "style-that-shines-how-lalchnd-is-transforming-womens-jewellery-options-in-bhubaneswar",
+    image: {
+      src: "/images/lalchnd/blogs/featured-img/8.webp",
+      alt: "Style That Shines: How Lalchnd Is Transforming Women’s Jewellery Options in Bhubaneswar",
+      width: 972,
+      height: 790,
+    },
+    category: "Women's Jewellery",
+    tags: ["Women's Jewellery", "Bhubaneswar", "Jewellery Trends"],
+    author: {
+      name: "Lalchnd",
+      img: "/images/lalchnd/blogs/blog-icons-ava.png",
+    },
+    headingLevel: "h4",
+    title:
+      "Style That Shines: How Lalchnd Is Transforming Women’s Jewellery Options in Bhubaneswar",
+    excerpt:
+      "Explore how changing preferences are shaping women's jewellery choices in Bhubaneswar.",
+    date: "December 2025",
+    metaTitle: "Style That Shines: How Lalchnd Is Transforming Women’s Jewellery Options in Bhubaneswar - Lalchnd Jewellers",
+    metaDescription:
+      "Explore how changing preferences are shaping women's jewellery choices in Bhubaneswar.",
+    canonicalUrl:
+      "https://lalchnd.com/style-that-shines-how-lalchnd-is-transforming-womens-jewellery-options-in-bhubaneswar",
+    metaRobots: "index, follow",
+  },
+
+  {
+    slug: "the-sparkle-of-tradition-discover-lalchnds-best-bangles-design-collection-for-every-occasion",
+    image: {
+      src: "/images/lalchnd/blogs/featured-img/9.webp",
+      alt: "The Sparkle of Tradition: Discover Lalchnd’s Best Bangles Design Collection for Every Occasion",
+      width: 972,
+      height: 790,
+    },
+    category: "Bangles",
+    tags: ["Bangles", "Traditional Jewellery", "Jewellery Designs"],
+    author: {
+      name: "Lalchnd",
+      img: "/images/lalchnd/blogs/blog-icons-ava.png",
+    },
+    headingLevel: "h4",
+    title:
+      "The Sparkle of Tradition: Discover Lalchnd’s Best Bangles Design Collection for Every Occasion",
+    excerpt:
+      "Bangles continue to hold a special place in jewellery traditions, offering designs for everyday wear and special occasions.",
+    date: "November 2025",
+    metaTitle: "Best Bangles Design Collection by Lalchnd - Traditional & Modern Styles",
+    metaDescription:
+      "Explore Lalchnd’s best bangles collection featuring gold, diamond, temple-style and bridal designs. Premium craftsmanship for festivals, weddings and daily wear.",
+    canonicalUrl:
+      "https://lalchnd.com/the-sparkle-of-tradition-discover-lalchnds-best-bangles-design-collection-for-every-occasion",
+    metaRobots: "index, follow",
+  },
+
+  {
+    slug: "timeless-beauty-why-gold-jewellery-will-never-go-out-of-style",
+    image: {
+      src: "/images/lalchnd/blogs/featured-img/10.webp",
+      alt: "Timeless Beauty: Why Gold Jewellery Will Never Go Out of Style",
+      width: 972,
+      height: 790,
+    },
+    category: "Gold Jewellery",
+    tags: ["Gold Jewellery", "Jewellery Trends", "Timeless Jewellery"],
+    author: {
+      name: "Lalchnd",
+      img: "/images/lalchnd/blogs/blog-icons-ava.png",
+    },
+    headingLevel: "h4",
+    title: "Timeless Beauty: Why Gold Jewellery Will Never Go Out of Style",
+    excerpt:
+      "Gold jewellery continues to remain a timeless choice, combining traditional appeal with styles that work across generations.",
+    date: "November 2025",
+    metaTitle: "Buy Gold Jewellery Online in India - Lalchnd Jewellers",
+    metaDescription:
+      "Discover BIS-hallmarked gold necklaces, bangles, earrings, and bridal sets. Shop premium gold jewellery online and celebrate every moment in style.",
+    canonicalUrl:
+      "https://lalchnd.com/timeless-beauty-why-gold-jewellery-will-never-go-out-of-style",
+    metaRobots: "index, follow",
+  },
+
+  {
+    slug: "how-to-style-your-jewellery-pairing-lalchnds-collections-with-traditional-western-outfits",
+    image: {
+      src: "/images/lalchnd/blogs/featured-img/11.webp",
+      alt: "How to Style Your Jewellery: Pairing Lalchnd’s Collections with Traditional & Western Outfits",
+      width: 972,
+      height: 790,
+    },
+    category: "Jewellery Styling",
+    tags: ["Jewellery Styling", "Fashion", "Jewellery Trends"],
+    author: {
+      name: "Lalchnd",
+      img: "/images/lalchnd/blogs/blog-icons-ava.png",
+    },
+    headingLevel: "h4",
+    title:
+      "How to Style Your Jewellery: Pairing Lalchnd’s Collections with Traditional & Western Outfits",
+    excerpt:
+      "Learn how to pair jewellery with both traditional and western outfits for different occasions and personal styles.",
+    date: "October 2025",
+    metaTitle: "How to Style Your Jewellery: Pairing Lalchnd's Collections with Traditional & Western Outfits - Lalchnd Jewellers",
+    metaDescription:
+      "Learn how to pair jewellery with both traditional and western outfits for different occasions and personal styles.",
+    canonicalUrl:
+      "https://lalchnd.com/how-to-style-your-jewellery-pairing-lalchnds-collections-with-traditional-western-outfits",
+    metaRobots: "index, follow",
+  },
+
+  {
+    slug: "your-story-your-jewellery-the-rise-of-personalized-customized-designs",
+    image: {
+      src: "/images/lalchnd/blogs/featured-img/12.webp",
+      alt: "Your Story, Your Jewellery: The Rise of Personalized & Customized Designs",
+      width: 972,
+      height: 790,
+    },
+    category: "Custom Jewellery",
+    tags: ["Custom Jewellery", "Personalized Jewellery", "Jewellery Trends"],
+    author: {
+      name: "Lalchnd",
+      img: "/images/lalchnd/blogs/blog-icons-ava.png",
+    },
+    headingLevel: "h4",
+    title:
+      "Your Story, Your Jewellery: The Rise of Personalized & Customized Designs",
+    excerpt:
+      "Personalized jewellery allows people to create pieces that reflect their stories, preferences and special moments.",
+    date: "September 2025",
+    metaTitle: "Personalized & Custom Jewellery Designs Craft Your Unique Story with Lalchnd Jewellers",
+    metaDescription:
+      "Discover the rise of personalized and customized jewellery at Lalchnd Jewellers. Explore how bespoke designs add emotional value, uniqueness, and lasting memories to every piece you wear.",
+    canonicalUrl:
+      "https://lalchnd.com/your-story-your-jewellery-the-rise-of-personalized-customized-designs",
+    metaRobots: "index, follow",
+  },
+
+  {
+    slug: "the-modern-bride-redefining-bridal-jewellery-with-lalchnds-contemporary-collections",
+    image: {
+      src: "/images/lalchnd/blogs/featured-img/13.webp",
+      alt: "The Modern Bride: Redefining Bridal Jewellery with Lalchnd’s Contemporary Collections",
+      width: 972,
+      height: 790,
+    },
+    category: "Bridal Jewellery",
+    tags: ["Bridal Jewellery", "Modern Bride", "Wedding Trends"],
+    author: {
+      name: "Lalchnd",
+      img: "/images/lalchnd/blogs/blog-icons-ava.png",
+    },
+    headingLevel: "h4",
+    title:
+      "The Modern Bride: Redefining Bridal Jewellery with Lalchnd’s Contemporary Collections",
+    excerpt:
+      "Bridal jewellery continues to evolve as modern brides combine traditional preferences with contemporary designs.",
+    date: "July 2025",
+    metaTitle: "The Modern Bride: Redefining Bridal Jewellery with Lalchnd's Contemporary Collections - Lalchnd Jewellers",
+    metaDescription:
+      "Bridal jewellery has always been about tradition, family, and timeless elegance. Today, the modern bride is choosing to redefine these values with confidence and clarity.",
+    canonicalUrl:
+      "https://lalchnd.com/the-modern-bride-redefining-bridal-jewellery-with-lalchnds-contemporary-collections",
+    metaRobots: "index, follow",
+  },
+
+  {
+    slug: "beyond-gold-exploring-the-versatility-of-gemstones-and-precious-metals-at-lalchnd",
+    image: {
+      src: "/images/lalchnd/blogs/featured-img/14.webp",
+      alt: "Beyond Gold: Exploring the Versatility of Gemstones and Precious Metals at Lalchnd",
+      width: 972,
+      height: 790,
+    },
+    category: "Gemstones & Precious Metals",
+    tags: ["Gemstones", "Precious Metals", "Jewellery Trends"],
+    author: {
+      name: "Lalchnd",
+      img: "/images/lalchnd/blogs/blog-icons-ava.png",
+    },
+    headingLevel: "h4",
+    title:
+      "Beyond Gold: Exploring the Versatility of Gemstones and Precious Metals at Lalchnd",
+    excerpt:
+      "Jewellery is no longer defined by gold alone. Discover the versatility of gemstones and other precious metals.",
+    date: "May 2025",
+    metaTitle: "Beyond Gold: Exploring the Versatility of Gemstones and Precious Metals at Lalchnd - Lalchnd Jewellers",
+    metaDescription:
+      "Jewellery is no longer defined by gold alone. Discover the versatility of gemstones and other precious metals.",
+    canonicalUrl:
+      "https://lalchnd.com/beyond-gold-exploring-the-versatility-of-gemstones-and-precious-metals-at-lalchnd",
+    metaRobots: "index, follow",
+  },
+];
+
+
+
+
+

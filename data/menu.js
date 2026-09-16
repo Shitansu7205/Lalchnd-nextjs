@@ -133,6 +133,64 @@ export const productDetailPages = [
   },
 ];
 
+
+
+export const morePages = [
+  {
+    heading: "MORE PAGES",
+    links: [
+      { href: "/media", label: " Media" },
+      { href: "/award", label: " Awards" },
+      { href: "/blogs", label: "Our Blogs" },
+      { href: "/contact", label: "Contact Us" },
+      { href: "/gallery", label: "Our Gallery" },
+      { href: "/about-us", label: "About Lalchnd" },
+    ],
+  },
+  {
+    heading: "LALCHND STORES",
+    links: [
+      {
+        href: "https://www.google.com/maps/search/?api=1&query=Master+Canteen+Bhubaneswar",
+        label: "Master Canteen - Bhubaneswar",
+      },
+      {
+        href: "https://www.google.com/maps/search/?api=1&query=Raghunathpur+Bhubaneswar",
+        label: "Raghunathpur - Bhubaneswar",
+      },
+      {
+        href: "https://www.google.com/maps/search/?api=1&query=CDA+Cuttack",
+        label: "CDA - Cuttack",
+      },
+      {
+        href: "https://www.google.com/maps/search/?api=1&query=Cantonment+Road+Cuttack",
+        label: "Cantonment Road - Cuttack",
+      },
+      {
+        href: "https://www.google.com/maps/search/?api=1&query=Berhampur+Odisha",
+        label: "Berhampur",
+      },
+      {
+        href: "https://www.google.com/maps/search/?api=1&query=Delhi+India",
+        label: "Delhi",
+      },
+    ],
+  },
+  {
+    heading: "TERMS & POLICIES",
+    links: [
+      { href: "/product-default/2", label: "Lalchnd Promises" },
+      { href: "/product-style-02/2", label: "Lalchnd Policies" },
+      { href: "/product-style-03/2", label: "Terms and Conditions" },
+      { href: "/product-style-03/2", label: "Today's Gold Rate" },
+      { href: "/product-style-03/2", label: "Refund Policies" },
+      { href: "/product-style-03/2", label: "Privacy Policy" },
+    ],
+  },
+];
+
+
+
 export const otherPages = [
   { href: "/about-us", label: "About Us" },
   { href: "/contact-us", label: "Contact Us" },
