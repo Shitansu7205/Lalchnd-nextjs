@@ -7,7 +7,7 @@ import { storeLocations } from "@/data/storeDetails";
 import { ArrowRight, Rotate3D } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-export default function StoreDetails() {
+export default function CdaDetails() {
     const [activeColor, setActiveColor] = useState("gold");
     const [quantity, setQuantity] = useState(1);
     const {
@@ -32,7 +32,7 @@ export default function StoreDetails() {
                                             width={1000}
                                             height={900}
                                             className="lazyload"
-                                            src="/images/lalchnd/store/bhubaneswar/master-canteen/2.webp"
+                                            src="/images/lalchnd/store/cuttack/cda/1.webp"
                                             style={{ color: "transparent" }}
                                         />
                                     </div>
@@ -62,10 +62,10 @@ export default function StoreDetails() {
                                             </li>
                                         </ul>
                                         <h3 className="product-info-name fw-normal">
-                                            Your Trusted Jewellery Store in Master Canteen
+                                           Your Trusted Jewellery Store in CDA
                                         </h3>
                                         <p className="product-infor-sub h6 fw-normal text-main-4">
-                                            Our showroom is your one-stop destination for a vast collection of high-quality jewellery, crafted to suit your individual taste and style. Whether you are looking for exquisite gold jewellery, elegant diamond pieces, or customized designs, we offer everything under one roof. With years of expertise in the jewellery industry, we pride ourselves on our legacy of delivering excellence in both product and service. Our jewellery shop in Master Canteen, you can rest assured that you are buying certified jewellery that guarantees purity and authenticity. Whether it’s a simple pendant or a sophisticated necklace, we provide the finest selection that reflects our attention to detail and passion for craftsmanship.
+                                        At Lalchnd Jewellers, we pride ourselves on being the best jewellery shop in CDA. Our reputation is built on unparalleled quality, customer service, and trust. With years of expertise, we bring you jewellery that reflects elegance, durability, and the highest standards of craftsmanship. From delicate gold necklaces to intricately designed diamond rings, our collection showcases the finest pieces for every taste and occasion. Whether you’re shopping for an engagement ring, a festive set, or a custom design, we have something truly special waiting for you. We are committed to offering a luxurious selection of fine jewellery that combines timeless craftsmanship with modern designs.
                                         </p>
 
 
@@ -110,7 +110,7 @@ export default function StoreDetails() {
                                         <ul className="entry_tag tag-wrap d-flex align-items-center">
                                             <li>
                                                 <Link
-                                                    href="#review"
+                                                    href="https://www.google.com/maps/place/Lalchnd+Jewellers+CDA/@20.4794162,85.8396722,17z/data=!3m1!4b1!4m6!3m5!1s0x3a191166ffa7db7b:0x5fe1ccac866b17f6!8m2!3d20.4794162!4d85.8396722!16s%2Fg%2F11vxqt9psy?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
                                                     className="tf-btn btn-fill store-map-button"
                                                 >
                                                     Write a Review
@@ -120,7 +120,7 @@ export default function StoreDetails() {
 
                                             <li>
                                                 <Link
-                                                    href="https://www.google.com/maps/place/Lalchnd+Jewellers/@20.2692697,85.8413965,64a,75y,42.4h,90.71t/data=!3m7!1e1!3m5!1sXwwXc-hkIUEjfN_psqt37g!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-0.7077242045555465%26panoid%3DXwwXc-hkIUEjfN_psqt37g%26yaw%3D42.39953924068941!7i16384!8i8192!4m14!1m7!3m6!1s0x3a19a744227e1903:0xb7b54fad41895a76!2sLalchnd+Jewellers!8m2!3d20.2691643!4d85.8415713!16s%2Fg%2F11g1lmdlp6!3m5!1s0x3a19a744227e1903:0xb7b54fad41895a76!8m2!3d20.2691643!4d85.8415713!16s%2Fg%2F11g1lmdlp6?entry=ttu"
+                                                    href="https://www.google.com/local/place/fid/0x3a191166ffa7db7b:0x5fe1ccac866b17f6/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3DwZ4rrwvLxdUVQCxfu08onw%26cb_client%3Dsearch.gws-prod.gps%26yaw%3D90.04523%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&ik=CAISFndaNHJyd3ZMeGRVVlFDeGZ1MDhvbnc%3D&sa=X&ved=2ahUKEwjtzYGzqfWWAxWhkOEIHRHvNX0Qpx96BAgWEBI"
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     className="tf-btn btn-fill-white store-map-button"
@@ -143,5 +143,3 @@ export default function StoreDetails() {
         </section>
     );
 }
-
-

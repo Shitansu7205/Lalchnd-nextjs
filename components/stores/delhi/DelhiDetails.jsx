@@ -1,13 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import ProgressBarComponent from "../../common/Progressbar";
 import { useContextElement } from "@/context/Context";
-import Slider2 from "@/components/product-details/sliders/Slider2";
-import { storeLocations } from "@/data/storeDetails";
 import { ArrowRight, Rotate3D } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-export default function StoreDetails() {
+export default function DelhiDetails() {
     const [activeColor, setActiveColor] = useState("gold");
     const [quantity, setQuantity] = useState(1);
     const {
@@ -25,14 +22,14 @@ export default function StoreDetails() {
                         <div className="col-md-6">
                             <div className="tf-product-media-wrap sticky-top">
                                 <div className="thumbs-slider thumbs-right">
-                                    <div className="image">
+                                    <div className="image" >
                                         <Image
                                             alt="Banner"
                                             loading="lazy"
                                             width={1000}
                                             height={900}
                                             className="lazyload"
-                                            src="/images/lalchnd/store/bhubaneswar/master-canteen/2.webp"
+                                            src="/images/lalchnd/store/delhi/2.jpg"
                                             style={{ color: "transparent" }}
                                         />
                                     </div>
@@ -62,10 +59,10 @@ export default function StoreDetails() {
                                             </li>
                                         </ul>
                                         <h3 className="product-info-name fw-normal">
-                                            Your Trusted Jewellery Store in Master Canteen
+                                            Lalchnd Jewellers, Lajpat Nagar, Delhi
                                         </h3>
                                         <p className="product-infor-sub h6 fw-normal text-main-4">
-                                            Our showroom is your one-stop destination for a vast collection of high-quality jewellery, crafted to suit your individual taste and style. Whether you are looking for exquisite gold jewellery, elegant diamond pieces, or customized designs, we offer everything under one roof. With years of expertise in the jewellery industry, we pride ourselves on our legacy of delivering excellence in both product and service. Our jewellery shop in Master Canteen, you can rest assured that you are buying certified jewellery that guarantees purity and authenticity. Whether it’s a simple pendant or a sophisticated necklace, we provide the finest selection that reflects our attention to detail and passion for craftsmanship.
+                                            Lalchnd has been a trusted name in Odisha since 1948 and Lalchnd Jewellers the most trusted jewellery brand in the state for over three decades. Lalchnd Jewellers has left no stone unturned to make sure that its first and only jewellery store in the national capital not only showcases the finest of its hugely popular collections of gold, silver, diamond (including polki) and platinum jewellery, but also highlights the immeasurably rich cultural and jewellery heritage of its home state before the world. The Delhi showroom is home to 20,000-plus pieces of exquisite and 100%-certified jewellery, backed by great schemes and exchange policies and matched by world-class customer service. This effectively makes every buying experience a celebration for customers -- and Lalchnd Jewellers the best jewellery shop in Delhi.
                                         </p>
 
 
@@ -110,7 +107,7 @@ export default function StoreDetails() {
                                         <ul className="entry_tag tag-wrap d-flex align-items-center">
                                             <li>
                                                 <Link
-                                                    href="#review"
+                                                    href="https://www.google.com/maps/place/Lalchnd+Jewellers+lajpat+nagar/@28.5712406,77.2381729,17z/data=!4m8!3m7!1s0x390ce309090603d7:0x1d5ca51e53fb3038!8m2!3d28.5712406!4d77.2381729!9m1!1b1!16s%2Fg%2F11k9kftb01!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDkxNS4wIKXMDSoASAFQAw%3D%3D"
                                                     className="tf-btn btn-fill store-map-button"
                                                 >
                                                     Write a Review
@@ -120,7 +117,7 @@ export default function StoreDetails() {
 
                                             <li>
                                                 <Link
-                                                    href="https://www.google.com/maps/place/Lalchnd+Jewellers/@20.2692697,85.8413965,64a,75y,42.4h,90.71t/data=!3m7!1e1!3m5!1sXwwXc-hkIUEjfN_psqt37g!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-0.7077242045555465%26panoid%3DXwwXc-hkIUEjfN_psqt37g%26yaw%3D42.39953924068941!7i16384!8i8192!4m14!1m7!3m6!1s0x3a19a744227e1903:0xb7b54fad41895a76!2sLalchnd+Jewellers!8m2!3d20.2691643!4d85.8415713!16s%2Fg%2F11g1lmdlp6!3m5!1s0x3a19a744227e1903:0xb7b54fad41895a76!8m2!3d20.2691643!4d85.8415713!16s%2Fg%2F11g1lmdlp6?entry=ttu"
+                                                    href="https://www.google.com/local/place/fid/0x390ce309090603d7:0x1d5ca51e53fb3038/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3DshPa_uoBQ__2v1ShOtd10g%26cb_client%3Dsearch.gws-prod.gps%26yaw%3D150.2881%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&ik=CAISFnNoUGFfdW9CUV9fMnYxU2hPdGQxMGc%3D&sa=X&ved=2ahUKEwidq_76p_WWAxXgleEIHT_AGpUQpx96BAgeEBI"
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     className="tf-btn btn-fill-white store-map-button"
@@ -143,5 +140,3 @@ export default function StoreDetails() {
         </section>
     );
 }
-
-

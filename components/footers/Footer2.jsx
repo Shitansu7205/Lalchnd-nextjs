@@ -45,7 +45,7 @@ export default function Footer2() {
   return (
     <footer className="tf-footer style-2 bg-dark-blue">
       <div className="footer-body p-xl-0">
-        <div className="container">
+        <div className="container-full-2">
           <div className="footer-inner-wrap d-xl-flex flex-xl-nowrap">
             <div className="footer-infor">
               <div className="box-title">
@@ -397,7 +397,7 @@ export default function Footer2() {
         </div>
       </div>
       <div className="footer-bottom">
-        <div className="container">
+        <div className="container-full-2">
           <div className="footer-bottom-wrap">
             <p className="text-nocopy text-white footer-app-title">
               All Rights Reserved By <strong>Lalchnd Groups</strong>.
@@ -536,7 +536,7 @@ export default function Footer2() {
         </div>
       </div>
       <div className="logo-bottom wow fadeInUp" data-wow-delay="0.1s">
-        <div className="container">
+        <div className="container-full-2">
           <div className="d-flex justify-content-center">
             <Image
               className="lazyload"
