@@ -115,3 +115,1533 @@ picture.jarallax-img img {
         object-fit: cover;
     }
 }
+
+
+
+
+//samrita
+.home-second{
+  display: flex ;
+  justify-Content: space-between;
+}
+.shape-image {
+        max-width: 675px !important;
+}
+.light-bg {
+    background-color: #F2D4D24D;
+}
+.deep-bg {
+    background-color: #06273F;
+}
+.home-left-img-section{    
+  max-width: 390px !important ;
+    height: 440px !important ;
+  }
+ .home-left-img-section .img {
+        max-width: 385px;
+        height: 440px;
+    }
+        .home-right-img-section .img {
+        max-width: 420px !important;
+        height: 520px !important;
+        padding-left: 51px;
+        padding-right: 0px !important;
+    }
+@media (max-width: 768px) {
+  .home-second{
+    display: block ;
+  }
+   .home-right-img-section .img {
+        padding-left: 0px;
+    }
+    .banner_V02 .bn-image-blur{
+      height: 500px;
+    }
+}
+
+
+
+/* =========================================
+   CENTER FOCUS PRODUCT SLIDER
+========================================= */
+
+.image-focus-slider {
+  width: 100%;
+  overflow: hidden;
+  padding: 35px 0 60px;
+}
+
+.image-focus-slider .swiper-wrapper {
+  align-items: flex-start;
+}
+
+.image-focus-slider .swiper-slide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  /* SIDE IMAGE SIZE */
+  transform: scale(0.70);
+
+  opacity: 1;
+
+  transition:
+    transform 0.8s ease,
+    opacity 0.8s ease;
+
+  z-index: 1;
+}
+
+
+/* =========================================
+   LEFT + RIGHT SIDE IMAGES
+========================================= */
+
+.image-focus-slider .swiper-slide-prev,
+.image-focus-slider .swiper-slide-next {
+  transform: scale(0.90);
+  z-index: 2;
+}
+
+
+/* =========================================
+   CENTER ACTIVE IMAGE
+========================================= */
+
+.image-focus-slider .swiper-slide-active {
+  transform: scale(1);
+  z-index: 10;
+}
+
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.focus-product-card {
+  width: 100%;
+  text-align: center;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.focus-image-card {
+  position: relative;
+}
+
+.focus-image-link {
+  display: block;
+  width: 100%;
+}
+
+.focus-image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  /* Image slightly bigger */
+  aspect-ratio: 0.75 / 1;
+
+  object-fit: cover;
+}
+
+
+/* =========================================
+   BLACK OVERLAY
+   ONLY NON-ACTIVE SLIDES
+========================================= */
+
+.image-focus-slider
+.swiper-slide:not(.swiper-slide-active)
+.focus-image-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.48);
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  transition: opacity 0.8s ease;
+}
+
+
+/* Active image = NO overlay */
+
+.image-focus-slider
+.swiper-slide-active
+.focus-image-card::after {
+  opacity: 0;
+}
+
+
+/* =========================================
+   QUICK VIEW
+   ONLY ACTIVE CENTER SLIDE
+========================================= */
+
+.focus-quick-view {
+  position: absolute;
+
+  /* Bottom of image */
+  left: 50%;
+  bottom: 15px;
+
+  transform: translateX(-50%);
+
+  z-index: 5;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 110px;
+
+  padding: 10px 20px;
+
+  background: #062536;
+  color: #fff;
+
+  font-size: 12px;
+  line-height: 1;
+
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+
+/* IMPORTANT:
+   Quick View ONLY on active slide
+*/
+
+.image-focus-slider
+.swiper-slide-active
+.focus-quick-view {
+  display: flex;
+}
+
+
+/* Hover */
+
+.image-focus-slider
+.swiper-slide-active
+.focus-quick-view:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* =========================================
+   SIDE CONTENT
+========================================= */
+
+/* Side products ka content thoda smaller */
+.image-focus-slider
+.swiper-slide:not(.swiper-slide-active)
+.focus-product-content {
+  transform: scale(0.82);
+
+  transform-origin: top center;
+
+  transition: transform 0.8s ease;
+}
+
+/* Center content normal size */
+.image-focus-slider
+.swiper-slide-active
+.focus-product-content {
+  transform: scale(1);
+}
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.image-focus-slider .spd16 {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 10px;
+
+  text-align: center;
+
+  z-index: 20;
+}
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 1200px) {
+
+  .image-focus-slider {
+    padding-top: 40px;
+  }
+
+  /* Outer images */
+  .image-focus-slider .swiper-slide {
+    transform: scale(0.64);
+  }
+
+  /* Side images */
+  .image-focus-slider .swiper-slide-prev,
+  .image-focus-slider .swiper-slide-next {
+    transform: scale(0.86);
+  }
+
+  /* Center image */
+  .image-focus-slider .swiper-slide-active {
+    transform: scale(1);
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1199px) {
+
+  .image-focus-slider .swiper-slide {
+    transform: scale(0.68);
+  }
+
+  .image-focus-slider .swiper-slide-prev,
+  .image-focus-slider .swiper-slide-next {
+    transform: scale(0.84);
+  }
+
+  .image-focus-slider .swiper-slide-active {
+    transform: scale(1);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+  .image-focus-slider {
+    padding: 20px 0 50px;
+  }
+
+  .image-focus-slider .swiper-slide {
+    transform: scale(0.72);
+  }
+
+  .image-focus-slider .swiper-slide-prev,
+  .image-focus-slider .swiper-slide-next {
+    transform: scale(0.86);
+  }
+
+  .image-focus-slider .swiper-slide-active {
+    transform: scale(1);
+  }
+
+  .focus-product-title {
+    font-size: 14px;
+  }
+
+  .focus-product-content .price-new {
+    font-size: 14px;
+  }
+
+  .focus-product-content .price-old {
+    font-size: 12px;
+  }
+
+  .focus-quick-view {
+    padding: 8px 15px;
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 574px) {
+
+  .image-focus-slider .swiper-slide {
+    transform: scale(0.74);
+  }
+
+  .image-focus-slider .swiper-slide-prev,
+  .image-focus-slider .swiper-slide-next {
+    transform: scale(0.88);
+  }
+
+  .image-focus-slider .swiper-slide-active {
+    transform: scale(1);
+  }
+
+  .image-focus-slider .swiper-slide:not(.swiper-slide-active)
+  .focus-image-card::after {
+    background: rgba(0, 0, 0, 0.42);
+  }
+
+}
+.collection-five-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr 1fr;
+  gap: 10px;
+  align-items: stretch;
+}
+
+/* Left & Right */
+.collection-side-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Side image */
+.collection-side-column .card_product-wrapper {
+  width: 100%;
+  aspect-ratio: 1.35 / 1;
+  overflow: hidden;
+  border-radius: 10px;
+      height: 260px;
+}
+
+.collection-side-column .card_product-wrapper .product-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.collection-side-column .card_product-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Center */
+.collection-center-image {
+  width: 100%;
+  height: 100%;
+}
+
+.collection-center-image .box_image--V01 {
+  height: 100%;
+}
+
+.collection-center-image .image {
+  width: 100%;
+  height: 100%;
+}
+
+.collection-center-image .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px) {
+  .collection-five-layout {
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 8px;
+  }
+
+  .collection-side-column {
+    gap: 8px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+  .collection-five-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .collection-center-image {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .collection-side-column:first-child {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .collection-side-column:last-child {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .collection-center-image .image {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+
+@media (min-width: 992px) {
+    .banner_countdown-v2 .bn_image {
+        max-width: 570px;
+    }
+        .banner_countdown-v2 .img {
+        max-width: 542px;
+    }
+}
+
+
+
+
+/* ========================================
+   JEWELLERY LOCATION SECTION
+======================================== */
+
+.jewellery-location-section {
+  background-image: url("/images/lalchnd/home/flower-bg.webp");
+  background-repeat: repeat;
+  background-position: center;
+
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.jewellery-location-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  background-color: #efd0cc;
+
+  border: 1px solid #ddac17;
+  border-radius: 55px 0 55px 0;
+
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.jewellery-location-content {
+  width: 100%;
+  padding: 35px 45px 30px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   SUBTITLE
+======================================== */
+
+.jewellery-location-subtitle {
+  display: block;
+
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1.8px;
+
+  color: #4a3732;
+
+  margin-bottom: 6px;
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.jewellery-location-title {
+  margin: 0;
+
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+
+  color: #2e211e;
+}
+
+.jewellery-location-title span {
+  font-size: 48px;
+  font-weight: 400;
+
+  color: #ED9A00;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.jewellery-location-description {
+  max-width: 760px;
+
+  margin: 10px auto 25px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+
+  color: #4c3c38;
+}
+
+
+/* ========================================
+   LOCATION LIST
+======================================== */
+
+.jewellery-location-list {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  align-items: end;
+  justify-items: center;
+
+  gap: 15px;
+}
+
+
+/* ========================================
+   LOCATION ITEM
+======================================== */
+
+.jewellery-location-item {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   IMAGE WRAPPER
+======================================== */
+
+.jewellery-location-image {
+  width: 100px;
+  height: 90px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  margin-bottom: 6px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   LOCATION IMAGE
+======================================== */
+
+.jewellery-location-image img {
+  width: auto;
+  height: auto;
+
+  max-width: 100%;
+  max-height: 88px;
+
+  object-fit: contain;
+
+  display: block;
+
+  /*
+    Smooth zoom animation
+  */
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  will-change: transform;
+}
+
+
+/* ========================================
+   CITY NAME
+======================================== */
+
+.jewellery-location-item h3 {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  color: #2e211e;
+
+  text-decoration: none;
+
+  transition:
+    color 0.4s ease,
+    transform 0.4s ease;
+}
+
+
+/* ========================================
+   HOVER EFFECT
+======================================== */
+
+/* Image smooth zoom */
+
+.jewellery-location-item:hover
+.jewellery-location-image img {
+  transform: scale(1.1);
+}
+
+
+/* Text color */
+
+.jewellery-location-item:hover h3 {
+  color: #ED9A00;
+
+}
+
+
+/* ========================================
+   LARGE TABLET
+======================================== */
+
+@media (max-width: 1100px) {
+
+ 
+
+  .jewellery-location-container {
+    max-width: 1000px;
+
+    border-radius: 48px 0 48px 0;
+  }
+
+  .jewellery-location-content {
+    padding: 32px 30px 28px;
+  }
+
+  .jewellery-location-title {
+    font-size: 36px;
+  }
+
+  .jewellery-location-title span {
+    font-size: 44px;
+  }
+
+  .jewellery-location-description {
+    max-width: 700px;
+
+    font-size: 13px;
+  }
+
+  .jewellery-location-list {
+    gap: 10px;
+  }
+
+  .jewellery-location-image {
+    width: 85px;
+    height: 75px;
+  }
+
+  .jewellery-location-image img {
+    max-height: 75px;
+  }
+
+  .jewellery-location-item h3 {
+    font-size: 13px;
+  }
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 768px) {
+
+  .jewellery-location-section {
+    background-size: 350px auto;
+  }
+
+  .jewellery-location-container {
+    border-radius: 40px 0 40px 0;
+  }
+
+  .jewellery-location-content {
+    padding: 30px 20px 25px;
+  }
+
+
+  /* Subtitle */
+
+  .jewellery-location-subtitle {
+    font-size: 8px;
+    letter-spacing: 1.4px;
+
+    margin-bottom: 5px;
+  }
+
+
+  /* Title */
+
+  .jewellery-location-title {
+    font-size: 30px;
+  }
+
+  .jewellery-location-title span {
+    font-size: 38px;
+  }
+
+
+  /* Description */
+
+  .jewellery-location-description {
+    max-width: 600px;
+
+    font-size: 11px;
+    line-height: 1.6;
+
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+
+
+  /* Locations */
+
+  .jewellery-location-list {
+    grid-template-columns: repeat(3, 1fr);
+
+    row-gap: 25px;
+    column-gap: 10px;
+  }
+
+
+  /* Images */
+
+  .jewellery-location-image {
+    width: 85px;
+    height: 75px;
+
+    margin-bottom: 5px;
+  }
+
+  .jewellery-location-image img {
+    max-height: 75px;
+  }
+
+
+  /* City */
+
+  .jewellery-location-item h3 {
+    font-size: 12px;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+
+  .jewellery-location-section {
+
+    background-size: 300px auto;
+  }
+
+  .jewellery-location-container {
+    border-radius: 30px 0 30px 0;
+  }
+
+  .jewellery-location-content {
+    padding: 25px 15px 22px;
+  }
+
+
+  /* Subtitle */
+
+  .jewellery-location-subtitle {
+    font-size: 7px;
+    letter-spacing: 1.2px;
+
+    margin-bottom: 5px;
+  }
+
+
+  /* Title */
+
+  .jewellery-location-title {
+    font-size: 25px;
+  }
+
+  .jewellery-location-title span {
+    font-size: 34px;
+  }
+
+
+  /* Description */
+
+  .jewellery-location-description {
+    font-size: 9px;
+    line-height: 1.65;
+
+    margin-top: 8px;
+    margin-bottom: 18px;
+  }
+
+
+  /* Location Grid */
+
+  .jewellery-location-list {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px 8px;
+  }
+
+
+  /* Images */
+
+  .jewellery-location-image {
+    width: 80px;
+    height: 70px;
+
+    margin-bottom: 5px;
+  }
+
+  .jewellery-location-image img {
+    max-height: 70px;
+  }
+
+
+  /* City */
+
+  .jewellery-location-item h3 {
+    font-size: 11px;
+  }
+
+
+  /* Mobile hover */
+
+  .jewellery-location-item:hover
+  .jewellery-location-image img {
+    transform: scale(1.08);
+  }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 360px) {
+
+
+  .jewellery-location-container {
+    border-radius: 25px 0 25px 0;
+  }
+
+  .jewellery-location-content {
+    padding: 22px 12px 20px;
+  }
+
+
+  /* Subtitle */
+
+  .jewellery-location-subtitle {
+    font-size: 6.5px;
+    letter-spacing: 1px;
+  }
+
+
+  /* Title */
+
+  .jewellery-location-title {
+    font-size: 22px;
+  }
+
+  .jewellery-location-title span {
+    font-size: 31px;
+  }
+
+
+  /* Description */
+
+  .jewellery-location-description {
+    font-size: 8px;
+
+    line-height: 1.6;
+
+    margin-bottom: 16px;
+  }
+
+
+  /* Grid */
+
+  .jewellery-location-list {
+    column-gap: 4px;
+    row-gap: 20px;
+  }
+
+
+  /* Image */
+
+  .jewellery-location-image {
+    width: 70px;
+    height: 65px;
+  }
+
+  .jewellery-location-image img {
+    max-height: 65px;
+  }
+
+
+  /* City */
+
+  .jewellery-location-item h3 {
+    font-size: 10px;
+  }
+}
+
+/* ========================================
+   INSTAGRAM FEED SECTION
+======================================== */
+
+
+
+.instagram-feed-container {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.instagram-feed-header {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 40px;
+}
+
+
+/* Title */
+
+.instagram-feed-title {
+  margin: 0;
+
+  font-size: 32px;
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  color: #17120f;
+}
+
+
+/* Description */
+
+.instagram-feed-description {
+  width: 345px;
+
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 1.7;
+
+  color: #4b4542;
+
+  text-align: left;
+}
+
+
+/* ========================================
+   SLIDER
+======================================== */
+
+.instagram-feed-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.instagram-swiper {
+  width: 100%;
+}
+
+
+/* ========================================
+   CARD
+======================================== */
+
+.instagram-feed-card {
+  display: block;
+
+  width: 100%;
+
+  text-decoration: none;
+
+  color: inherit;
+
+  overflow: hidden;
+
+  background: #fff;
+
+  border: 1px solid #dedede;
+
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   MEDIA
+======================================== */
+
+.instagram-feed-media {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+
+  background: #eee;
+}
+
+
+/* Image */
+
+.instagram-feed-media img {
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: cover;
+
+  transition: transform 0.7s cubic-bezier(
+    0.25,
+    0.46,
+    0.45,
+    0.94
+  );
+}
+
+
+/* Video */
+
+.instagram-feed-media video {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.7s cubic-bezier(
+    0.25,
+    0.46,
+    0.45,
+    0.94
+  );
+}
+
+
+/* ========================================
+   OVERLAY
+======================================== */
+
+.instagram-feed-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+}
+
+
+/* ========================================
+   INSTAGRAM ICON
+======================================== */
+
+.instagram-feed-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #ED9A00;
+
+  border-radius: 50%;
+
+  color: #fff;
+
+  font-size: 21px;
+
+  transform: scale(0.7);
+
+  transition:
+    transform 0.45s ease,
+    background 0.45s ease;
+}
+
+
+/* ========================================
+   HOVER
+======================================== */
+
+.instagram-feed-card:hover
+.instagram-feed-overlay {
+  opacity: 1;
+
+  visibility: visible;
+}
+
+
+.instagram-feed-card:hover
+.instagram-feed-icon {
+  transform: scale(1);
+
+  background: rgba(255, 255, 255, 0.12);
+}
+
+
+.instagram-feed-card:hover
+.instagram-feed-media img,
+
+.instagram-feed-card:hover
+.instagram-feed-media video {
+  transform: scale(1.06);
+}
+
+
+/* ========================================
+   CAPTION
+======================================== */
+
+.instagram-feed-caption {
+  width: 100%;
+
+  min-height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 10px;
+
+  box-sizing: border-box;
+
+  background: #fff;
+
+  text-align: center;
+}
+
+
+.instagram-feed-caption span {
+  font-size: 10px;
+
+  font-weight: 400;
+
+  font-style: italic;
+
+  color: #25201e;
+
+  text-decoration: underline;
+
+  transition: color 0.3s ease;
+}
+
+
+.instagram-feed-card:hover
+.instagram-feed-caption span {
+  color: #ed9a00;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 992px) {
+
+  .instagram-feed-section {
+    padding: 60px 20px;
+  }
+
+  .instagram-feed-header {
+    margin-bottom: 30px;
+  }
+
+  .instagram-feed-title {
+    font-size: 30px;
+  }
+
+  .instagram-feed-description {
+    width: 240px;
+    font-size: 9px;
+  }
+
+}
+
+
+/* ========================================
+   SMALL TABLET
+======================================== */
+
+@media (max-width: 768px) {
+
+  .instagram-feed-section {
+    padding: 50px 15px;
+  }
+
+  .instagram-feed-header {
+    align-items: flex-start;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+  }
+
+  .instagram-feed-title {
+    font-size: 28px;
+  }
+
+  .instagram-feed-description {
+    width: 220px;
+
+    font-size: 8px;
+  }
+
+  .instagram-feed-icon {
+    width: 46px;
+    height: 46px;
+
+    font-size: 18px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 576px) {
+
+  .instagram-feed-section {
+    padding: 40px 12px;
+  }
+
+  .instagram-feed-header {
+    display: block;
+
+    margin-bottom: 25px;
+  }
+
+  .instagram-feed-title {
+    font-size: 27px;
+
+    margin-bottom: 12px;
+  }
+
+  .instagram-feed-description {
+    width: 100%;
+
+    max-width: 330px;
+
+    font-size: 9px;
+
+    line-height: 1.6;
+  }
+
+  .instagram-feed-media {
+    aspect-ratio: 1 / 1;
+  }
+
+  .instagram-feed-caption {
+    min-height: 40px;
+  }
+
+  .instagram-feed-caption span {
+    font-size: 10px;
+  }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 360px) {
+
+  .instagram-feed-section {
+    padding: 35px 10px;
+  }
+
+  .instagram-feed-title {
+    font-size: 25px;
+  }
+
+  .instagram-feed-description {
+    font-size: 8px;
+  }
+
+  .instagram-feed-icon {
+    width: 42px;
+    height: 42px;
+
+    font-size: 17px;
+  }
+
+}
+
+
+
+
+.collection-image-link {
+  display: block;
+  position: relative;
+  cursor: none;
+}
+
+.collection-image-link .box_image--V01 {
+  position: relative;
+  overflow: hidden;
+}
+.collection-image-link .box_image--V01 .image {
+  position: relative;
+}
+
+.collection-image-link .box_image--V01 .image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.4s ease;
+  z-index: 1;
+}
+
+/* Hover par black overlay */
+.collection-image-link .box_image--V01:hover .image::after {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+
+/* Hide normal cursor */
+.collection-image-link,
+.collection-image-link * {
+  cursor: none !important;
+}
+
+/* VIEW ALL circle */
+.view-all-cursor {
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+
+  background: #fff;
+  color: #111;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Jost", sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 20;
+
+  transition:
+    width 0.25s ease,
+    height 0.25s ease,
+    transform 0.15s ease;
+}
+
+/* Optional hover effect */
+.collection-image-link:hover .view-all-cursor {
+  width: 68px;
+  height: 68px;
+}
+.tf_marquee-V01.style_2 p {
+    font-size: clamp(7px, 5vw, 28px);
+    line-height: clamp(7px, 6vw, 20px);
+}
+.tf_marquee-V01.style_2 img{
+  height: 45px;
+}
+.banner_V02 .bn-image-blur::before {
+    background-image: url(/images/lalchnd/home/discount-img.webp) !important;
+}
+.banner_V02 .bn-image-blur::after {
+        backdrop-filter: blur(0px);;
+}

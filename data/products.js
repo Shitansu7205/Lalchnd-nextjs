@@ -54,8 +54,8 @@ export const products2 = [
 export const products3 = [
   {
     id: 7,
-    imgSrc: "/images/products/product-5.jpg",
-    hoverImgSrc: "/images/products/product-49.jpg",
+    imgSrc: "/images/lalchnd/home/gold-necklaces.webp",
+    hoverImgSrc: "/images/lalchnd/home/gold-necklace2.webp",
     title: "Engagement Ring in 18k Yellow Gold",
     price: 2499,
     oldPrice: null,
@@ -64,8 +64,8 @@ export const products3 = [
   },
   {
     id: 8,
-    imgSrc: "/images/products/product-50.jpg",
-    hoverImgSrc: "/images/products/product-50.jpg",
+    imgSrc: "/images/lalchnd/home/diamond-necklaces.webp",
+    hoverImgSrc: "/images/lalchnd/home/diamond-necklace2.webp",
     title: "Teardrop Earrings",
     price: 2999,
     oldPrice: 3999,
@@ -74,8 +74,8 @@ export const products3 = [
   },
   {
     id: 9,
-    imgSrc: "/images/products/product-52.jpg",
-    hoverImgSrc: "/images/products/product-51.jpg",
+    imgSrc: "/images/lalchnd/home/silver-ring.webp",
+    hoverImgSrc: "/images/lalchnd/home/silver-ring2.webp",
     title: "Dança Ring",
     price: 1199,
     oldPrice: 2899,
@@ -84,8 +84,8 @@ export const products3 = [
   },
   {
     id: 10,
-    imgSrc: "/images/products/product-41.jpg",
-    hoverImgSrc: "/images/products/product-42.jpg",
+    imgSrc: "/images/lalchnd/home/watch.webp",
+    hoverImgSrc: "/images/lalchnd/home/watch2.webp",
     title: "White Sapphire Ring in 10K White Gold",
     price: 4199,
     oldPrice: null,
@@ -1140,6 +1140,150 @@ export const products15 = [
     material: "gold",
     filterColors: ["blue", "pink", "white"],
     size: 6,
+  },
+];
+
+
+
+export const productsImage = [
+  {
+    id: 84,
+    imgSrc: "/images/lalchnd/home/model-1.webp",
+    title: "Sparkling Moon & Star Stud Earrings",
+    price: 2099.0,
+    oldPrice: 2899.0,
+    videoUrl: "https://www.youtube.com/watch?v=MLpWrANjFbI",
+    stockLeft: 2,
+  },
+  {
+    id: 85,
+    imgSrc: "/images/lalchnd/home/model-2.webp",
+    title: "Sparkling Moon & Star Stud Earrings",
+    price: 2499.0,
+    oldPrice: 2899.0,
+    videoUrl: "https://www.youtube.com/watch?v=MLpWrANjFbI",
+    stockLeft: 3,
+  },
+  {
+    id: 86,
+    imgSrc: "/images/lalchnd/home/model-3.webp",
+    title: "Sparkling Moon & Star Stud Earrings",
+    price: 2199.0,
+    oldPrice: 3799.0,
+    videoUrl: "https://www.youtube.com/watch?v=MLpWrANjFbI",
+    stockLeft: 5,
+  },
+  {
+    id: 87,
+    imgSrc: "/images/lalchnd/home/model-4.webp",
+    title: "Sparkling Moon & Star Stud Earrings",
+    price: 2199.0,
+    oldPrice: 3799.0,
+    videoUrl: "https://www.youtube.com/watch?v=MLpWrANjFbI",
+    stockLeft: 5,
+  },
+  {
+    id: 88,
+    imgSrc: "/images/lalchnd/home/model-5.webp",
+    title: "Sparkling Moon & Star Stud Earrings",
+    price: 2199.0,
+    oldPrice: 3799.0,
+    videoUrl: "https://www.youtube.com/watch?v=MLpWrANjFbI",
+    stockLeft: 5,
+  },
+  {
+    id: 89,
+    imgSrc: "/images/lalchnd/home/model-6.webp",
+    title: "Sparkling Moon & Star Stud Earrings",
+    price: 2199.0,
+    oldPrice: 3799.0,
+    videoUrl: "https://www.youtube.com/watch?v=MLpWrANjFbI",
+    stockLeft: 5,
+  },
+];
+export const jewelleryLocations = [
+  {
+    id: 1,
+    name: " Master Canteen",
+    image: "/images/lalchnd/home/first.webp",
+    link: "https://maps.app.goo.gl/QbsqhQ1RfxtKRHJB6",
+  },
+  {
+    id: 2,
+    name: "Raghunathpur",
+    image: "/images/lalchnd/home/second.webp",
+    link: "https://maps.app.goo.gl/2eXXbmjd2PLYg6av5",
+  },
+  {
+    id: 3,
+    name: "CDA",
+    image: "/images/lalchnd/home/third.webp",
+    link: "https://maps.app.goo.gl/hpy15FdLyp17esez8",
+  },
+  {
+    id: 4,
+    name: "Cantonment Road",
+    image: "/images/lalchnd/home/fourth.webp",
+    link: "https://maps.app.goo.gl/HTyx3khNtPuGGimRA",
+  },
+  {
+    id: 5,
+    name: "Brahmapur",
+    image: "/images/lalchnd/home/fifth.webp",
+    link: "https://maps.app.goo.gl/n7wsjB7AePZHuz5g8",
+  },
+  {
+    id: 6,
+    name: "New Delhi",
+    image: "/images/lalchnd/home/sixth.webp",
+    link: "/stores/new-delhi",
+  },
+];
+
+export const instagramFeed = [
+  {
+    id: 1,
+    type: "image",
+    src: "/images/lalchnd/home/model-1.webp",
+    title: "@Gold With Pearls",
+    link: "https://www.instagram.com/",
+  },
+  {
+    id: 2,
+    type: "image",
+    src: "/images/lalchnd/home/model-2.webp",
+    title: "@Chain & Pendant",
+    link: "https://www.instagram.com/",
+  },
+  {
+    id: 3,
+    type: "video",
+    src: "/images/lalchnd/home/model-3.webp",
+    poster: "/images/lalchnd/home/model-3.webp",
+    title: "@Gold Bracelets",
+    link: "https://www.instagram.com/",
+  },
+  {
+    id: 4,
+    type: "image",
+    src: "/images/lalchnd/home/model-4.webp",
+    title: "@Diamonds",
+    link: "https://www.instagram.com/",
+  },
+  {
+    id: 5,
+    type: "image",
+    src: "/images/lalchnd/home/model-5.webp",
+    title: "@Necklaces",
+    link: "https://www.instagram.com/",
+  },
+  {
+    id: 6,
+    type: "video",
+    src: "/images/lalchnd/home/model-6.webp",
+    poster: "/images/lalchnd/home/model-6.webp",
+    title: "@Jewellery",
+    link: "https://www.instagram.com/",
   },
 ];
 

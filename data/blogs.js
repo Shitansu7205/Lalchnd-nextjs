@@ -1,6 +1,6 @@
 export const blogItems = [
   {
-    img: "/images/blog/blog-8.jpg",
+    img: "/images/lalchnd/home/model-6.webp",
     alt: "Blog",
     tags: ["JewelryTrends", "12 Feb 2025"],
     title:
@@ -8,7 +8,7 @@ export const blogItems = [
     delay: "",
   },
   {
-    img: "/images/blog/blog-9.jpg",
+    img: "/images/lalchnd/home/model-4.webp",
     alt: "Blog",
     tags: ["JewelryTrends", "12 Feb 2025"],
     title:
@@ -16,7 +16,7 @@ export const blogItems = [
     delay: "0.1s",
   },
   {
-    img: "/images/blog/blog-10.jpg",
+    img: "/images/lalchnd/home/model-1.webp",
     alt: "Blog",
     tags: ["JewelryTrends", "12 Feb 2025"],
     title: "Jewelry Care 101: Tips to Keep Your Pieces Sparkling Like New",

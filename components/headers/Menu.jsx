@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import QuickView from "../common/QuickView";
-import { allJewlleryPages, moreMenuImages } from "@/data/menu";
+import { allJewlleryPages, giftingPages, moreMenuImages } from "@/data/menu";
 import {
     blogMenuLinks,
     demoPages,
@@ -72,108 +72,7 @@ export default function Menu({ megaMarginRight = true }) {
     };
     return (
         <>
-            <li
-                className={`menu-item ${isMenuParentActive2(allJewlleryPages) ? "active" : ""
-                    }`}
-            >
-                <a href="#" className="item-link">
-                    All Jewellery
-                    <i className="icon icon-arrow-angle-down" />
-                </a>
-
-                <div className="sub-menu mega-menu mega-menu-product">
-                    <div className="container-layout-right">
-                        <div className="mega-menu-wrap">
-                            <div className="wrapper-sub-menu">
-                                {allJewlleryPages.map((section, sectionIndex) => (
-                                    <div
-                                        className="mega-menu-item"
-                                        key={sectionIndex}
-                                    >
-                                        <p className="text-caption menu-heading">
-                                            {section.heading}
-                                        </p>
-
-                                        <ul className="menu-list">
-                                            {section.links.map((link, linkIndex) => {
-                                                const Icon =
-                                                    link.icon
-                                                        ? jewelleryIcons[link.icon]
-                                                        : null;
-
-                                                return (
-                                                    <li key={linkIndex}>
-                                                        <Link
-                                                            href={
-                                                                link.href2
-                                                                    ? link.href2
-                                                                    : link.href
-                                                            }
-                                                            className={`menu-link-text link ${isMenuActive(link)
-                                                                ? "active"
-                                                                : ""
-                                                                }`}
-                                                        >
-                                                            {Icon && (
-                                                                <span className="jewellery-menu-icon">
-                                                                    <Icon size={16} strokeWidth={1.5} />
-                                                                </span>
-                                                            )}
-
-                                                            <span>{link.label}</span>
-
-                                                            {link.badge && (
-                                                                <span
-                                                                    className={`demo-label ${link.badgeType || ""
-                                                                        }`.trim()}
-                                                                >
-                                                                    {link.badge}
-                                                                </span>
-                                                            )}
-                                                        </Link>
-                                                    </li>
-                                                );
-                                            })}
-                                        </ul>
-                                    </div>
-                                ))}
-                            </div>
-
-                            <div className="wrapper-sub-collection">
-                                {moreMenuImages.slice(0, 2).map((product, i) => (
-                                    <div
-                                        key={i}
-                                        className="card_product--V01"
-                                    >
-                                        <div className="card_product-wrapper aspect-ratio-1">
-                                            <Link
-                                                href="/gallery"
-                                                className="product-img"
-                                            >
-                                                <Image
-                                                    src={product.imgSrc}
-                                                    alt="Image Product"
-                                                    className="lazyload img-product"
-                                                    width={714}
-                                                    height={900}
-                                                />
-
-                                                <Image
-                                                    src={product.hoverImgSrc}
-                                                    alt="Image Product"
-                                                    className="lazyload img-hover"
-                                                    width={714}
-                                                    height={900}
-                                                />
-                                            </Link>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
+   
             <li
                 className={`menu-item ${isMenuParentActive(demoPages) ? "active" : ""}`}
             >
@@ -579,6 +478,108 @@ export default function Menu({ megaMarginRight = true }) {
                         <div className="mega-menu-wrap">
                             <div className="wrapper-sub-menu">
                                 {allJewlleryPages.map((section, sectionIndex) => (
+                                    <div
+                                        className="mega-menu-item"
+                                        key={sectionIndex}
+                                    >
+                                        <p className="text-caption menu-heading">
+                                            {section.heading}
+                                        </p>
+
+                                        <ul className="menu-list">
+                                            {section.links.map((link, linkIndex) => {
+                                                const Icon =
+                                                    link.icon
+                                                        ? jewelleryIcons[link.icon]
+                                                        : null;
+
+                                                return (
+                                                    <li key={linkIndex}>
+                                                        <Link
+                                                            href={
+                                                                link.href2
+                                                                    ? link.href2
+                                                                    : link.href
+                                                            }
+                                                            className={`menu-link-text link ${isMenuActive(link)
+                                                                ? "active"
+                                                                : ""
+                                                                }`}
+                                                        >
+                                                            {Icon && (
+                                                                <span className="jewellery-menu-icon">
+                                                                    <Icon size={16} strokeWidth={1.5} />
+                                                                </span>
+                                                            )}
+
+                                                            <span>{link.label}</span>
+
+                                                            {link.badge && (
+                                                                <span
+                                                                    className={`demo-label ${link.badgeType || ""
+                                                                        }`.trim()}
+                                                                >
+                                                                    {link.badge}
+                                                                </span>
+                                                            )}
+                                                        </Link>
+                                                    </li>
+                                                );
+                                            })}
+                                        </ul>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="wrapper-sub-collection">
+                                {moreMenuImages.slice(0, 2).map((product, i) => (
+                                    <div
+                                        key={i}
+                                        className="card_product--V01"
+                                    >
+                                        <div className="card_product-wrapper aspect-ratio-1">
+                                            <Link
+                                                href="/gallery"
+                                                className="product-img"
+                                            >
+                                                <Image
+                                                    src={product.imgSrc}
+                                                    alt="Image Product"
+                                                    className="lazyload img-product"
+                                                    width={714}
+                                                    height={900}
+                                                />
+
+                                                <Image
+                                                    src={product.hoverImgSrc}
+                                                    alt="Image Product"
+                                                    className="lazyload img-hover"
+                                                    width={714}
+                                                    height={900}
+                                                />
+                                            </Link>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li
+                className={`menu-item ${isMenuParentActive2(allJewlleryPages) ? "active" : ""
+                    }`}
+            >
+                <a href="#" className="item-link">
+                    Gifting
+                    <i className="icon icon-arrow-angle-down" />
+                </a>
+
+                <div className="sub-menu mega-menu mega-menu-product">
+                    <div className="container-layout-right">
+                        <div className="mega-menu-wrap">
+                            <div className="wrapper-sub-menu">
+                                {giftingPages.map((section, sectionIndex) => (
                                     <div
                                         className="mega-menu-item"
                                         key={sectionIndex}

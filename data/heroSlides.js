@@ -24,20 +24,9 @@ export const sliderData = [
 
 export const secondSliderData = [
   {
-    image: "/images/slider/slider-4.jpg",
+    image: "/images/lalchnd/home/banner-section.webp",
     imageWidth: 1924,
     imageHeight: 1872,
-    titleItalic: "Timless",
-    titleRest: "Treasures",
-    buttonText: "SHOP COLLECTION",
-  },
-  {
-    image: "/images/slider/slider-5.jpg",
-    imageWidth: 1920,
-    imageHeight: 1872,
-    titleItalic: "Modern",
-    titleRest: "Glamour",
-    buttonText: "DISCOVER MORE",
   },
 ];
 

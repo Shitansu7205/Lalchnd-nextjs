@@ -5,7 +5,7 @@ import Menu from "./Menu";
 export default function Header({ parentClass = "tf-header line-bt-2" }) {
     return (
         <header className={parentClass}>
-            <div className="container">
+            <div className="container-full-2">
                 <div className="row align-items-center">
                     <div className="col-md-4 col-3 d-xl-none">
                         <a
@@ -22,7 +22,7 @@ export default function Header({ parentClass = "tf-header line-bt-2" }) {
                                 alt=""
                                 width={122}
                                 height={32}
-                                src="/images/logo/logo.svg"
+                                src="/images/lalchnd/blogs/logo.png"
                             />
                         </Link>
                     </div>

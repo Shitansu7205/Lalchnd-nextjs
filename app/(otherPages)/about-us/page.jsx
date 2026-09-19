@@ -1,65 +1,59 @@
-import Footer3 from "@/components/footers/Footer3";
+import Footer2 from "@/components/footers/Footer2";
 import Header1 from "@/components/headers/Header1";
 import Topbar1 from "@/components/headers/Topbar1";
-import Cta from "@/components/common/Cta";
 import Link from "next/link";
-import Collections from "@/components/otherPages/about/Collections";
-import Established from "@/components/otherPages/about/Established";
-import Features from "@/components/otherPages/about/Features";
-import Intro from "@/components/otherPages/about/Intro";
-import Testimonials from "@/components/otherPages/about/Testimonials";
+import Features from "@/components/about-us/Features";
+import Intro from "@/components/about-us/Intro";
 import React from "react";
+import BreadcrumbBanner from "@/components/common/BreadcrumbBanner";
+import About from "@/components/about-us/About";
 
 export const metadata = {
-  title: "About Us || Vemus - Jewelry Ecommerce React Nextjs Template",
-  description: "Vemus - Jewelry Ecommerce React Nextjs Template",
+    title: "About Us || Lalchnd - Jewelry Ecommerce React Nextjs Template",
+    description: "Lalchnd - Jewelry Ecommerce React Nextjs Template",
 };
 export default function page() {
-  return (
-    <>
-      <Topbar1 />
-      <Header1 parentClass="tf-header" />
-      <section className="flat-spacing-2 pb-0">
-        <div className="container">
-          <div className="page-title">
-            <div className="breadcrumbs">
-              <ul className="bread-wrap">
-                <li>
-                  <Link href={`/`} className="text-main-4 link-secondary">
-                    Home
-                  </Link>
-                </li>
-                <li className="br-line w-12 bg-main" />
-                <li>About Us</li>
-              </ul>
-              <h1 className="heading fw-normal text-uppercase">
-                welcome to vemus
-              </h1>
+    return (
+        <>
+            <Topbar1 />
+            <Header1 parentClass="tf-header" />
+            <BreadcrumbBanner
+                title="Our Story"
+                descriprion="Lalchand Jewellers blends timeless craftsmanship with exquisite designs sourced from across India and the world. With trusted service and a legacy of excellence, it stands as one of Odisha’s most cherished luxury jewellery brands."
+                current="About Us"
+                image="/images/lalchnd/about/about-banner.webp"
+            />
+            <section className="flat-spacing-2">
+                <div className="container">
+                    <div className="page-title">
+                        <div className="breadcrumbs">
+                            <ul className="bread-wrap mb-0">
+                                <li>
+                                    <Link href={`/`} className="text-main-4 link-secondary">
+                                        Home
+                                    </Link>
+                                </li>
+                                <li className="br-line w-12 bg-main" />
+                                <li>About Us</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <div className="sect-border p-0 mt-0">
+
+                <div className="sect-head wow fadeInUp">
+                    <h2 className="s-title font-2 text-capitalize">
+
+                    </h2>
+                </div>
             </div>
-            <div className="box-text">
-              <p className="text-main-4">
-                At Vemus, we believe jewelry is more than an accessory—it’s a
-                reflection of your story. With a
-                <br className="d-none d-xxl-block" />
-                passion for craftsmanship and a commitment to quality, we create
-                timeless pieces that celebrate
-                <br className="d-none d-xxl-block" />
-                life’s moments, big and small. From delicate everyday essentials
-                to statement designs, each
-                <br className="d-none d-xxl-block" />
-                creation is crafted to inspire and shine for generations.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <Intro />
-      <Established />
-      <Features />
-      <Collections />
-      <Testimonials />
-      <Cta />
-      <Footer3 />
-    </>
-  );
+            <About />
+            <Intro />
+            <Features />
+            <Footer2 />
+        </>
+    );
 }

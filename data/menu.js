@@ -318,7 +318,28 @@ export const allJewlleryPages = [
   },
 ]
 
-
+export const giftingPages = [
+  {
+    heading: "GIFT FOR",
+    links: [
+      { href: "/media", label: " Him" },
+      { href: "/award", label: " Her" },
+      { href: "/blogs", label: "Kinds" },
+      { href: "/contact", label: "Contact Us" },
+      { href: "/gallery", label: "Our Gallery" },
+      { href: "/about-us", label: "About Lalchnd" },
+    ],
+  },
+  {
+    heading: "BY PRICE",
+    links: [
+      { href: "/media", label: "Under ₹10K" },
+      { href: "/award", label: "₹10K - 25K" },
+      { href: "/blogs", label: "₹25K - 50K" },
+      { href: "/contact", label: "Above 50K" },
+    ],
+  },
+]
 
 
 
