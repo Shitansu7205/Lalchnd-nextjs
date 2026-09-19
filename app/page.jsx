@@ -12,6 +12,8 @@ import Testimonials from "@/components/homes/home-1/Testimonials";
 import TextBanner from "@/components/homes/home-1/TextBanner";
 import TextSlider from "@/components/common/TextSlider";
 import NewsLetter from "@/components/modals/NewsLetter";
+import Header from "@/components/headers/Header";
+import Footer2 from "@/components/footers/Footer2";
 
 export const metadata = {
   title: "Home 01 || Vemus - Jewelry Ecommerce React Nextjs Template",
@@ -23,7 +25,7 @@ export default function Home() {
       <div className="bg-surface">
         <div id="wrapper">
           <Topbar1 />
-          <Header1 />
+          <Header />
           <Hero />
           <TextBanner />
           <Products1 />
@@ -34,7 +36,7 @@ export default function Home() {
           <Testimonials />
           <Banner />
           <Features />
-          <Footer1 />
+          <Footer2 />
           <NewsLetter />
         </div>
       </div>

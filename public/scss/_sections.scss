@@ -4679,3 +4679,34 @@ section {
 .golden-star{
   color: #f5c518;
 }
+
+
+.menu-link-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.jewellery-menu-icon {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+  background: #fafafa;
+  transition: all 0.25s ease;
+}
+
+.menu-link-text:hover .jewellery-menu-icon {
+  border-color: #c9a227;
+  background: #fffaf0;
+  transform: scale(1.08);
+}
+
+.menu-link-text.active .jewellery-menu-icon {
+  border-color: #c9a227;
+  background: #fffaf0;
+}

@@ -214,12 +214,12 @@ export default function Footer2() {
                     </Link>
                   </li>
                   <li>
-                    <Link href={`/return`} className="text-white link">
-                      Returns &amp; Refunds
+                    <Link href={`/privacy-policy`} className="text-white link">
+                     Privacy Policy
                     </Link>
                   </li>
                   <li>
-                    <Link href={`/term-condition`} className="text-white link">
+                    <Link href={`/terms-condition`} className="text-white link">
                       Terms &amp; Conditions
                     </Link>
                   </li>

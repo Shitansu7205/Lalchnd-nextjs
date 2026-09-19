@@ -54,11 +54,28 @@ export const shopPages = [
     ],
   },
   {
-    heading: "SHOP LIST",
+    heading: "BY PRICE",
     links: [
-      { href2: "/shop-default", label: "Pagination Links" },
-      { href: "/shop-load-more-button", label: "Load More Button" },
-      { href: "/shop-infinity-scroll", label: "Infinity Scroll" },
+      {
+        href: "/shop-default",
+        label: "Under ₹25K",
+        icon: "under25k",
+      },
+      {
+        href: "/shop-default",
+        label: "₹25K - 50K",
+        icon: "range25k50k",
+      },
+      {
+        href: "/shop-default",
+        label: "₹50K - 1L",
+        icon: "range50k1l",
+      },
+      {
+        href: "/shop-default",
+        label: "₹1L - 2L",
+        icon: "range1l2l",
+      },
     ],
   },
 ];
@@ -181,14 +198,13 @@ export const morePages = [
     links: [
       { href: "/product-default/2", label: "Lalchnd Promises" },
       { href: "/product-style-02/2", label: "Lalchnd Policies" },
-      { href: "/product-style-03/2", label: "Terms and Conditions" },
+      { href: "/privacy-policy", label: "Terms and Conditions" },
       { href: "/product-style-03/2", label: "Today's Gold Rate" },
-      { href: "/product-style-03/2", label: "Refund Policies" },
-      { href: "/product-style-03/2", label: "Privacy Policy" },
+      { href: "#", label: "Refund Policies" },
+      { href: "/privacy-policy", label: "Privacy Policy" },
     ],
   },
 ];
-
 export const moreMenuImages = [
   {
     id: 1,
@@ -198,11 +214,121 @@ export const moreMenuImages = [
   },
   {
     id: 2,
-     imgSrc: "/images/lalchnd/gallery/8.webp",
+    imgSrc: "/images/lalchnd/gallery/8.webp",
     hoverImgSrc: "/images/lalchnd/gallery/9.webp",
     title: "wards & Achievements",
   },
 ]
+
+export const allJewlleryPages = [
+  {
+    heading: "By Category",
+    links: [
+      { href: "/ear", label: "Earrings", icon: "earrings" },
+      { href: "/award", label: "Rings", icon: "rings" },
+      { href: "/blogs", label: "Necklaces", icon: "necklaces" },
+      { href: "/contact", label: "Bangles", icon: "bangles" },
+      { href: "/gallery", label: "Mangalasutra", icon: "mangalsutra" },
+      { href: "/about-us", label: "Pendants", icon: "pendants" },
+      { href: "/about-us", label: "Bracelets", icon: "bracelets" },
+      { href: "/about-us", label: "Chains", icon: "chains" },
+      { href: "/about-us", label: "Coins", icon: "coins" },
+      { href: "/about-us", label: "All Jewellery", icon: "all" },
+    ],
+  },
+  {
+    heading: "BY PRICE",
+    links: [
+      {
+        href: "/shop-default",
+        label: "Under ₹25K",
+        icon: "under25k",
+      },
+      {
+        href: "/shop-default",
+        label: "₹25K - 50K",
+        icon: "range25k50k",
+      },
+      {
+        href: "/shop-default",
+        label: "₹50K - 1L",
+        icon: "range50k1l",
+      },
+      {
+        href: "/shop-default",
+        label: "₹1L - 2L",
+        icon: "range1l2l",
+      },
+    ],
+  },
+  {
+    heading: "BY GENDER",
+    links: [
+      {
+        href: "/shop-default",
+        label: "Men",
+        icon: "men",
+      },
+      {
+        href: "/shop-default",
+        label: "Women",
+        icon: "women",
+      },
+      {
+        href: "/shop-default",
+        label: "Kids",
+        icon: "kids",
+      },
+      {
+        href: "/shop-default",
+        label: "Unisex",
+        icon: "unisex",
+      },
+    ],
+  },
+  {
+    heading: "BY OCCASION",
+    links: [
+      {
+        href: "/shop-default",
+        label: "Daily Wear",
+        icon: "dailyWear",
+      },
+      {
+        href: "/shop-default",
+        label: "Heavy Occasions",
+        icon: "heavyOccasion",
+      },
+      {
+        href: "/shop-default",
+        label: "Light Occasions",
+        icon: "lightOccasion",
+      },
+      {
+        href: "/shop-default",
+        label: "Bridal Wear",
+        icon: "bridalWear",
+      },
+      {
+        href: "/shop-default",
+        label: "Elevated Essentials",
+        icon: "elevatedEssentials",
+      },
+    ],
+  },
+]
+
+
+
+
+
+
+
+
+
+
+
+
 
 export const otherPages = [
   { href: "/about-us", label: "About Us" },
