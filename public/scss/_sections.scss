@@ -65,7 +65,11 @@
     inset: 0;
     z-index: -1;
     // background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 35%, rgba(255, 255, 255, 0.88) 100%);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 35%, rgb(255, 255, 255) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.05) 35%,
+      rgb(255, 255, 255) 100%
+    );
   }
 
   &__content {
@@ -398,13 +402,19 @@
 
 .text-clip {
   color: white !important;
-  text-shadow: -1px -1px 0 #5a5a5a, 1px -1px 0 #5a5a5a, -1px 1px 0 #5a5a5a,
+  text-shadow:
+    -1px -1px 0 #5a5a5a,
+    1px -1px 0 #5a5a5a,
+    -1px 1px 0 #5a5a5a,
     1px 1px 0 #5a5a5a;
 
   &.style-white {
     color: var(--bg-3) !important;
-    text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
-      -1px 1px 0 var(--white), 1px 1px 0 var(--white);
+    text-shadow:
+      -1px -1px 0 var(--white),
+      1px -1px 0 var(--white),
+      -1px 1px 0 var(--white),
+      1px 1px 0 var(--white);
   }
 
   &.type-2 {
@@ -1420,7 +1430,6 @@
     .box-product {
       gap: 24px;
     }
-
   }
 }
 
@@ -1682,7 +1691,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("./../images/banner/banner-7.jpg");
+    background-image: url("./../images/lalchnd/icons/banner-bg.webp");
     background-size: cover;
     background-position: center;
     animation: tf-animate-zoom-in-out 40s linear infinite;
@@ -4112,7 +4121,7 @@ section {
 .table-order-finish {
   text-align: center;
   overflow: auto;
-  
+
   th {
     font-weight: normal;
     text-transform: uppercase;
@@ -4613,73 +4622,73 @@ section {
   }
 }
 
-
-
 .contact-select-field {
-    position: relative;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  select {
+    outline: 0;
+    box-shadow: none;
     width: 100%;
-    display: flex;
-    align-items: center;
+    padding: 13px 28px 12px 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--main);
+    transition: all 0.3s ease;
+    border-radius: 0px;
 
-    select {
-        outline: 0;
-        box-shadow: none;
-        width: 100%;
-        padding: 13px 28px 12px 0;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -0.32px;
-        border: 0;
-        border-bottom: 1px solid var(--line);
-        color: var(--main);
-        transition: all 0.3s ease;
-        border-radius: 0px;
+    // Remove browser default arrow
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 
-        // Remove browser default arrow
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
+    background: transparent;
+    cursor: pointer;
 
-        background: transparent;
-        cursor: pointer;
-
-        &:focus {
-            outline: 0;
-            box-shadow: none;
-            border-bottom-color: var(--main);
-        }
-
-        &:invalid {
-            color: var(--main-4);
-        }
-
-        option {
-            color: var(--main);
-        }
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+      border-bottom-color: var(--main);
     }
 
-    .contact-select-icon {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        pointer-events: none;
-        color: var(--main);
+    &:invalid {
+      color: var(--main-4);
     }
+
+    option {
+      color: var(--main);
+    }
+  }
+
+  .contact-select-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--main);
+  }
 }
 
+.section-padding-bottom-40 {
+  padding-bottom: 50px;
+}
+.section-padding-top-40 {
+  padding-top: 50px;
+}
+.title-margin-top-10 {
+  margin-top: 10px;
+}
 
-.section-padding-bottom-40{
-  padding-bottom: 40px;
-}
-.section-padding-top-40{
-  padding-top: 40px;
-}
-.golden-star{
+.golden-star {
   color: #f5c518;
 }
-
 
 .menu-link-text {
   display: flex;

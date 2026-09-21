@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import HomeButton from "@/components/common/HomeButton";
 import gsap from "gsap";
 import CountdownTimer from "@/components/common/Countdown";
 export default function Diamond() {
@@ -112,14 +113,13 @@ export default function Diamond() {
     };
   }, []);
   return (
-    <div className="flat-spacing light-bg">
+    <div className="section-padding-bottom-40 section-padding-top-40 light-bg">
       <div className="container">
         <div className="banner_countdown-v2" style={{ gap: "80px" }}>
           
           <div className="bn_content wow fadeInUp">
             <div className="heading">
               <Image alt="" src="/icon/luxury.svg" width={48} height={48} />
-              <h6 className="short-line-heding-dark">WHY CHOOSE US</h6>
               <h2 className="heading-font">
                 Where <span className="highlight-font">Diamond</span> Brilliance Meets Elegance
               </h2>
@@ -131,16 +131,10 @@ export default function Diamond() {
             </div>
            
             <div className="btn-group">
-              <Link
-                href={`/shop-collection-list`}
-                className="tf-btn type-large button-font"
-              >
+              <HomeButton href="/shop-collection-list" className="type-large">
                 Shop Collection
-              </Link>
-              <Link href={`/about-us`} className="tf-btn btn-def fw-medium">
-                READ MORE
-                <i className="icon icon-arrow-right" />
-              </Link>
+              </HomeButton>
+              
             </div>
           </div>
           <div className="bn_image play-area-2">
@@ -153,7 +147,6 @@ export default function Diamond() {
                 height={1084}
               />
             </div>
-            {/* <span className="item-square dodger-2 d-none d-lg-block" /> */}
           </div>
         </div>
       </div>

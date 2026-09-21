@@ -22,6 +22,7 @@ import Pickup from "@/components/modals/Pickup";
 import ProductDes from "@/components/modals/ProductDes";
 import UnavailableModal from "@/components/modals/UnavailableModal";
 import OrderDetails from "@/components/modals/OrderDetails";
+import FloatingActions from "@/components/common/FloatingActions";
 
 export default function RootLayout({ children }) {
   return (
@@ -51,6 +52,7 @@ export default function RootLayout({ children }) {
             <ProductDes />
             <UnavailableModal />
             <OrderDetails />
+            <FloatingActions />
           </Context>
         </LayoutWrapper>
       </body>

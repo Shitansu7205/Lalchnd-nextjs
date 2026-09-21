@@ -7,10 +7,9 @@ import Image from "next/image";
 import { Pagination } from "swiper/modules";
 export default function Categories() {
   return (
-    <section className="flat-spacing-3 light-bg">
-      <div className="container">
+    <section className="section-padding-bottom-40 section-padding-top-40 light-bg">
+      <div className="container-full-2">
         <div className="sect-top center text-center wow fadeInUp">
-           <h6 className="short-line-heding-dark">Attractve jewellery</h6>
           <h2 className="heading-font">
             Gorgeous <span className="highlight-font">Collections</span>
           </h2>

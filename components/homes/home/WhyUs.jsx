@@ -112,8 +112,8 @@ export default function WhyUs() {
     };
   }, []);
   return (
-    <div className="flat-spacing pb-0">
-      <div className="container">
+    <div className="light-bg section-padding-top-40 section-padding-bottom-40">
+      <div className="container-full-2">
         <div className="banner_countdown-v2" style={{ gap: "0" }}>
           <div className="bn_image play-area-2 home-left-img-section">
             <div className="img">
@@ -133,10 +133,10 @@ export default function WhyUs() {
               <h4 className="title font-2">
                 Trust us to be part of your precious moments and to deliver jewellery that you'll cherish forever.
               </h4>
-              
+
             </div>
-            
-           
+
+
           </div>
           <div className="bn_image play-area-2 home-right-img-section">
             <div className="img">

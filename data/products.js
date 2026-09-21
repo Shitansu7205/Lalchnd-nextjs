@@ -1206,37 +1206,37 @@ export const jewelleryLocations = [
     id: 1,
     name: " Master Canteen",
     image: "/images/lalchnd/home/first.webp",
-    link: "https://maps.app.goo.gl/QbsqhQ1RfxtKRHJB6",
+    link: "/master-canteen",
   },
   {
     id: 2,
     name: "Raghunathpur",
     image: "/images/lalchnd/home/second.webp",
-    link: "https://maps.app.goo.gl/2eXXbmjd2PLYg6av5",
+    link: "/raghunathpur",
   },
   {
     id: 3,
     name: "CDA",
     image: "/images/lalchnd/home/third.webp",
-    link: "https://maps.app.goo.gl/hpy15FdLyp17esez8",
+    link: "/cda",
   },
   {
     id: 4,
     name: "Cantonment Road",
     image: "/images/lalchnd/home/fourth.webp",
-    link: "https://maps.app.goo.gl/HTyx3khNtPuGGimRA",
+    link: "/cantonmentroad",
   },
   {
     id: 5,
     name: "Brahmapur",
     image: "/images/lalchnd/home/fifth.webp",
-    link: "https://maps.app.goo.gl/n7wsjB7AePZHuz5g8",
+    link: "/brahmapur",
   },
   {
     id: 6,
     name: "New Delhi",
     image: "/images/lalchnd/home/sixth.webp",
-    link: "/stores/new-delhi",
+    link: "/delhi",
   },
 ];
 

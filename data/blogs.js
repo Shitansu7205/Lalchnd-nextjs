@@ -1,25 +1,28 @@
 export const blogItems = [
   {
-    img: "/images/lalchnd/home/model-6.webp",
+    img: "/images/lalchnd/blogs/featured-img/1.webp",
     alt: "Blog",
     tags: ["JewelryTrends", "12 Feb 2025"],
     title:
-      "Timeless Elegance: How to Choose the Perfect Jewelry for Every Occasion",
+      "More Than Designs: What Defines a Good Jewellery Shop in Bhubaneswar?",
     delay: "",
+    link: "/more-than-designs-what-defines-a-good-jewellery-shop-in-bhubaneswar"
   },
   {
-    img: "/images/lalchnd/home/model-4.webp",
+    img: "/images/lalchnd/blogs/featured-img/2.webp",
     alt: "Blog",
     tags: ["JewelryTrends", "12 Feb 2025"],
     title:
-      "The Art of Layering: Styling Necklaces, Bracelets & Rings Like a Pro",
+      "How to Choose Gold Jewellery That You Will Still Love Years from Now",
     delay: "0.1s",
+    link: "/how-to-choose-gold-jewellery-that-you-will-still-love-years-from-now"
   },
   {
-    img: "/images/lalchnd/home/model-1.webp",
+    img: "/images/lalchnd/blogs/featured-img/3.webp",
     alt: "Blog",
     tags: ["JewelryTrends", "12 Feb 2025"],
-    title: "Jewelry Care 101: Tips to Keep Your Pieces Sparkling Like New",
+    title: "Why Lalchnd Is One of the Most Trusted Jewellery Brands in Odisha",
+    link: "/why-lalchnd-is-one-of-the-most-trusted-jewellery-brands-in-odisha",
     delay: "0.2s",
   },
 ];

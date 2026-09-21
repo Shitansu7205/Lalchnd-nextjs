@@ -6,6 +6,7 @@ import Image from "next/image";
 // import "bootstrap-icons/font/bootstrap-icons.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { Camera } from "lucide-react";
 
 import { instagramFeed } from "@/data/products";
 
@@ -16,7 +17,7 @@ export default function InstagramFeed() {
     const video = videoRefs.current[index];
 
     if (video) {
-      video.play().catch(() => {});
+      video.play().catch(() => { });
     }
   };
 
@@ -30,8 +31,8 @@ export default function InstagramFeed() {
   };
 
   return (
-    <section className="flat-spacing-3 light-bg">
-      <div className="instagram-feed-container">
+    <section className="section-padding-top-40 section-padding-bottom-40 light-bg">
+      <div className="container-full-2">
 
         {/* =================================
             HEADER
@@ -62,7 +63,7 @@ export default function InstagramFeed() {
 
             modules={[Autoplay]}
 
-            slidesPerView={4}
+            slidesPerView={5}
 
             spaceBetween={0}
 
@@ -153,7 +154,7 @@ export default function InstagramFeed() {
                     <div className="instagram-feed-overlay">
 
                       <span className="instagram-feed-icon">
-                        <i className="bi bi-instagram"></i>
+                        <span class="icon"><i class="icon-instagram"></i></span>
                       </span>
 
                     </div>

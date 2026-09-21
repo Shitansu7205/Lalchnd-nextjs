@@ -7,6 +7,7 @@ import AddtoWishlist from "@/components/common/AddtoWishlist";
 import AddtoCart from "@/components/common/AddtoCart";
 import QuickView from "@/components/common/QuickView";
 import AddtoCompare from "@/components/common/AddtoCompare";
+import HomeButton from "@/components/common/HomeButton";
 export default function Gallery() {
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
@@ -20,25 +21,23 @@ export default function Gallery() {
     });
   };
   return (
-    <section className="flat-spacing-3">
-      <div className="container">
-
+    <section className="section-padding-bottom-40 section-padding-top-40 bg-white">
+      <div className="container-full-2">
         {/* Header */}
         <div className="bn-content wow fadeInUp mb-5 home-second">
           <div>
-            <h6 className="short-line-heding-dark">LALCHND Collections</h6>
-
+            <h6 className="short-line-heding-dark">LALCHND COLLECTION</h6>
             <h2 className="heading-font">
               <span className="highlight-font">Exquisite</span> Jewelry
             </h2>
           </div>
 
           <div>
-            <Link href="/about-us" className="tf-btn type-large button-font">
+            <HomeButton href="/about-us">
               Explore More
-              <i className="icon-arrow-right-2 fs-24" />
-            </Link>
+            </HomeButton>
           </div>
+
         </div>
 
         {/* Collection Layout */}

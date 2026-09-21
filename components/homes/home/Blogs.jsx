@@ -7,8 +7,8 @@ import Image from "next/image";
 import { Pagination } from "swiper/modules";
 export default function Blogs() {
   return (
-    <section className="flat-spacing-3">
-      <div className="container">
+    <section className="section-padding-bottom-40 section-padding-top-40 bg-white">
+      <div className="container-full-2">
         <div className="sect-top center text-center wow fadeInUp">
           <h2 className="heading-font">
             <span className="highlight-font">Behind</span> the brand
@@ -49,7 +49,7 @@ export default function Blogs() {
                 {...(item.delay && { "data-wow-delay": item.delay })}
               >
                 <div className="entry_image">
-                  <Link href={`/blog-single`} className="image img-style4">
+                  <Link href={item.link} className="image img-style4">
                     <Image
                       src={item.img}
                       alt={item.alt}
@@ -62,7 +62,7 @@ export default function Blogs() {
                     {item.tags.map((tag, tagIndex) => (
                       <Link
                         key={tagIndex}
-                        href={`/blog-single`}
+                        href={item.link}
                         className="name-tag text-caption link"
                       >
                         {tag}
@@ -72,14 +72,14 @@ export default function Blogs() {
                 </div>
                 <h5>
                   <Link
-                    href={`/blog-single`}
+                    href={item.link}
                     className="link fw-normal text-line-clamp-2"
                   >
                     {item.title}
                   </Link>
                 </h5>
                 <Link
-                  href={`/blog-single`}
+                  href={item.link}
                   className="tf-btn-line hv-2 lh-28 text-uppercase fw-normal"
                 >
                   Read More

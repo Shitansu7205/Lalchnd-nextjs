@@ -77,27 +77,21 @@ export const featureItems = [
 
 export const boxFeatures = [
   {
-    iconClass: "icon-box",
-    title: "Free Shipping",
-    text: "Enjoy free shipping on all orders",
+    image: "/images/lalchnd/icons/exchange.webp",
+    title: "Easy Exchange",
+    text: "Enjoy a seamless, transparent, and hassle-free jewellery exchange experience, with dedicated assistance to make every exchange simple and convenient.",
     delay: "",
   },
   {
-    iconClass: "icon-credit-card",
-    title: "Secured Payment",
-    text: "Secured payment",
+    image: "/images/lalchnd/icons/certificate.webp",
+    title: "Certified Jewellery",
+    text: "Every piece comes with authenticity and quality certification, ensuring you can shop with complete confidence in the purity, craftsmanship, and value of your jewellery.",
     delay: "0.1s",
   },
   {
-    iconClass: "icon-return",
-    title: "14 - Days Return",
-    text: "Free return in 14 days",
+    image: "/images/lalchnd/icons/pricing.webp",
+    title: "Personalized Experiences",
+    text: "Discover custom designs and bespoke jewellery experiences created especially for you, thoughtfully crafted to reflect your unique style, personality, and cherished moments.",
     delay: "0.2s",
-  },
-  {
-    iconClass: "icon-headphone",
-    title: "Premium Support",
-    text: "Enjoy our support 24/7",
-    delay: "0.3s",
   },
 ];

@@ -12,16 +12,16 @@ export default function JewelleryLocations() {
         <div className="jewellery-location-content">
 
           <div className="pb-4">
-            <h6 className="short-line-heding-dark">Attractve jewellery Found Here</h6>
-              <h2 className="heading-font pb-2">
-                Lalchnd in Your <span className="highlight-font">City</span>
-              </h2>
+            <h6 className="text-uppercase short-line-heding " style={{ color: "#06273F" }}>Attractve jewellery Found Here</h6>
+            <h2 className="heading-font pb-2">
+              Lalchnd in Your <span className="highlight-font">City</span>
+            </h2>
 
-         <p className="sub-title jewellery-location-description">
-                Discover exquisite jewelry pieces at unbeatable prices. With our <br />
-                limited-time offer, every second counts—shop now before the
-                timer runs out!
-              </p>
+            <p className="sub-title jewellery-location-description">
+              Discover exquisite jewelry pieces at unbeatable prices. With our <br />
+              limited-time offer, every second counts—shop now before the
+              timer runs out!
+            </p>
           </div>
 
           <div className="jewellery-location-list">
@@ -29,7 +29,7 @@ export default function JewelleryLocations() {
               <Link
                 href={location.link}
                 className="jewellery-location-item"
-                 target="_blank"
+                target="_blank"
                 key={location.id}
               >
                 <div className="jewellery-location-image">

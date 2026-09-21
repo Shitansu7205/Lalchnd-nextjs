@@ -1,58 +1,44 @@
 "use client";
-import { boxFeatures } from "@/data/features";
+
 import React from "react";
-import { Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { boxFeatures } from "@/data/features";
 
 export default function Features() {
   return (
-    <div className="themesFlat">
-      <div className="container">
-        <div className="line-bt py-20">
-          <Swiper
-            dir="ltr"
-            className="swiper tf-swiper"
-            breakpoints={{
-              0: { slidesPerView: 1 },
-              575: {
-                slidesPerView: 2,
-              },
-              768: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-              },
-              1200: {
-                slidesPerView: 4,
-                spaceBetween: 48,
-              },
-            }}
-            spaceBetween={15}
-            modules={[Pagination]}
-            pagination={{
-              clickable: true,
-              el: ".spd31",
-            }}
-          >
-            {boxFeatures.map((item, index) => (
-              <SwiperSlide className="swiper-slide" key={index}>
-                <div
-                  className="box_icon--V02 style_2 border-0 wow fadeInLeft"
-                  {...(item.delay && { "data-wow-delay": item.delay })}
-                >
-                  <span className="icon">
-                    <i className={item.iconClass} />
-                  </span>
-                  <div className="content">
-                    <h5 className="title">{item.title}</h5>
-                    <p className="text">{item.text}</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-            <div className="sw-dot-default tf-sw-pagination spd31" />
-          </Swiper>
+    <section className="lalchnd-promises">
+      <div className="container-full-2">
+        <div className="lalchnd-promises-heading">
+          <h2 className="title heading-font fw-normal" >
+            The Lalchnd <span className="highlight-font">     Promises</span>
+          </h2>
+        </div>
+
+        <div className="lalchnd-promises-grid">
+          {boxFeatures.map((item, index) => (
+            <div
+              className="lalchnd-promise-item wow fadeInUp"
+              key={index}
+              {...(item.delay && {
+                "data-wow-delay": item.delay,
+              })}
+            >
+              <div className="lalchnd-promise-icon">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  width="80"
+                  height="80"
+                />
+              </div>
+
+              <div className="lalchnd-promise-content">
+                <h5>{item.title}</h5>
+                <p>{item.text}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

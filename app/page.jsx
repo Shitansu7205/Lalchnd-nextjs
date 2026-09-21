@@ -2,7 +2,6 @@ import Features from "@/components/homes/home/Features";
 import Footer1 from "@/components/footers/Footer1";
 import Header1 from "@/components/headers/Header1";
 import Topbar1 from "@/components/headers/Topbar1";
-import Banner from "@/components/homes/home-1/Banner";
 import Collections from "@/components/homes/home-1/Collections";
 import Hero from "@/components/homes/home/Hero";
 import Products1 from "@/components/homes/home-1/Products1";
@@ -28,6 +27,8 @@ import JewelleryLocations from "@/components/homes/home/JewelleryLocations";
 import WhyUs from "@/components/homes/home/WhyUs";
 import Blogs from "@/components/homes/home/Blogs";
 import InstagramFeed from "@/components/homes/home/InstagramFeed";
+import Banner from "@/components/homes/home-4/Banner";
+import FloatingActions from "@/components/common/FloatingActions";
 
 export const metadata = {
   title: "Home 01 || Vemus - Jewelry Ecommerce React Nextjs Template",
@@ -43,7 +44,7 @@ export default function Home() {
           <Hero />
           <Gallery />
           <About />
-          <TextSlider />
+          {/* <TextSlider /> */}
           <Categories />
           <Gold />
           <Diamond />
@@ -52,13 +53,14 @@ export default function Home() {
           <ProductsImage />
           <Discount />
           <JewelleryLocations />
-          <WhyUs />
+          {/* <WhyUs /> */}
+          <Banner />
           <Features />
           <Testimonials />
           <Blogs />
           <InstagramFeed />
           <Footer2 />
-          <NewsLetter />
+          {/* <NewsLetter /> */}
         </div>
       </div>
       {/* <div className="bg-surface">

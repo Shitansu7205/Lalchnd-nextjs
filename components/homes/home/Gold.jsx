@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import HomeButton from "@/components/common/HomeButton";
 import gsap from "gsap";
 import CountdownTimer from "@/components/common/Countdown";
 export default function Gold() {
@@ -112,7 +113,7 @@ export default function Gold() {
     };
   }, []);
   return (
-    <div className="flat-spacing">
+    <div className="section-padding-bottom-40 section-padding-top-40 bg-white">
       <div className="container">
         <div className="banner_countdown-v2" style={{ gap: "80px" }}>
           <div className="bn_image play-area-2">
@@ -130,7 +131,6 @@ export default function Gold() {
           <div className="bn_content wow fadeInUp">
             <div className="heading">
               <Image alt="" src="/icon/luxury.svg" width={48} height={48} />
-               <h6 className="short-line-heding-dark">WHY CHOOSE US</h6>
               <h2 className="heading-font">
                 Timeless <span className="highlight-font">Gold</span>, Crafted With Elegance
               </h2>
@@ -142,17 +142,9 @@ export default function Gold() {
             </div>
             
             <div className="btn-group">
-              <Link
-                href={`/shop-collection-list`}
-                className="tf-btn type-large button-font"
-                
-              >
+              <HomeButton href="/shop-collection-list" className="type-large">
                 Shop Collection
-              </Link>
-              <Link href={`/about-us`} className="tf-btn btn-def fw-medium">
-                READ MORE
-                <i className="icon icon-arrow-right" />
-              </Link>
+              </HomeButton>
             </div>
           </div>
         </div>

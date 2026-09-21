@@ -59,16 +59,22 @@ export default function Banner() {
     <div className="banner_V04">
       <div className="bn-content">
         <h3 ref={textRef} className="title text-color-change-2 fw-normal">
-          We believe jewelry is more than an accessory—it’s a story of
-          individuality and style. Our curated collection blends timeless
-          craftsmanship with modern design, creating pieces that empower you to
-          express your unique elegance every day.
+          Every piece tells a story—crafted with timeless{" "}
+          <span
+            style={{
+              fontFamily: "Playfair Display, serif",
+              fontStyle: "italic",
+            }}
+          >
+            Elegance
+          </span>
+          , made to be treasured for a lifetime.
         </h3>
         <Link
-          href={`/our-store`}
+          href={`/our-stores`}
           className="tf-btn-line style-white text-uppercase lh-32 gap-10"
         >
-          <span className="fs-16"> ours story </span>
+          <span className="fs-16"> Explore More</span>
           <i className="icon icon-arrow-top-right-2 fs-12" />
         </Link>
       </div>
