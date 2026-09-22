@@ -72,51 +72,6 @@ export default function Menu({ megaMarginRight = true }) {
     };
     return (
         <>
-   
-            <li
-                className={`menu-item ${isMenuParentActive(demoPages) ? "active" : ""}`}
-            >
-                <a href="#" className="item-link">
-                    Home
-                    <i className="icon icon-arrow-angle-down" />
-                </a>
-                <div className="sub-menu mega-home start-0">
-                    <ul className="row-demo">
-                        {demoPages.map((page, index) => (
-                            <li
-                                key={index}
-                                className={`demo-item ${isMenuActive(page) ? "active" : ""}`}
-                            >
-                                <Link href={page.href}>
-                                    <div className="demo-image relative">
-                                        <Image
-                                            src={page.imgSrc}
-                                            alt={page.name}
-                                            className="lazyload"
-                                            width={417}
-                                            height={555}
-                                        />
-                                    </div>
-                                    <p className="demo-name">
-                                        {page.name}
-                                        {page.label && (
-                                            <span
-                                                className={`demo-label ${page.labelType || ""}`.trim()}
-                                            >
-                                                {page.label}
-                                            </span>
-                                        )}
-                                    </p>
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                    <p className="font-2 text-coming">
-                        MORE ARE
-                        <span className="text-primary">COMING</span> SOON...
-                    </p>
-                </div>
-            </li>
             <li
                 className={`menu-item  ${isMenuParentActive2(shopPages) ? "active" : ""
                     }`}

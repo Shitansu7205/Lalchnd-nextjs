@@ -124,8 +124,8 @@ picture.jarallax-img img {
   max-width: 675px !important;
 }
 .light-bg {
-  // background-color: #f2d4d24d;
-  background-color: #fffaf5;
+  background-color: #f2d4d24d;
+  // background-color: #fffaf5;
 }
 .deep-bg {
   background-color: #06273f !important;
@@ -512,117 +512,939 @@ picture.jarallax-img img {
     background: rgba(0, 0, 0, 0.42);
   }
 }
+/* =========================================================
+   COLLECTION IMAGE LINK
+========================================================= */
+
+.collection-image-link {
+  display: block;
+  position: relative;
+  cursor: none;
+}
+
+.collection-image-link,
+.collection-image-link * {
+  cursor: none !important;
+}
+
+
+/* =========================================================
+   IMAGE BOX
+========================================================= */
+
+.collection-image-link .box_image--V01 {
+  position: relative;
+  overflow: hidden;
+}
+
+.collection-image-link .box_image--V01 .image {
+  position: relative;
+}
+
+
+/* =========================================================
+   HOVER OVERLAY
+========================================================= */
+
+.collection-image-link .box_image--V01 .image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0);
+
+  transition: background 0.4s ease;
+
+  z-index: 1;
+}
+
+.collection-image-link .box_image--V01:hover .image::after {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================================
+   VIEW ALL CURSOR
+========================================================= */
+
+.view-all-cursor {
+  position: absolute;
+
+  width: 62px;
+  height: 62px;
+
+  border-radius: 50%;
+
+  background: #fff;
+  color: #111;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Jost", sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+
+  z-index: 20;
+
+  transition:
+    width 0.25s ease,
+    height 0.25s ease;
+}
+
+.collection-image-link:hover .view-all-cursor {
+  width: 68px;
+  height: 68px;
+}
+
+
+/* =========================================================
+   MAIN COLLECTION LAYOUT
+========================================================= */
+
 .collection-five-layout {
   display: grid;
-  grid-template-columns: 1fr 1.8fr 1fr;
-  gap: 10px;
+
+  /*
+    Center is wider than side columns
+  */
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1.55fr)
+    minmax(0, 1fr);
+
+  gap: 12px;
+
+  width: 100%;
+
+  /*
+    Don't make the gallery too small
+  */
+
+  // max-width: 1280px;
+
+  margin-left: auto;
+  margin-right: auto;
+
   align-items: stretch;
 }
 
-/* Left & Right */
+
+/* =========================================================
+   SIDE COLUMNS
+========================================================= */
+
 .collection-side-column {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: grid;
+
+  grid-template-rows:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  width: 100%;
+  height: 100%;
+
+  min-width: 0;
 }
 
-/* Side image */
+
+/* =========================================================
+   SIDE PRODUCT CARD
+========================================================= */
+
+.collection-side-column .card_product--V01 {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+}
+
+
+/* =========================================================
+   SIDE IMAGE WRAPPER
+========================================================= */
+
 .collection-side-column .card_product-wrapper {
+  position: relative;
+
   width: 100%;
-  aspect-ratio: 1.35 / 1;
+
+  /*
+    IMPORTANT:
+    Height matches the desktop center image
+    when two cards are stacked.
+  */
+
+  height: 245px;
+
   overflow: hidden;
+
   border-radius: 10px;
-  height: 260px;
 }
 
-.collection-side-column .card_product-wrapper .product-img {
+
+/* =========================================================
+   SIDE PRODUCT LINK
+========================================================= */
+
+.collection-side-column
+.card_product-wrapper
+.product-img {
   display: block;
+
+  position: relative;
+
   width: 100%;
   height: 100%;
+
+  overflow: hidden;
 }
 
-.collection-side-column .card_product-wrapper img {
+
+/* =========================================================
+   SIDE PRODUCT IMAGE
+========================================================= */
+
+.collection-side-column
+.card_product-wrapper
+img {
+  display: block;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.5s ease;
 }
 
-/* Center */
+
+/* Subtle hover zoom */
+
+.collection-side-column
+.card_product-wrapper:hover
+img {
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   CENTER IMAGE
+========================================================= */
+
 .collection-center-image {
+  position: relative;
+
+  width: 100%;
+
+  /*
+    Bigger than previous version,
+    but still controlled.
+  */
+
+  height: 502px;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   CENTER LINK
+========================================================= */
+
+.collection-center-image .collection-image-link {
+  display: block;
+
   width: 100%;
   height: 100%;
 }
+
+
+/* =========================================================
+   CENTER IMAGE BOX
+========================================================= */
 
 .collection-center-image .box_image--V01 {
-  height: 100%;
-}
+  position: relative;
 
-.collection-center-image .image {
   width: 100%;
-  height: 100%;
-}
+  height: 502px;
 
-.collection-center-image .image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  overflow: hidden;
+
   border-radius: 10px;
 }
 
-/* =========================
-   TABLET
-========================= */
 
-@media (max-width: 991px) {
+/* =========================================================
+   CENTER IMAGE CONTAINER
+========================================================= */
+
+.collection-center-image .image {
+  position: relative;
+
+  width: 100%;
+  height: 502px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CENTER IMAGE
+========================================================= */
+
+.collection-center-image .image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.6s ease;
+}
+
+
+/* Subtle zoom */
+
+.collection-center-image
+.box_image--V01:hover
+.image img {
+  transform: scale(1.02);
+}
+
+
+/* =========================================================
+   CENTER CONTENT
+========================================================= */
+
+.collection-center-image .content {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 30px;
+
+  z-index: 5;
+
+  padding: 0 25px;
+
+  text-align: center;
+}
+
+.collection-center-image .content .title {
+  margin: 0;
+  color: #fff;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1400px+
+========================================================= */
+
+@media (min-width: 1400px) {
+
   .collection-five-layout {
-    grid-template-columns: 1fr 1.5fr 1fr;
+    // max-width: 1280px;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1.55fr)
+      minmax(0, 1fr);
+
+    gap: 14px;
+  }
+
+  .collection-side-column {
+    gap: 14px;
+  }
+
+  .collection-side-column
+  .card_product-wrapper {
+    height: 250px;
+  }
+
+  .collection-center-image {
+    height: 514px;
+  }
+
+  .collection-center-image
+  .box_image--V01,
+  .collection-center-image
+  .image {
+    height: 514px;
+  }
+}
+
+
+/* =========================================================
+   DESKTOP
+   1200px - 1399px
+========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+  .collection-five-layout {
+    // max-width: 1200px;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1.55fr)
+      minmax(0, 1fr);
+
+    gap: 12px;
+  }
+
+  .collection-side-column {
+    gap: 12px;
+  }
+
+  .collection-side-column
+  .card_product-wrapper {
+    height: 240px;
+  }
+
+  .collection-center-image {
+    height: 492px;
+  }
+
+  .collection-center-image
+  .box_image--V01,
+  .collection-center-image
+  .image {
+    height: 492px;
+  }
+
+  .collection-center-image .content {
+    bottom: 28px;
+  }
+}
+
+
+/* =========================================================
+   SMALL DESKTOP
+   992px - 1199px
+========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .collection-five-layout {
+    // max-width: 1080px;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1.5fr)
+      minmax(0, 1fr);
+
+    gap: 10px;
+  }
+
+  .collection-side-column {
+    gap: 10px;
+  }
+
+  .collection-side-column
+  .card_product-wrapper {
+    height: 215px;
+
+    border-radius: 9px;
+  }
+
+  .collection-center-image {
+    height: 440px;
+  }
+
+  .collection-center-image
+  .box_image--V01,
+  .collection-center-image
+  .image {
+    height: 440px;
+  }
+
+  .collection-center-image .content {
+    bottom: 24px;
+
+    padding: 0 20px;
+  }
+
+  .collection-center-image
+  .content .title {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 991px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .collection-five-layout {
+    // max-width: 900px;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1.45fr)
+      minmax(0, 1fr);
+
     gap: 8px;
   }
 
   .collection-side-column {
     gap: 8px;
   }
+
+  .collection-side-column
+  .card_product-wrapper {
+    height: 185px;
+
+    border-radius: 8px;
+  }
+
+  .collection-center-image {
+    height: 378px;
+  }
+
+  .collection-center-image
+  .box_image--V01,
+  .collection-center-image
+  .image {
+    height: 378px;
+  }
+
+  .collection-center-image .content {
+    bottom: 20px;
+
+    padding: 0 15px;
+  }
+
+  .collection-center-image
+  .content .title {
+    font-size: 21px;
+
+    line-height: 1.2;
+  }
+
+  .view-all-cursor {
+    width: 56px;
+    height: 56px;
+  }
+
+  .collection-image-link:hover
+  .view-all-cursor {
+    width: 62px;
+    height: 62px;
+  }
 }
 
-/* =========================
+
+/* =========================================================
    MOBILE
-========================= */
+   767px AND BELOW
+========================================================= */
 
 @media (max-width: 767px) {
+
+  /* -----------------------------------------
+     MAIN GRID
+  ----------------------------------------- */
+
   .collection-five-layout {
-    grid-template-columns: 1fr 1fr;
+    // display: grid;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    grid-template-rows:
+      auto
+      auto;
+
     gap: 10px;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 0;
   }
+
+
+  /* -----------------------------------------
+     CENTER IMAGE
+  ----------------------------------------- */
 
   .collection-center-image {
     grid-column: 1 / -1;
     grid-row: 1;
+
+    width: 100%;
+    height: auto;
+
+    min-height: 0;
   }
+
+  .collection-center-image
+  .collection-image-link {
+    width: 100%;
+    height: auto;
+  }
+
+  .collection-center-image
+  .box_image--V01 {
+
+    width: 100%;
+
+    height: auto;
+
+    min-height: 0;
+
+    /*
+      Mobile center image
+      portrait ratio
+    */
+
+    aspect-ratio: 4 / 5;
+
+    border-radius: 9px;
+  }
+
+  .collection-center-image
+  .image {
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 0;
+  }
+
+  .collection-center-image
+  .image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+
+
+  /* -----------------------------------------
+     LEFT COLUMN
+  ----------------------------------------- */
 
   .collection-side-column:first-child {
+
     grid-column: 1;
     grid-row: 2;
+
+    display: grid;
+
+    grid-template-rows:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    width: 100%;
+    height: auto;
   }
+
+
+  /* -----------------------------------------
+     RIGHT COLUMN
+  ----------------------------------------- */
 
   .collection-side-column:last-child {
+
     grid-column: 2;
     grid-row: 2;
+
+    display: grid;
+
+    grid-template-rows:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    width: 100%;
+    height: auto;
   }
 
-  .collection-center-image .image {
-    aspect-ratio: 1 / 1;
+
+  /* -----------------------------------------
+     MOBILE PRODUCT CARD
+  ----------------------------------------- */
+
+  .collection-side-column
+  .card_product--V01 {
+
+    width: 100%;
+    height: auto;
+
+    min-height: 0;
+  }
+
+
+  /* -----------------------------------------
+     MOBILE PRODUCT IMAGE
+  ----------------------------------------- */
+
+  .collection-side-column
+  .card_product-wrapper {
+
+    width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 1 / 1.15;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+  }
+
+  .collection-side-column
+  .card_product-wrapper
+  .product-img {
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .collection-side-column
+  .card_product-wrapper
+  img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+
+
+  /* -----------------------------------------
+     CENTER CONTENT
+  ----------------------------------------- */
+
+  .collection-center-image .content {
+
+    left: 0;
+    right: 0;
+
+    bottom: 18px;
+
+    padding: 0 15px;
+
+    text-align: center;
+  }
+
+  .collection-center-image
+  .content .title {
+
+    margin: 0;
+
+    font-size: 20px;
+
+    line-height: 1.2;
+  }
+
+
+  /* -----------------------------------------
+     CURSOR
+  ----------------------------------------- */
+
+  .view-all-cursor {
+
+    width: 54px;
+    height: 54px;
+
+    font-size: 7px;
+
+    letter-spacing: 0.7px;
+  }
+
+  .collection-image-link:hover
+  .view-all-cursor {
+
+    width: 58px;
+    height: 58px;
   }
 }
 
+
+/* =========================================================
+   MOBILE 481px - 767px
+========================================================= */
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .collection-center-image
+  .box_image--V01 {
+
+    aspect-ratio: 4 / 5;
+  }
+
+  .collection-side-column
+  .card_product-wrapper {
+
+    aspect-ratio: 1 / 1.12;
+  }
+
+  .collection-center-image
+  .content .title {
+
+    font-size: 21px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   480px AND BELOW
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .collection-five-layout {
+    gap: 8px;
+  }
+
+  .collection-side-column {
+    gap: 8px !important;
+  }
+
+
+  /* Center image */
+
+  .collection-center-image
+  .box_image--V01 {
+
+    aspect-ratio: 4 / 5.1;
+
+    border-radius: 8px;
+  }
+
+
+  /* Side images */
+
+  .collection-side-column
+  .card_product-wrapper {
+
+    aspect-ratio: 1 / 1.17;
+
+    border-radius: 7px;
+  }
+
+
+  /* Center text */
+
+  .collection-center-image .content {
+
+    bottom: 15px;
+
+    padding: 0 12px;
+  }
+
+  .collection-center-image
+  .content .title {
+
+    font-size: 18px;
+
+    line-height: 1.2;
+  }
+
+
+  /* Cursor */
+
+  .view-all-cursor {
+
+    width: 52px;
+    height: 52px;
+
+    font-size: 7px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   360px AND BELOW
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .collection-five-layout {
+    gap: 6px;
+  }
+
+  .collection-side-column {
+    gap: 6px !important;
+  }
+
+
+  .collection-center-image
+  .box_image--V01 {
+
+    aspect-ratio: 1 / 1.25;
+
+    border-radius: 7px;
+  }
+
+
+  .collection-side-column
+  .card_product-wrapper {
+
+    aspect-ratio: 1 / 1.18;
+
+    border-radius: 6px;
+  }
+
+
+  .collection-center-image .content {
+
+    bottom: 12px;
+
+    padding: 0 10px;
+  }
+
+  .collection-center-image
+  .content .title {
+
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   COUNTDOWN IMAGE
+========================================================= */
+
 @media (min-width: 992px) {
+
   .banner_countdown-v2 .bn_image {
     max-width: 570px;
   }
+
   .banner_countdown-v2 .img {
     max-width: 542px;
   }
 }
-
 /* ========================================
    JEWELLERY LOCATION SECTION
 ======================================== */
@@ -1492,74 +2314,7 @@ picture.jarallax-img img {
   }
 }
 
-.collection-image-link {
-  display: block;
-  position: relative;
-  cursor: none;
-}
 
-.collection-image-link .box_image--V01 {
-  position: relative;
-  overflow: hidden;
-}
-.collection-image-link .box_image--V01 .image {
-  position: relative;
-}
-
-.collection-image-link .box_image--V01 .image::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0);
-  transition: background 0.4s ease;
-  z-index: 1;
-}
-
-/* Hover par black overlay */
-.collection-image-link .box_image--V01:hover .image::after {
-  background: rgba(0, 0, 0, 0.45);
-}
-
-/* Hide normal cursor */
-.collection-image-link,
-.collection-image-link * {
-  cursor: none !important;
-}
-
-/* VIEW ALL circle */
-.view-all-cursor {
-  position: absolute;
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
-
-  background: #fff;
-  color: #111;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-family: "Jost", sans-serif;
-  font-size: 8px;
-  font-weight: 600;
-  letter-spacing: 1px;
-
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 20;
-
-  transition:
-    width 0.25s ease,
-    height 0.25s ease,
-    transform 0.15s ease;
-}
-
-/* Optional hover effect */
-.collection-image-link:hover .view-all-cursor {
-  width: 68px;
-  height: 68px;
-}
 .tf_marquee-V01.style_2 p {
   font-size: clamp(7px, 5vw, 28px);
   line-height: clamp(7px, 6vw, 20px);

@@ -20,7 +20,7 @@ export default function Discount() {
 
         <h6 className="text-uppercase short-line-heding mb-4">discount code: vemus20off</h6>
 
-        <h2 className="heading-font wow fadeInUp">
+        <h2 className="heading-font wow fadeInUp text-white" >
           <span className="highlight-font">Unveil</span> Your Sparkle
         </h2>
         <p className="sub-title wow fadeInUp">

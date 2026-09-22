@@ -102,9 +102,7 @@ export default function Testimonials() {
                           </ul>
 
                           <div className="author-info">
-                            <p className="name">
-                              {item.name}
-                            </p>
+                            
 
                             <p className="verify">
                               <svg
@@ -166,9 +164,9 @@ export default function Testimonials() {
                         <div className="info-item">
                           <a
                             href="#"
-                            className="link text-caption text-line-clamp-1 fw-medium"
+                            className="name"
                           >
-                            {item.productName}
+                            {item.name}
                           </a>
                         </div>
 

@@ -58,7 +58,7 @@ export default function Blogs() {
                       height={776}
                     />
                   </Link>
-                  <div className="entry_tag">
+                  {/* <div className="entry_tag">
                     {item.tags.map((tag, tagIndex) => (
                       <Link
                         key={tagIndex}
@@ -68,7 +68,7 @@ export default function Blogs() {
                         {tag}
                       </Link>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
                 <h5>
                   <Link

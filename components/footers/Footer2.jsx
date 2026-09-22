@@ -215,7 +215,7 @@ export default function Footer2() {
                   </li>
                   <li>
                     <Link href={`/privacy-policy`} className="text-white link">
-                     Privacy Policy
+                      Privacy Policy
                     </Link>
                   </li>
                   <li>
