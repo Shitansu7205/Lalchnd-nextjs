@@ -18,7 +18,6 @@ export default function FloatingActions() {
             {/* GOLD POPUP */}
             {showGoldRate && (
                 <div className="lalchnd-gold-popup">
-
                     <button
                         type="button"
                         className="lalchnd-gold-close"
@@ -29,36 +28,20 @@ export default function FloatingActions() {
                     </button>
 
                     <p className="lalchnd-gold-rate">
-                        Today's Gold Rate is Rs.14270 per gm (22kt).
+                        Today's Gold Rate: ₹14,270/gm (22KT)
                     </p>
 
                     <p className="lalchnd-gold-updated">
-                        Last updated on  {formattedDate}
+                        Updated: {formattedDate}
                     </p>
 
                     <h4>✨ Special Offers</h4>
 
-                    <p>
-                        💎 Up to 30% off on diamond value*
-                    </p>
-
-                    <p>
-                        💰 Up to 20% off on gold jewellery making charges*
-                    </p>
-
-                    <p>
-                        🔒 Double Gold Rate Protection : Pay 25% advance and lock the
-                        gold rate. If price rises, pay the locked rate. If price reduces,
-                        pay the reduced rate.*
-                    </p>
-
-                    <p>
-                        ♻️ 0% DEDUCTION ON OLD GOLD on any karat*
-                    </p>
-
-                    <p>
-                        ⏳ Limited time only. *T&C Apply
-                    </p>
+                    <p>💎 Up to 30% off on diamond value*</p>
+                    <p>💰 Up to 20% off on gold making charges*</p>
+                    <p>🔒 Lock gold rate with 25% advance*</p>
+                    <p>♻️ 0% deduction on old gold*</p>
+                    <p>⏳ Limited time only. *T&C Apply</p>
                 </div>
             )}
 

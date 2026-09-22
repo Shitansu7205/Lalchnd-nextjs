@@ -1,89 +1,160 @@
 "use client";
 
-import React, { useState } from "react";
-import { X, Phone } from "lucide-react";
+import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import HomeOnlyButton from "../common/HomeOnlyButton";
 
-export default function FloatingActions() {
-  const [showGoldRate, setShowGoldRate] = useState(false);
+export default function NewsLetter() {
+  const modalElement = useRef(null);
+  const modalInstance = useRef(null);
+
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    const showModal = async () => {
+      const bootstrap = await import("bootstrap");
+
+      const myModal = new bootstrap.Modal(
+        document.getElementById("newsletterPopup"),
+        {
+          keyboard: false,
+        }
+      );
+
+      modalInstance.current = myModal;
+
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
+      myModal.show();
+    };
+
+    showModal();
+  }, []);
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    // Make sure email is entered
+    if (!email.trim()) {
+      return;
+    }
+
+    // Show success message
+    setMessage("Thank you! You have successfully subscribed.");
+
+    // Close popup
+    modalInstance.current?.hide();
+
+    // Clear email
+    setEmail("");
+
+    // Remove message after 3 seconds
+    setTimeout(() => {
+      setMessage("");
+    }, 3000);
+  };
 
   return (
-    <div className="lalchnd-floating-actions">
-
-      {/* GOLD RATE POPUP */}
-      {showGoldRate && (
-        <div className="lalchnd-gold-popup">
-
-          <button
-            type="button"
-            className="lalchnd-gold-close"
-            onClick={() => setShowGoldRate(false)}
-            aria-label="Close gold rate"
-          >
-            <X size={19} strokeWidth={1.5} />
-          </button>
-
-          <p className="lalchnd-gold-rate">
-            Today's Gold Rate is Rs.14270 per gm (22kt).
-          </p>
-
-          <p className="lalchnd-gold-updated">
-            Last updated on 21/09/2026 05:00 PM
-          </p>
-
-          <h4>✨ Special Offers</h4>
-
-          <p>💎 Up to 30% off on diamond value*</p>
-
-          <p>
-            💰 Up to 20% off on gold jewellery making charges*
-          </p>
-
-          <p>
-            🔒 Double Gold Rate Protection : Pay 25% advance and lock the
-            gold rate. If price rises, pay the locked rate. If price reduces,
-            pay the reduced rate.*
-          </p>
-
-          <p>
-            ♻️ 0% DEDUCTION ON OLD GOLD on any karat*
-          </p>
-
-          <p>
-            ⏳ Limited time only. *T&C Apply
-          </p>
+    <>
+      {/* Simple success message */}
+      {message && (
+        <div
+          style={{
+            position: "fixed",
+            top: "30px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 9999,
+            background: "#fff",
+            padding: "14px 25px",
+            borderRadius: "4px",
+            boxShadow: "0 5px 25px rgba(0, 0, 0, 0.15)",
+            color: "#34a853",
+            fontSize: "15px",
+            textAlign: "center",
+          }}
+        >
+          {message}
         </div>
       )}
 
-      {/* GOLD RATE */}
-      <button
-        type="button"
-        className="lalchnd-floating-button lalchnd-gold-button"
-        onClick={() => setShowGoldRate((prev) => !prev)}
-        aria-label="Today's gold rate"
+      <div
+        className="modal modalCentered fade auto-popup modal-auto-newletter"
+        id="newsletterPopup"
+        ref={modalElement}
       >
-        <span className="lalchnd-floating-icon">
-          <span className="lalchnd-gold-bars">▰</span>
-          <span className="lalchnd-gold-spark">✦</span>
-        </span>
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <span className="icon-close-popup" data-bs-dismiss="modal">
+              <i className="icon-close" />
+            </span>
 
-        <span className="lalchnd-floating-tooltip">
-          Today's gold rate
-        </span>
-      </button>
+            <div className="modal-body">
+              <div className="image">
+                <Image
+                  alt="Lalchnd Jewellers Exclusive Collection"
+                  width={876}
+                  height={1120}
+                  src="/images/lalchnd/pay-online/popup.webp"
+                />
+              </div>
 
-      {/* CALL */}
-      <a
-        href="tel:+919999999999"
-        className="lalchnd-floating-button lalchnd-call-button"
-        aria-label="Call us"
-      >
-        <Phone size={27} strokeWidth={1.8} />
+              <div className="content text-center">
+                <div className="heading">
+                  <h2 className="title heading-font fw-normal">
+                    Exclusive Jewellery{" "}
+                    <span className="highlight-font">Offers</span>
+                  </h2>
 
-        <span className="lalchnd-floating-tooltip">
-          Call us
-        </span>
-      </a>
+                  <p className="sub-title">
+                    Subscribe For New Collections, Special Offers &amp; Gold
+                    Rate Updates
+                  </p>
+                </div>
 
-    </div>
+                <form
+                  onSubmit={sendEmail}
+                  className="form-newleter style-border"
+                >
+                  <input
+                    className="text-center"
+                    type="email"
+                    name="email"
+                    placeholder="ENTER YOUR EMAIL ADDRESS"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+
+                  <div className="btn-group">
+                    <HomeOnlyButton
+                      href="#"
+                      className="type-large"
+                      onClick={sendEmail}
+                    >
+                      Submit Now
+                    </HomeOnlyButton>
+                  </div>
+                </form>
+
+                <p className="privacy text-main-6">
+                  Your information will be used in accordance with our{" "}
+                  <Link
+                    href="/privacy"
+                    className="tf-btn-line style-line-2 text-main link"
+                  >
+                    <span className="text-body">Privacy Policy</span>
+                  </Link>
+                  .
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
+

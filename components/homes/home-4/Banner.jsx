@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ButtomBorder from "@/components/common/ButtomBorder";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -70,13 +71,10 @@ export default function Banner() {
           </span>
           , made to be treasured for a lifetime.
         </h3>
-        <Link
-          href={`/our-stores`}
-          className="tf-btn-line style-white text-uppercase lh-32 gap-10"
-        >
-          <span className="fs-16"> Explore More</span>
-          <i className="icon icon-arrow-top-right-2 fs-12" />
-        </Link>
+
+        <ButtomBorder href="/contact" className="type-large">
+          Get In touch
+        </ButtomBorder>
       </div>
     </div>
   );

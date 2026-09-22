@@ -154,7 +154,7 @@ export default function InstagramFeed() {
                     <div className="instagram-feed-overlay">
 
                       <span className="instagram-feed-icon">
-                        <span class="icon"><i class="icon-instagram"></i></span>
+                        <span className="icon"><i className="icon-instagram"></i></span>
                       </span>
 
                     </div>

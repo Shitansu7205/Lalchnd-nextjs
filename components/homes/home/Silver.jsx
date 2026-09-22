@@ -113,7 +113,7 @@ export default function Silver() {
     };
   }, []);
   return (
-    <div className="section-padding-bottom-40 section-padding-top-40 bg-white">
+    <div className="section-padding-bottom-40 section-padding-top-40 bg-white bg-transparent-svg2">
       <div className="container">
         <div className="banner_countdown-v2" style={{ gap: "80px" }}>
           <div className="bn_image play-area-2">

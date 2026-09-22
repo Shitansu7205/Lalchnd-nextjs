@@ -1,3 +1,4 @@
+
 import Features from "@/components/homes/home/Features";
 import Footer1 from "@/components/footers/Footer1";
 import Header1 from "@/components/headers/Header1";
@@ -60,7 +61,7 @@ export default function Home() {
           <Blogs />
           <InstagramFeed />
           <Footer2 />
-          {/* <NewsLetter /> */}
+          <NewsLetter />
         </div>
       </div>
       {/* <div className="bg-surface">

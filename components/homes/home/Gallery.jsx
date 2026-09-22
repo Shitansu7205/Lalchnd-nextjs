@@ -21,14 +21,14 @@ export default function Gallery() {
     });
   };
   return (
-    <section className="section-padding-bottom-40 section-padding-top-40 bg-white">
+    <section className="section-padding-bottom-40 section-padding-top-40 bg-white bg-transparent-svg2">
       <div className="container-full-2">
         {/* Header */}
         <div className="bn-content wow fadeInUp mb-5 home-second">
           <div>
             <h6 className="short-line-heding-dark">LALCHND COLLECTION</h6>
             <h2 className="heading-font">
-              <span className="highlight-font">Exquisite</span> Jewelry
+              <span className="highlight-font">Exquisite</span> Jewellery
             </h2>
           </div>
 

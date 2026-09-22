@@ -113,7 +113,7 @@ export default function Gold() {
     };
   }, []);
   return (
-    <div className="section-padding-bottom-40 section-padding-top-40 bg-white">
+    <div className="section-padding-bottom-40 section-padding-top-40 bg-white bg-transparent-svg1">
       <div className="container">
         <div className="banner_countdown-v2" style={{ gap: "80px" }}>
           <div className="bn_image play-area-2">
@@ -140,7 +140,7 @@ export default function Gold() {
                 timer runs out!
               </p>
             </div>
-            
+
             <div className="btn-group">
               <HomeButton href="/shop-collection-list" className="type-large">
                 Shop Collection

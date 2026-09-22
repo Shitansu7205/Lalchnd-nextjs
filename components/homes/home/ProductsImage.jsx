@@ -12,7 +12,7 @@ export default function ProductsImage() {
   const { setQuickViewItem } = useContextElement();
   return (
     <>
-      <section className=" section-padding-top-40 bg-white">
+      <section className=" section-padding-top-40 bg-white bg-transparent-svg1">
         <div className="container">
           <div className="sect-border mt-0" style={{ border: "none" }}>
             <div className="sect-head wow fadeInUp">

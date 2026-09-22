@@ -2,9 +2,10 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Menu from "./Menu";
+import { TrendingUp, MapPin, Phone } from "lucide-react";
 export default function Header({ parentClass = "tf-header line-bt-2" }) {
     return (
-        <header className={parentClass}>
+        <header className={parentClass} >
             <div className="container-full-2">
                 <div className="row align-items-center">
                     <div className="col-md-4 col-3 d-xl-none">
@@ -46,31 +47,31 @@ export default function Header({ parentClass = "tf-header line-bt-2" }) {
                             </li>
                             <li className="br-line d-none d-xl-flex" />
                             <li className="d-none d-md-inline-flex">
-                                <a
-                                    href="#log"
+                                <Link
+                                    href="#"
                                     data-bs-toggle="modal"
                                     className="nav-icon-item text-black link"
                                 >
-                                    <i className="icon icon-user" />
-                                </a>
+                                    <TrendingUp size={20} strokeWidth={1.7} />
+                                </Link>
                             </li>
                             <li className="d-none d-md-inline-flex">
                                 <Link
-                                    href={`/wishlist`}
+                                    href={`/our-stores`}
                                     className="nav-icon-item text-black link"
                                 >
-                                    <i className="icon icon-hearth" />
+                                    <MapPin size={20} strokeWidth={1.7} />
                                 </Link>
                             </li>
                             <li className="d-inline-flex">
-                                <a
-                                    href="#shoppingCart"
+                                <Link
+                                    href="telto:"
                                     data-bs-toggle="offcanvas"
                                     className="nav-icon-item text-black link"
                                 >
-                                    <i className="icon icon-cart" />
+                                    <Phone size={20} strokeWidth={1.7} />
                                     <span className="count-notice" />
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>

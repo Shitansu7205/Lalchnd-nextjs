@@ -1240,6 +1240,10 @@ export const jewelleryLocations = [
   },
 ];
 
+
+
+
+
 export const instagramFeed = [
   {
     id: 1,
@@ -1286,6 +1290,11 @@ export const instagramFeed = [
     link: "https://www.instagram.com/",
   },
 ];
+
+
+
+
+
 
 export const allProducts = [
   ...products1,
