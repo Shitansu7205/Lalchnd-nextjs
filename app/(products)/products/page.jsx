@@ -1,24 +1,25 @@
-import Features from "@/components/common/Features";
-import Footer1 from "@/components/footers/Footer1";
-import Header1 from "@/components/headers/Header1";
-import Topbar1 from "@/components/headers/Topbar1";
-import ProductsListing from "@/components/products/ProductsListing";
-import Categories from "@/components/shop/Categories";
-
-import Products1 from "@/components/shop/Products1";
-import Link from "next/link";
-import React from "react";
+import BreadcrumbBanner from "@/components/common/BreadcrumbBanner";
+import Footer2 from "@/components/footers/Footer2";
+import Header from "@/components/headers/Header";
+import TopBar from "@/components/headers/TopBar";
+import ProductListing from "@/components/shop/ProductListing";
 export const metadata = {
-    title: "Shop || Vemus - Jewelry Ecommerce React Nextjs Template",
-    description: "Vemus - Jewelry Ecommerce React Nextjs Template",
+    title: "Products || Vemus - Jewelry Ecommerce React Nextjs Template",
+    description: "Products - Jewelry Ecommerce React Nextjs Template",
 };
 export default function page() {
     return (
         <>
-            <Topbar1 parentClass="tf-topbar bg-dark-olive" />
-            <Header1 parentClass="tf-header" />
-            <ProductsListing />
-            <Footer1 />
+            <TopBar />
+            <Header parentClass="tf-header" />
+            <BreadcrumbBanner
+                title="Our Products"
+                current="Blogs"
+                image="https://lalchnd.com/wp-content/uploads/2026/03/2560-x-931.jpg.jpeg"
+            />
+            
+            <ProductListing />
+            <Footer2 />
         </>
     );
 }

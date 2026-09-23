@@ -10,7 +10,7 @@ export default function AddtoCart({ tooltipDirection = "left", product }) {
       data-bs-toggle="offcanvas"
       onClick={() => {
         if (product.id) {
-          addProductToCart(product.id);
+          addProductToCart(product.id, 1, true, product);
         }
       }}
       className={`hover-tooltip tooltip-${tooltipDirection} box-icon`}
