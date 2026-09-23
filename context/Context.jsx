@@ -11,6 +11,7 @@ export const useContextElement = () => {
 };
 
 export default function Context({ children }) {
+  const [productCache, setProductCache] = useState({});
   const [cartProducts, setCartProducts] = useState([]);
   const [wishList, setWishList] = useState([1, 2, 3]);
   const [compareItem, setCompareItem] = useState([1, 2, 3, 4]);
@@ -30,10 +31,10 @@ export default function Context({ children }) {
     }
     return false;
   };
-  const addProductToCart = (id, qty, isModal = true) => {
+  const addProductToCart = (id, qty, isModal = true, product = null) => {
     if (!isAddedToCartProducts(id)) {
       const item = {
-        ...allProducts.filter((elm) => elm.id == id)[0],
+        ...(product || allProducts.find((elm) => elm.id == id) || {}),
         quantity: qty ? qty : 1,
       };
       setCartProducts((pre) => [...pre, item]);
@@ -53,6 +54,26 @@ export default function Context({ children }) {
       items[itemIndex] = item;
       setCartProducts(items);
     }
+  };
+
+  const fetchProducts = async (filters = {}) => {
+    const query = new URLSearchParams(
+      Object.entries(filters).filter(([, value]) => value),
+    ).toString();
+    const cacheKey = query || "all";
+
+    if (productCache[cacheKey]) {
+      return productCache[cacheKey];
+    }
+
+    const response = await fetch(`/api/v1/products${query ? `?${query}` : ""}`);
+    if (!response.ok) {
+      throw new Error("Failed to fetch products");
+    }
+
+    const result = await response.json();
+    setProductCache((current) => ({ ...current, [cacheKey]: result }));
+    return result;
   };
 
   const addToWishlist = (id) => {
@@ -132,6 +153,7 @@ export default function Context({ children }) {
     compareItem,
     setCompareItem,
     updateQuantity,
+    fetchProducts,
   };
   return (
     <dataContext.Provider value={contextElement}>

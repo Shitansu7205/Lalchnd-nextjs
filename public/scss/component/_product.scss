@@ -178,7 +178,7 @@
 
   .card_product-info {
     display: grid;
-    gap: 10px;
+    gap: 0px;
   }
 
   &.out-of-stock {
@@ -408,6 +408,47 @@
         line-height: 18px;
       }
     }
+  }
+}
+
+.api-product-listing {
+  .card_product--V01 {
+    gap: 14px;
+
+    .card_product-wrapper {
+      aspect-ratio: calc(340 / 420);
+    }
+  }
+}
+
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 180px;
+  color: var(--primary);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+}
+
+.loading-spinner-icon {
+  width: 34px;
+  height: 34px;
+  animation: loading-spinner-rotate 0.9s linear infinite;
+  stroke-width: 1.5;
+}
+
+.product-fetch-message {
+  min-height: 180px;
+  padding-top: 70px;
+  color: var(--main-4);
+}
+
+@keyframes loading-spinner-rotate {
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -1566,4 +1607,8 @@
   @include res(xxl, min) {
     padding: 48px 46px;
   }
+}
+
+.price-tag-listing {
+  font-family: "Judson", serif;
 }

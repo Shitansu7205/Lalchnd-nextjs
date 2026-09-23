@@ -16,7 +16,7 @@ export default function page() {
     <>
       <Topbar1 parentClass="tf-topbar bg-dark-olive" />
       <Header1 parentClass="tf-header" />
-      <section className="flat-spacing-2 pb-0">
+      {/* <section className="flat-spacing-2 pb-0">
         <div className="container">
           <div className="page-title type-2">
             <div className="breadcrumbs">
@@ -50,13 +50,13 @@ export default function page() {
             </div>
           </div>
         </div>
-      </section>
-      <Categories />
+      </section> */}
+      {/* <Categories /> */}
       <Products1 />
-      <Features
+      {/* <Features
         parentClass="flat-spacing-8 bg-main"
         iconColorClass="text-primary"
-      />
+      /> */}
       <Footer1 />
     </>
   );
