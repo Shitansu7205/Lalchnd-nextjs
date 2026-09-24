@@ -1,0 +1,13 @@
+.blog-grid-card-heading {
+  font-family: "Judson", serif;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0;
+  margin: 0;
+  color: #06273f;
+  font-size: 22px;
+}
+
+.blog-grid-card-paragraph {
+  color: var(--main-4);
+}

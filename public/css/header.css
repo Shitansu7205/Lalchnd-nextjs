@@ -1,0 +1,18 @@
+.compact-header {
+  top: 0;
+}
+
+.compact-header .box-navigation .item-link {
+  line-height: 76px;
+}
+
+.compact-header.header-sticky {
+  background-color: var(--white);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1200px) {
+  .compact-header {
+    min-height: 76px;
+  }
+}

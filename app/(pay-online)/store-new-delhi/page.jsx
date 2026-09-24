@@ -1,14 +1,14 @@
 import BreadcrumbBanner from "@/components/common/BreadcrumbBanner";
 import React from "react";
 import Footer2 from "@/components/footers/Footer2";
-import StoreMastercanteen from "@/components/pay-online/StoreMastercanteen";
 import Header from "@/components/headers/Header";
 import TopBar from "@/components/headers/TopBar";
 import Link from "next/link";
 import Partion from "@/components/common/Partion";
+import Delhi from "@/components/pay-online/Delhi";
 import Topbar1 from "@/components/headers/Topbar1";
 export const metadata = {
-  title: "Master Canteen || Lalchnd - Jewelry Ecommerce React Nextjs Template",
+  title: "Delhi || Lalchnd - Jewelry Ecommerce React Nextjs Template",
   description: "Lalchnd - Jewelry Ecommerce React Nextjs Template",
 };
 export default function page() {
@@ -20,11 +20,11 @@ export default function page() {
           <Header />
           <BreadcrumbBanner
             title="Pay Online"
-            current="Master Canteen"
+            current="New Delhi"
             image="/images/lalchnd/banner/pay-online-banner.webp"
           />
           <Partion />
-          <StoreMastercanteen />
+          <Delhi />
           <Footer2 />
         </div>
       </div>

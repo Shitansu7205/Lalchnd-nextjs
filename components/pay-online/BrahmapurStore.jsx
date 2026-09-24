@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { masterCanteenData } from "@/data/service";
+import { BrahmapurData } from "@/data/service";
 
 
-export default function StoreMasterCanteen() {
+export default function BrahmapurStore() {
   const { heading, headingHighlight, subtitle, cards } =
-    masterCanteenData;
+    BrahmapurData;
 
   return (
     <section className="payonline-section store-payonline-page">
@@ -22,7 +22,7 @@ export default function StoreMasterCanteen() {
 
             <span></span>
           </div> */}
-
+          
           <h2 className="heading-font">
             {heading} <span className="highlight-font">{headingHighlight}</span>
           </h2>
@@ -203,14 +203,15 @@ function SupportBox({
         <p>{support.address}</p>
       </div>
 
-      <a
-        href={button.link}
-        className={`home-cta-btn tf-btn btn-fill animate-btn type-large button-font ${payment ? "" : "gold-button"
-          }`}
-      >
-        {button.text}
-        <span>→</span>
-      </a>
+     <a
+  href={button.link}
+  className={`home-cta-btn tf-btn btn-fill animate-btn type-large button-font ${
+    payment ? "" : "gold-button"
+  }`}
+>
+  {button.text}
+  <span>→</span>
+</a>
 
     </div>
   );

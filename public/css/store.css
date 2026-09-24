@@ -1,0 +1,162 @@
+.store-payonline-page {
+  --store-ink: #06273f;
+  --store-gold: #c79237;
+  --store-orange: #ed9a00;
+  --store-copy: #4a5158;
+  --store-paper: #fffdf9;
+  padding: 68px 0 78px;
+  background-color: var(--store-paper);
+  background-position: center;
+}
+
+.store-payonline-page .container-full-2 {
+  max-width: 1435px;
+  padding: 0 22px;
+}
+
+.store-payonline-page .payonline-header {
+  margin-bottom: 39px;
+}
+
+.store-payonline-page .payonline-header h2 {
+  margin: 0;
+  color: var(--store-ink);
+  font-family: "Judson", serif;
+  font-size: clamp(42px, 4vw, 58px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.store-payonline-page .payonline-header .highlight-font {
+  color: var(--store-orange);
+}
+
+.store-payonline-page .payonline-header .s-sub-title {
+  max-width: 700px;
+  margin: 14px auto 0;
+  color: var(--store-copy);
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.store-payonline-page .payonline-cards {
+  gap: 24px;
+}
+
+.store-payonline-page .payonline-card {
+  min-height: 483px;
+  border-radius: 16px;
+}
+
+.store-payonline-page .card-content,
+.store-payonline-page .payment-content {
+  padding-top: 39px;
+  padding-left: 43px;
+}
+
+.store-payonline-page .card-label {
+  gap: 13px;
+  margin-bottom: 16px;
+}
+
+.store-payonline-page .card-label p {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  letter-spacing: 3.5px;
+}
+
+.store-payonline-page .payonline-card h2 {
+  margin: 8px 0 18px;
+  font-family: "Judson", serif;
+  font-size: clamp(40px, 3.65vw, 56px);
+  line-height: 1;
+}
+
+.store-payonline-page .payment-card h2 {
+  font-size: clamp(35px, 3.1vw, 49px);
+}
+
+.store-payonline-page .payment-card h4 {
+  margin: -4px 0 25px;
+  font-size: 23px;
+}
+
+.store-payonline-page .card-description,
+.store-payonline-page .payment-description {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.store-payonline-page .support-box {
+  margin-top: 20px;
+  padding: 16px 19px 17px;
+  border-radius: 11px;
+}
+
+.store-payonline-page .support-box h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.store-payonline-page .support-item {
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.store-payonline-page .support-item p {
+  font-size: 13px;
+}
+
+.store-payonline-page .home-cta-btn {
+  min-height: 44px;
+  margin-top: 4px;
+  padding: 11px 20px;
+  font-family: "Judson", serif;
+  font-size: 12px;
+  letter-spacing: 1.8px;
+}
+
+@media (max-width: 991px) {
+  .store-payonline-page {
+    padding: 56px 0 64px;
+  }
+
+  .store-payonline-page .payonline-card {
+    min-height: 540px;
+  }
+}
+
+@media (max-width: 767px) {
+  .store-payonline-page {
+    padding: 42px 0 50px;
+  }
+
+  .store-payonline-page .container-full-2 {
+    padding: 0 15px;
+  }
+
+  .store-payonline-page .payonline-header {
+    margin-bottom: 28px;
+  }
+
+  .store-payonline-page .payonline-header h2 {
+    font-size: clamp(38px, 10vw, 50px);
+  }
+
+  .store-payonline-page .payonline-header .s-sub-title {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+
+  .store-payonline-page .card-content,
+  .store-payonline-page .payment-content {
+    padding: 25px 20px 10px;
+  }
+
+  .store-payonline-page .payonline-card h2,
+  .store-payonline-page .payment-card h2 {
+    font-size: clamp(40px, 11vw, 50px);
+  }
+}

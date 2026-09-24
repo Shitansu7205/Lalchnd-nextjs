@@ -4,6 +4,7 @@ import React from "react";
 import GalleryGridPopup from "@/components/common/GalleryGridPopup";
 import Footer2 from "@/components/footers/Footer2";
 import Header from "@/components/headers/Header";
+import Partion from "@/components/common/Partion";
 export const metadata = {
   title: "Gallery - Lalchnd Jewellers",
   description:
@@ -20,8 +21,9 @@ export default function page() {
       <BreadcrumbBanner
         title="Our Beautiful Moments"
         current="Gallery"
-        image="https://lalchnd.com/wp-content/uploads/2026/09/Desktop-2560-x-931.jpg.jpeg"
+        image="/images/lalchnd/banner/gallery-banner.webp"
       />
+      <Partion />
       <GalleryGridPopup />
       <Footer2 />
     </>
