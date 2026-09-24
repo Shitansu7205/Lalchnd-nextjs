@@ -17,11 +17,22 @@ const filterKeys = ["category", "metal", "gender", "occasion", "purity"];
 const mapProduct = (product) => ({
     id: product.id,
     title: product.name || "",
+    slug: product.slug || "",
+
     price: Number(product.prices?.price || 0) / 100,
-    oldPrice: product.on_sale ? Number(product.prices?.regular_price || 0) / 100 : null,
-    imgSrc: product.images?.[0]?.src || "",
-    hoverImgSrc: product.images?.[1]?.src || product.images?.[0]?.src || "",
+
+    oldPrice: product.on_sale
+        ? Number(product.prices?.regular_price || 0) / 100
+        : null,
+
+    imgSrc: product.images?.[0]?.src || null,
+    hoverImgSrc:
+        product.images?.[1]?.src ||
+        product.images?.[0]?.src ||
+        "",
+
     outOfStock: !product.is_in_stock,
+
     wooProduct: product,
 });
 const label = (value) => value.split("-").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
@@ -155,7 +166,7 @@ function ProductListingContent({ defaultLayout = 4 }) {
                             >
                                 <div className="card_product-wrapper">
                                     <Link
-                                        href={`/${product.outOfStock ? "product-notify-avaiable" : "product-default"}/${product.id}`}
+                                        href={`/products/${product.slug}`}
                                         className="product-img"
                                     >
                                         <img
@@ -192,7 +203,7 @@ function ProductListingContent({ defaultLayout = 4 }) {
                                 </div>
                                 <div className="card_product-info">
                                     <Link
-                                        href={`/${product.outOfStock ? "product-notify-avaiable" : "product-default"}/${product.id}`}
+                                        href={`/products/${product.slug}`}
                                         className="name-product h5 fw-normal link text-line-clamp-2"
                                     >
                                         {product.title}

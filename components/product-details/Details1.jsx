@@ -30,7 +30,7 @@ export default function Details1({ product }) {
               <div className="tf-product-media-wrap sticky-top">
                 <div className="thumbs-slider">
                   <Slider1
-                    firstItem={product.imgSrc}
+                    firstItem={product.images[0].src}
                     activeColor={activeColor}
                     setActiveColor={setActiveColor}
                   />
@@ -60,9 +60,9 @@ export default function Details1({ product }) {
                       </li>
                     </ul>
                     <h3 className="product-info-name fw-normal">
-                      {product.title}
+                      {product.name}
                     </h3>
-                    <div className="product-info-price">
+                    {/* <div className="product-info-price">
                       <div className="price-wrap">
                         <span className="price-new price-on-sale h4">
                           ${product.price.toFixed(2)}
@@ -73,7 +73,7 @@ export default function Details1({ product }) {
                           </span>
                         )}
                       </div>
-                    </div>
+                    </div> */}
                     <p className="product-infor-sub h6 fw-normal text-main-4">
                       This regulator has a rolled diaphragm and high flow rate
                       with reduced pressure drop.It has an excellent degree of
@@ -113,8 +113,8 @@ export default function Details1({ product }) {
                           quantity={
                             isAddedToCartProducts(product.id)
                               ? cartProducts.filter(
-                                  (elm) => elm.id == product.id,
-                                )[0].quantity
+                                (elm) => elm.id == product.id,
+                              )[0].quantity
                               : quantity
                           }
                           setQuantity={(qty) => {
@@ -198,7 +198,6 @@ export default function Details1({ product }) {
                     </ul>
                   </div>
                 </div>
-                <BoughtTogther />
               </div>
             </div>
           </div>
