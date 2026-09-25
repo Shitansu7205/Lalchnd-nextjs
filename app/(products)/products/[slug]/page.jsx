@@ -10,6 +10,7 @@ import TextSlider from "@/components/common/TextSlider3";
 import Link from "next/link";
 import Footer2 from "@/components/footers/Footer2";
 import Header from "@/components/headers/Header";
+import BreadcrumbBanner from "@/components/common/BreadcrumbBanner";
 
 export default async function ProductDetailPage({ params }) {
     const { slug } = await params;
@@ -47,7 +48,7 @@ export default async function ProductDetailPage({ params }) {
             <Header parentClass="tf-header" />
 
             <div className="flat-spacing-16 pb-0">
-                <div className="container">
+                <div className="container-full-2">
                     <div className="page-title border-0">
                         <div className="breadcrumbs">
                             <ul className="bread-wrap mb-0">
@@ -67,7 +68,7 @@ export default async function ProductDetailPage({ params }) {
                                         href="/products"
                                         className="text-main-4 link"
                                     >
-                                      Products
+                                        Products
                                     </Link>
                                 </li>
 
@@ -84,7 +85,7 @@ export default async function ProductDetailPage({ params }) {
 
             <Details1 product={product} />
 
-            <RelatedProducts />
+            <RelatedProducts product={product} />
 
 
             <Footer2 />

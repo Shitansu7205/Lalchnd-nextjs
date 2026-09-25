@@ -13,24 +13,28 @@ import AddtoCompare from "../common/AddtoCompare";
 import SizePicker from "./SizeSelect";
 export default function Details1({ product }) {
   const [activeColor, setActiveColor] = useState("gold");
-  const [quantity, setQuantity] = useState(1);
-  const {
-    addProductToCart,
-    isAddedToCartProducts,
-
-    cartProducts,
-    updateQuantity,
-  } = useContextElement();
+  const getAttributeValue = (name) => {
+    return (
+      product.attributes
+        ?.find(
+          (attribute) =>
+            attribute.name?.toLowerCase() === name.toLowerCase()
+        )
+        ?.terms?.map((term) => term.name)
+        .join(", ") || ""
+    );
+  };
   return (
     <section className="themesFlat">
       <div className="tf-main-product section-image-zoom">
-        <div className="container">
+        <div className="container-full-2">
           <div className="row">
             <div className="col-md-6">
               <div className="tf-product-media-wrap sticky-top">
                 <div className="thumbs-slider">
                   <Slider1
-                    firstItem={product.images[0].src}
+                    // firstItem={product.images[0].src}
+                    images={product.images}
                     activeColor={activeColor}
                     setActiveColor={setActiveColor}
                   />
@@ -62,26 +66,30 @@ export default function Details1({ product }) {
                     <h3 className="product-info-name fw-normal">
                       {product.name}
                     </h3>
-                    {/* <div className="product-info-price">
+                    <div className="product-info-price">
                       <div className="price-wrap">
                         <span className="price-new price-on-sale h4">
-                          ${product.price.toFixed(2)}
+                          ₹{product.prices.price}     {/* Size */}
+                          <div className="variant-picker-item">
+                            <div className="variant-picker-label h6 fw-normal">
+                              Size:{" "}
+                              <span className="variant-picker-label-value">
+                                {product.attributes
+                                  ?.find((attr) => attr.name === "Size")
+                                  ?.terms?.map((term) => term.name)
+                                  .join(", ")}
+                              </span>
+                            </div>
+                          </div>
                         </span>
-                        {product.oldPrice && (
-                          <span className="price-old compare-at-price fw-normal h6">
-                            ${product.oldPrice.toFixed(2)}
-                          </span>
-                        )}
                       </div>
-                    </div> */}
+                    </div>
                     <p className="product-infor-sub h6 fw-normal text-main-4">
-                      This regulator has a rolled diaphragm and high flow rate
-                      with reduced pressure drop.It has an excellent degree of
-                      condensation.
+                      {product.description}
                     </p>
                     <div className="product-info-progress-sale">
                       <h6 className="text-hurry-up fw-normal">
-                        Only 4 items left
+                        In stock
                       </h6>
                       <div className="progress-cart">
                         <ProgressBarComponent max={70} />
@@ -89,114 +97,82 @@ export default function Details1({ product }) {
                     </div>
                   </div>
                   <div className="tf-product-info-variant">
-                    <div className="variant-picker-item variant-color">
-                      <div className="variant-picker-label h6 fw-normal">
-                        Material:
-                        <span className="variant-picker-label-value value-currentColor d-none">
-                          {activeColor}
-                        </span>
-                      </div>
-                      <div className="variant-picker-values">
-                        <ColorSelect
-                          activeColor={activeColor}
-                          setActiveColor={setActiveColor}
-                        />
-                      </div>
-                    </div>
-                    <SizePicker />
+
                     <div className="variant-picker-item">
                       <div className="variant-picker-label h6 fw-normal">
-                        Quantity
-                      </div>
-                      <div className="variant-picker-values">
-                        <QuantitySelect
-                          quantity={
-                            isAddedToCartProducts(product.id)
-                              ? cartProducts.filter(
-                                (elm) => elm.id == product.id,
-                              )[0].quantity
-                              : quantity
-                          }
-                          setQuantity={(qty) => {
-                            if (isAddedToCartProducts(product.id)) {
-                              updateQuantity(product.id, qty);
-                            } else {
-                              setQuantity(qty);
-                            }
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="tf-product-total-quantity">
-                    <div className="group-btn">
-                      <a
-                        href="#shoppingCart"
-                        data-bs-toggle="offcanvas"
-                        onClick={() => addProductToCart(product.id, quantity)}
-                        className="tf-btn btn-fill-2 text-uppercase fw-medium animate-btn"
-                      >
-                        {isAddedToCartProducts(product.id)
-                          ? "already added"
-                          : "add to bag"}
-                        <i className="icon-minus d-none d-sm-block" />
-                        <span className="price-add d-none d-sm-block">
-                          {(product.price * quantity).toFixed(2)}
+                        Material:{" "}
+                        <span className="variant-picker-label-value">
+                          {getAttributeValue("Metal")}
                         </span>
-                      </a>
-                      <div className="group-btn-action">
-                        <AddtoWishlist
-                          additionalClass="tf-btn-icon btn-add-wishlist"
-                          product={product}
-                          tooltipDirection="top"
-                        />
-
-                        <AddtoCompare
-                          tooltipDirection="top"
-                          product={product}
-                          additionalClass="tf-btn-icon"
-                        />
                       </div>
                     </div>
-                    <Link
-                      href={`/checkout`}
-                      className="tf-btn w-100 text-uppercase fw-medium"
-                    >
-                      buy it now
-                    </Link>
+
+                    <div className="variant-picker-item">
+                      <div className="variant-picker-label h6 fw-normal">
+                        Color:{" "}
+                        <span className="variant-picker-label-value">
+                          {getAttributeValue("Color")}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="variant-picker-item">
+                      <div className="variant-picker-label h6 fw-normal">
+                        Size:{" "}
+                        <span className="variant-picker-label-value">
+                          {getAttributeValue("Size")}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="variant-picker-item">
+                      <div className="variant-picker-label h6 fw-normal">
+                        Purity:{" "}
+                        <span className="variant-picker-label-value">
+                          {getAttributeValue("Purity")}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="variant-picker-item">
+                      <div className="variant-picker-label h6 fw-normal">
+                        Gender:{" "}
+                        <span className="variant-picker-label-value">
+                          {getAttributeValue("Gender")}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="variant-picker-item">
+                      <div className="variant-picker-label h6 fw-normal">
+                        Occasion:{" "}
+                        <span className="variant-picker-label-value">
+                          {getAttributeValue("Occasion")}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="variant-picker-item">
+                      <div className="variant-picker-label h6 fw-normal">
+                        Product Code:{" "}
+                        <span className="variant-picker-label-value">
+                          {getAttributeValue("Code")}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="variant-picker-item">
+                      <div className="variant-picker-label h6 fw-normal">
+                        Weight:{" "}
+                        <span className="variant-picker-label-value">
+                          {getAttributeValue("Weight")} g
+                        </span>
+                      </div>
+                    </div>
+
                   </div>
-                  <div className="tf-product-share">
-                    <ul className="tf-social-icon">
-                      <li>
-                        <a href="#" className="social-facebook">
-                          <span className="icon">
-                            <i className="icon-facebook" />
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" className="social-instagram">
-                          <span className="icon">
-                            <i className="icon-instagram" />
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" className="social-x">
-                          <span className="icon">
-                            <i className="icon-x" />
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" className="social-snapchat">
-                          <span className="icon">
-                            <i className="icon-snapchat" />
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+
+
                 </div>
               </div>
             </div>
