@@ -4,6 +4,7 @@ import React from "react";
 import BlogGrids from "@/components/blogs/BlogGrids";
 import Footer2 from "@/components/footers/Footer2";
 import Header from "@/components/headers/Header";
+import "@/public/css/blogs/blogs.css"
 
 export const metadata = {
   title: "Blogs || Lalchnd Jewellers",
@@ -22,17 +23,13 @@ export default async function Page({ searchParams }) {
   return (
     <>
       <Topbar1 />
-
       <Header parentClass="tf-header" />
-
       <BreadcrumbBanner
         title="Insights & Stories of Lalchnd"
         current="Blogs"
         image="https://lalchnd.com/wp-content/uploads/2026/03/2560-x-931.jpg.jpeg"
       />
-
       <BlogGrids page={page} />
-
       <Footer2 />
     </>
   );

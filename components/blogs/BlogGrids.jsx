@@ -137,18 +137,19 @@ export default function BlogGrids({ page = 1 }) {
                           <HeadingTag>
                             <Link
                               href={`/${entry.slug}`}
-                              className="link fw-medium text-black text-uppercase"
+                              className="link  text-capitalize blog-grid-card-heading"
                             >
                               {entry.title}
                             </Link>
                           </HeadingTag>
 
                           <p
-                            className={`text-main-6 ${entry.headingLevel ===
-                                "h4"
-                                ? "text-line-clamp-2"
-                                : ""
-                              }`}
+                            // className={`text-main-6 ${entry.headingLevel ===
+                            //   "h4"
+                            //   ? "text-line-clamp-2"
+                            //   : ""
+                            //   }`}
+                            className="sub-title blog-grid-card-paragraph"
                           >
                             {entry.excerpt}
                           </p>

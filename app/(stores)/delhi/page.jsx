@@ -17,7 +17,7 @@ export default async function ProductDetailPage({ params }) {
     const product = allProducts.filter((p) => p.id == id)[0] || allProducts[0];
     return (
         <>
-            <Topbar1 parentClass="tf-topbar bg-dark-olive" />
+            <Topbar1 />
 
             <Header parentClass="tf-header" />
             <BreadcrumbBanner title="Delhi - Lalchnd Jewellers"

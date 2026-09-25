@@ -23,7 +23,7 @@ export default function GalleryGridPopup() {
   }, [selectedImage]);
 
   return (
-    <div className="flat-spacing-12 pb-0">
+    <div className="section-padding-bottom-40 section-padding-top-40">
       <div className="container-full-2">
         <div className="gallery-grid-popup__grid">
           {collectionsMedia.map((item, index) => (

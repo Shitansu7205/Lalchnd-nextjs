@@ -4,6 +4,7 @@ import React from "react";
 import MediaGridPopup from "@/components/common/MediaGridPopup";
 import Footer2 from "@/components/footers/Footer2";
 import Header from "@/components/headers/Header";
+import Partion from "@/components/common/Partion";
 export const metadata = {
   title: "Media - Lalchnd Jewellers",
   description:
@@ -20,8 +21,9 @@ export default function page() {
       <BreadcrumbBanner
         title="In the News"
         current="Media"
-        image="https://lalchnd.com/wp-content/uploads/2026/04/2560-x931.jpg-1.jpeg"
+        image="/images/lalchnd/banner/media-banner.webp"
       />
+      <Partion/>
       <MediaGridPopup />
       <Footer2 />
     </>

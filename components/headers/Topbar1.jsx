@@ -3,7 +3,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import Link from "next/link";
-export default function Topbar1({ parentClass = "tf-topbar bg-olive-brown" }) {
+export default function Topbar1({ parentClass = "tf-topbar bg-dark-blue" }) {
   return (
     <div className={parentClass}>
       <div className="container">
@@ -23,14 +23,14 @@ export default function Topbar1({ parentClass = "tf-topbar bg-olive-brown" }) {
             <SwiperSlide className="swiper-slide">
               <div className="has-btn">
                 <p className="text-caption-3 fw-medium text-white">
-                  FREE STANDARD DELIVERY FOR ALL ORDERS OVER $200
+                       DISCOVER TIMELESS JEWELLERY, CRAFTED TO CELEBRATE EVERY MOMENT
                 </p>
                 <span className="br-line" />
                 <Link
-                  href={`/shop-default`}
+                  href={`/products`}
                   className="tf-btn-line style-white-2 text-uppercase lh-19"
                 >
-                  Shop Now
+                  Explore Collection
                   <i className="icon-arrow-top-right-2 fs-10" />
                 </Link>
               </div>
@@ -39,14 +39,14 @@ export default function Topbar1({ parentClass = "tf-topbar bg-olive-brown" }) {
             <SwiperSlide className="swiper-slide">
               <div className="has-btn">
                 <p className="text-caption-3 fw-medium text-white">
-                  COMPLIMENTARY SHIPPING ON ORDERS ABOVE $200
+                    ELEVATE YOUR EVERYDAY WITH LALCHND'S SIGNATURE COLLECTIONS
                 </p>
                 <span className="br-line" />
                 <Link
-                  href={`/shop-default`}
+                  href={`/products`}
                   className="tf-btn-line style-white-2 text-uppercase lh-19"
                 >
-                  Shop Now
+                 Shop Jewellery
                   <i className="icon-arrow-top-right-2 fs-10" />
                 </Link>
               </div>

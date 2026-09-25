@@ -409,7 +409,8 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: $font-main;
+  // font-family: $font-main;
+  font-family: "Judson", serif;
   text-rendering: optimizeLegibility;
   font-weight: 500;
   margin-bottom: 0;
@@ -661,7 +662,7 @@ video {
 }
 
 .bg-surface {
-  background-color: var(--bg);
+  background-color: white;
 }
 
 .bg-surface-2 {

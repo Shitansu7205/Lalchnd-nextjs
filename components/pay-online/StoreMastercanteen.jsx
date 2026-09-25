@@ -4,24 +4,25 @@ import Image from "next/image";
 import { masterCanteenData } from "@/data/service";
 
 
-export default function MasterCanteen() {
+export default function StoreMasterCanteen() {
   const { heading, headingHighlight, subtitle, cards } =
     masterCanteenData;
 
   return (
-    <section className="master-canteen-section">
-      <div className="master-canteen-container">
+    <section className="payonline-section store-payonline-page">
+      <div className="container-full-2">
 
         {/* Header */}
-        <div className="master-canteen-header">
+        <div className="payonline-header">
 
-          <div className="brand-line">
+          {/* <div className="brand-line">
             <span></span>
 
             <p>LALCHND JEWELLERS</p>
 
             <span></span>
-          </div>
+          </div> */}
+
           <h2 className="heading-font">
             {heading} <span className="highlight-font">{headingHighlight}</span>
           </h2>
@@ -32,11 +33,11 @@ export default function MasterCanteen() {
 
 
         {/* Cards */}
-        <div className="master-canteen-cards">
+        <div className="payonline-cards">
 
           {cards.map((card) => (
             <div
-              className={`master-card ${card.type}-card`}
+              className={`payonline-card ${card.type}-card`}
               key={card.id}
             >
 
@@ -159,16 +160,6 @@ export default function MasterCanteen() {
         </div>
 
 
-        {/* Bottom Decoration */}
-
-        <div className="bottom-decoration">
-          <span></span>
-
-          <div>♢</div>
-
-          <span></span>
-        </div>
-
       </div>
     </section>
   );
@@ -214,14 +205,10 @@ function SupportBox({
 
       <a
         href={button.link}
-        className={
-          payment
-            ? "tf-btn type-large button-font"
-            : "tf-btn type-large button-font gold-button"
-        }
+        className={`home-cta-btn tf-btn btn-fill animate-btn type-large button-font ${payment ? "" : "gold-button"
+          }`}
       >
         {button.text}
-
         <span>→</span>
       </a>
 

@@ -30,56 +30,429 @@
   src: url("HeroLight-Light.otf");
 }
 
-/* Heading - Judson */
+/* =========================================================
+   GLOBAL TYPOGRAPHY
+   Fully Responsive
+========================================================= */
+
+
+/* =========================================================
+   MAIN HEADING - JUDSON
+========================================================= */
+
 .heading-font {
   font-family: "Judson", serif;
+
   font-size: 49px;
   font-weight: 400;
-  line-height: 54px;
+
+  line-height: 1.1;
+
+  letter-spacing: 0;
+
+  margin: 0;
+
+  color: #06273f;
 }
 
-/* Highlight Text - Carattere */
+
+/* =========================================================
+   HIGHLIGHT TEXT - CARATTERE
+========================================================= */
+
 .highlight-font {
   font-family: "Carattere", cursive;
+
   color: #ed9a00;
+
   font-size: 60px;
   font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: 0;
+
+  display: inline-block;
 }
 
-/* Paragraph - Inter */
+
+/* =========================================================
+   PARAGRAPH - INTER
+========================================================= */
+
 .paragraph-font {
   font-family: "Inter", sans-serif;
+
   font-size: 16px;
   font-weight: 400;
+
+  line-height: 1.7;
+
+  letter-spacing: 0;
+
+  margin: 0;
+
+  color: #333;
 }
 
-/* Button - Judson */
+
+/* =========================================================
+   BUTTON - JUDSON
+========================================================= */
+
 .button-font {
   font-family: "Judson", serif;
+
   font-size: 14px;
   font-weight: 400;
+
+  line-height: 1.2;
+
+  letter-spacing: 0;
+
+  white-space: nowrap;
 }
+
+
+/* =========================================================
+   BUTTON BACKGROUND
+========================================================= */
+
 .button-font-bg {
   background-color: #06273f !important;
+
   color: #fff !important;
-  transition: all 0.3s ease-in-out;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
+
+
+/* Button Hover */
+
 .button-font-bg:hover {
   background-color: #ed9a00 !important;
+
   color: #06273f !important;
 }
 
+
+/* =========================================================
+   SHORT HEADING - LIGHT
+========================================================= */
+
 .short-line-heding {
   font-family: "Judson", serif;
-  color: #ffffffd6;
+
+  color: rgba(255, 255, 255, 0.84);
+
   font-size: 18px;
-  letter-spacing:2px;
+  font-weight: 400;
+
+  line-height: 1.3;
+
+  letter-spacing: 2px;
+
+  margin: 0;
 }
+
+
+/* =========================================================
+   SHORT HEADING - DARK
+========================================================= */
+
 .short-line-heding-dark {
   font-family: "Judson", serif;
+
   color: #06273f;
+
   font-size: 18px;
-  letter-spacing:2px;
+  font-weight: 400;
+
+  line-height: 1.3;
+
+  letter-spacing: 2px;
+
+  margin: 0;
 }
 
 
+/* =========================================================
+   LARGE DESKTOP
+   1400px+
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .heading-font {
+    font-size: 52px;
+    line-height: 1.08;
+  }
+
+  .highlight-font {
+    font-size: 64px;
+    line-height: 0.9;
+  }
+
+  .paragraph-font {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .button-font {
+    font-size: 15px;
+  }
+
+  .short-line-heding,
+  .short-line-heding-dark {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+}
+
+
+/* =========================================================
+   DESKTOP
+   1200px - 1399px
+========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+  .heading-font {
+    font-size: 49px;
+    line-height: 1.1;
+  }
+
+  .highlight-font {
+    font-size: 59px;
+    line-height: 0.9;
+  }
+
+  .paragraph-font {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .button-font {
+    font-size: 14px;
+  }
+
+  .short-line-heding,
+  .short-line-heding-dark {
+    font-size: 17px;
+    letter-spacing: 1.8px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   992px - 1199px
+========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .heading-font {
+    font-size: 44px;
+    line-height: 1.1;
+  }
+
+  .highlight-font {
+    font-size: 53px;
+    line-height: 0.9;
+  }
+
+  .paragraph-font {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .button-font {
+    font-size: 14px;
+  }
+
+  .short-line-heding,
+  .short-line-heding-dark {
+    font-size: 16px;
+    letter-spacing: 1.7px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 991px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .heading-font {
+    font-size: 38px;
+    line-height: 1.12;
+  }
+
+  .highlight-font {
+    font-size: 46px;
+    line-height: 0.92;
+  }
+
+  .paragraph-font {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .button-font {
+    font-size: 14px;
+  }
+
+  .short-line-heding,
+  .short-line-heding-dark {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   481px - 767px
+========================================================= */
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .heading-font {
+    font-size: 34px;
+    line-height: 1.15;
+    padding-bottom: 20px;
+  }
+
+  .highlight-font {
+    font-size: 41px;
+    line-height: 0.95;
+  }
+
+  .paragraph-font {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .button-font {
+    font-size: 13px;
+  }
+
+  .short-line-heding,
+  .short-line-heding-dark {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    padding-bottom: 10px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   480px AND BELOW
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .heading-font {
+    font-size: 31px;
+    line-height: 1.15;
+    padding-bottom: 20px;
+  }
+
+  .highlight-font {
+    font-size: 38px;
+    line-height: 0.95;
+  }
+
+  .paragraph-font {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .button-font {
+    font-size: 13px;
+  }
+
+  .short-line-heding,
+  .short-line-heding-dark {
+    font-size: 13px;
+    letter-spacing: 1.2px;
+    padding-bottom: 10px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   360px AND BELOW
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .heading-font {
+    font-size: 28px;
+    line-height: 1.18;
+    padding-bottom: 20px;
+  }
+
+  .highlight-font {
+    font-size: 34px;
+    line-height: 0.95;
+  }
+
+  .paragraph-font {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .button-font {
+    font-size: 12px;
+  }
+
+  .short-line-heding,
+  .short-line-heding-dark {
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+   320px AND BELOW
+========================================================= */
+
+@media (max-width: 320px) {
+
+  .heading-font {
+    font-size: 26px;
+    line-height: 1.2;
+    padding-bottom: 20px;
+  }
+
+  .highlight-font {
+    font-size: 31px;
+  }
+
+  .paragraph-font {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .button-font {
+    font-size: 12px;
+  }
+
+  .short-line-heding,
+  .short-line-heding-dark {
+    font-size: 11px;
+    letter-spacing: 0.9px;
+    padding-bottom: 10px;
+  }
+}

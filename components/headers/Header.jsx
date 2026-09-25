@@ -5,7 +5,7 @@ import Menu from "./Menu";
 import { TrendingUp, MapPin, Phone } from "lucide-react";
 export default function Header({ parentClass = "tf-header line-bt-2" }) {
     return (
-        <header className={parentClass} >
+        <header className={`${parentClass} compact-header`} >
             <div className="container-full-2">
                 <div className="row align-items-center">
                     <div className="col-md-4 col-3 d-xl-none">

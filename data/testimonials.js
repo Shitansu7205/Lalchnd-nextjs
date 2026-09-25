@@ -43,49 +43,61 @@ export const testimonials = [
 
 export const testimonialData = [
   {
-    delay: "0s",
-    name: "Vincent P.",
-    title: "LOVE IT!",
-    text: "Lightweight yet impactful, they’re crafted to elevate your look from day to night — effortlessly blending simplicity and sophistication",
-    image: "/images/products/product-38.jpg",
-    productName: "Organically Shaped Heart Hoop...",
-    price: "$2,499.00",
-  },
+  delay: "0s",
+  name: "Sanjeev Khatoi",
+  title: "LOVE IT!",
+  text: `I finally found the perfect Panchmukhi Hanuman Ji idol for my car dashboard!
+
+My priority was to get something I could keep with me for a very long time, preferably a silver idol. I searched high and low—through countless online and offline stores—looking for something that truly spoke to me. Most of them were just silver-coated, and the ones I found were not looking great, with poor detailing work.
+
+After a lot of searching, I finally stumbled upon this absolute masterpiece during my recent road trip from Gurgaon to Puri. The intricate detailing and the powerful presence of Panchmukhi Hanuman Ji are just incredible.
+
+Having him on my dashboard not only brings positivity and protection but also a sense of calm whenever I’m on the road.`,
+
+  image: "/images/avatar/user.webp",
+
+  productName: "Organically Shaped Heart Hoop...",
+},
   {
     delay: "0.1s",
-    name: "Mas Shin",
+    name: "Aparna Rout",
     title: "RECOMMEND!",
-    text: "The quality of the jewelry exceeded my expectations. Each piece feels premium and beautifully crafted, and the designs are incredibly stylish. I’m absolutely obsessed with my new collection!",
-    image: "/images/products/product-39.jpg",
+    text: `Me and my mother went to lalchnd jeweller's in the morning hr and bought an earing, they have very beautiful collection of jewelleries✨️
+I had a little inconvenient experience earlier, However, after posting my review, the store promptly reached out to me, and assured that they would take necessary action to improve their customer service. I truly appreciate their quick response and willingness to address the issue.
+Hoping for a much better experience in the future.
+Thank you 🌸`,
+    image: "/images/avatar/user.webp",
     productName: "Hammered Teardrop Studs...",
-    price: "$2,799.00",
   },
   {
     delay: "0.2s",
-    name: "Rose Vo",
+    name: "SANTHOJI RAO M",
     title: "RECOMMEND!",
-    text: "I was blown away by the craftsmanship of these jewelry pieces. Every item feels luxurious and the modern designs are simply stunning",
-    image: "/images/products/product-37.jpg",
+    text: `Good location near to the Bhubaneswar railway station. Lift facility available. Veriety of Silver, Gold and Diamond ornaments available.`,
+    image: "/images/avatar/user.webp",
     productName: "Sculpted Pearl Drop Earrings",
-    price: "$3,299.00",
   },
   {
     delay: "0.3s",
     name: "David Ngo",
     title: "LOVE IT!",
     text: "These minimalist hoops add the perfect touch of elegance to any outfit. Designed for everyday wear with a sleek, modern finish",
-    image: "/images/products/product-36.jpg",
+    image: "/images/avatar/user.webp",
     productName: "Brushed Metal Cuff Bracelet",
-    price: "$1,999.00",
   },
   {
     delay: "0s",
-    name: "Vincent P.",
+    name: "Aarthi Moorthy",
     title: "LOVE IT!",
-    text: "The quality of the clothes exceeded my expectations. Every piece feels premium, and the designs are so trendy.",
-    image: "/images/products/product-38.jpg",
+    text: `We had the most fun shopping here. They have an extensive collection of everything silver.
+We went here to buy the Odisha famous filigree silver work jewellery. They had such a huge collections of them that it was heaven for shopping lovers like me.
+The staff were very courteous and Knowledgeable they asked us the right questions and showed us the perfect things we could choose from.
+They have silver jewellery that's gold plated and that's another huge collection and they are all super elegant and tough to just choose one.
+The staff will not become tired of showing off their collections.
+If you want silver filigree work as a memorabilia from Odisha then this is the place to visit.
+Their price was nominal and didn't charge is any thing extra.`,
+    image: "/images/avatar/user.webp",
     productName: "Organically Shaped Heart Hoop...",
-    price: "$2,499.00",
   },
 ];
 

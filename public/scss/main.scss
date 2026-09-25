@@ -11,6 +11,8 @@
 @import "/css/animate.css";
 
 @include meta.load-css("app.scss");
+@include meta.load-css("../css/store.css");
+@include meta.load-css("../css/header.css");
 .infiniteSlider {
   align-items: center;
   animation: 50.7075s linear 0s infinite normal none running infiniteslide;
@@ -512,117 +514,818 @@ picture.jarallax-img img {
     background: rgba(0, 0, 0, 0.42);
   }
 }
+/* =========================================================
+   COLLECTION IMAGE LINK
+========================================================= */
+
+.collection-image-link {
+  display: block;
+  position: relative;
+  cursor: none;
+}
+
+.collection-image-link,
+.collection-image-link * {
+  cursor: none !important;
+}
+
+/* =========================================================
+   IMAGE BOX
+========================================================= */
+
+.collection-image-link .box_image--V01 {
+  position: relative;
+  overflow: hidden;
+}
+
+.collection-image-link .box_image--V01 .image {
+  position: relative;
+}
+
+/* =========================================================
+   HOVER OVERLAY
+========================================================= */
+
+.collection-image-link .box_image--V01 .image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0);
+
+  transition: background 0.4s ease;
+
+  z-index: 1;
+}
+
+.collection-image-link .box_image--V01:hover .image::after {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* =========================================================
+   VIEW ALL CURSOR
+========================================================= */
+
+.view-all-cursor {
+  position: absolute;
+
+  width: 62px;
+  height: 62px;
+
+  border-radius: 50%;
+
+  background: #fff;
+  color: #111;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Jost", sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+
+  z-index: 20;
+
+  transition:
+    width 0.25s ease,
+    height 0.25s ease;
+}
+
+.collection-image-link:hover .view-all-cursor {
+  width: 68px;
+  height: 68px;
+}
+
+/* =========================================================
+   MAIN COLLECTION LAYOUT
+========================================================= */
+
 .collection-five-layout {
   display: grid;
-  grid-template-columns: 1fr 1.8fr 1fr;
-  gap: 10px;
+
+  /*
+    Center is wider than side columns
+  */
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1.55fr)
+    minmax(0, 1fr);
+
+  gap: 12px;
+
+  width: 100%;
+
+  /*
+    Don't make the gallery too small
+  */
+
+  // max-width: 1280px;
+
+  margin-left: auto;
+  margin-right: auto;
+
   align-items: stretch;
 }
 
-/* Left & Right */
+/* =========================================================
+   SIDE COLUMNS
+========================================================= */
+
 .collection-side-column {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: grid;
+
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  width: 100%;
+  height: 100%;
+
+  min-width: 0;
 }
 
-/* Side image */
-.collection-side-column .card_product-wrapper {
+/* =========================================================
+   SIDE PRODUCT CARD
+========================================================= */
+
+.collection-side-column .card_product--V01 {
   width: 100%;
-  aspect-ratio: 1.35 / 1;
-  overflow: hidden;
-  border-radius: 10px;
-  height: 260px;
+  height: 100%;
+  min-width: 0;
 }
+
+/* =========================================================
+   SIDE IMAGE WRAPPER
+========================================================= */
+
+.collection-side-column .card_product-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  /*
+    IMPORTANT:
+    Height matches the desktop center image
+    when two cards are stacked.
+  */
+
+  height: 245px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+}
+
+/* =========================================================
+   SIDE PRODUCT LINK
+========================================================= */
 
 .collection-side-column .card_product-wrapper .product-img {
   display: block;
+
+  position: relative;
+
   width: 100%;
   height: 100%;
+
+  overflow: hidden;
 }
+
+/* =========================================================
+   SIDE PRODUCT IMAGE
+========================================================= */
 
 .collection-side-column .card_product-wrapper img {
+  display: block;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.5s ease;
 }
 
-/* Center */
+/* Subtle hover zoom */
+
+.collection-side-column .card_product-wrapper:hover img {
+  transform: scale(1.03);
+}
+
+/* =========================================================
+   CENTER IMAGE
+========================================================= */
+
 .collection-center-image {
+  position: relative;
+
+  width: 100%;
+
+  /*
+    Bigger than previous version,
+    but still controlled.
+  */
+
+  height: 502px;
+
+  min-width: 0;
+}
+
+/* =========================================================
+   CENTER LINK
+========================================================= */
+
+.collection-center-image .collection-image-link {
+  display: block;
+
   width: 100%;
   height: 100%;
 }
+
+/* =========================================================
+   CENTER IMAGE BOX
+========================================================= */
 
 .collection-center-image .box_image--V01 {
-  height: 100%;
-}
+  position: relative;
 
-.collection-center-image .image {
   width: 100%;
-  height: 100%;
-}
+  height: 502px;
 
-.collection-center-image .image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  overflow: hidden;
+
   border-radius: 10px;
 }
 
-/* =========================
-   TABLET
-========================= */
+/* =========================================================
+   CENTER IMAGE CONTAINER
+========================================================= */
 
-@media (max-width: 991px) {
+.collection-center-image .image {
+  position: relative;
+
+  width: 100%;
+  height: 502px;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   CENTER IMAGE
+========================================================= */
+
+.collection-center-image .image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.6s ease;
+}
+
+/* Subtle zoom */
+
+.collection-center-image .box_image--V01:hover .image img {
+  transform: scale(1.02);
+}
+
+/* =========================================================
+   CENTER CONTENT
+========================================================= */
+
+.collection-center-image .content {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 30px;
+
+  z-index: 5;
+
+  padding: 0 25px;
+
+  text-align: center;
+}
+
+.collection-center-image .content .title {
+  margin: 0;
+  color: #fff;
+}
+
+/* =========================================================
+   LARGE DESKTOP
+   1400px+
+========================================================= */
+
+@media (min-width: 1400px) {
   .collection-five-layout {
-    grid-template-columns: 1fr 1.5fr 1fr;
+    // max-width: 1280px;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1.55fr)
+      minmax(0, 1fr);
+
+    gap: 14px;
+  }
+
+  .collection-side-column {
+    gap: 14px;
+  }
+
+  .collection-side-column .card_product-wrapper {
+    height: 250px;
+  }
+
+  .collection-center-image {
+    height: 514px;
+  }
+
+  .collection-center-image .box_image--V01,
+  .collection-center-image .image {
+    height: 514px;
+  }
+}
+
+/* =========================================================
+   DESKTOP
+   1200px - 1399px
+========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .collection-five-layout {
+    // max-width: 1200px;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1.55fr)
+      minmax(0, 1fr);
+
+    gap: 12px;
+  }
+
+  .collection-side-column {
+    gap: 12px;
+  }
+
+  .collection-side-column .card_product-wrapper {
+    height: 240px;
+  }
+
+  .collection-center-image {
+    height: 492px;
+  }
+
+  .collection-center-image .box_image--V01,
+  .collection-center-image .image {
+    height: 492px;
+  }
+
+  .collection-center-image .content {
+    bottom: 28px;
+  }
+}
+
+/* =========================================================
+   SMALL DESKTOP
+   992px - 1199px
+========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .collection-five-layout {
+    // max-width: 1080px;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1.5fr)
+      minmax(0, 1fr);
+
+    gap: 10px;
+  }
+
+  .collection-side-column {
+    gap: 10px;
+  }
+
+  .collection-side-column .card_product-wrapper {
+    height: 215px;
+
+    border-radius: 9px;
+  }
+
+  .collection-center-image {
+    height: 440px;
+  }
+
+  .collection-center-image .box_image--V01,
+  .collection-center-image .image {
+    height: 440px;
+  }
+
+  .collection-center-image .content {
+    bottom: 24px;
+
+    padding: 0 20px;
+  }
+
+  .collection-center-image .content .title {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}
+
+/* =========================================================
+   TABLET
+   768px - 991px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .collection-five-layout {
+    // max-width: 900px;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1.45fr)
+      minmax(0, 1fr);
+
     gap: 8px;
   }
 
   .collection-side-column {
     gap: 8px;
   }
+
+  .collection-side-column .card_product-wrapper {
+    height: 185px;
+
+    border-radius: 8px;
+  }
+
+  .collection-center-image {
+    height: 378px;
+  }
+
+  .collection-center-image .box_image--V01,
+  .collection-center-image .image {
+    height: 378px;
+  }
+
+  .collection-center-image .content {
+    bottom: 20px;
+
+    padding: 0 15px;
+  }
+
+  .collection-center-image .content .title {
+    font-size: 21px;
+
+    line-height: 1.2;
+  }
+
+  .view-all-cursor {
+    width: 56px;
+    height: 56px;
+  }
+
+  .collection-image-link:hover .view-all-cursor {
+    width: 62px;
+    height: 62px;
+  }
 }
 
-/* =========================
+/* =========================================================
    MOBILE
-========================= */
+   767px AND BELOW
+========================================================= */
 
 @media (max-width: 767px) {
+  /* -----------------------------------------
+     MAIN GRID
+  ----------------------------------------- */
+
   .collection-five-layout {
-    grid-template-columns: 1fr 1fr;
+    // display: grid;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    grid-template-rows:
+      auto
+      auto;
+
     gap: 10px;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 0;
   }
+
+  /* -----------------------------------------
+     CENTER IMAGE
+  ----------------------------------------- */
 
   .collection-center-image {
     grid-column: 1 / -1;
     grid-row: 1;
+
+    width: 100%;
+    height: auto;
+
+    min-height: 0;
   }
+
+  .collection-center-image .collection-image-link {
+    width: 100%;
+    height: auto;
+  }
+
+  .collection-center-image .box_image--V01 {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 0;
+
+    /*
+      Mobile center image
+      portrait ratio
+    */
+
+    aspect-ratio: 4 / 5;
+
+    border-radius: 9px;
+  }
+
+  .collection-center-image .image {
+    width: 100%;
+    height: 100%;
+
+    min-height: 0;
+  }
+
+  .collection-center-image .image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* -----------------------------------------
+     LEFT COLUMN
+  ----------------------------------------- */
 
   .collection-side-column:first-child {
     grid-column: 1;
     grid-row: 2;
+
+    display: grid;
+
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    width: 100%;
+    height: auto;
   }
+
+  /* -----------------------------------------
+     RIGHT COLUMN
+  ----------------------------------------- */
 
   .collection-side-column:last-child {
     grid-column: 2;
     grid-row: 2;
+
+    display: grid;
+
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    width: 100%;
+    height: auto;
   }
 
-  .collection-center-image .image {
-    aspect-ratio: 1 / 1;
+  /* -----------------------------------------
+     MOBILE PRODUCT CARD
+  ----------------------------------------- */
+
+  .collection-side-column .card_product--V01 {
+    width: 100%;
+    height: auto;
+
+    min-height: 0;
+  }
+
+  /* -----------------------------------------
+     MOBILE PRODUCT IMAGE
+  ----------------------------------------- */
+
+  .collection-side-column .card_product-wrapper {
+    width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 1 / 1.15;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+  }
+
+  .collection-side-column .card_product-wrapper .product-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .collection-side-column .card_product-wrapper img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* -----------------------------------------
+     CENTER CONTENT
+  ----------------------------------------- */
+
+  .collection-center-image .content {
+    left: 0;
+    right: 0;
+
+    bottom: 18px;
+
+    padding: 0 15px;
+
+    text-align: center;
+  }
+
+  .collection-center-image .content .title {
+    margin: 0;
+
+    font-size: 20px;
+
+    line-height: 1.2;
+  }
+
+  /* -----------------------------------------
+     CURSOR
+  ----------------------------------------- */
+
+  .view-all-cursor {
+    width: 54px;
+    height: 54px;
+
+    font-size: 7px;
+
+    letter-spacing: 0.7px;
+  }
+
+  .collection-image-link:hover .view-all-cursor {
+    width: 58px;
+    height: 58px;
   }
 }
+
+/* =========================================================
+   MOBILE 481px - 767px
+========================================================= */
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .collection-center-image .box_image--V01 {
+    aspect-ratio: 4 / 5;
+  }
+
+  .collection-side-column .card_product-wrapper {
+    aspect-ratio: 1 / 1.12;
+  }
+
+  .collection-center-image .content .title {
+    font-size: 21px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   480px AND BELOW
+========================================================= */
+
+@media (max-width: 480px) {
+  .collection-five-layout {
+    gap: 8px;
+  }
+
+  .collection-side-column {
+    gap: 8px !important;
+  }
+
+  /* Center image */
+
+  .collection-center-image .box_image--V01 {
+    aspect-ratio: 4 / 5.1;
+
+    border-radius: 8px;
+  }
+
+  /* Side images */
+
+  .collection-side-column .card_product-wrapper {
+    aspect-ratio: 1 / 1.17;
+
+    border-radius: 7px;
+  }
+
+  /* Center text */
+
+  .collection-center-image .content {
+    bottom: 15px;
+
+    padding: 0 12px;
+  }
+
+  .collection-center-image .content .title {
+    font-size: 18px;
+
+    line-height: 1.2;
+  }
+
+  /* Cursor */
+
+  .view-all-cursor {
+    width: 52px;
+    height: 52px;
+
+    font-size: 7px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+   360px AND BELOW
+========================================================= */
+
+@media (max-width: 360px) {
+  .collection-five-layout {
+    gap: 6px;
+  }
+
+  .collection-side-column {
+    gap: 6px !important;
+  }
+
+  .collection-center-image .box_image--V01 {
+    aspect-ratio: 1 / 1.25;
+
+    border-radius: 7px;
+  }
+
+  .collection-side-column .card_product-wrapper {
+    aspect-ratio: 1 / 1.18;
+
+    border-radius: 6px;
+  }
+
+  .collection-center-image .content {
+    bottom: 12px;
+
+    padding: 0 10px;
+  }
+
+  .collection-center-image .content .title {
+    font-size: 16px;
+  }
+}
+
+/* =========================================================
+   COUNTDOWN IMAGE
+========================================================= */
 
 @media (min-width: 992px) {
   .banner_countdown-v2 .bn_image {
     max-width: 570px;
   }
+
   .banner_countdown-v2 .img {
     max-width: 542px;
   }
 }
-
 /* ========================================
    JEWELLERY LOCATION SECTION
 ======================================== */
@@ -1492,74 +2195,6 @@ picture.jarallax-img img {
   }
 }
 
-.collection-image-link {
-  display: block;
-  position: relative;
-  cursor: none;
-}
-
-.collection-image-link .box_image--V01 {
-  position: relative;
-  overflow: hidden;
-}
-.collection-image-link .box_image--V01 .image {
-  position: relative;
-}
-
-.collection-image-link .box_image--V01 .image::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0);
-  transition: background 0.4s ease;
-  z-index: 1;
-}
-
-/* Hover par black overlay */
-.collection-image-link .box_image--V01:hover .image::after {
-  background: rgba(0, 0, 0, 0.45);
-}
-
-/* Hide normal cursor */
-.collection-image-link,
-.collection-image-link * {
-  cursor: none !important;
-}
-
-/* VIEW ALL circle */
-.view-all-cursor {
-  position: absolute;
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
-
-  background: #fff;
-  color: #111;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-family: "Jost", sans-serif;
-  font-size: 8px;
-  font-weight: 600;
-  letter-spacing: 1px;
-
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 20;
-
-  transition:
-    width 0.25s ease,
-    height 0.25s ease,
-    transform 0.15s ease;
-}
-
-/* Optional hover effect */
-.collection-image-link:hover .view-all-cursor {
-  width: 68px;
-  height: 68px;
-}
 .tf_marquee-V01.style_2 p {
   font-size: clamp(7px, 5vw, 28px);
   line-height: clamp(7px, 6vw, 20px);
@@ -2249,7 +2884,7 @@ picture.jarallax-img img {
    Pay Online
 ========================================================= */
 
-.master-canteen-section {
+.payonline-section {
   width: 100%;
   background-image: url("/images/lalchnd/pay-online/services-bg.webp");
   background-repeat: no-repeat;
@@ -2260,9 +2895,9 @@ picture.jarallax-img img {
   overflow: hidden;
 }
 
-.master-canteen-container {
+.payonline-container {
   width: 100%;
-  max-width: 1420px;
+  // max-width: 1420px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -2272,7 +2907,7 @@ picture.jarallax-img img {
    HEADER
 ========================================================= */
 
-.master-canteen-header {
+.payonline-header {
   text-align: center;
   margin-bottom: 42px;
 }
@@ -2303,7 +2938,7 @@ picture.jarallax-img img {
   letter-spacing: 5px;
 }
 
-.master-canteen-header h1 {
+.payonline-header h1 {
   margin: 0;
   color: #07172d;
   font-family: "Judson", serif;
@@ -2312,7 +2947,7 @@ picture.jarallax-img img {
   font-weight: 400;
 }
 
-.master-canteen-header h1 em {
+.payonline-header h1 em {
   color: #bd8628;
   font-family: "Carattere", cursive;
   font-size: 1.15em;
@@ -2333,7 +2968,7 @@ picture.jarallax-img img {
    CARDS WRAPPER
 ========================================================= */
 
-.master-canteen-cards {
+.payonline-cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
@@ -2343,7 +2978,7 @@ picture.jarallax-img img {
    COMMON CARD
 ========================================================= */
 
-.master-card {
+.payonline-card {
   position: relative;
   min-height: 535px;
   overflow: hidden;
@@ -2448,7 +3083,7 @@ picture.jarallax-img img {
    HEADINGS
 ========================================================= */
 
-.master-card h2 {
+.payonline-card h2 {
   margin: 8px 0 20px;
 
   font-family: "Judson", serif;
@@ -2752,8 +3387,7 @@ picture.jarallax-img img {
   align-items: center;
 
   gap: 20px;
-
-  margin-top: 52px;
+  background-color: #fff;
 }
 
 .bottom-decoration span {
@@ -2775,11 +3409,11 @@ picture.jarallax-img img {
 ========================================================= */
 
 @media (max-width: 1200px) {
-  .master-canteen-section {
+  .payonline-section {
     padding: 55px 25px 65px;
   }
 
-  .master-canteen-cards {
+  .payonline-cards {
     gap: 20px;
   }
 
@@ -2788,11 +3422,11 @@ picture.jarallax-img img {
     padding-left: 32px;
   }
 
-  .master-card {
+  .payonline-card {
     min-height: 570px;
   }
 
-  .master-card h2 {
+  .payonline-card h2 {
     font-size: 48px;
   }
 
@@ -2836,15 +3470,15 @@ picture.jarallax-img img {
 ========================================================= */
 
 @media (max-width: 991px) {
-  .master-canteen-section {
+  .payonline-section {
     padding: 48px 20px 58px;
   }
 
-  .master-canteen-header {
+  .payonline-header {
     margin-bottom: 32px;
   }
 
-  .master-canteen-header h1 {
+  .payonline-header h1 {
     font-size: 58px;
   }
 
@@ -2852,12 +3486,12 @@ picture.jarallax-img img {
     font-size: 18px;
   }
 
-  .master-canteen-cards {
+  .payonline-cards {
     grid-template-columns: 1fr;
     gap: 25px;
   }
 
-  .master-card {
+  .payonline-card {
     min-height: 580px;
   }
 
@@ -2871,7 +3505,7 @@ picture.jarallax-img img {
     padding: 38px 0 30px 40px;
   }
 
-  .master-card h2 {
+  .payonline-card h2 {
     font-size: 55px;
   }
 
@@ -2900,10 +3534,6 @@ picture.jarallax-img img {
     object-position: 72% center !important;
     transform: scale(1.12);
   }
-
-  .bottom-decoration {
-    margin-top: 42px;
-  }
 }
 
 /* =========================================================
@@ -2911,11 +3541,11 @@ picture.jarallax-img img {
 ========================================================= */
 
 @media (max-width: 767px) {
-  .master-canteen-section {
+  .payonline-section {
     padding: 36px 15px 45px;
   }
 
-  .master-canteen-container {
+  .payonline-container {
     width: 100%;
   }
 
@@ -2923,7 +3553,7 @@ picture.jarallax-img img {
      HEADER
   ===================================================== */
 
-  .master-canteen-header {
+  .payonline-header {
     margin-bottom: 27px;
   }
 
@@ -2941,12 +3571,12 @@ picture.jarallax-img img {
     letter-spacing: 2.5px;
   }
 
-  .master-canteen-header h1 {
+  .payonline-header h1 {
     font-size: clamp(38px, 10vw, 52px);
     line-height: 1.05;
   }
 
-  .master-canteen-header h1 em {
+  .payonline-header h1 em {
     display: block;
     margin: 5px 0 0;
     font-size: 1.08em;
@@ -2966,12 +3596,12 @@ picture.jarallax-img img {
      CARDS
   ===================================================== */
 
-  .master-canteen-cards {
+  .payonline-cards {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .master-card {
+  .payonline-card {
     /*
       IMPORTANT:
       No fixed mobile height.
@@ -3040,7 +3670,7 @@ picture.jarallax-img img {
 
   /* HEADING */
 
-  .master-card h2 {
+  .payonline-card h2 {
     margin: 7px 0 15px;
 
     font-size: clamp(40px, 11vw, 50px);
@@ -3319,8 +3949,6 @@ picture.jarallax-img img {
 
   .bottom-decoration {
     gap: 12px;
-
-    margin-top: 28px;
   }
 
   .bottom-decoration span {
@@ -3337,7 +3965,7 @@ picture.jarallax-img img {
 ========================================================= */
 
 @media (max-width: 480px) {
-  .master-canteen-section {
+  .payonline-section {
     padding: 30px 12px 40px;
   }
 
@@ -3356,7 +3984,7 @@ picture.jarallax-img img {
     letter-spacing: 2px;
   }
 
-  .master-canteen-header h1 {
+  .payonline-header h1 {
     font-size: 38px;
   }
 
@@ -3368,7 +3996,7 @@ picture.jarallax-img img {
 
   /* CARD */
 
-  .master-card {
+  .payonline-card {
     border-radius: 14px;
   }
 
@@ -3396,7 +4024,7 @@ picture.jarallax-img img {
 
   /* HEADINGS */
 
-  .master-card h2 {
+  .payonline-card h2 {
     font-size: 40px;
   }
 
@@ -3467,10 +4095,6 @@ picture.jarallax-img img {
 
   /* BOTTOM */
 
-  .bottom-decoration {
-    margin-top: 25px;
-  }
-
   .bottom-decoration span {
     width: 42px;
   }
@@ -3485,14 +4109,14 @@ picture.jarallax-img img {
 ========================================================= */
 
 @media (max-width: 360px) {
-  .master-canteen-section {
+  .payonline-section {
     padding-left: 9px;
     padding-right: 9px;
   }
 
   /* HEADER */
 
-  .master-canteen-header h1 {
+  .payonline-header h1 {
     font-size: 34px;
   }
 
@@ -3514,7 +4138,7 @@ picture.jarallax-img img {
 
   /* HEADING */
 
-  .master-card h2 {
+  .payonline-card h2 {
     font-size: 37px;
   }
 
@@ -3571,7 +4195,7 @@ picture.jarallax-img img {
 ========================================================= */
 
 @media (max-width: 320px) {
-  .master-canteen-header h1 {
+  .payonline-header h1 {
     font-size: 31px;
   }
 
@@ -3588,7 +4212,7 @@ picture.jarallax-img img {
     letter-spacing: 1.2px;
   }
 
-  .master-card h2 {
+  .payonline-card h2 {
     font-size: 34px;
   }
 
@@ -3603,5 +4227,11 @@ picture.jarallax-img img {
   .app-image-wrap,
   .payment-bg-image {
     height: 180px;
+  }
+}
+
+@media (max-width: 767px) {
+  .partion-img {
+    width: 10% !important;
   }
 }

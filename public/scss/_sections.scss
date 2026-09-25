@@ -2872,15 +2872,15 @@ section {
     }
   }
 
-  @include res(xxl, min) {
-    .brand-intro_subtitle,
-    .brand-intro_title,
-    .brand-intro_text,
-    .br-line,
-    .brand-intro_author {
-      margin-left: -30px;
-    }
-  }
+  // @include res(xxl, min) {
+  //   .brand-intro_subtitle,
+  //   .brand-intro_title,
+  //   .brand-intro_text,
+  //   .br-line,
+  //   .brand-intro_author {
+  //     margin-left: -30px;
+  //   }
+  // }
 }
 
 .s-established {

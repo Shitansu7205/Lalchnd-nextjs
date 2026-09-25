@@ -55,6 +55,10 @@ export default function LayoutWrapper({ children }) {
     let didScroll = false;
     const header = document.querySelector("header");
 
+    if (header?.classList.contains("compact-header")) {
+      return undefined;
+    }
+
     const handleScroll = () => {
       didScroll = true;
     };
@@ -105,6 +109,12 @@ export default function LayoutWrapper({ children }) {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
+      const header = document.querySelector("header");
+      if (header?.classList.contains("compact-header")) {
+        header.style.top = "0px";
+        header.classList.toggle("header-sticky", currentScrollY > 0);
+      }
+
       if (currentScrollY > 250) {
         if (currentScrollY > lastScrollY.current) {
           // Scrolling down
@@ -134,6 +144,12 @@ export default function LayoutWrapper({ children }) {
   useEffect(() => {
     const header = document.querySelector("header");
     if (header) {
+      if (header.classList.contains("compact-header")) {
+        header.style.top = "0px";
+        header.classList.toggle("header-sticky", window.scrollY > 0);
+        return;
+      }
+
       if (scrollDirection == "up") {
         header.style.top = "0px";
         header.classList.add("header-sticky");
