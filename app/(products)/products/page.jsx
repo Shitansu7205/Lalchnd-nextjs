@@ -17,7 +17,6 @@ export default function page() {
                 current="Blogs"
                 image="https://lalchnd.com/wp-content/uploads/2026/03/2560-x-931.jpg.jpeg"
             />
-            
             <ProductListing />
             <Footer2 />
         </>

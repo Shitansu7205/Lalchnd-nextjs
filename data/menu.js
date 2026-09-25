@@ -205,39 +205,178 @@ export const morePages = [
     ],
   },
 ];
-export const moreMenuImages = [
-  {
-    id: 1,
-    imgSrc: "/images/lalchnd/gallery/6.webp",
-    hoverImgSrc: "/images/lalchnd/gallery/7.webp",
-    title: "Explore Lalchnd",
-  },
-  {
-    id: 2,
-    imgSrc: "/images/lalchnd/gallery/8.webp",
-    hoverImgSrc: "/images/lalchnd/gallery/9.webp",
-    title: "wards & Achievements",
-  },
-]
 
 export const allJewlleryPages = [
   {
     heading: "By Category",
     links: [
-      { href: "/ear", label: "Earrings", icon: "earrings" },
-      { href: "/award", label: "Rings", icon: "rings" },
-      { href: "/blogs", label: "Necklaces", icon: "necklaces" },
-      { href: "/contact", label: "Bangles", icon: "bangles" },
-      { href: "/gallery", label: "Mangalasutra", icon: "mangalsutra" },
-      { href: "/about-us", label: "Pendants", icon: "pendants" },
-      { href: "/about-us", label: "Bracelets", icon: "bracelets" },
-      { href: "/about-us", label: "Chains", icon: "chains" },
-      { href: "/about-us", label: "Coins", icon: "coins" },
-      { href: "/about-us", label: "All Jewellery", icon: "all" },
+      { href: "/products?category=earrings", label: "Earrings", icon: "earrings" },
+      { href: "/products?category=rings", label: "Rings", icon: "rings" },
+      { href: "/products?category=necklaces", label: "Necklaces", icon: "necklaces" },
+      { href: "/products?category=bangles", label: "Bangles", icon: "bangles" },
+      { href: "#", label: "Mangalasutra", icon: "mangalsutra" },
+      { href: "/products?category=pendants", label: "Pendants", icon: "pendants" },
+      { href: "/products?category=bracelets", label: "Bracelets", icon: "bracelets" },
+      { href: "/products?category=chain", label: "Chains", icon: "chains" },
+      { href: "#", label: "Coins", icon: "coins" },
+      { href: "/products", label: "All Jewellery", icon: "all" },
     ],
   },
   {
-    heading: "BY PRICE",
+    heading: "By Price",
+    links: [
+      {
+        href: "#",
+        label: "Under ₹25K",
+        icon: "under25k",
+      },
+      {
+        href: "#",
+        label: "₹25K - 50K",
+        icon: "range25k50k",
+      },
+      {
+        href: "#",
+        label: "₹50K - 1L",
+        icon: "range50k1l",
+      },
+      {
+        href: "#",
+        label: "₹1L - 2L",
+        icon: "range1l2l",
+      },
+    ],
+  },
+  {
+    heading: "By Gender",
+    links: [
+      {
+        href: "/products?gender=male",
+        label: "Men",
+        icon: "men",
+      },
+      {
+        href: "/products?gender=female",
+        label: "Women",
+        icon: "women",
+      },
+      {
+        href: "/products?gender=kids",
+        label: "Kids",
+        icon: "kids",
+      },
+      {
+        href: "/products?gender=unisex",
+        label: "Unisex",
+        icon: "unisex",
+      },
+    ],
+  },
+  {
+    heading: "By Occasion",
+    links: [
+      {
+        href: "/products?occasion=daily-wear",
+        label: "Daily Wear",
+        icon: "dailyWear",
+      },
+      {
+        href: "/products?occasion=wedding",
+        label: "Wedding",
+        icon: "heavyOccasion",
+      },
+      {
+        href: "/products?occasion=light-occasion",
+        label: "Light Occasions",
+        icon: "lightOccasion",
+      },
+
+    ],
+  },
+]
+
+export const giftingPages = [
+  {
+    heading: "Gift For",
+    links: [
+      { href: "#", label: " Him" },
+      { href: "#", label: " Her" },
+      { href: "#", label: "Kinds" },
+      { href: "#", label: "Contact Us" },
+      { href: "#", label: "Our Gallery" },
+      { href: "#", label: "About Lalchnd" },
+    ],
+  },
+  {
+    heading: "By Price",
+    links: [
+      { href: "#", label: "Under ₹10K" },
+      { href: "#", label: "₹10K - 25K" },
+      { href: "#", label: "₹25K - 50K" },
+      { href: "#", label: "Above 50K" },
+    ],
+  },
+]
+
+export const goldJewlleryPages = [
+  {
+    heading: "By Category",
+    links: [
+      {
+        href: "/products?metal=gold&category=earrings",
+        label: "Earrings",
+        icon: "earrings",
+      },
+      {
+        href: "/products?metal=gold&category=rings",
+        label: "Rings",
+        icon: "rings",
+      },
+      {
+        href: "/products?metal=gold&category=necklaces",
+        label: "Necklaces",
+        icon: "necklaces",
+      },
+      {
+        href: "/products?metal=gold&category=bangles",
+        label: "Bangles",
+        icon: "bangles",
+      },
+      {
+        href: "/products?metal=gold&category=mangalsutra",
+        label: "Mangalasutra",
+        icon: "mangalsutra",
+      },
+      {
+        href: "/products?metal=gold&category=pendants",
+        label: "Pendants",
+        icon: "pendants",
+      },
+      {
+        href: "/products?metal=gold&category=bracelets",
+        label: "Bracelets",
+        icon: "bracelets",
+      },
+      {
+        href: "/products?metal=gold&category=chains",
+        label: "Chains",
+        icon: "chains",
+      },
+      {
+        href: "/products?metal=gold&category=coins",
+        label: "Coins",
+        icon: "coins",
+      },
+      {
+        href: "/products?metal=gold",
+        label: "All Jewellery",
+        icon: "all",
+      },
+    ],
+  },
+
+  {
+    heading: "By Price",
     links: [
       {
         href: "/shop-default",
@@ -261,92 +400,333 @@ export const allJewlleryPages = [
       },
     ],
   },
+
   {
-    heading: "BY GENDER",
+    heading: "By Gender",
     links: [
       {
-        href: "/shop-default",
+        href: "/products?metal=gold&gender=male",
         label: "Men",
         icon: "men",
       },
       {
-        href: "/shop-default",
+        href: "/products?metal=gold&gender=female",
         label: "Women",
         icon: "women",
       },
       {
-        href: "/shop-default",
+        href: "/products?metal=gold&gender=kids",
         label: "Kids",
         icon: "kids",
       },
       {
-        href: "/shop-default",
+        href: "/products?metal=gold&gender=unisex",
         label: "Unisex",
         icon: "unisex",
       },
     ],
   },
+
   {
-    heading: "BY OCCASION",
+    heading: "By Occasion",
     links: [
       {
-        href: "/shop-default",
+        href: "/products?metal=gold&occasion=daily-wear",
         label: "Daily Wear",
         icon: "dailyWear",
       },
       {
-        href: "/shop-default",
-        label: "Heavy Occasions",
+        href: "/products?metal=gold&occasion=wedding",
+        label: "Wedding",
         icon: "heavyOccasion",
       },
       {
-        href: "/shop-default",
+        href: "/products?metal=gold&occasion=light-occasion",
         label: "Light Occasions",
         icon: "lightOccasion",
       },
+    ],
+  },
+];
+
+export const silverJewlleryPages = [
+  {
+    heading: "By Category",
+    links: [
+      {
+        href: "/products?metal=silver&category=earrings",
+        label: "Earrings",
+        icon: "earrings",
+      },
+      {
+        href: "/products?metal=silver&category=rings",
+        label: "Rings",
+        icon: "rings",
+      },
+      {
+        href: "/products?metal=silver&category=necklaces",
+        label: "Necklaces",
+        icon: "necklaces",
+      },
+      {
+        href: "/products?metal=silver&category=bangles",
+        label: "Bangles",
+        icon: "bangles",
+      },
+      {
+        href: "/products?metal=silver&category=mangalsutra",
+        label: "Mangalasutra",
+        icon: "mangalsutra",
+      },
+      {
+        href: "/products?metal=silver&category=pendants",
+        label: "Pendants",
+        icon: "pendants",
+      },
+      {
+        href: "/products?metal=silver&category=bracelets",
+        label: "Bracelets",
+        icon: "bracelets",
+      },
+      {
+        href: "/products?metal=silver&category=chains",
+        label: "Chains",
+        icon: "chains",
+      },
+      {
+        href: "/products?metal=silver&category=coins",
+        label: "Coins",
+        icon: "coins",
+      },
+      {
+        href: "/products?metal=silver",
+        label: "All Jewellery",
+        icon: "all",
+      },
+    ],
+  },
+
+  {
+    heading: "By Price",
+    links: [
       {
         href: "/shop-default",
-        label: "Bridal Wear",
-        icon: "bridalWear",
+        label: "Under ₹25K",
+        icon: "under25k",
       },
       {
         href: "/shop-default",
-        label: "Elevated Essentials",
-        icon: "elevatedEssentials",
+        label: "₹25K - 50K",
+        icon: "range25k50k",
+      },
+      {
+        href: "/shop-default",
+        label: "₹50K - 1L",
+        icon: "range50k1l",
+      },
+      {
+        href: "/shop-default",
+        label: "₹1L - 2L",
+        icon: "range1l2l",
       },
     ],
   },
-]
 
-export const giftingPages = [
   {
-    heading: "GIFT FOR",
+    heading: "By Gender",
     links: [
-      { href: "/media", label: " Him" },
-      { href: "/award", label: " Her" },
-      { href: "/blogs", label: "Kinds" },
-      { href: "/contact", label: "Contact Us" },
-      { href: "/gallery", label: "Our Gallery" },
-      { href: "/about-us", label: "About Lalchnd" },
+      {
+        href: "/products?metal=silver&gender=male",
+        label: "Men",
+        icon: "men",
+      },
+      {
+        href: "/products?metal=silver&gender=female",
+        label: "Women",
+        icon: "women",
+      },
+      {
+        href: "/products?metal=silver&gender=kids",
+        label: "Kids",
+        icon: "kids",
+      },
+      {
+        href: "/products?metal=silver&gender=unisex",
+        label: "Unisex",
+        icon: "unisex",
+      },
     ],
   },
+
   {
-    heading: "BY PRICE",
+    heading: "By Occasion",
     links: [
-      { href: "/media", label: "Under ₹10K" },
-      { href: "/award", label: "₹10K - 25K" },
-      { href: "/blogs", label: "₹25K - 50K" },
-      { href: "/contact", label: "Above 50K" },
+      {
+        href: "/products?metal=silver&occasion=daily-wear",
+        label: "Daily Wear",
+        icon: "dailyWear",
+      },
+      {
+        href: "/products?metal=silver&occasion=wedding",
+        label: "Wedding",
+        icon: "heavyOccasion",
+      },
+      {
+        href: "/products?metal=silver&occasion=light-occasion",
+        label: "Light Occasions",
+        icon: "lightOccasion",
+      },
     ],
   },
+];
+
+export const diamondJewlleryPages = [
+  {
+    heading: "By Category",
+    links: [
+      {
+        href: "/products?metal=diamond&category=earrings",
+        label: "Earrings",
+        icon: "earrings",
+      },
+      {
+        href: "/products?metal=diamond&category=rings",
+        label: "Rings",
+        icon: "rings",
+      },
+      {
+        href: "/products?metal=diamond&category=necklaces",
+        label: "Necklaces",
+        icon: "necklaces",
+      },
+      {
+        href: "/products?metal=diamond&category=bangles",
+        label: "Bangles",
+        icon: "bangles",
+      },
+      {
+        href: "/products?metal=diamond&category=mangalsutra",
+        label: "Mangalasutra",
+        icon: "mangalsutra",
+      },
+      {
+        href: "/products?metal=diamond&category=pendants",
+        label: "Pendants",
+        icon: "pendants",
+      },
+      {
+        href: "/products?metal=diamond&category=bracelets",
+        label: "Bracelets",
+        icon: "bracelets",
+      },
+      {
+        href: "/products?metal=diamond&category=chains",
+        label: "Chains",
+        icon: "chains",
+      },
+      {
+        href: "/products?metal=diamond&category=coins",
+        label: "Coins",
+        icon: "coins",
+      },
+      {
+        href: "/products?metal=diamond",
+        label: "All Jewellery",
+        icon: "all",
+      },
+    ],
+  },
+
+  {
+    heading: "By Price",
+    links: [
+      {
+        href: "/shop-default",
+        label: "Under ₹25K",
+        icon: "under25k",
+      },
+      {
+        href: "/shop-default",
+        label: "₹25K - 50K",
+        icon: "range25k50k",
+      },
+      {
+        href: "/shop-default",
+        label: "₹50K - 1L",
+        icon: "range50k1l",
+      },
+      {
+        href: "/shop-default",
+        label: "₹1L - 2L",
+        icon: "range1l2l",
+      },
+    ],
+  },
+
+  {
+    heading: "By Gender",
+    links: [
+      {
+        href: "/products?metal=diamond&gender=male",
+        label: "Men",
+        icon: "men",
+      },
+      {
+        href: "/products?metal=diamond&gender=female",
+        label: "Women",
+        icon: "women",
+      },
+      {
+        href: "/products?metal=diamond&gender=kids",
+        label: "Kids",
+        icon: "kids",
+      },
+      {
+        href: "/products?metal=diamond&gender=unisex",
+        label: "Unisex",
+        icon: "unisex",
+      },
+    ],
+  },
+
+  {
+    heading: "By Occasion",
+    links: [
+      {
+        href: "/products?metal=diamond&occasion=daily-wear",
+        label: "Daily Wear",
+        icon: "dailyWear",
+      },
+      {
+        href: "/products?metal=diamond&occasion=wedding",
+        label: "Wedding",
+        icon: "heavyOccasion",
+      },
+      {
+        href: "/products?metal=diamond&occasion=light-occasion",
+        label: "Light Occasions",
+        icon: "lightOccasion",
+      },
+    ],
+  },
+];
+
+
+
+export const moreMenuImages = [
+  {
+    id: 1,
+    imgSrc: "/images/lalchnd/gallery/6.webp",
+    hoverImgSrc: "/images/lalchnd/gallery/7.webp",
+    title: "Explore Lalchnd",
+  },
+  {
+    id: 2,
+    imgSrc: "/images/lalchnd/gallery/8.webp",
+    hoverImgSrc: "/images/lalchnd/gallery/9.webp",
+    title: "wards & Achievements",
+  },
 ]
-
-
-
-
-
-
-
 
 
 
