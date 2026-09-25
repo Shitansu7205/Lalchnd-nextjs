@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function CdaDescription() {
     return (
-        <div className="flat-spacing-3">
+        <div className="flat-spacing-3 store-inner-section">
             <div className="container-full-2">
                 <div className="widget-accordion wd-product-descriptions">
                     <div
@@ -15,7 +15,7 @@ export default function CdaDescription() {
                         role="button"
                     >
                         <span className="icon icon-arrow-right-down" />
-                        <span>Description</span>
+                        <span className="store-inner-heading">Description</span>
                     </div>
                     <div id="description" className="collapse widget-desc">
                         <div className="accordion-body">
@@ -36,7 +36,7 @@ export default function CdaDescription() {
                         role="button"
                     >
                         <span className="icon icon-arrow-right-down" />
-                        <span>additional information</span>
+                        <span className="store-inner-heading">additional information</span>
                     </div>
                     <div id="material" className="collapse widget-material">
                         <div className="accordion-body">
@@ -69,7 +69,7 @@ export default function CdaDescription() {
                         role="button"
                     >
                         <span className="icon icon-arrow-right-down" />
-                        <span>reviews</span>
+                        <span className="store-inner-heading">reviews</span>
                     </div>
                     <div id="review" className="collapse widget-review">
                         <div className="accordion-body">

@@ -1,0 +1,13 @@
+.contact-us-btn {
+  padding: 7px;
+  width: 65%;
+}
+.contact-store-content {
+  justify-content: space-around !important;
+}
+
+@media (max-width: 1280px) {
+  .contact-us-btn {
+    width: 100% !important;
+  }
+}

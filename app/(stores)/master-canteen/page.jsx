@@ -1,4 +1,4 @@
-import Topbar1 from "@/components/headers/Topbar1";
+import TopBar from "@/components/headers/TopBar";
 import React from "react";
 import Link from "next/link";
 import { allProducts } from "@/data/products";
@@ -10,6 +10,7 @@ import Footer2 from "@/components/footers/Footer2";
 import MasterCanteenDetails from "@/components/stores/master-canteen/MasterCanteenDetails";
 import MasterCanteenDescription from "@/components/stores/master-canteen/MasterCanteenDescription";
 import OtherStores from "@/components/stores/OtherStores";
+import Partion from "@/components/common/Partion";
 export const metadata = {
     title: "Product Details || Vemus - Jewelry Ecommerce React Nextjs Template",
     description: "Vemus - Jewelry Ecommerce React Nextjs Template",
@@ -20,13 +21,14 @@ export default async function ProductDetailPage({ params }) {
     const product = allProducts.filter((p) => p.id == id)[0] || allProducts[0];
     return (
         <>
-             <Topbar1 />
+            <TopBar/>
 
             <Header parentClass="tf-header" />
             <BreadcrumbBanner title="Master Canteen"
                 current="Master Canteen - Lalchnd Jewellers"
-                image="https://lalchnd.com/wp-content/uploads/2025/07/WhatsApp-Image-2025-06-23-at-6.03.24-PM-1.jpeg"
+                image="/images/lalchnd/banner/store-inner-banner.webp"
             />
+            <Partion />
             <MasterCanteenDetails  />
             <MasterCanteenDescription />
             <OtherStores />

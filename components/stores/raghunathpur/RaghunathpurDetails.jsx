@@ -18,6 +18,8 @@ export default function RaghunathpurDetails() {
         updateQuantity,
     } = useContextElement();
     return (
+        <>
+        <link rel="stylesheet" href="/css/store/innerstore.css" />
         <section className="themesFlat section-padding-top-40">
             <div className="tf-main-product section-image-zoom">
                 <div className="container-full-2">
@@ -107,18 +109,19 @@ export default function RaghunathpurDetails() {
                                     </div>
 
                                     <div className="section-padding-top-40 store-action-buttons">
-                                        <ul className="entry_tag tag-wrap d-flex align-items-center">
-                                            <li>
+                                        <ul className="entry_tag tag-wrap d-flex align-items-center inner-btn">
+                                            <li className="inner-page-btn">
                                                 <Link
                                                     href="https://www.google.com/maps/place/Lalchnd+Jewellers/@20.3727489,85.8288903,17z/data=!4m16!1m7!3m6!1s0x3a1909b3b7641cfb:0x242ea86a13dc1dca!2sLalchnd+Jewellers!8m2!3d20.3728465!4d85.8315898!16s%2Fg%2F11h_14__8h!3m7!1s0x3a1909b3b7641cfb:0x242ea86a13dc1dca!8m2!3d20.3728465!4d85.8315898!9m1!1b1!16s%2Fg%2F11h_14__8h?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
-                                                    className="tf-btn btn-fill store-map-button"
+                                                    className="home-cta-btn tf-btn btn-fill animate-btn type-large"
+                                                style={{width: "100%"}}
                                                 >
                                                     Write a Review
                                                     <ArrowRight size={24} strokeWidth={1.8} />
                                                 </Link>
                                             </li>
 
-                                            <li>
+                                            <li className="inner-page-btn">
                                                 <Link
                                                     href="https://www.google.com/local/place/fid/0x3a1909b3b7641cfb:0x242ea86a13dc1dca/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3DiDJKX5XZYJfoPxYY01quYA%26cb_client%3Dsearch.gws-prod.gps%26yaw%3D23.98967%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&ik=CAISFmlESktYNVhaWUpmb1B4WVkwMXF1WUE%3D&sa=X&ved=2ahUKEwi-scC9q_WWAxVJj-EIHdZlDL0Qpx96BAgdEBI"
                                                     target="_blank"
@@ -141,5 +144,6 @@ export default function RaghunathpurDetails() {
                 </div>
             </div>
         </section>
+        </>
     );
 }

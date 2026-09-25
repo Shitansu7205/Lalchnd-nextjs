@@ -18,6 +18,8 @@ export default function StoreDetails() {
         updateQuantity,
     } = useContextElement();
     return (
+        <>
+        <link rel="stylesheet" href="/css/store/innerstore.css" />
         <section className="themesFlat section-padding-top-40">
             <div className="tf-main-product section-image-zoom">
                 <div className="container-full-2">
@@ -107,18 +109,18 @@ export default function StoreDetails() {
                                     </div>
 
                                     <div className="section-padding-top-40 store-action-buttons">
-                                        <ul className="entry_tag tag-wrap d-flex align-items-center">
-                                            <li>
+                                        <ul className="entry_tag tag-wrap d-flex align-items-center inner-btn">
+                                            <li className="inner-page-btn">
                                                 <Link
                                                     href="#review"
-                                                    className="tf-btn btn-fill store-map-button"
-                                                >
+                                                    className="home-cta-btn tf-btn btn-fill animate-btn type-large"
+                                                style={{width: "100%"}}>
                                                     Write a Review
                                                     <ArrowRight size={24} strokeWidth={1.8} />
                                                 </Link>
                                             </li>
 
-                                            <li>
+                                            <li className="inner-page-btn">
                                                 <Link
                                                     href="https://www.google.com/maps/place/Lalchnd+Jewellers/@20.2692697,85.8413965,64a,75y,42.4h,90.71t/data=!3m7!1e1!3m5!1sXwwXc-hkIUEjfN_psqt37g!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-0.7077242045555465%26panoid%3DXwwXc-hkIUEjfN_psqt37g%26yaw%3D42.39953924068941!7i16384!8i8192!4m14!1m7!3m6!1s0x3a19a744227e1903:0xb7b54fad41895a76!2sLalchnd+Jewellers!8m2!3d20.2691643!4d85.8415713!16s%2Fg%2F11g1lmdlp6!3m5!1s0x3a19a744227e1903:0xb7b54fad41895a76!8m2!3d20.2691643!4d85.8415713!16s%2Fg%2F11g1lmdlp6?entry=ttu"
                                                     target="_blank"
@@ -141,6 +143,7 @@ export default function StoreDetails() {
                 </div>
             </div>
         </section>
+        </>
     );
 }
 

@@ -15,6 +15,8 @@ export default function DelhiDetails() {
         updateQuantity,
     } = useContextElement();
     return (
+        <>
+        <link rel="stylesheet" href="/css/store/innerstore.css" />
         <section className="themesFlat section-padding-top-40">
             <div className="tf-main-product section-image-zoom">
                 <div className="container-full-2">
@@ -104,18 +106,19 @@ export default function DelhiDetails() {
                                     </div>
 
                                     <div className="section-padding-top-40 store-action-buttons">
-                                        <ul className="entry_tag tag-wrap d-flex align-items-center">
-                                            <li>
+                                        <ul className="entry_tag tag-wrap d-flex align-items-center inner-btn">
+                                            <li className="inner-page-btn">
                                                 <Link
                                                     href="https://www.google.com/maps/place/Lalchnd+Jewellers+lajpat+nagar/@28.5712406,77.2381729,17z/data=!4m8!3m7!1s0x390ce309090603d7:0x1d5ca51e53fb3038!8m2!3d28.5712406!4d77.2381729!9m1!1b1!16s%2Fg%2F11k9kftb01!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDkxNS4wIKXMDSoASAFQAw%3D%3D"
-                                                    className="tf-btn btn-fill store-map-button"
+                                                    className="home-cta-btn tf-btn btn-fill animate-btn type-large"
+                                                style={{width: "100%"}}
                                                 >
                                                     Write a Review
                                                     <ArrowRight size={24} strokeWidth={1.8} />
                                                 </Link>
                                             </li>
 
-                                            <li>
+                                            <li className="inner-page-btn">
                                                 <Link
                                                     href="https://www.google.com/local/place/fid/0x390ce309090603d7:0x1d5ca51e53fb3038/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3DshPa_uoBQ__2v1ShOtd10g%26cb_client%3Dsearch.gws-prod.gps%26yaw%3D150.2881%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&ik=CAISFnNoUGFfdW9CUV9fMnYxU2hPdGQxMGc%3D&sa=X&ved=2ahUKEwidq_76p_WWAxXgleEIHT_AGpUQpx96BAgeEBI"
                                                     target="_blank"
@@ -138,5 +141,6 @@ export default function DelhiDetails() {
                 </div>
             </div>
         </section>
+        </>
     );
 }

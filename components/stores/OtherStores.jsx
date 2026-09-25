@@ -11,10 +11,10 @@ import { storeLocations } from "@/data/storeDetails";
 
 export default function OtherStores({ containerFull = false }) {
     return (
-        <section className="flat-spacing pt-0">
+        <section className="section-padding-bottom-40 section-padding-top-40 light-bg">
             <div className="container-full-2">
                 <div className="sect-top wow fadeInUp">
-                    <h3 className="s-title">Our Other Stores</h3>
+                    <h3 className="heading-font">Our Other <span className="highlight-font">Stores</span></h3>
 
                     <div className="group-btn-slider">
                         <div className="nav-prev-swiper tf-sw-nav snbp45">

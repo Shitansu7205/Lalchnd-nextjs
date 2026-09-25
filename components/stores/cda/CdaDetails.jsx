@@ -18,6 +18,8 @@ export default function CdaDetails() {
         updateQuantity,
     } = useContextElement();
     return (
+         <>
+         <link rel="stylesheet" href="/css/store/innerstore.css" />
         <section className="themesFlat section-padding-top-40">
             <div className="tf-main-product section-image-zoom">
                 <div className="container-full-2">
@@ -107,18 +109,19 @@ export default function CdaDetails() {
                                     </div>
 
                                     <div className="section-padding-top-40 store-action-buttons">
-                                        <ul className="entry_tag tag-wrap d-flex align-items-center">
-                                            <li>
+                                        <ul className="entry_tag tag-wrap d-flex align-items-center inner-btn">
+                                            <li className="inner-page-btn">
                                                 <Link
                                                     href="https://www.google.com/maps/place/Lalchnd+Jewellers+CDA/@20.4794162,85.8396722,17z/data=!3m1!4b1!4m6!3m5!1s0x3a191166ffa7db7b:0x5fe1ccac866b17f6!8m2!3d20.4794162!4d85.8396722!16s%2Fg%2F11vxqt9psy?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
-                                                    className="tf-btn btn-fill store-map-button"
+                                                    className="home-cta-btn tf-btn btn-fill animate-btn type-large"
+                                                style={{width: "100%"}}
                                                 >
                                                     Write a Review
                                                     <ArrowRight size={24} strokeWidth={1.8} />
                                                 </Link>
                                             </li>
 
-                                            <li>
+                                            <li className="inner-page-btn">
                                                 <Link
                                                     href="https://www.google.com/local/place/fid/0x3a191166ffa7db7b:0x5fe1ccac866b17f6/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3DwZ4rrwvLxdUVQCxfu08onw%26cb_client%3Dsearch.gws-prod.gps%26yaw%3D90.04523%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&ik=CAISFndaNHJyd3ZMeGRVVlFDeGZ1MDhvbnc%3D&sa=X&ved=2ahUKEwjtzYGzqfWWAxWhkOEIHRHvNX0Qpx96BAgWEBI"
                                                     target="_blank"
@@ -141,5 +144,6 @@ export default function CdaDetails() {
                 </div>
             </div>
         </section>
+         </>
     );
 }

@@ -5,12 +5,17 @@ import Image from "next/image";
 import { ArrowUpRight, MapPin, Phone } from "lucide-react";
 import { storeLocations } from "@/data/storeDetails";
 
-
 export default function Store() {
     return (
-        <section className="stores-section section-padding-bottom-40 section-padding-top-40">
+        <section className="stores-section section-padding-bottom-40">
             <div className="container-full-2">
-
+                <div className="sect-border border-0">
+                    <div className="sect-head wow fadeInUp">
+                        <h2 className="s-title font-2 text-capitalize">
+                            <span className="fst-italic">Visit Our</span>  Exclusive Showrooms
+                        </h2>
+                    </div>
+                </div>
                 <div className="stores-grid">
                     {storeLocations.map((store) => (
                         <article className="cls_videoV01 hover-img3" key={store.title}>

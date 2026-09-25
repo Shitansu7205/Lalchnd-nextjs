@@ -1,0 +1,19 @@
+@media(max-width:767px){
+    .inner-btn{
+        display: flex;
+        flex-direction: column;
+    }
+    .inner-page-btn{
+        width: 100%;
+    }
+    .store-inner-heading{
+    font-size: 25px !important;
+}
+.store-inner-section{
+    padding: 0 !important;
+}
+}
+.store-inner-heading{
+    font-size: 35px;
+    font-family: "Judson", serif;
+}

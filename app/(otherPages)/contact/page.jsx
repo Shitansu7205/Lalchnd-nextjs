@@ -1,9 +1,10 @@
-import Topbar1 from "@/components/headers/Topbar1";
+import TopBar from "@/components/headers/TopBar";
 import BreadcrumbBanner from "@/components/common/BreadcrumbBanner";
 import React from "react";
 import Footer2 from "@/components/footers/Footer2";
 import ContactUs from "@/components/otherPages/ContactUs";
 import Header from "@/components/headers/Header";
+import Partion from "@/components/common/Partion";
 export const metadata = {
   title: "Contact - Lalchnd Jewellers",
   description:
@@ -15,13 +16,14 @@ export const metadata = {
 export default function page() {
   return (
     <>
-      <Topbar1 />
+      <TopBar />
       <Header parentClass="tf-header" />
       <BreadcrumbBanner
         title="Contact Us"
         current="Contact"
-        image="https://lalchnd.com/wp-content/uploads/2025/07/WhatsApp-Image-2025-06-23-at-6.03.24-PM-1.jpeg"
+        image="/images/lalchnd/banner/store-inner-banner.webp"
       />
+      <Partion />
       <ContactUs />
       <Footer2 />
     </>

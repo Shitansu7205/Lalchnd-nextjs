@@ -18,6 +18,8 @@ export default function BrahmapurDetails() {
         updateQuantity,
     } = useContextElement();
     return (
+        <>
+        <link rel="stylesheet" href="/css/store/innerstore.css" />
         <section className="themesFlat section-padding-top-40">
             <div className="tf-main-product section-image-zoom">
                 <div className="container-full-2">
@@ -107,18 +109,19 @@ export default function BrahmapurDetails() {
                                     </div>
 
                                     <div className="section-padding-top-40 store-action-buttons">
-                                        <ul className="entry_tag tag-wrap d-flex align-items-center">
-                                            <li>
+                                        <ul className="entry_tag tag-wrap d-flex align-items-center inner-btn">
+                                            <li className="inner-page-btn">
                                                 <Link
                                                     href="https://www.google.com/maps/place/Lalchnd+Jewellers/@19.3103271,84.7824868,17z/data=!3m1!4b1!4m6!3m5!1s0x3a3d512e59d1b0fd:0xe6ddc87d80f14020!8m2!3d19.3103221!4d84.7850617!16s%2Fg%2F11q4jr1d0_?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
-                                                    className="tf-btn btn-fill store-map-button"
+                                                   className="home-cta-btn tf-btn btn-fill animate-btn type-large"
+                                                style={{width: "100%"}}
                                                 >
                                                     Write a Review
                                                     <ArrowRight size={24} strokeWidth={1.8} />
                                                 </Link>
                                             </li>
 
-                                            <li>
+                                            <li className="inner-page-btn">
                                                 <Link
                                                     href="https://www.google.com/local/place/fid/0x3a3d512e59d1b0fd:0xe6ddc87d80f14020/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3DPlR3NC0SuK1IQDvaALmyiQ%26cb_client%3Dsearch.gws-prod.gps%26yaw%3D70.50755%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&ik=CAISFlBsUjNOQzBTdUsxSVFEdmFBTG15aVE%3D&sa=X&ved=2ahUKEwjDrYWnqPWWAxXXleEIHWZ6KPIQpx96BAgdEBI"
                                                     target="_blank"
@@ -141,5 +144,6 @@ export default function BrahmapurDetails() {
                 </div>
             </div>
         </section>
+        </>
     );
 }

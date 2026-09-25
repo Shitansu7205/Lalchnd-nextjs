@@ -18,6 +18,8 @@ export default function CantonmentRoadDetails() {
         updateQuantity,
     } = useContextElement();
     return (
+        <>
+        <link rel="stylesheet" href="/css/store/innerstore.css" />
         <section className="themesFlat section-padding-top-40">
             <div className="tf-main-product section-image-zoom">
                 <div className="container-full-2">
@@ -107,18 +109,19 @@ export default function CantonmentRoadDetails() {
                                     </div>
 
                                     <div className="section-padding-top-40 store-action-buttons">
-                                        <ul className="entry_tag tag-wrap d-flex align-items-center">
-                                            <li>
+                                        <ul className="entry_tag tag-wrap d-flex align-items-center inner-btn">
+                                            <li className="inner-page-btn">
                                                 <Link
                                                     href="google.com/maps/place/Lalchnd+Gems+and+Jewellers/data=!4m2!3m1!1s0x0:0xbc04869ee1b9d77c?sa=X&ved=1t:2428&ictx=111"
-                                                    className="tf-btn btn-fill store-map-button"
+                                                    className="home-cta-btn tf-btn btn-fill animate-btn type-large"
+                                                style={{width: "100%"}}
                                                 >
                                                     Write a Review
                                                     <ArrowRight size={24} strokeWidth={1.8} />
                                                 </Link>
                                             </li>
 
-                                            <li>
+                                            <li className="inner-page-btn">
                                                 <Link
                                                     href="https://www.google.com/local/place/fid/0x3a19120c10c56f8d:0xbc04869ee1b9d77c/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3DKKWfggHY4FU5zohO3BgdYQ%26cb_client%3Dsearch.gws-prod.gps%26yaw%3D186.58835%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&ik=CAISFktLV2ZnZ0hZNEZVNXpvaE8zQmdkWVE%3D&sa=X&ved=2ahUKEwium9OxqvWWAxVlleEIHaqaEe0Qpx96BAgcEBI"
                                                     target="_blank"
@@ -141,5 +144,6 @@ export default function CantonmentRoadDetails() {
                 </div>
             </div>
         </section>
+        </>
     );
 }

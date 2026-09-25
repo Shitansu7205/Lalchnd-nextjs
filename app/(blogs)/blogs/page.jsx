@@ -5,6 +5,7 @@ import BlogGrids from "@/components/blogs/BlogGrids";
 import Footer2 from "@/components/footers/Footer2";
 import Header from "@/components/headers/Header";
 import "@/public/css/blogs/blogs.css"
+import Partion from "@/components/common/Partion";
 
 export const metadata = {
   title: "Blogs || Lalchnd Jewellers",
@@ -27,8 +28,9 @@ export default async function Page({ searchParams }) {
       <BreadcrumbBanner
         title="Insights & Stories of Lalchnd"
         current="Blogs"
-        image="https://lalchnd.com/wp-content/uploads/2026/03/2560-x-931.jpg.jpeg"
+        image="/images/lalchnd/banner/blogs-banner.webp"
       />
+      <Partion />
       <BlogGrids page={page} />
       <Footer2 />
     </>
