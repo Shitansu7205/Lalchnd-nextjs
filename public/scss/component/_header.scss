@@ -440,6 +440,8 @@ header {
     @include transition3;
     line-height: 100px;
     text-transform: capitalize;
+    font-family: "Judson", serif;
+    font-size: 17px;
 
     .icon {
       color: var(--main);
@@ -601,6 +603,7 @@ header {
     display: inline-flex;
     align-items: center;
     gap: 10px;
+    font-family: "Judson", serif;
 
     &.active {
       color: var(--primary);
@@ -610,6 +613,8 @@ header {
   .menu-heading {
     font-weight: 500;
     color: var(--main);
+    font-family: "Judson", serif;
+    font-size: 16px;
   }
 
   &::-webkit-scrollbar {

@@ -57,11 +57,11 @@ export default function MobileMenu() {
                 <p>
                   Address:
                   <a
-                    href="https://www.google.com/maps?q=123+Yarran+St,+Punchbowl,+NSW+2196,+Australia"
+                    href="https://goo.gl/maps/AjU4cYxmFm1zzXL79"
                     className="fw-medium"
                     target="_blank"
                   >
-                    123 Yarran st, Punchbowl, NSW 2196, Australia
+                    Station Square, Unit- 3, Bhubaneswar
                   </a>
                 </p>
               </li>

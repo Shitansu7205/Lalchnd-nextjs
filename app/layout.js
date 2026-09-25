@@ -1,6 +1,7 @@
 import LayoutWrapper from "@/components/common/LayoutWrapper";
 
 import "../public/scss/main.scss";
+import "../public/css/product-listing/product-listing.css";
 import "photoswipe/dist/photoswipe.css";
 import ScrollTop from "@/components/common/ScrollTop";
 import Toolbar from "@/components/common/Toolbar";

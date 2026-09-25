@@ -74,9 +74,10 @@
 .footer-heading {
     font-size: 20px;
     line-height: 32px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     margin-bottom: 24px;
     letter-spacing: 0;
+    font-family: "Judson", serif;
 
     @include res(sm) {
         margin-bottom: 20px;

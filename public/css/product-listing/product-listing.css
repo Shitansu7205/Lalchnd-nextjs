@@ -1,0 +1,16 @@
+.api-product-listing .wrapper-shop.tf-grid-layout.tf-col-4 {
+  grid-template-columns: repeat(4, minmax(0, 300px));
+  justify-content: center;
+}
+
+@media (min-width: 992px) {
+  .api-product-listing .card_product--V01 {
+    width: 300px;
+    height: 400px;
+  }
+
+  .api-product-listing .card_product--V01 .card_product-wrapper {
+    height: 320px;
+    aspect-ratio: auto;
+  }
+}

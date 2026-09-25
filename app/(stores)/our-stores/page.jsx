@@ -7,6 +7,7 @@ import Link from "next/link";
 import BreadcrumbBanner from "@/components/common/BreadcrumbBanner";
 import Header from "@/components/headers/Header";
 import Partion from "@/components/common/Partion";
+import Topbar1 from "@/components/headers/Topbar1";
 export const metadata = {
     title: "Our Stores || Lalchnd - Jewelry ",
     description: "Lalchnd - Jewelry Ecommerce ",
@@ -14,12 +15,12 @@ export const metadata = {
 export default function page() {
     return (
         <>
-            <TopBar />
+            <Topbar1 />
             <Header parentClass="tf-header" />
             <BreadcrumbBanner
                 title="Our Presence"
                 current="Stores"
-                image="/images/banner/our-store-banner.webp"
+                image="/images/lalchnd/banner/our-store-banner.webp"
             />
             <Partion />
             <Store />

@@ -154,7 +154,7 @@ export const productDetailPages = [
 
 export const morePages = [
   {
-    heading: "MORE PAGES",
+    heading: "Explore Lalchnd",
     links: [
       { href: "/media", label: " Media" },
       { href: "/award", label: " Awards" },
@@ -710,6 +710,15 @@ export const diamondJewlleryPages = [
     ],
   },
 ];
+export const payOnlineMenuLinks = [
+  { href: "/store-mastercanteen", label: "Master Canteen Store" },
+  { href: "/store-raghunathpur", label: "Raghunath Store" },
+  { href: "/store-cantonment-road", label: "Contanoment Road Store" },
+  { href: "/store-cda", label: "Cda Store" },
+  { href: "/brahmapur-store", label: "Bramhapur Store" },
+  { href: "/store-new-delhi", label: "New Delhi Store" },
+];
+
 
 
 
