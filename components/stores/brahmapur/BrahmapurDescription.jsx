@@ -19,11 +19,11 @@ export default function BrahmapurDescription() {
                     </div>
                     <div id="description" className="collapse widget-desc">
                         <div className="accordion-body">
-                            <h6 className="text-main-4 fw-normal">
+                            <p className="sub-title">
                                 As the Best Jewellery Shopping Store in Brahmapur, Lalchnd Jewellers takes pride in offering a seamless and enjoyable shopping experience. Whether you’re searching for the ideal engagement ring, a gift for a loved one, or a piece to mark a special milestone, our collection has something for everyone.
                                 <br></br>
                                 When it comes to Jewellery Shops in Brahmapur, Lalchnd Jewellers is the name that stands out. We are honored to be recognized as the Best Jewellers in Brahmapur, and our Gold Showroom in Brahmapur is a testament to the legacy we’ve built over the years.
-                            </h6>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -44,16 +44,16 @@ export default function BrahmapurDescription() {
                             <table className="table-material">
                                 <tbody>
                                     <tr>
-                                        <td className="h6">Address</td>
-                                        <td className="h6">Lalchnd Jewellers, Dharma Nagar, <br /> Alakapur, Brahmapur, Odisha 760002</td>
+                                        <td className="sub-title">Address</td>
+                                        <td className="sub-title">Lalchnd Jewellers, Dharma Nagar, <br /> Alakapur, Brahmapur, Odisha 760002</td>
                                     </tr>
                                     <tr>
-                                        <td className="h6">Reviews</td>
-                                        <td className="h6">714 + Google reviews</td>
+                                        <td className="sub-title">Reviews</td>
+                                        <td className="sub-title">714 + Google reviews</td>
                                     </tr>
                                     <tr>
-                                        <td className="h6">Contact Details</td>
-                                        <td className="h6">0680 222 9404</td>
+                                        <td className="sub-title">Contact Details</td>
+                                        <td className="sub-title">0680 222 9404</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -178,7 +178,7 @@ export default function BrahmapurDescription() {
                                         <span className="rate-count">0</span>
                                     </li>
                                 </ul>
-                                <a href="https://www.google.com/maps/place/Lalchnd+Jewellers/data=!4m2!3m1!1s0x0:0xe6ddc87d80f14020?sa=X&ved=1t:2428&ictx=111" className="tf-btn fw-medium">
+                                <a href="https://www.google.com/maps/place/Lalchnd+Jewellers/data=!4m2!3m1!1s0x0:0xe6ddc87d80f14020?sa=X&ved=1t:2428&ictx=111" className="home-cta-btn tf-btn btn-fill animate-btn type-large">
                                     write a review
                                 </a>
                             </div>
@@ -215,11 +215,11 @@ export default function BrahmapurDescription() {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <h6 className="rv-text">
+                                                <p className="sub-title">
                                                     Excellent designs , good customer service
                                                     Polite behavior what elese could could you ask for
                                                     Amazing services would recommend for everyone to go
-                                                </h6>
+                                                </p>
                                             </div>
                                         </li>
                                         <li className="post-review-item">
@@ -252,9 +252,9 @@ export default function BrahmapurDescription() {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <h6 className="rv-text">
+                                                <p className="sub-title">
                                                     Today we are visit berhampur lalchnd store nice collection new design and excellent 👌 staff behavior alos good. My marriage anniversary purchase mantika lalchnd berhampur store nice so happy.
-                                                </h6>
+                                                </p>
                                             </div>
                                         </li>
                                         <li className="post-review-item">
@@ -286,9 +286,9 @@ export default function BrahmapurDescription() {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <h6 className="rv-text">
+                                                <p className="sub-title">
                                                     Excellent Designs With Reasonable Price,staff Behaviour Is Also Good,no Additional Making Charge Having V A Of 6.99 Percent
-                                                </h6>
+                                                </p>
                                             </div>
                                         </li>
                                     </ul>
@@ -299,7 +299,7 @@ export default function BrahmapurDescription() {
                                         href="https://www.google.com/maps/place/Lalchnd+Jewellers/data=!4m2!3m1!1s0x0:0xe6ddc87d80f14020?sa=X&ved=1t:2428&ictx=111"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="tf-btn fw-medium view-more-google"
+                                        className="home-cta-btn tf-btn btn-fill animate-btn type-large"
                                     >
                                         View More
                                         <img

@@ -19,10 +19,10 @@ export default function CdaDescription() {
                     </div>
                     <div id="description" className="collapse widget-desc">
                         <div className="accordion-body">
-                            <h6 className="text-main-4 fw-normal">
+                            <p className="sub-title">
                                 At Lalchnd Jewellers, we pride ourselves on being the best jewellery shop in CDA. Our reputation is built on unparalleled quality, customer service, and trust. With years of expertise, we bring you jewellery that reflects elegance, durability, and the highest standards of craftsmanship. From delicate gold necklaces to intricately designed diamond rings, our collection showcases the finest pieces for every taste and occasion. Whether you’re shopping for an engagement ring, a festive set, or a custom design, we have something truly special waiting for you. We are committed to offering a luxurious selection of fine jewellery that combines timeless craftsmanship with modern designs.
 
-                            </h6>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -43,16 +43,16 @@ export default function CdaDescription() {
                             <table className="table-material">
                                 <tbody>
                                     <tr>
-                                        <td className="h6">Address</td>
-                                        <td className="h6">Lalchnd Jewellers, CDA Sector VI, <br /> Kataka, Odisha 753014</td>
+                                        <td className="sub-title">Address</td>
+                                        <td className="sub-title">Lalchnd Jewellers, CDA Sector VI, <br /> Kataka, Odisha 753014</td>
                                     </tr>
                                     <tr>
-                                        <td className="h6">Reviews</td>
-                                        <td className="h6">1,180 + Google reviews</td>
+                                        <td className="sub-title">Reviews</td>
+                                        <td className="sub-title">1,180 + Google reviews</td>
                                     </tr>
                                     <tr>
-                                        <td className="h6">Contact Details</td>
-                                        <td className="h6">09124113240</td>
+                                        <td className="sub-title">Contact Details</td>
+                                        <td className="sub-title">09124113240</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -177,7 +177,7 @@ export default function CdaDescription() {
                                         <span className="rate-count">0</span>
                                     </li>
                                 </ul>
-                                <a href="https://www.google.com/maps/place/Lalchnd+Jewellers+CDA/@20.4794162,85.8396722,17z/data=!4m8!3m7!1s0x3a191166ffa7db7b:0x5fe1ccac866b17f6!8m2!3d20.4794162!4d85.8396722!9m1!1b1!16s%2Fg%2F11vxqt9psy?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D" className="tf-btn fw-medium">
+                                <a href="https://www.google.com/maps/place/Lalchnd+Jewellers+CDA/@20.4794162,85.8396722,17z/data=!4m8!3m7!1s0x3a191166ffa7db7b:0x5fe1ccac866b17f6!8m2!3d20.4794162!4d85.8396722!9m1!1b1!16s%2Fg%2F11vxqt9psy?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D" className="home-cta-btn tf-btn btn-fill animate-btn type-large">
                                     write a review
                                 </a>
                             </div>
@@ -214,9 +214,9 @@ export default function CdaDescription() {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <h6 className="rv-text">
+                                                <p className="sub-title">
                                                     Good ambience with best offer thanks lalchand . They have more option with unique collection, Awesome dealing by the employees 👏  As rakhi is round the corner they offer best price and silver rakhis are also there and tbh its not a paid review they make our shopping really relaxing 😌 thanks team lalchand …
-                                                </h6>
+                                                </p>
                                             </div>
                                         </li>
                                         <li className="post-review-item">
@@ -248,11 +248,11 @@ export default function CdaDescription() {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <h6 className="rv-text">
+                                                <p className="sub-title">
                                                     BEST EXPERIENCE
                                                     TILL LIFE LONG WE BEHERA FAMILY WANT TO THANKS U A LOT FOR YOUR CUSTOMER SERVICE
                                                     WELL done✔ 👍 …
-                                                </h6>
+                                                </p>
                                             </div>
                                         </li>
                                         <li className="post-review-item">
@@ -284,9 +284,9 @@ export default function CdaDescription() {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <h6 className="rv-text">
+                                                <p className="sub-title">
                                                    Good designs in the store and extremely cordial behavior.
-                                                </h6>
+                                                </p>
                                             </div>
                                         </li>
                                     </ul>
@@ -297,7 +297,7 @@ export default function CdaDescription() {
                                         href="https://www.google.com/maps/place/Lalchnd+Jewellers+CDA/@20.4794162,85.8396722,17z/data=!4m8!3m7!1s0x3a191166ffa7db7b:0x5fe1ccac866b17f6!8m2!3d20.4794162!4d85.8396722!9m1!1b1!16s%2Fg%2F11vxqt9psy?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="tf-btn fw-medium view-more-google"
+                                        className="home-cta-btn tf-btn btn-fill animate-btn type-large"
                                     >
                                         View More
                                         <img
