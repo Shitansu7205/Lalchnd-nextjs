@@ -195,55 +195,6 @@
     );
 }
 
-/* =========================================
-   DECORATIVE TOP LEFT
-========================================= */
-
-.decor-top-left {
-  width: 180px;
-  height: 180px;
-
-  position: absolute;
-
-  top: -105px;
-  left: -105px;
-
-  border-radius: 50%;
-
-  border: 12px solid rgba(214, 168, 60, 0.18);
-
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-
-  transform: rotate(-25deg);
-
-  pointer-events: none;
-}
-
-/* =========================================
-   DECORATIVE BOTTOM RIGHT
-========================================= */
-
-.decor-bottom-right {
-  width: 210px;
-  height: 210px;
-
-  position: absolute;
-
-  right: -120px;
-  bottom: -120px;
-
-  border-radius: 50%;
-
-  border: 14px solid rgba(6, 39, 63, 0.07);
-
-  border-left-color: transparent;
-  border-top-color: transparent;
-
-  transform: rotate(-20deg);
-
-  pointer-events: none;
-}
 
 /* =========================================
    LARGE DESKTOP
@@ -384,22 +335,6 @@
     margin-bottom: 25px;
   }
 
-
-  .decor-top-left {
-    width: 130px;
-    height: 130px;
-
-    top: -75px;
-    left: -75px;
-  }
-
-  .decor-bottom-right {
-    width: 150px;
-    height: 150px;
-
-    right: -85px;
-    bottom: -85px;
-  }
 }
 
 /* =========================================
