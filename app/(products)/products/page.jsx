@@ -18,7 +18,7 @@ export default function page() {
                 current="Blogs"
                 image="/images/lalchnd/banner/media-banner.webp"
             />
-            <Partion />
+            {/* <Partion /> */}
             <ProductListing />
             <Footer2 />
         </>

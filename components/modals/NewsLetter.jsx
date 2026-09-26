@@ -13,44 +13,87 @@ export default function NewsLetter() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
+    let timer;
+
     const showModal = async () => {
+      // Only show on homepage
+      if (window.location.pathname !== "/") return;
+
+      // Don't show again if already shown
+      const alreadyShown = localStorage.getItem("lalchnd_newsletter_shown");
+
+      if (alreadyShown) return;
+
       const bootstrap = await import("bootstrap");
 
-      const myModal = new bootstrap.Modal(
-        document.getElementById("newsletterPopup"),
-        {
-          keyboard: false,
-        }
-      );
+      const modalEl = document.getElementById("newsletterPopup");
+
+      if (!modalEl) return;
+
+      const myModal = new bootstrap.Modal(modalEl, {
+        keyboard: true,
+        backdrop: true,
+      });
 
       modalInstance.current = myModal;
 
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // Show after 2 seconds
+      timer = setTimeout(() => {
+        myModal.show();
 
-      myModal.show();
+        // Mark as shown
+        localStorage.setItem("lalchnd_newsletter_shown", "true");
+      }, 2000);
     };
 
     showModal();
+
+    return () => {
+      clearTimeout(timer);
+
+      if (modalInstance.current) {
+        modalInstance.current.hide();
+        modalInstance.current.dispose();
+        modalInstance.current = null;
+      }
+
+      // Remove any leftover Bootstrap backdrop
+      document.querySelectorAll(".modal-backdrop").forEach((backdrop) => {
+        backdrop.remove();
+      });
+
+      document.body.classList.remove("modal-open");
+      document.body.style.removeProperty("padding-right");
+      document.body.style.removeProperty("overflow");
+    };
   }, []);
 
-  const sendEmail = async (e) => {
-    e.preventDefault();
-
-    // Make sure email is entered
-    if (!email.trim()) {
-      return;
-    }
-
-    // Show success message
-    setMessage("Thank you! You have successfully subscribed.");
-
-    // Close popup
+  const closeModal = () => {
     modalInstance.current?.hide();
 
-    // Clear email
+    // Extra cleanup to prevent black overlay
+    setTimeout(() => {
+      document.querySelectorAll(".modal-backdrop").forEach((backdrop) => {
+        backdrop.remove();
+      });
+
+      document.body.classList.remove("modal-open");
+      document.body.style.removeProperty("padding-right");
+      document.body.style.removeProperty("overflow");
+    }, 300);
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (!email.trim()) return;
+
+    setMessage("Thank you! You have successfully subscribed.");
+
+    closeModal();
+
     setEmail("");
 
-    // Remove message after 3 seconds
     setTimeout(() => {
       setMessage("");
     }, 3000);
@@ -58,7 +101,6 @@ export default function NewsLetter() {
 
   return (
     <>
-      {/* Simple success message */}
       {message && (
         <div
           style={{
@@ -87,7 +129,12 @@ export default function NewsLetter() {
       >
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
-            <span className="icon-close-popup" data-bs-dismiss="modal">
+            <span
+              className="icon-close-popup"
+              onClick={closeModal}
+              role="button"
+              aria-label="Close newsletter"
+            >
               <i className="icon-close" />
             </span>
 
@@ -157,4 +204,3 @@ export default function NewsLetter() {
     </>
   );
 }
-

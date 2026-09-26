@@ -33,7 +33,7 @@ export default function Gallery() {
           </div>
 
           <div>
-            <HomeButton href="/about-us">
+            <HomeButton href="/products">
               Explore More
             </HomeButton>
           </div>
@@ -54,7 +54,7 @@ export default function Gallery() {
                 <div className="card_product-wrapper aspect-ratio-1">
 
                   <Link
-                    href={`/product-default/${product.id}`}
+                    href={product.url}
                     className="product-img"
                   >
                     <Image
@@ -115,7 +115,7 @@ export default function Gallery() {
             onMouseLeave={() => setIsHovering(false)}
             onMouseMove={handleMouseMove}
           >
-            <Link href="/collections" className="collection-image-link">
+            <Link href="/products" className="collection-image-link">
               <div className="box_image--V01 style-2 hover-img">
 
                 <div className="image img-style">
@@ -166,7 +166,7 @@ export default function Gallery() {
                 <div className="card_product-wrapper aspect-ratio-1">
 
                   <Link
-                    href={`/product-default/${product.id}`}
+                    href={product.url}
                     className="product-img"
                   >
                     <Image

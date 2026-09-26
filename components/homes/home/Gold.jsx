@@ -135,14 +135,12 @@ export default function Gold() {
                 Timeless <span className="highlight-font">Gold</span>, Crafted With Elegance
               </h2>
               <p className="sub-title">
-                Discover exquisite jewelry pieces at unbeatable prices. With our
-                limited-time offer, every second counts—shop now before the
-                timer runs out!
+                Discover exquisite gold jewellery designed to celebrate every moment. From classic essentials to statement pieces, find timeless craftsmanship that adds a touch of elegance to every occasion.
               </p>
             </div>
 
             <div className="btn-group">
-              <HomeButton href="/shop-collection-list" className="type-large">
+              <HomeButton href="/products?metal=gold" className="type-large">
                 Shop Collection
               </HomeButton>
             </div>

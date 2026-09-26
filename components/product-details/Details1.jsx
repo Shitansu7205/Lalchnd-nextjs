@@ -11,6 +11,7 @@ import QuantitySelect from "../common/QuantitySelect";
 import AddtoWishlist from "../common/AddtoWishlist";
 import AddtoCompare from "../common/AddtoCompare";
 import SizePicker from "./SizeSelect";
+import HomeButton from "../common/HomeButton";
 export default function Details1({ product }) {
   const [activeColor, setActiveColor] = useState("gold");
   const getAttributeValue = (name) => {
@@ -25,11 +26,11 @@ export default function Details1({ product }) {
     );
   };
   return (
-    <section className="themesFlat">
+    <section className="themesFlat section-padding-bottom-40">
       <div className="tf-main-product section-image-zoom">
         <div className="container-full-2">
-          <div className="row">
-            <div className="col-md-6">
+          <div className="row" style={{ justifyContent: "center" }}>
+            <div className="col-md-5">
               <div className="tf-product-media-wrap sticky-top">
                 <div className="thumbs-slider">
                   <Slider1
@@ -41,26 +42,26 @@ export default function Details1({ product }) {
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-5">
               <div className="tf-product-info-wrap">
                 <div className="tf-zoom-main sticky-top" />
                 <div className="tf-product-info-list other-image-zoom">
                   <div className="tf-product-info-heading">
                     <ul className="product-info-rate rate-wrap">
                       <li>
-                        <i className="icon-star" />
+                        <i className="icon-star" style={{ color: "#C9A227" }} />
                       </li>
                       <li>
-                        <i className="icon-star" />
+                        <i className="icon-star" style={{ color: "#C9A227" }} />
                       </li>
                       <li>
-                        <i className="icon-star" />
+                        <i className="icon-star" style={{ color: "#C9A227" }} />
                       </li>
                       <li>
-                        <i className="icon-star" />
+                        <i className="icon-star" style={{ color: "#C9A227" }} />
                       </li>
                       <li>
-                        <i className="icon-star" />
+                        <i className="icon-star" style={{ color: "#C9A227" }} />
                       </li>
                     </ul>
                     <h3 className="product-info-name fw-normal">
@@ -69,24 +70,16 @@ export default function Details1({ product }) {
                     <div className="product-info-price">
                       <div className="price-wrap">
                         <span className="price-new price-on-sale h4">
-                          ₹{product.prices.price}     {/* Size */}
-                          <div className="variant-picker-item">
-                            <div className="variant-picker-label h6 fw-normal">
-                              Size:{" "}
-                              <span className="variant-picker-label-value">
-                                {product.attributes
-                                  ?.find((attr) => attr.name === "Size")
-                                  ?.terms?.map((term) => term.name)
-                                  .join(", ")}
-                              </span>
-                            </div>
-                          </div>
+                          ₹{product.prices.price}
                         </span>
                       </div>
                     </div>
-                    <p className="product-infor-sub h6 fw-normal text-main-4">
-                      {product.description}
-                    </p>
+                    <p
+                      className="product-infor-sub h6 fw-normal "
+                      dangerouslySetInnerHTML={{
+                        __html: product.description,
+                      }}
+                    />
                     <div className="product-info-progress-sale">
                       <h6 className="text-hurry-up fw-normal">
                         In stock
@@ -96,82 +89,121 @@ export default function Details1({ product }) {
                       </div>
                     </div>
                   </div>
-                  <div className="tf-product-info-variant">
+                  <div className="tf-product-info-variant product-specs-grid">
 
                     <div className="variant-picker-item">
                       <div className="variant-picker-label h6 fw-normal">
-                        Material:{" "}
-                        <span className="variant-picker-label-value">
-                          {getAttributeValue("Metal")}
-                        </span>
+                        Material
                       </div>
+                      <span className="variant-picker-label-value">
+                        {getAttributeValue("Metal") || "—"}
+                      </span>
                     </div>
 
                     <div className="variant-picker-item">
                       <div className="variant-picker-label h6 fw-normal">
-                        Color:{" "}
-                        <span className="variant-picker-label-value">
-                          {getAttributeValue("Color")}
-                        </span>
+                        Color
                       </div>
+                      <span className="variant-picker-label-value">
+                        {getAttributeValue("Color") || "—"}
+                      </span>
                     </div>
 
                     <div className="variant-picker-item">
                       <div className="variant-picker-label h6 fw-normal">
-                        Size:{" "}
-                        <span className="variant-picker-label-value">
-                          {getAttributeValue("Size")}
-                        </span>
+                        Size
                       </div>
+                      <span className="variant-picker-label-value">
+                        {getAttributeValue("Size") || "—"}
+                      </span>
                     </div>
 
                     <div className="variant-picker-item">
                       <div className="variant-picker-label h6 fw-normal">
-                        Purity:{" "}
-                        <span className="variant-picker-label-value">
-                          {getAttributeValue("Purity")}
-                        </span>
+                        Purity
                       </div>
+                      <span className="variant-picker-label-value">
+                        {getAttributeValue("Purity") || "—"}
+                      </span>
                     </div>
 
                     <div className="variant-picker-item">
                       <div className="variant-picker-label h6 fw-normal">
-                        Gender:{" "}
-                        <span className="variant-picker-label-value">
-                          {getAttributeValue("Gender")}
-                        </span>
+                        Gender
                       </div>
+                      <span className="variant-picker-label-value">
+                        {getAttributeValue("Gender") || "—"}
+                      </span>
                     </div>
 
                     <div className="variant-picker-item">
                       <div className="variant-picker-label h6 fw-normal">
-                        Occasion:{" "}
-                        <span className="variant-picker-label-value">
-                          {getAttributeValue("Occasion")}
-                        </span>
+                        Occasion
                       </div>
+                      <span className="variant-picker-label-value">
+                        {getAttributeValue("Occasion") || "—"}
+                      </span>
                     </div>
 
                     <div className="variant-picker-item">
                       <div className="variant-picker-label h6 fw-normal">
-                        Product Code:{" "}
-                        <span className="variant-picker-label-value">
-                          {getAttributeValue("Code")}
-                        </span>
+                        Product Code
                       </div>
+                      <span className="variant-picker-label-value">
+                        {getAttributeValue("Product Code") || "—"}
+                      </span>
                     </div>
 
                     <div className="variant-picker-item">
                       <div className="variant-picker-label h6 fw-normal">
-                        Weight:{" "}
-                        <span className="variant-picker-label-value">
-                          {getAttributeValue("Weight")} g
-                        </span>
+                        Gross Weight
                       </div>
+                      <span className="variant-picker-label-value">
+                        {getAttributeValue("Gross Weight (Grs)") || "—"}
+                      </span>
+                    </div>
+
+                    <div className="variant-picker-item">
+                      <div className="variant-picker-label h6 fw-normal">
+                        Net Weight
+                      </div>
+                      <span className="variant-picker-label-value">
+                        {getAttributeValue("Net Weight (Net)") || "—"}
+                      </span>
+                    </div>
+
+                    <div className="variant-picker-item">
+                      <div className="variant-picker-label h6 fw-normal">
+                        Stone
+                      </div>
+                      <span className="variant-picker-label-value">
+                        {getAttributeValue("Stone") || "—"}
+                      </span>
                     </div>
 
                   </div>
+                  <div
+                    className="tf-product-info-heading"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "12px",
+                    }}
+                  >
+                    <HomeButton
+                      href="/products?metal=silver"
+                      className="type-large"
+                    >
+                      Shop Now
+                    </HomeButton>
 
+                    {/* <HomeButton
+                      href="/products?metal=silver"
+                      className="type-large"
+                    >
+                      Find Near Store
+                    </HomeButton> */}
+                  </div>
 
                 </div>
               </div>

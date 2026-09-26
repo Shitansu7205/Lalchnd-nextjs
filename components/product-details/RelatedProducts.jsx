@@ -44,7 +44,7 @@ export default function RelatedProducts({ product, containerFull = false }) {
   }, [category, product?.id]);
 
   return (
-    <section className="flat-spacing-3">
+    <section className="section-padding-bottom-40 section-padding-top-40">
       <div className="container-full-2">
         <div className="sect-top wow fadeInUp">
           <h3 className="s-title">YOU MAY ALSO LIKE</h3>
@@ -70,7 +70,7 @@ export default function RelatedProducts({ product, containerFull = false }) {
               spaceBetween: 20,
             },
             1200: {
-              slidesPerView: 4,
+              slidesPerView: 5,
               spaceBetween: 30,
             },
           }}

@@ -61,6 +61,7 @@ export const products3 = [
     oldPrice: null,
     textColor: "",
     badge: null,
+    url: "/products"
   },
   {
     id: 8,
@@ -71,6 +72,7 @@ export const products3 = [
     oldPrice: 3999,
     textColor: "text-secondary",
     badge: "30% OFF",
+    url: "/products"
   },
   {
     id: 9,
@@ -81,6 +83,7 @@ export const products3 = [
     oldPrice: 2899,
     textColor: "text-secondary",
     badge: "30% OFF",
+    url: "/products"
   },
   {
     id: 10,
@@ -91,6 +94,7 @@ export const products3 = [
     oldPrice: null,
     textColor: "",
     badge: null,
+    url: "/products"
   },
 ];
 

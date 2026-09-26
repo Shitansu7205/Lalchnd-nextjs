@@ -80,7 +80,7 @@ function ProductListingContent({ defaultLayout = 4 }) {
     });
 
     return <>
-        <div className="flat-spacing pt-0  api-product-listing" >
+        <div className="flat-spacing pt-0  api-product-listing " style={{ backgroundColor: "#fff9f3" }} >
             <div className="container-full-2">
                 <div className="tf-shop-control">
                     <div className="tf-control-filter">

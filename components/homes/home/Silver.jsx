@@ -135,14 +135,12 @@ export default function Silver() {
                 <span className="highlight-font">Silver</span> Elegance That Shines With Grace
               </h2>
               <p className="sub-title">
-                Discover exquisite jewelry pieces at unbeatable prices. With our
-                limited-time offer, every second counts—shop now before the
-                timer runs out!
+              Explore beautifully crafted silver jewellery that blends timeless charm with contemporary style. Discover versatile pieces made to complement your everyday moments and special occasions.
               </p>
             </div>
 
             <div className="btn-group">
-              <HomeButton href="/shop-collection-list" className="type-large">
+              <HomeButton href="/products?metal=silver" className="type-large">
                 Shop Collection
               </HomeButton>
             </div>

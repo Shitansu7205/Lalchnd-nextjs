@@ -30,10 +30,15 @@ import Blogs from "@/components/homes/home/Blogs";
 import InstagramFeed from "@/components/homes/home/InstagramFeed";
 import Banner from "@/components/homes/home-4/Banner";
 import FloatingActions from "@/components/common/FloatingActions";
+import Watch from "@/components/homes/home/Watch";
+
 
 export const metadata = {
-  title: "Home 01 || Vemus - Jewelry Ecommerce React Nextjs Template",
-  description: "Vemus - Jewelry Ecommerce React Nextjs Template",
+  title: "Best Jewellery Showroom in Odisha – Lalchnd Jewellers",
+  description: "Explore exquisite gold jewellery at Lalchnd, the best gold jewellery store in Odisha. Elevate your style with the finest gold pieces. Your trusted choice for luxurious jewellery shopping.",
+  alternates: {
+    canonical: "https://lalchnd.com/",
+  },
 };
 export default function Home() {
   return (
@@ -50,6 +55,7 @@ export default function Home() {
           <Gold />
           <Diamond />
           <Silver />
+          <Watch />
           <ImageSection />
           <ProductsImage />
           <Discount />
@@ -64,24 +70,6 @@ export default function Home() {
           <NewsLetter />
         </div>
       </div>
-      {/* <div className="bg-surface">
-        <div id="wrapper">
-          <Topbar1 />
-          <Header />
-          <Hero />
-          <TextBanner />
-          <Products1 />
-          <Products2 />
-          <Collections />
-          <TextSlider />
-          <Products3 />
-          <Testimonials />
-          <Banner />
-          <Features />
-          <Footer2 />
-          <NewsLetter />
-        </div>
-      </div> */}
     </>
   );
 }

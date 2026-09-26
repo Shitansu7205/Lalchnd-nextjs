@@ -1,4 +1,5 @@
-import Features from "@/components/common/Features";
+
+import Features from "@/components/homes/home/Features";
 import Footer1 from "@/components/footers/Footer1";
 import Header1 from "@/components/headers/Header1";
 import Topbar1 from "@/components/headers/Topbar1";
@@ -47,9 +48,9 @@ export default async function ProductDetailPage({ params }) {
 
             <Header parentClass="tf-header" />
 
-            <div className="flat-spacing-16 pb-0">
+            <div className="pb-0">
                 <div className="container-full-2">
-                    <div className="page-title border-0">
+                    <div className="page-title border-0 mob-paddin-left-128">
                         <div className="breadcrumbs">
                             <ul className="bread-wrap mb-0">
                                 <li>
@@ -84,9 +85,8 @@ export default async function ProductDetailPage({ params }) {
             </div>
 
             <Details1 product={product} />
-
+            <Features />
             <RelatedProducts product={product} />
-
 
             <Footer2 />
         </>

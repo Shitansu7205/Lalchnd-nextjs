@@ -4,36 +4,42 @@ export const categories = [
     image: "/images/lalchnd/home/category-01.webp",
     width: 800,
     height: 800,
+    url: "/products?metal=gold&category=earrings"
   },
   {
     label: "BANGLES",
     image: "/images/lalchnd/home/category-02.webp",
     width: 800,
     height: 800,
+    url: "/products?metal=gold&category=bangles"
   },
   {
     label: "BRACELETS",
     image: "/images/lalchnd/home/category-03.webp",
     width: 800,
     height: 800,
+    url: "/products?metal=gold&category=bracelets"
   },
   {
     label: "RINGS",
     image: "/images/lalchnd/home/category-05.webp",
     width: 800,
     height: 800,
+    url: "/products?metal=gold&category=rings"
   },
   {
     label: "WATCHES",
     image: "/images/lalchnd/home/category-04.webp",
     width: 800,
     height: 800,
+    url: "/products?category=watches"
   },
   {
     label: "GIFT IDEAS",
     image: "/images/lalchnd/home/gift.webp",
     width: 552,
     height: 552,
+    url: "/products?category=gift-items"
   },
 ];
 

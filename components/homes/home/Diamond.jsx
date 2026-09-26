@@ -116,7 +116,7 @@ export default function Diamond() {
     <div className="section-padding-bottom-40 section-padding-top-40 light-bg">
       <div className="container">
         <div className="banner_countdown-v2" style={{ gap: "80px" }}>
-          
+
           <div className="bn_content wow fadeInUp">
             <div className="heading">
               <Image alt="" src="/icon/luxury.svg" width={48} height={48} />
@@ -124,17 +124,15 @@ export default function Diamond() {
                 Where <span className="highlight-font">Diamond</span> Brilliance Meets Elegance
               </h2>
               <p className="sub-title">
-                Discover exquisite jewelry pieces at unbeatable prices. With our
-                limited-time offer, every second counts—shop now before the
-                timer runs out!
+                Discover exquisite diamond jewellery crafted to capture every sparkle. From elegant classics to stunning statement pieces, find designs that make your most cherished moments unforgettable.
               </p>
             </div>
-           
+
             <div className="btn-group">
-              <HomeButton href="/shop-collection-list" className="type-large">
+              <HomeButton href="/products?metal=diamond" className="type-large">
                 Shop Collection
               </HomeButton>
-              
+
             </div>
           </div>
           <div className="bn_image play-area-2">
