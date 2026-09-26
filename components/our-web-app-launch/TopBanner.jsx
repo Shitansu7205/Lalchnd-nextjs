@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import CountdownTimer from "@/components/common/Countdown";
 export default function TopBanner() {
   return (
     <div className="banner_countdown mt-5">
