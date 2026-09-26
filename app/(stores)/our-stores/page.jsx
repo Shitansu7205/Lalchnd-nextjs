@@ -19,7 +19,7 @@ export default function page() {
             <BreadcrumbBanner
                 title="Our Presence"
                 current="Stores"
-                image="/images/banner/our-store-banner.webp"
+                image="/images/lalchnd/banner/our-store-banner.webp"
             />
             <Partion />
             <Store />
