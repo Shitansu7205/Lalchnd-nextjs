@@ -69,10 +69,6 @@ export default function Installation() {
       <section style={{padding: "100px 0"}}>
         <div className="container-full-2">
 
-          {/* Decorative Elements */}
-          <span className="decor decor-top-left"></span>
-          <span className="decor decor-bottom-right"></span>
-
           <div className="steps-wrapper">
 
             {steps.map((step, index) => (
