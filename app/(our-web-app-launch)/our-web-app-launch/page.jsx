@@ -6,7 +6,7 @@ import Partion from "@/components/common/Partion";
 import React from "react";
 import Link from "next/link";
 import Banner from "@/components/our-web-app-launch/Banner";
-import TopBanner from "@/components/our-web-app-launch/topBanner";
+import TopBanner from "@/components/our-web-app-launch/TopBanner";
 import Installation from "@/components/our-web-app-launch/Installation";
 export const metadata = {
   title: "Our Stores || Vemus - Jewelry Ecommerce React Nextjs Template",
