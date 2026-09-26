@@ -533,7 +533,7 @@ function PreClosureTab() {
   </div>
 
   {/* Discount Table */}
-  <div className="sps-discount-table-wrapper">
+  <div className="sps-discount-table-wrapper mt-5">
 
     <div className="sps-discount-table">
       <table>
