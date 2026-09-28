@@ -44,7 +44,7 @@ export default function RelatedProducts({ product, containerFull = false }) {
   }, [category, product?.id]);
 
   return (
-    <section className="section-padding-bottom-40 section-padding-top-40">
+    <section className="section-padding-bottom-40 section-padding-top-40 light-bg">
       <div className="container-full-2">
         <div className="sect-top wow fadeInUp">
           <h3 className="s-title">YOU MAY ALSO LIKE</h3>

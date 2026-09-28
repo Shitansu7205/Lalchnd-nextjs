@@ -3,10 +3,10 @@
 import React from "react";
 
 const filterGroups = [
-  { key: "category", label: "Category", values: ["bangles", "rings", "earrings", "necklaces", "necklace-sets", "mangalsutra", "bracelets", "pendants", "chains", "anklets", "toe-rings", "coins", "gift-items"] },
-  { key: "metal", label: "Metal", values: ["gold", "silver", "diamond", "platinum"] },
+  { key: "category", label: "Category", values: ["bangles", "rings", "earrings", "necklaces", "necklace-set", "mangalsutra", "bracelets", "pendants", "chains", "coins", "gift-items"] },
+  { key: "metal", label: "Metal", values: ["gold", "silver", "diamond"] },
   { key: "gender", label: "Gender", values: ["female", "male", "unisex"] },
-  { key: "occasion", label: "Occasion", values: ["daily-wear", "festive", "party", "wedding"] },
+  { key: "occasion", label: "Occasion", values: ["daily-wear", "light-occasion", "wedding"] },
   { key: "purity", label: "Purity", values: ["22k", "24k"] },
 ];
 

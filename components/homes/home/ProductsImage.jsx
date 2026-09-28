@@ -66,7 +66,7 @@ export default function ProductsImage() {
                     <div className="focus-image-card">
 
                       <Link
-                        href={`/product-default/${product.id}`}
+                        href={`/products`}
                         className="focus-image-link"
                       >
                         <Image

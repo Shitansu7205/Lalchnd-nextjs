@@ -52,14 +52,14 @@ export default function Intro() {
                   <span className="duty text-main-4">Founder of Lalchnd</span>
                 </div>
               </div>
-              {/* <div className="author-signature">
+              <div className="author-signature">
                 <Image
                   alt="Signature"
                   src="/images/section/signature.svg"
                   width={296}
                   height={81}
                 />
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
