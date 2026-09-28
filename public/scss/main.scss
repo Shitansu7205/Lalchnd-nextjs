@@ -118,6 +118,19 @@ picture.jarallax-img img {
 }
 
 //samrita
+.sonepesuhagabanner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/images/banner/sone-pe-suhaga-banner.webp);
+    background-size: cover;
+    background-position: center;
+    animation: tf-animate-zoom-in-out 40s linear infinite;
+    z-index: 0;
+}
 .home-second {
   display: flex;
   justify-content: space-between;
