@@ -725,15 +725,9 @@ export const payOnlineMenuLinks = [
 export const moreMenuImages = [
   {
     id: 1,
-    imgSrc: "/images/lalchnd/gallery/6.webp",
-    hoverImgSrc: "/images/lalchnd/gallery/7.webp",
+    imgSrc: "/images/lalchnd/jewellery-menu/header-img-2.webp",
+    hoverImgSrc: "/images/lalchnd/jewellery-menu/header-img-1.webp",
     title: "Explore Lalchnd",
-  },
-  {
-    id: 2,
-    imgSrc: "/images/lalchnd/gallery/8.webp",
-    hoverImgSrc: "/images/lalchnd/gallery/9.webp",
-    title: "wards & Achievements",
   },
 ]
 
