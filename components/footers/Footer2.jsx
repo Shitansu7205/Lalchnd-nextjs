@@ -137,7 +137,7 @@ export default function Footer2() {
                 <ul className="footer-menu-list">
                   <li>
                     <Link
-                      href={`/shop-collection-list`}
+                      href={`/products?metal=gold`}
                       className="text-white link"
                     >
                       Gold
@@ -145,7 +145,7 @@ export default function Footer2() {
                   </li>
                   <li>
                     <Link
-                      href={`/shop-collection-list`}
+                      href={`/products?metal=silver`}
                       className="text-white link"
                     >
                       Silver
@@ -153,7 +153,7 @@ export default function Footer2() {
                   </li>
                   <li>
                     <Link
-                      href={`/shop-collection-list`}
+                      href={`/products?metal=diamond`}
                       className="text-white link"
                     >
                       Diamond
@@ -161,15 +161,15 @@ export default function Footer2() {
                   </li>
                   <li>
                     <Link
-                      href={`/shop-collection-list`}
+                      href={`/products?metal=gold&category=necklaces`}
                       className="text-white link"
                     >
-                      Watches
+                      Gold Necklaces
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href={`/shop-collection-list`}
+                      href={`/products?category=gift-items`}
                       className="text-white link"
                     >
                       Gifts Items
@@ -177,7 +177,7 @@ export default function Footer2() {
                   </li>
                   <li>
                     <Link
-                      href={`/shop-collection-list`}
+                      href={`/products`}
                       className="text-white link"
                     >
                       All Jewellery
@@ -400,7 +400,26 @@ export default function Footer2() {
         <div className="container-full-2">
           <div className="footer-bottom-wrap">
             <p className="text-nocopy text-white footer-app-title">
-              All Rights Reserved By <strong>Lalchnd Groups</strong>.
+              All Rights Reserved By <strong>Lalchnd Groups</strong> || Powered by{" "}
+              <a
+                href="https://crushaderstech.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-powered-logo"
+              >
+                <Image
+                  src="/images/lalchnd/icons/crushaders-logo.webp"
+                  alt="Crushaders Tech"
+                  width={100}
+                  height={30}
+                  style={{
+                    width: "100px",
+                    height: "auto",
+                    display: "inline-block",
+                    verticalAlign: "middle",
+                  }}
+                />
+              </a>
             </p>
             <div className="tf-currencies">
               <div className="footer-app-promo">
@@ -430,7 +449,7 @@ export default function Footer2() {
                 </a>
               </div>
             </div>
-            <ul className="paymend-method-list">
+            {/* <ul className="paymend-method-list">
               <li>
                 <a href="#">
                   <Image
@@ -531,11 +550,11 @@ export default function Footer2() {
                   />
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </div>
-      <div className="logo-bottom wow fadeInUp" data-wow-delay="0.1s">
+      {/* <div className="logo-bottom wow fadeInUp" data-wow-delay="0.1s">
         <div className="container-full-2">
           <div className="d-flex justify-content-center">
             <Image
@@ -547,7 +566,7 @@ export default function Footer2() {
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 }

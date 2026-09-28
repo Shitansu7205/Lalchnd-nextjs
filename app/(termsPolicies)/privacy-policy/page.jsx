@@ -11,6 +11,9 @@ export const metadata = {
   title: "Privacy Policy - Lalchnd Jewellers",
   description:
     "Read the privacy policy of Lalchnd Jewellers.",
+  alternates: {
+    canonical: "https://lalchnd.com/privacy-policy/",
+  },
 };
 export default function page() {
   return (
@@ -20,10 +23,8 @@ export default function page() {
       <BreadcrumbBanner
         title="Privacy Policy"
         current="Privacy Policy"
-        image="https://lalchnd.com/wp-content/uploads/2025/07/WhatsApp-Image-2025-06-23-at-6.03.24-PM-1.jpeg"
+        image="/images/lalchnd/banner/gallery-banner.webp"
       />
-
-
       <PrivacyPolicy />
       <Footer2 />
     </>
