@@ -13,6 +13,7 @@ export async function GET(request) {
         const gender = searchParams.get("gender");
         const occasion = searchParams.get("occasion");
         const purity = searchParams.get("purity");
+        const search = searchParams.get("search");
 
         const page = searchParams.get("page") || "1";
         const perPage = searchParams.get("per_page") || "20";
@@ -102,6 +103,11 @@ export async function GET(request) {
                 "attributes[3][slug]",
                 purity
             );
+        }
+
+        // Search
+        if (search) {
+            wooUrl.searchParams.set("search", search);
         }
 
         // =========================
