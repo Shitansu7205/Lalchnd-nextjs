@@ -60,10 +60,10 @@ export default function DelhiDetails() {
                                                 <i className="icon-star" />
                                             </li>
                                         </ul>
-                                        <h3 className="product-info-name fw-normal">
-                                            Lalchnd Jewellers, Lajpat Nagar, Delhi
+                                        <h3>
+                                            Lalchnd Jewellers, <span className="highlight-font" style={{fontSize: "38px"}}>Lajpat Nagar, Delhi</span>
                                         </h3>
-                                        <p className="product-infor-sub h6 fw-normal text-main-4">
+                                        <p className="sub-title">
                                             Lalchnd has been a trusted name in Odisha since 1948 and Lalchnd Jewellers the most trusted jewellery brand in the state for over three decades. Lalchnd Jewellers has left no stone unturned to make sure that its first and only jewellery store in the national capital not only showcases the finest of its hugely popular collections of gold, silver, diamond (including polki) and platinum jewellery, but also highlights the immeasurably rich cultural and jewellery heritage of its home state before the world. The Delhi showroom is home to 20,000-plus pieces of exquisite and 100%-certified jewellery, backed by great schemes and exchange policies and matched by world-class customer service. This effectively makes every buying experience a celebration for customers -- and Lalchnd Jewellers the best jewellery shop in Delhi.
                                         </p>
 

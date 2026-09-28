@@ -63,10 +63,10 @@ export default function StoreDetails() {
                                                 <i className="icon-star" />
                                             </li>
                                         </ul>
-                                        <h3 className="product-info-name fw-normal">
-                                            Your Trusted Jewellery Store in Master Canteen
+                                        <h3>
+                                            Your Trusted Jewellery Store in  <span className="highlight-font" style={{fontSize: "38px"}}>Master Canteen</span>
                                         </h3>
-                                        <p className="product-infor-sub h6 fw-normal text-main-4">
+                                        <p className="sub-title">
                                             Our showroom is your one-stop destination for a vast collection of high-quality jewellery, crafted to suit your individual taste and style. Whether you are looking for exquisite gold jewellery, elegant diamond pieces, or customized designs, we offer everything under one roof. With years of expertise in the jewellery industry, we pride ourselves on our legacy of delivering excellence in both product and service. Our jewellery shop in Master Canteen, you can rest assured that you are buying certified jewellery that guarantees purity and authenticity. Whether it’s a simple pendant or a sophisticated necklace, we provide the finest selection that reflects our attention to detail and passion for craftsmanship.
                                         </p>
 

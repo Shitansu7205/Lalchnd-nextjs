@@ -19,9 +19,9 @@ export default function CantonmentRoadDescription() {
                     </div>
                     <div id="description" className="collapse widget-desc">
                         <div className="accordion-body">
-                            <h6 className="text-main-4 fw-normal">
+                            <p className="sub-title">
                                 Lalchnd Jewellers stands as the leading jewellery shop on Cantonment Road, known for its transparent pricing, personalized service, and a wide selection of exquisite designs. Each piece in our collection is meticulously crafted with precision, ensuring unmatched quality and timeless elegance. From stunning bridal sets to everyday accessories, we offer a diverse range of gold, diamond, and gemstone jewellery that caters to every style and occasion. Whether you’re seeking classic pieces or the latest trends, our extensive collection of gold necklaces, bangles, earrings, and rings combines modern craftsmanship with traditional charm. At Lalchnd Jewellers, we don’t just sell jewellery—we create lasting memories. Visit us today and experience jewellery shopping like never before.
-                            </h6>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -42,16 +42,16 @@ export default function CantonmentRoadDescription() {
                             <table className="table-material">
                                 <tbody>
                                     <tr>
-                                        <td className="h6">Address</td>
-                                        <td className="h6">Cantonment Rd, opposite DCP Office,<br/> Maachhua Bazar, Kataka, Odisha 753001</td>
+                                        <td className="sub-title">Address</td>
+                                        <td className="sub-title">Cantonment Rd, opposite DCP Office,<br/> Maachhua Bazar, Kataka, Odisha 753001</td>
                                     </tr>
                                     <tr>
-                                        <td className="h6">Reviews</td>
-                                        <td className="h6">1,441 + Google reviews</td>
+                                        <td className="sub-title">Reviews</td>
+                                        <td className="sub-title">1,441 + Google reviews</td>
                                     </tr>
                                     <tr>
-                                        <td className="h6">Contact Details</td>
-                                        <td className="h6">0671 230 2505</td>
+                                        <td className="sub-title">Contact Details</td>
+                                        <td className="sub-title">0671 230 2505</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -176,7 +176,7 @@ export default function CantonmentRoadDescription() {
                                         <span className="rate-count">0</span>
                                     </li>
                                 </ul>
-                                <a href="https://www.google.com/maps/place/Lalchnd+Gems+and+Jewellers/@20.4778339,85.8798162,17z/data=!4m8!3m7!1s0x3a19120c10c56f8d:0xbc04869ee1b9d77c!8m2!3d20.4778339!4d85.8798162!9m1!1b1!16s%2Fg%2F11bx5qc4m3?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D" className="tf-btn fw-medium">
+                                <a href="https://www.google.com/maps/place/Lalchnd+Gems+and+Jewellers/@20.4778339,85.8798162,17z/data=!4m8!3m7!1s0x3a19120c10c56f8d:0xbc04869ee1b9d77c!8m2!3d20.4778339!4d85.8798162!9m1!1b1!16s%2Fg%2F11bx5qc4m3?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D" className="home-cta-btn tf-btn btn-fill animate-btn type-large">
                                     write a review
                                 </a>
                             </div>
@@ -213,9 +213,9 @@ export default function CantonmentRoadDescription() {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <h6 className="rv-text">
+                                                <p className="sub-title">
                                                   I had a fantastic experience shopping today.the staff Rajashree madam was incredibly welcoming, patient, and knowledgeable about the different diamond cuts and gold karats. They helped me find the perfect piece without applying any pressure, making the whole process truly special. Highly recommend their service.
-                                                </h6>
+                                                </p>
                                             </div>
                                         </li>
                                         <li className="post-review-item">
@@ -247,9 +247,9 @@ export default function CantonmentRoadDescription() {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <h6 className="rv-text">
+                                                <p className="sub-title">
                                                  It's a grand jewelery store which has variety of watches, gold jewelery, silver jewelery, bronze jewelry, silver containers, worship items made of silver and may more things. And variety of jewelery are just awesome. When I want to get something in silver I always go to lalchand because of the service and minimal price and lots of variety to choose.
-                                                </h6>
+                                                </p>
                                             </div>
                                         </li>
                                         <li className="post-review-item">
@@ -281,9 +281,9 @@ export default function CantonmentRoadDescription() {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <h6 className="rv-text">
+                                                <p className="sub-title">
                                                    Latest collections good store in odisha staff behaviour very good 😊👍
-                                                </h6>
+                                                </p>
                                             </div>
                                         </li>
                                     </ul>
@@ -294,7 +294,7 @@ export default function CantonmentRoadDescription() {
                                         href="https://www.google.com/maps/place/Lalchnd+Gems+and+Jewellers/@20.4778339,85.8798162,17z/data=!4m8!3m7!1s0x3a19120c10c56f8d:0xbc04869ee1b9d77c!8m2!3d20.4778339!4d85.8798162!9m1!1b1!16s%2Fg%2F11bx5qc4m3?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="tf-btn fw-medium view-more-google"
+                                        className="home-cta-btn tf-btn btn-fill animate-btn type-large"
                                     >
                                         View More
                                         <img

@@ -63,10 +63,10 @@ export default function RaghunathpurDetails() {
                                                 <i className="icon-star" />
                                             </li>
                                         </ul>
-                                        <h3 className="product-info-name fw-normal">
-                                            Your Trusted Jewellery Store in Raghunathpur
+                                        <h3>
+                                            Your Trusted Jewellery Store in <span className="highlight-font" style={{fontSize: "38px"}}>Raghunathpur</span>
                                         </h3>
-                                        <p className="product-infor-sub h6 fw-normal text-main-4">
+                                        <p className="sub-title">
                                             Welcome to Lalchnd Jewellers, your ultimate destination for exquisite gold, diamond, and designer jewellery. Renowned as the best jewellery showroom in Raghunathpur, we specialize in crafting jewellery that blends tradition with contemporary elegance. Whether you’re looking for a perfect bridal set or a special piece to celebrate your moments, our expert team is here to assist you in choosing the perfect piece. the best jewellery shop in Raghunathpur, our collection includes intricately designed gold necklaces, stunning diamond sets, and elegant bangles, each piece reflecting impeccable craftsmanship. With a legacy of trust and excellence, Lalchnd Jewellers is committed to making your moments special. Visit us today to explore our latest collections and indulge in a jewellery shopping experience like no other.
                                         </p>
 

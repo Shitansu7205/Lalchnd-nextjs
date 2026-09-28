@@ -63,10 +63,10 @@ export default function CantonmentRoadDetails() {
                                                 <i className="icon-star" />
                                             </li>
                                         </ul>
-                                        <h3 className="product-info-name fw-normal">
-                                            Explore Our Jewellery Showroom on Cantonment Road
+                                        <h3>
+                                            Explore Our Jewellery Showroom on <span className="highlight-font" style={{fontSize: "38px"}}>Cantonment Road</span>
                                         </h3>
-                                        <p className="product-infor-sub h6 fw-normal text-main-4">
+                                        <p className="sub-title">
                                             Lalchnd Jewellers stands as the leading jewellery shop on Cantonment Road, known for its transparent pricing, personalized service, and a wide selection of exquisite designs. Each piece in our collection is meticulously crafted with precision, ensuring unmatched quality and timeless elegance. From stunning bridal sets to everyday accessories, we offer a diverse range of gold, diamond, and gemstone jewellery that caters to every style and occasion. Whether you’re seeking classic pieces or the latest trends, our extensive collection of gold necklaces, bangles, earrings, and rings combines modern craftsmanship with traditional charm. At Lalchnd Jewellers, we don’t just sell jewellery—we create lasting memories. Visit us today and experience jewellery shopping like never before.
                                         </p>
 

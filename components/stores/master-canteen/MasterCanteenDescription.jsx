@@ -19,9 +19,9 @@ export default function MasterCanteenDescription() {
                     </div>
                     <div id="description" className="collapse widget-desc">
                         <div className="accordion-body">
-                            <h6 className="text-main-4 fw-normal">
+                            <p className="sub-title">
                                 Our showroom is your one-stop destination for a vast collection of high-quality jewellery, crafted to suit your individual taste and style. Whether you are looking for exquisite gold jewellery, elegant diamond pieces, or customized designs, we offer everything under one roof. With years of expertise in the jewellery industry, we pride ourselves on our legacy of delivering excellence in both product and service. Our jewellery shop in Master Canteen, you can rest assured that you are buying certified jewellery that guarantees purity and authenticity. Whether it’s a simple pendant or a sophisticated necklace, we provide the finest selection that reflects our attention to detail and passion for craftsmanship.
-                            </h6>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -42,16 +42,16 @@ export default function MasterCanteenDescription() {
                             <table className="table-material">
                                 <tbody>
                                     <tr>
-                                        <td className="h6">Address</td>
-                                        <td className="h6">Station Rd, Master Canteen Area,<br /> Kharvela Nagar, Bhubaneswar, <br />Odisha 751001</td>
+                                        <td className="sub-title">Address</td>
+                                        <td className="sub-title">Station Rd, Master Canteen Area,<br /> Kharvela Nagar, Bhubaneswar, <br />Odisha 751001</td>
                                     </tr>
                                     <tr>
-                                        <td className="h6">Reviews</td>
-                                        <td className="h6">2,057 + Google reviews</td>
+                                        <td className="sub-title">Reviews</td>
+                                        <td className="sub-title">2,057 + Google reviews</td>
                                     </tr>
                                     <tr>
-                                        <td className="h6">Contact Details</td>
-                                        <td className="h6">0674 - 2534016 / 17 / 18</td>
+                                        <td className="sub-title">Contact Details</td>
+                                        <td className="sub-title">0674 - 2534016 / 17 / 18</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -176,7 +176,7 @@ export default function MasterCanteenDescription() {
                                         <span className="rate-count">0</span>
                                     </li>
                                 </ul>
-                                <a href="https://www.google.com/maps/place/Lalchnd+Jewellers/data=!4m2!3m1!1s0x0:0xb7b54fad41895a76?sa=X&ved=1t:2428&ictx=111" className="tf-btn fw-medium">
+                                <a href="https://www.google.com/maps/place/Lalchnd+Jewellers/data=!4m2!3m1!1s0x0:0xb7b54fad41895a76?sa=X&ved=1t:2428&ictx=111" className="home-cta-btn tf-btn btn-fill animate-btn type-large">
                                     write a review
                                 </a>
                             </div>
@@ -213,12 +213,12 @@ export default function MasterCanteenDescription() {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <h6 className="rv-text">
+                                                <p className="sub-title">
                                                     Me and my mother went to lalchnd jeweller's in the morning hr and bought an earing, they have very beautiful collection of jewelleries✨️
                                                     I had a little  inconvenient experience earlier, However, after posting my review, the store promptly reached out to me, and assured that they would take necessary action to improve their customer service. I truly appreciate their quick response and willingness to address the issue.
                                                     Hoping for a much better experience in the future.
                                                     Thank you 🌸
-                                                </h6>
+                                                </p>
                                             </div>
                                         </li>
                                         <li className="post-review-item">
@@ -250,9 +250,9 @@ export default function MasterCanteenDescription() {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <h6 className="rv-text">
+                                                <p className="sub-title">
                                                     Good location near to the Bhubaneswar railway station.  Lift facility available.  Veriety of Silver, Gold and Diamond ornaments available.
-                                                </h6>
+                                                </p>
                                             </div>
                                         </li>
                                         <li className="post-review-item">
@@ -284,9 +284,9 @@ export default function MasterCanteenDescription() {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <h6 className="rv-text">
+                                                <p className="sub-title">
                                                     One place where you would like to come to  buy jewellery for your loved ones then this is the place for you in Bhubaneswar. Higly recommended the place . It is one of the best in town for all kinds of jewellery, the quality is unquestionable they have hallmarked jewellery with all upgraded designs and the staff is really well mannered and trained to handle your choices .
-                                                </h6>
+                                                </p>
                                             </div>
                                         </li>
                                     </ul>
@@ -297,7 +297,7 @@ export default function MasterCanteenDescription() {
                                         href="https://www.google.com/maps/place/Lalchnd+Jewellers/data=!4m2!3m1!1s0x0:0xb7b54fad41895a76?sa=X&ved=1t:2428&ictx=111"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="tf-btn fw-medium view-more-google"
+                                        className="home-cta-btn tf-btn btn-fill animate-btn type-large"
                                     >
                                         View More
                                         <img

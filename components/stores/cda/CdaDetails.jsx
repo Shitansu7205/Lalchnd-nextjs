@@ -63,10 +63,10 @@ export default function CdaDetails() {
                                                 <i className="icon-star" />
                                             </li>
                                         </ul>
-                                        <h3 className="product-info-name fw-normal">
-                                           Your Trusted Jewellery Store in CDA
+                                        <h3>
+                                           Your Trusted Jewellery Store in <span className="highlight-font" style={{fontSize: "38px"}}>CDA</span>
                                         </h3>
-                                        <p className="product-infor-sub h6 fw-normal text-main-4">
+                                        <p className="sub-title">
                                         At Lalchnd Jewellers, we pride ourselves on being the best jewellery shop in CDA. Our reputation is built on unparalleled quality, customer service, and trust. With years of expertise, we bring you jewellery that reflects elegance, durability, and the highest standards of craftsmanship. From delicate gold necklaces to intricately designed diamond rings, our collection showcases the finest pieces for every taste and occasion. Whether you’re shopping for an engagement ring, a festive set, or a custom design, we have something truly special waiting for you. We are committed to offering a luxurious selection of fine jewellery that combines timeless craftsmanship with modern designs.
                                         </p>
 

@@ -19,9 +19,9 @@ export default function RaghunathpurDescription() {
                     </div>
                     <div id="description" className="collapse widget-desc">
                         <div className="accordion-body">
-                            <h6 className="text-main-4 fw-normal">
+                            <p className="sub-title">
                                 Welcome to Lalchnd Jewellers, your ultimate destination for exquisite gold, diamond, and designer jewellery. Renowned as the best jewellery showroom in Raghunathpur, we specialize in crafting jewellery that blends tradition with contemporary elegance. Whether you’re looking for a perfect bridal set or a special piece to celebrate your moments, our expert team is here to assist you in choosing the perfect piece. the best jewellery shop in Raghunathpur, our collection includes intricately designed gold necklaces, stunning diamond sets, and elegant bangles, each piece reflecting impeccable craftsmanship. With a legacy of trust and excellence, Lalchnd Jewellers is committed to making your moments special. Visit us today to explore our latest collections and indulge in a jewellery shopping experience like no other.
-                            </h6>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -42,16 +42,16 @@ export default function RaghunathpurDescription() {
                             <table className="table-material">
                                 <tbody>
                                     <tr>
-                                        <td className="h6">Address</td>
-                                        <td className="h6">2149.2149/2880, Raghunathpur,<br /> Bhubaneswar, Odisha 751024</td>
+                                        <td className="sub-title">Address</td>
+                                        <td className="sub-title">2149.2149/2880, Raghunathpur,<br /> Bhubaneswar, Odisha 751024</td>
                                     </tr>
                                     <tr>
-                                        <td className="h6">Reviews</td>
-                                        <td className="h6">1,368 + Google reviews</td>
+                                        <td className="sub-title">Reviews</td>
+                                        <td className="sub-title">1,368 + Google reviews</td>
                                     </tr>
                                     <tr>
-                                        <td className="h6">Contact Details</td>
-                                        <td className="h6">0674 246 9149
+                                        <td className="sub-title">Contact Details</td>
+                                        <td className="sub-title">0674 246 9149
                                         </td>
                                     </tr>
                                 </tbody>
@@ -177,7 +177,7 @@ export default function RaghunathpurDescription() {
                                         <span className="rate-count">0</span>
                                     </li>
                                 </ul>
-                                <a href="https://www.google.com/maps/place/Lalchnd+Jewellers/data=!4m2!3m1!1s0x0:0x242ea86a13dc1dca?sa=X&ved=1t:2428&ictx=111" className="tf-btn fw-medium">
+                                <a href="https://www.google.com/maps/place/Lalchnd+Jewellers/data=!4m2!3m1!1s0x0:0x242ea86a13dc1dca?sa=X&ved=1t:2428&ictx=111" className="home-cta-btn tf-btn btn-fill animate-btn type-large">
                                     write a review
                                 </a>
                             </div>
@@ -214,9 +214,9 @@ export default function RaghunathpurDescription() {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <h6 className="rv-text">
+                                                <p className="sub-title">
                                                     Sriram from lalchand helped us with detailed explanation of the product and helped us choose it fast. Go to Lalchand Raghunathpur if you need peace, personalization and attention from sales team. Very good.
-                                                </h6>
+                                                </p>
                                             </div>
                                         </li>
                                         <li className="post-review-item">
@@ -248,10 +248,10 @@ export default function RaghunathpurDescription() {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <h6 className="rv-text">
+                                                <p className="sub-title">
                                                     The staff and management listened to my issues and handled properly...they were welcoming and resolved my issues...had a good experience now
                                                     Good luck team lalchnd.
-                                                </h6>
+                                                </p>
                                             </div>
                                         </li>
                                         <li className="post-review-item">
@@ -283,9 +283,9 @@ export default function RaghunathpurDescription() {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <h6 className="rv-text">
+                                                <p className="sub-title">
                                                     Thank you so much. The staffs are very cordial and cooperative. They made our visit very friendly and welcoming. The brand also provided very good pricing and offers. Thank you Ashriata Madam for your patience and cooperation.
-                                                </h6>
+                                                </p>
                                             </div>
                                         </li>
                                     </ul>
@@ -296,7 +296,7 @@ export default function RaghunathpurDescription() {
                                         href="https://www.google.com/maps/place/Lalchnd+Jewellers/data=!4m2!3m1!1s0x0:0x242ea86a13dc1dca?sa=X&ved=1t:2428&ictx=111"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="tf-btn fw-medium view-more-google"
+                                        className="home-cta-btn tf-btn btn-fill animate-btn type-large"
                                     >
                                         View More
                                         <img

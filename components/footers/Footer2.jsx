@@ -449,7 +449,7 @@ export default function Footer2() {
                 </a>
               </div>
             </div>
-            {/* <ul className="paymend-method-list">
+            <ul className="paymend-method-list">
               <li>
                 <a href="#">
                   <Image
@@ -550,7 +550,7 @@ export default function Footer2() {
                   />
                 </a>
               </li>
-            </ul> */}
+            </ul>
           </div>
         </div>
       </div>

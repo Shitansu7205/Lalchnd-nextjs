@@ -19,9 +19,9 @@ export default function DelhiDescription() {
                     </div>
                     <div id="description" className="collapse widget-desc">
                         <div className="accordion-body">
-                            <h6 className="text-main-4 fw-normal">
+                            <p className="sub-title">
                                 Lalchnd has been a trusted name in Odisha since 1948 and Lalchnd Jewellers the most trusted jewellery brand in the state for over three decades. Lalchnd Jewellers has left no stone unturned to make sure that its first and only jewellery store in the national capital not only showcases the finest of its hugely popular collections of gold, silver, diamond (including polki) and platinum jewellery, but also highlights the immeasurably rich cultural and jewellery heritage of its home state before the world. The Delhi showroom is home to 20,000-plus pieces of exquisite and 100%-certified jewellery, backed by great schemes and exchange policies and matched by world-class customer service. This effectively makes every buying experience a celebration for customers -- and Lalchnd Jewellers the best jewellery shop in Delhi.
-                            </h6>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -42,16 +42,16 @@ export default function DelhiDescription() {
                             <table className="table-material">
                                 <tbody>
                                     <tr>
-                                        <td className="h6">Address</td>
-                                        <td className="h6">A-57/B, Veer Savarkar Marg, <br /> Block A, Lajpat Nagar II, Lajpat Nagar, <br/> New Delhi, Delhi 110024</td>
+                                        <td className="sub-title">Address</td>
+                                        <td className="sub-title">A-57/B, Veer Savarkar Marg, <br /> Block A, Lajpat Nagar II, Lajpat Nagar, <br/> New Delhi, Delhi 110024</td>
                                     </tr>
                                     <tr>
-                                        <td className="h6">Reviews</td>
-                                        <td className="h6">534 + Google reviews</td>
+                                        <td className="sub-title">Reviews</td>
+                                        <td className="sub-title">534 + Google reviews</td>
                                     </tr>
                                     <tr>
-                                        <td className="h6">Contact Details</td>
-                                        <td className="h6">08800948800</td>
+                                        <td className="sub-title">Contact Details</td>
+                                        <td className="sub-title">08800948800</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -176,7 +176,7 @@ export default function DelhiDescription() {
                                         <span className="rate-count">0</span>
                                     </li>
                                 </ul>
-                                <a href="https://www.google.com/maps/place/Lalchnd+Jewellers+lajpat+nagar/@28.5712406,77.2381729,17z/data=!4m8!3m7!1s0x390ce309090603d7:0x1d5ca51e53fb3038!8m2!3d28.5712406!4d77.2381729!9m1!1b1!16s%2Fg%2F11k9kftb01!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D" className="tf-btn fw-medium">
+                                <a href="https://www.google.com/maps/place/Lalchnd+Jewellers+lajpat+nagar/@28.5712406,77.2381729,17z/data=!4m8!3m7!1s0x390ce309090603d7:0x1d5ca51e53fb3038!8m2!3d28.5712406!4d77.2381729!9m1!1b1!16s%2Fg%2F11k9kftb01!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D" className="home-cta-btn tf-btn btn-fill animate-btn type-large">
                                     write a review
                                 </a>
                             </div>
@@ -213,9 +213,9 @@ export default function DelhiDescription() {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <h6 className="rv-text">
+                                                <p className="sub-title">
                                                     I have been shopping at Lalchnd since 2 years. The experience has always been amazing, the staff is very kind and keen to show new designs with patience. Moreover the making charges are less than other brands and gold is hallmark. Do check them out.
-                                                </h6>
+                                                </p>
                                             </div>
                                         </li>
                                         <li className="post-review-item">
@@ -247,9 +247,9 @@ export default function DelhiDescription() {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <h6 className="rv-text">
+                                                <p className="sub-title">
                                                     The piece here is really great and the staff is really friendly you can ask for Anjali she will take good care of you
-                                                </h6>
+                                                </p>
                                             </div>
                                         </li>
                                         <li className="post-review-item">
@@ -281,9 +281,9 @@ export default function DelhiDescription() {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <h6 className="rv-text">
+                                                <p className="sub-title">
                                                     Bought gold earrings with only 3.9% making charges from Lalchnd Jewellers, The quality is amazing, and I rate the purity 1000%. The staff is very polite and understanding. Highly recommended! Best in Lajpat Nagar
-                                                </h6>
+                                                </p>
                                             </div>
                                         </li>
                                     </ul>
@@ -294,7 +294,7 @@ export default function DelhiDescription() {
                                         href="https://www.google.com/maps/place/Lalchnd+Jewellers+lajpat+nagar/@28.5712406,77.2381729,17z/data=!4m8!3m7!1s0x390ce309090603d7:0x1d5ca51e53fb3038!8m2!3d28.5712406!4d77.2381729!9m1!1b1!16s%2Fg%2F11k9kftb01!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="tf-btn fw-medium view-more-google"
+                                        className="home-cta-btn tf-btn btn-fill animate-btn type-large"
                                     >
                                         View More
                                         <img
