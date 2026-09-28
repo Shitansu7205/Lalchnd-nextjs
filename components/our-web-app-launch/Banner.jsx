@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ButtomBorder from "@/components/common/ButtomBorder";
+import { HandHeart } from "lucide-react";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -63,7 +64,7 @@ export default function Banner() {
          Thank you for choosing <span className="highlight-font">Lalchnd Jewellers</span>.
         </h3>
 
-        <p className="sub-title mb-3">We truly value your continued trust and association with us. 🙏</p>
+        <p className="sub-title mb-3">We truly value your continued trust and association with us. <HandHeart size={20} color="#ed9a00"/></p>
         <h6>
   For any assistance, please contact us at:{" "}
   <a href="tel:9938081378" style={{color: "#ed9a00"}}>+91 9938081378</a>
