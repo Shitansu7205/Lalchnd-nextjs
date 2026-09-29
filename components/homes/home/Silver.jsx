@@ -141,7 +141,7 @@ export default function Silver() {
 
             <div className="btn-group">
               <HomeButton href="/products?metal=silver" className="type-large">
-                Shop Collection
+                EXPLORE SILVER COLLECTION
               </HomeButton>
             </div>
           </div>

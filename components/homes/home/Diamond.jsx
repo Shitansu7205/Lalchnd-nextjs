@@ -130,7 +130,7 @@ export default function Diamond() {
 
             <div className="btn-group">
               <HomeButton href="/products?metal=diamond" className="type-large">
-                Shop Collection
+                EXPLORE DIAMOND COLLECTION
               </HomeButton>
 
             </div>
