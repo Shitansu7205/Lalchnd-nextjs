@@ -58,8 +58,10 @@ export default function SonePeSuhagaBanner() {
   }, []);
 
   return (
+    <>
+    <link rel="stylesheet" href="/css/sonepesuhagabanner/sonepesuhagabanner.css" />
     <div className="banner_V04 sonepesuhagabanner">
-      <div className="bn-content">
+      <div className="bn-content sonepesuhagabanner-bg">
          <Image
       src="/images/lalchnd/sone-pe-suhag/sone-pe-suhaga-img.webp"
       alt="Sone Pe Suhaga"
@@ -74,5 +76,6 @@ export default function SonePeSuhagaBanner() {
         </ButtomBorder>
       </div>
     </div>
+    </>
   );
 }
