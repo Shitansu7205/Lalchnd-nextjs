@@ -96,7 +96,7 @@ export default function Menu({ megaMarginRight = true }) {
               <div className="wrapper-sub-menu">
                 {allJewlleryPages.map((section, sectionIndex) => (
                   <div className="mega-menu-item" key={sectionIndex}>
-                    <p className="text-caption menu-heading">
+                    <p className="text-caption menu-heading sub-title">
                       {section.heading}
                     </p>
 
@@ -115,7 +115,7 @@ export default function Menu({ megaMarginRight = true }) {
                               }`}
                             >
                               {image && (
-    <span className="jewellery-menu-icon">
+    <span className="jewellery-menu-icon ">
         <img
             src={image}
             alt={link.label}
@@ -125,7 +125,7 @@ export default function Menu({ megaMarginRight = true }) {
     </span>
 )}
 
-                              <span>{link.label}</span>
+                              <span className="sub-title" style={{fontSize: "13px"}}>{link.label}</span>
 
                               {link.badge && (
                                 <span

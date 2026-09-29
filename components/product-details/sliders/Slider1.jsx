@@ -32,13 +32,13 @@ export default function Slider1({ images = [] }) {
 
       driftAll.forEach((el) => {
         new Drift(el, {
-          zoomFactor: 2,
-          paneContainer: pane,
-          inlinePane: false,
-          handleTouch: false,
-          hoverBoundingBox: true,
-          containInline: true,
-        });
+  zoomFactor: 4,
+  paneContainer: pane,
+  inlinePane: false,
+  handleTouch: false,
+  hoverBoundingBox: true,
+  containInline: true,
+});
       });
     };
 
@@ -113,6 +113,7 @@ export default function Slider1({ images = [] }) {
 
   return (
     <>
+    <link rel="stylesheet" href="/css/product-details/product-details.css" />
       <div className="flat-wrap-media-product">
         <Swiper
           dir="ltr"
@@ -138,7 +139,7 @@ export default function Slider1({ images = [] }) {
                 href={slide.imgSrc}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="item"
+                className="item section-image-zoom"
                 data-pswp-width="1000"
                 data-pswp-height="1000"
               >

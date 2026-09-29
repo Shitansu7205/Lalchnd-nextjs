@@ -33,7 +33,7 @@ export default function Features() {
 
               <div className="lalchnd-promise-content">
                 <h5>{item.title}</h5>
-                <p>{item.text}</p>
+                <p className="sub-title">{item.text}</p>
               </div>
             </div>
           ))}
