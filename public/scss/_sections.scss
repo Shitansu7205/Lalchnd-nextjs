@@ -4703,19 +4703,19 @@ section {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #e5e5e5;
+  // border: 1px solid #e5e5e5;
   border-radius: 50%;
   background: #fafafa;
   transition: all 0.25s ease;
 }
 
-.menu-link-text:hover .jewellery-menu-icon {
-  border-color: #c9a227;
-  background: #fffaf0;
-  transform: scale(1.08);
-}
+// .menu-link-text:hover .jewellery-menu-icon {
+//   border-color: #c9a227;
+//   background: #fffaf0;
+//   transform: scale(1.08);
+// }
 
-.menu-link-text.active .jewellery-menu-icon {
-  border-color: #c9a227;
-  background: #fffaf0;
-}
+// .menu-link-text.active .jewellery-menu-icon {
+//   border-color: #c9a227;
+//   background: #fffaf0;
+// }

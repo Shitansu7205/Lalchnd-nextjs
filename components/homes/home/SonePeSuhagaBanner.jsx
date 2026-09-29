@@ -1,16 +1,16 @@
 "use client";
 import React, { useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ButtomBorder from "@/components/common/ButtomBorder";
-import { HandHeart } from "lucide-react";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-export default function Banner() {
+export default function SonePeSuhagaBanner() {
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -58,17 +58,20 @@ export default function Banner() {
   }, []);
 
   return (
-    <div className="banner_V04">
-      <div className="bn-content" style={{color: "#fff"}}>
-        <h3 className="heading-font" style={{color: "#fff"}}>
-         Thank you for choosing <span className="highlight-font">Lalchnd Jewellers</span>.
-        </h3>
+    <div className="banner_V04 sonepesuhagabanner">
+      <div className="bn-content">
+         <Image
+      src="/images/lalchnd/sone-pe-suhag/sone-pe-suhaga-img.webp"
+      alt="Sone Pe Suhaga"
+      width={250}
+      height={50}
+      className="sone-pe-suhaga-title mb-4"
+    />
+        <h3 className="mb-4" style={{color: "#fff"}}>Where <span className="highlight-font">Gold</span> Meets Timeless <span className="highlight-font">Elegance</span></h3>
 
-        <p className="sub-title mb-3">We truly value your continued trust and association with us. <HandHeart size={20} color="#ed9a00"/></p>
-        <h6>
-  For any assistance, please contact us at:{" "}
-  <a href="tel:9938081378" style={{color: "#ed9a00"}}>+91 9938081378</a>
-</h6>
+        <ButtomBorder href="/sone-pe-suhaga" className="type-large">
+          For More Information
+        </ButtomBorder>
       </div>
     </div>
   );
