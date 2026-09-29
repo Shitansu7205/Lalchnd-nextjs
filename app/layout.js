@@ -24,6 +24,8 @@ import ProductDes from "@/components/modals/ProductDes";
 import UnavailableModal from "@/components/modals/UnavailableModal";
 import OrderDetails from "@/components/modals/OrderDetails";
 import FloatingActions from "@/components/common/FloatingActions";
+import ProductFoms from "@/components/common/ProductFoms";
+import WhyByForm from "@/components/common/WhyByForm";
 
 export default function RootLayout({ children }) {
   return (
@@ -46,11 +48,13 @@ export default function RootLayout({ children }) {
             <Search />
             <ShoppingCart />
             <SizeGuide />
+            <ProductFoms />
             <AskQuestion />
             <Delivery />
             <Engrave />
             <Pickup />
             <ProductDes />
+            <WhyByForm />
             <UnavailableModal />
             <OrderDetails />
             <FloatingActions />
