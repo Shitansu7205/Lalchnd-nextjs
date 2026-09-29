@@ -12,8 +12,11 @@ import MasterCanteenDescription from "@/components/stores/master-canteen/MasterC
 import OtherStores from "@/components/stores/OtherStores";
 import Partion from "@/components/common/Partion";
 export const metadata = {
-    title: "Product Details || Vemus - Jewelry Ecommerce React Nextjs Template",
-    description: "Vemus - Jewelry Ecommerce React Nextjs Template",
+  title: "Best Gold Jewellery Shop in Master Canteen- Lalchnd Jewellers",
+  description: "Lalchnd Jewellers is a trusted jewellery store and showroom in Master Canteen,offering an exquisite collection of gold, diamond, and gemstone jewellery. Each piece is crafted withunmatched quality and elegant designs, perfect for any occasion.",
+  alternates: {
+    canonical: "https://lalchnd.com/master-canteen/"
+  },
 };
 export default async function ProductDetailPage({ params }) {
     const { id } = await params;

@@ -5,8 +5,11 @@ import Header from "@/components/headers/Header";
 import TopBar from "@/components/headers/TopBar";
 import ProductListing from "@/components/shop/ProductListing";
 export const metadata = {
-    title: "Products || Vemus - Jewelry Ecommerce React Nextjs Template",
-    description: "Products - Jewelry Ecommerce React Nextjs Template",
+  title: "Online Diamond Sellers,Necklace & Gold Ring Shopping Stores India",
+  description: "Lalchnd is the online jewellery shopping store & diamond seller in India where well designed necklace, gold ring and artificial earrings near me are available.",
+  alternates: {
+    canonical: "https://lalchnd.com/products/"
+  },
 };
 export default function page() {
     return (
