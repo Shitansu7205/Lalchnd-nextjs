@@ -141,7 +141,7 @@ export default function Gold() {
 
             <div className="btn-group">
               <HomeButton href="/products?metal=gold" className="type-large">
-                Shop Collection
+                EXPLORE GOLD COLLECTION
               </HomeButton>
             </div>
           </div>

@@ -305,7 +305,7 @@ export default function Details1({ product }) {
                       {/* Description */}
                       <div className="lalchnd-product-description">
                         <p
-                          className="product-infor-sub mb-0"
+                          className="product-infor-sub mb-0 sub-title"
                           dangerouslySetInnerHTML={{
                             __html: product.description,
                           }}
@@ -430,7 +430,7 @@ export default function Details1({ product }) {
                   {renderAccordion(
                     "description",
                     "Product Description",
-                    <div className="lalchnd-description-content">
+                    <div className="lalchnd-description-content sub-title">
                       {product?.description ? (
                         <div
                           dangerouslySetInnerHTML={{

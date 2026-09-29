@@ -28,8 +28,8 @@ export const categories = [
     url: "/products?metal=gold&category=rings"
   },
   {
-    label: "WATCHES",
-    image: "/images/lalchnd/home/category-04.webp",
+    label: "Kid's Wear",
+    image: "/images/lalchnd/home/kids-wear.webp",
     width: 800,
     height: 800,
     url: "/products?category=watches"

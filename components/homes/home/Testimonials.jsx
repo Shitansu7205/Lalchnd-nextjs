@@ -143,7 +143,7 @@ export default function Testimonials() {
                         <div className="tes-text">
                           <h5>{item.title}</h5>
 
-                          <p className="text">
+                          <p className="text sub-title">
                             {item.text}
                           </p>
                         </div>

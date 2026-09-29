@@ -59,14 +59,9 @@ export default function Banner() {
   return (
     <div className="banner_V04">
       <div className="bn-content">
-        <h3 ref={textRef} className="title text-color-change-2 fw-normal">
+        <h3 className="mb-3" style={{color: "#fff"}}>
           Every piece tells a story—crafted with timeless{" "}
-          <span
-            style={{
-              fontFamily: "Playfair Display, serif",
-              fontStyle: "italic",
-            }}
-          >
+          <span className="highlight-font">
             Elegance
           </span>
           , made to be treasured for a lifetime.

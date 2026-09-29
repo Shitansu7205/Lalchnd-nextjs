@@ -21,6 +21,7 @@ import InstagramFeed from "@/components/homes/home/InstagramFeed";
 import Banner from "@/components/homes/home/Banner";
 import Watch from "@/components/homes/home/Watch";
 import SonePeSuhagaBanner from "@/components/homes/home/SonePeSuhagaBanner";
+import Kids from "@/components/homes/home/Kids";
 
 
 export const metadata = {
@@ -42,11 +43,11 @@ export default function Home() {
           <About />
           {/* <TextSlider /> */}
           <Categories />
-           <SonePeSuhagaBanner />
           <Gold />
           <Diamond />
-         
+         <SonePeSuhagaBanner />
           <Silver />
+          <Kids/>
           {/* <Watch /> */}
           <ImageSection />
           <ProductsImage />
