@@ -1,0 +1,7 @@
+.tf-image-zoom {
+  cursor: zoom-in !important;
+}
+
+.section-image-zoom.zoom-active .tf-image-zoom {
+  cursor: zoom-in !important;
+}

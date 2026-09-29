@@ -12,7 +12,7 @@ import Link from "next/link";
 import Footer2 from "@/components/footers/Footer2";
 import Header from "@/components/headers/Header";
 import BreadcrumbBanner from "@/components/common/BreadcrumbBanner";
-import { Home, ChevronRight } from "lucide-react";
+// import { Home, ChevronRight } from "lucide-react";
 
 export default async function ProductDetailPage({ params }) {
     const { slug } = await params;
@@ -49,53 +49,7 @@ export default async function ProductDetailPage({ params }) {
 
             <Header parentClass="tf-header" />
 
-            <div className="pt-4 pb-2 light-bg">
-                <div className="container-full-2">
-                    <div className="page-title border-0 mob-paddin-left-128">
-                        <div className="breadcrumbs">
-                            <ul className="bread-wrap mb-0 d-flex align-items-center">
-                                {/* Home */}
-                                <li className="font-size-mobile-11">
-                                    <Link
-                                        href="/"
-                                        className="text-main-4 link d-flex align-items-center gap-1"
-                                    >
-                                        <Home size={14} strokeWidth={1.7} />
-                                        <span>Home</span>
-                                    </Link>
-                                </li>
-
-                                {/* Separator */}
-                                <li className="d-flex align-items-center mx-1">
-                                    <ChevronRight size={14} strokeWidth={1.5} />
-                                </li>
-
-                                {/* Products */}
-                                <li className="font-size-mobile-11">
-                                    <Link
-                                        href="/products"
-                                        className="text-main-4 link"
-                                    >
-                                        Products
-                                    </Link>
-                                </li>
-
-                                {/* Separator */}
-                                <li className="d-flex align-items-center mx-1">
-                                    <ChevronRight size={14} strokeWidth={1.5} />
-                                </li>
-
-                                {/* Current Product */}
-                                <li className="font-size-mobile-11">
-                                    <p className="mb-0">
-                                        {product.name}
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
 
 
             <Details1 product={product} />

@@ -42,11 +42,12 @@ export default function Home() {
           <About />
           {/* <TextSlider /> */}
           <Categories />
+           <SonePeSuhagaBanner />
           <Gold />
           <Diamond />
-          <SonePeSuhagaBanner />
+         
           <Silver />
-          <Watch />
+          {/* <Watch /> */}
           <ImageSection />
           <ProductsImage />
           <Discount />

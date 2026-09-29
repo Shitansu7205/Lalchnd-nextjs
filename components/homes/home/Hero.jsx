@@ -2,48 +2,26 @@
 import React from "react";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Link from "next/link";
 import Image from "next/image";
+
 const fourthSliderData = [
   {
-    image: "/images/lalchnd/home/banner-2.webp",
+    desktopImage: "/images/lalchnd/home/banner-2.webp",
+    mobileImage: "/images/lalchnd/home/banner-2-mobile.webp",
     imageWidth: 2790,
     imageHeight: 1226,
-    title: (
-      <>
-        <span className="fst-italic">Elevate</span> Your
-        <br />
-        Elegance
-      </>
-    ),
-    buttonClass: "tf-btn type-large style-white-2",
   },
   {
-    image: "/images/lalchnd/home/banner-3.webp",
+    desktopImage: "/images/lalchnd/home/banner-3.webp",
+    mobileImage: "/images/lalchnd/home/banner-3-mobile.webp",
     imageWidth: 2790,
     imageHeight: 1226,
-    title: (
-      <>
-        <span className="fst-italic">Elegance,</span>
-        <br />
-        Redefined
-      </>
-    ),
-    buttonClass: "tf-btn type-large",
-    titleClass: "text-main",
   },
   {
-    image: "/images/lalchnd/home/banner-4.webp",
+    desktopImage: "/images/lalchnd/home/banner-4.webp",
+    mobileImage: "/images/lalchnd/home/banner-4-mobile.webp",
     imageWidth: 2790,
     imageHeight: 1226,
-    title: (
-      <>
-        <span className="fst-italic">Jewels</span>
-        <br />
-        That Speak
-      </>
-    ),
-    buttonClass: "tf-btn type-large style-white-2",
   },
 ];
 
@@ -68,17 +46,26 @@ export default function Hero() {
             <SwiperSlide className="swiper-slide" key={index}>
               <div className="slider_wrap">
                 <div className="sld-image">
-                  <Image
-                    src={slide.image}
-                    alt=""
-                    className="lazyload"
-                    width={slide.imageWidth}
-                    height={slide.imageHeight}
-                  />
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcSet={slide.mobileImage}
+                    />
+
+                    <Image
+                      src={slide.desktopImage}
+                      alt=""
+                      className="lazyload"
+                      width={slide.imageWidth}
+                      height={slide.imageHeight}
+                      priority={index === 0}
+                    />
+                  </picture>
                 </div>
               </div>
             </SwiperSlide>
           ))}
+
           <div className="sw-dot-default style-white tf-sw-pagination spd33" />
         </Swiper>
       </div>

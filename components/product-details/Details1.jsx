@@ -12,6 +12,7 @@ import AddtoWishlist from "../common/AddtoWishlist";
 import AddtoCompare from "../common/AddtoCompare";
 import SizePicker from "./SizeSelect";
 import HomeButton from "../common/HomeButton";
+import { Home, ChevronRight } from "lucide-react";
 import {
   Facebook,
   Instagram,
@@ -86,11 +87,11 @@ export default function Details1({ product }) {
   };
   return (
     <>
-      <section className="themesFlat section-padding-bottom-40 light-bg">
+      <section className="themesFlat section-padding-bottom-40 bg-transparent-svg2">
         <div className="tf-main-product section-image-zoom">
           <div className="container-full-2">
             <div className="row" style={{ justifyContent: "center" }}>
-              <div className="col-md-5">
+              <div className="col-md-4">
                 <div className="tf-product-media-wrap sticky-top">
                   <div className="thumbs-slider">
                     <Slider1
@@ -107,7 +108,49 @@ export default function Details1({ product }) {
                   <div className="tf-zoom-main sticky-top" />
                   <div className="tf-product-info-list other-image-zoom">
                     <div className="lalchnd-product-info">
+<div className="page-title border-0 mb-3">
+                        <div className="breadcrumbs">
+                            <ul className="bread-wrap mb-0 d-flex align-items-center">
+                                {/* Home */}
+                                <li className="font-size-mobile-11">
+                                    <Link
+                                        href="/"
+                                        className="text-main-4 link d-flex align-items-center gap-1"
+                                    >
+                                        <Home size={14} strokeWidth={1.7} />
+                                        <span>Home</span>
+                                    </Link>
+                                </li>
 
+                                {/* Separator */}
+                                <li className="d-flex align-items-center mx-1">
+                                    <ChevronRight size={14} strokeWidth={1.5} />
+                                </li>
+
+                                {/* Products */}
+                                <li className="font-size-mobile-11">
+                                    <Link
+                                        href="/products"
+                                        className="text-main-4 link"
+                                    >
+                                        Products
+                                    </Link>
+                                </li>
+
+                                {/* Separator */}
+                                <li className="d-flex align-items-center mx-1">
+                                    <ChevronRight size={14} strokeWidth={1.5} />
+                                </li>
+
+                                {/* Current Product */}
+                                <li className="font-size-mobile-11">
+                                    <p className="mb-0">
+                                        {product.name}
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                       {/* Rating */}
                       <div className="lalchnd-product-rating">
                         <ul className="product-info-rate rate-wrap mb-0">
@@ -235,9 +278,9 @@ export default function Details1({ product }) {
 
                       {/* Product Code */}
                       <div className="lalchnd-product-code">
-                        <span className="lalchnd-code-label">
+                        {/* <span className="lalchnd-code-label">
                           Product Code:
-                        </span>
+                        </span> */}
 
                         <span className="lalchnd-code-value">
                           {getAttributeValue("Product Code") || "—"}
@@ -320,10 +363,10 @@ export default function Details1({ product }) {
         id="additional-information"
         className="lalchnd-details-section"
       >
-        <div className="container">
-          <div className="row align-items-start lalchnd-details-row">
+        <div className="container-full-2">
+          <div className="row"  style={{ justifyContent: "center" }}>
             {/* LEFT SIDE - IMAGE */}
-            <div className="col-md-6">
+            <div className="col-md-4">
               <div className="lalchnd-details-image">
                 <img
                   src={
@@ -336,7 +379,7 @@ export default function Details1({ product }) {
               </div>
             </div>
             {/* RIGHT SIDE - PRODUCT DETAILS */}
-            <div className="col-lg-6 col-md-6 col-12">
+            <div className="col-lg-5">
               <div className="lalchnd-details-content">
                 <h3 className="product-info-name fw-normal mb-0">
                   {product.name}
