@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { X, Phone } from "lucide-react";
+import { X } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function FloatingActions() {
     const [showGoldRate, setShowGoldRate] = useState(false);
@@ -66,14 +67,17 @@ export default function FloatingActions() {
 
             </div>
 
-            {/* CALL */}
-            <a
-                href="tel:+919999999999"
-                className="lalchnd-floating-button lalchnd-call-button"
-                aria-label="Call us"
-            >
-                <Phone />
-            </a>
+
+            {/* WHATSAPP */}
+<a
+    href="https://wa.me/919937296745"
+    className="lalchnd-floating-button lalchnd-call-button"
+    aria-label="WhatsApp us"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    <FaWhatsapp />
+</a>
 
         </div>
     );

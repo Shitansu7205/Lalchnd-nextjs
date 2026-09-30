@@ -20,7 +20,7 @@ export default function Features() {
 
                 </p>
                 <Link
-                  href={`/shop-default`}
+                  href={`/products`}
                   className="home-cta-btn tf-btn btn-fill animate-btn"
                 >
                   shop all jewellry

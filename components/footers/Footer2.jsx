@@ -49,7 +49,7 @@ export default function Footer2() {
           <div className="footer-inner-wrap d-xl-flex flex-xl-nowrap">
             <div className="footer-infor">
               <div className="box-title">
-                <Link href={`/home-2`} className="logo-site d-inline-block">
+                <Link href={`/`} className="logo-site d-inline-block">
                   <Image
                     alt=""
                     src="/images/lalchnd/blogs/logo.png"
@@ -431,7 +431,7 @@ export default function Footer2() {
                     height={34}
                   /> */}
                   <div>
-                    <p className="footer-app-title">Install our mobile app</p>
+                    <p className="footer-app-title">Download Here</p>
                   </div>
                 </div>
                 <a
