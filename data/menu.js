@@ -301,7 +301,7 @@ export const giftingPages = [
     links: [
       { href: "#", label: " Him" },
       { href: "#", label: " Her" },
-      { href: "#", label: "Kinds" },
+      { href: "#", label: "Kids" },
      
     ],
   },
