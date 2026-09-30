@@ -38,9 +38,9 @@ export default function InstagramFeed() {
         <div className="instagram-feed-header">
           <h2 className="heading-font">Follow Us</h2>
 
-          <p className="instagram-feed-description">
+          <p className="instagram-feed-description sub-title">
             All the business growth and profit revolve around effective catchy
-            marketing sales always in the limelight
+            marketing sales always in the limelight.
           </p>
         </div>
 
