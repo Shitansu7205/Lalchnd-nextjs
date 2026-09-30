@@ -11,3 +11,8 @@
 .blog-grid-card-paragraph {
   color: var(--main-4);
 }
+@media (max-width: 1199px) {
+    .tf-btn {
+        font-size: 9px !important;
+    }
+  }
