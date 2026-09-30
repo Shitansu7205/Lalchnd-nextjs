@@ -136,6 +136,7 @@ export async function GET(request) {
             response.headers.get("X-WP-TotalPages") || 0
         );
 
+
         // =========================
         // API response
         // =========================

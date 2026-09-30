@@ -71,14 +71,43 @@ function ProductListingContent({ defaultLayout = 4 }) {
         router.push(params.toString() ? `?${params.toString()}` : "?");
     };
     const clearFilters = () => router.push("?");
+
+    // const sortedProducts = [...products].sort((a, b) => {
+    //     if (sort === "Price Ascending") return a.price - b.price;
+    //     if (sort === "Price Descending") return b.price - a.price;
+    //     if (sort === "Title Ascending") return a.title.localeCompare(b.title);
+    //     if (sort === "Title Descending") return b.title.localeCompare(a.title);
+    //     return 0;
+    // });
+    
     const sortedProducts = [...products].sort((a, b) => {
-        if (sort === "Price Ascending") return a.price - b.price;
-        if (sort === "Price Descending") return b.price - a.price;
-        if (sort === "Title Ascending") return a.title.localeCompare(b.title);
-        if (sort === "Title Descending") return b.title.localeCompare(a.title);
+        // Products with images first
+        const aHasImage = !!a.imgSrc;
+        const bHasImage = !!b.imgSrc;
+
+        if (aHasImage !== bHasImage) {
+            return aHasImage ? -1 : 1;
+        }
+
+        // Keep your normal sorting after image priority
+        if (sort === "Price Ascending") {
+            return a.price - b.price;
+        }
+
+        if (sort === "Price Descending") {
+            return b.price - a.price;
+        }
+
+        if (sort === "Title Ascending") {
+            return a.title.localeCompare(b.title);
+        }
+
+        if (sort === "Title Descending") {
+            return b.title.localeCompare(a.title);
+        }
+
         return 0;
     });
-
     return <>
         <div className="flat-spacing pt-0  api-product-listing " style={{ backgroundColor: "#fff9f3" }} >
             <div className="container-full-2">

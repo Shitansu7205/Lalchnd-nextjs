@@ -49,7 +49,7 @@ export default async function ProductDetailPage({ params }) {
 
             <Header parentClass="tf-header" />
 
-            
+
 
 
             <Details1 product={product} />
