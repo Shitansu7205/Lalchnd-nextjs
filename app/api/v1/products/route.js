@@ -1,4 +1,15 @@
 import { NextResponse } from "next/server";
+import { calculateGoldPrice } from "@/lib/pricing";
+
+
+
+function getAttributeValue(product, taxonomy) {
+    const attribute = product.attributes?.find(
+        (item) => item.taxonomy === taxonomy
+    );
+
+    return attribute?.terms?.[0]?.name || null;
+}
 
 export async function GET(request) {
     try {
@@ -124,6 +135,20 @@ export async function GET(request) {
 
         const products = await response.json();
 
+
+        ///////
+        const metalRatesResponse = await fetch(
+            `${new URL(request.url).origin}/api/v1/metal-rates`
+        );
+
+        if (!metalRatesResponse.ok) {
+            throw new Error("Failed to fetch metal rates");
+        }
+
+        const metalRatesData = await metalRatesResponse.json();
+        const goldRate = metalRatesData?.gold?.["22k"];
+        //////
+
         // =========================
         // Pagination information
         // =========================
@@ -136,12 +161,50 @@ export async function GET(request) {
             response.headers.get("X-WP-TotalPages") || 0
         );
 
+
+        const productsWithPricing = products.map((product) => {
+            const metal = getAttributeValue(product, "pa_metal");
+            const purity = getAttributeValue(product, "pa_purity");
+            const netWeight = getAttributeValue(
+                product,
+                "pa_net-weight-net"
+            );
+            const stone = getAttributeValue(
+                product,
+                "pa_stone"
+            );
+            const stoneWeight = stone
+                ? parseFloat(stone)
+                : 0;
+            let pricing = null;
+
+            if (
+                metal?.toLowerCase() === "gold" &&
+                purity?.toLowerCase() === "22k" &&
+                netWeight
+            ) {
+                const weight = parseFloat(netWeight);
+
+                pricing = calculateGoldPrice({
+                    netWeight: weight,
+                    goldRate,
+                    stoneWeight,
+                });
+            }
+
+            return {
+                ...product,
+                pricing,
+            };
+        });
+
+
         // =========================
         // API response
         // =========================
 
         return NextResponse.json({
-            products,
+            products: productsWithPricing,
             pagination: {
                 page: Number(page),
                 per_page: Number(perPage),
