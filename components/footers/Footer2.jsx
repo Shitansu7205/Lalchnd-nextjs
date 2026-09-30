@@ -57,7 +57,7 @@ export default function Footer2() {
                     height={31}
                   />
                 </Link>
-                <p className="text-main-5 lt-sp-nor">
+                <p className="text-main-5 lt-sp-nor sub-title">
                   <span className="text-white">Discover</span> our exquisite
                   collections crafted to{" "}
                   <span className="text-white">
@@ -130,7 +130,7 @@ export default function Footer2() {
               </ul>
             </div>
             <div className="footer-col-block">
-              <p className="footer-heading footer-heading-mobile text-white font-2">
+              <p className="footer-heading-mobile text-white sub-title mb-4" style={{fontSize: "19px"}}>
                 Categories
               </p>
               <div className="tf-collapse-content">
@@ -138,7 +138,7 @@ export default function Footer2() {
                   <li>
                     <Link
                       href={`/products?metal=gold`}
-                      className="text-white link"
+                      className="text-white link sub-title"
                     >
                       Gold
                     </Link>
@@ -146,7 +146,7 @@ export default function Footer2() {
                   <li>
                     <Link
                       href={`/products?metal=silver`}
-                      className="text-white link"
+                      className="text-white link sub-title"
                     >
                       Silver
                     </Link>
@@ -162,7 +162,7 @@ export default function Footer2() {
                   <li>
                     <Link
                       href={`/products?metal=gold&category=necklaces`}
-                      className="text-white link"
+                      className="text-white link sub-title"
                     >
                       Gold Necklaces
                     </Link>
@@ -170,7 +170,7 @@ export default function Footer2() {
                   <li>
                     <Link
                       href={`/products?category=gift-items`}
-                      className="text-white link"
+                      className="text-white link sub-title"
                     >
                       Gifts Items
                     </Link>
@@ -178,7 +178,7 @@ export default function Footer2() {
                   <li>
                     <Link
                       href={`/products`}
-                      className="text-white link"
+                      className="text-white link sub-title"
                     >
                       All Jewellery
                     </Link>
@@ -187,39 +187,39 @@ export default function Footer2() {
               </div>
             </div>
             <div className="footer-col-block">
-              <p className="footer-heading footer-heading-mobile text-white font-2">
+              <p className="footer-heading-mobile text-white sub-title mb-4" style={{fontSize: "19px"}}>
                 Useful Links
               </p>
               <div className="tf-collapse-content">
                 <ul className="footer-menu-list">
                   <li>
-                    <Link href={`/gallery`} className="text-white link">
+                    <Link href={`/gallery`} className="text-white link sub-title">
                       Gallery
                     </Link>
                   </li>
-                  <li>
-                    <Link href={`/media`} className="text-white link">
+                  <li> 
+                    <Link href={`/media`} className="text-white link sub-title">
                       Media
                     </Link>
                   </li>
                   <li>
-                    <Link href={`/awards`} className="text-white link">
+                    <Link href={`/awards`} className="text-white link sub-title">
                       Awards
                     </Link>
                   </li>
 
                   <li>
-                    <Link href={`/our-stores`} className="text-white link">
+                    <Link href={`/our-stores`} className="text-white link sub-title">
                       Our Stores
                     </Link>
                   </li>
                   <li>
-                    <Link href={`/privacy-policy`} className="text-white link">
+                    <Link href={`/privacy-policy`} className="text-white link sub-title">
                       Privacy Policy
                     </Link>
                   </li>
                   <li>
-                    <Link href={`/terms-condition`} className="text-white link">
+                    <Link href={`/terms-condition`} className="text-white link sub-title">
                       Terms &amp; Conditions
                     </Link>
                   </li>
@@ -227,17 +227,17 @@ export default function Footer2() {
               </div>
             </div>
             <div className="footer-col-block">
-              <p className="footer-heading footer-heading-mobile text-white font-2">
+              <p className="footer-heading-mobile text-white sub-title mb-4" style={{fontSize: "19px"}}>
                 Visit Us
               </p>
               <div className="tf-collapse-content">
                 <ul className="footer-menu-list">
                   <li className="text-caption d-flex align-items-center gap-2">
                     <Mail size={16} strokeWidth={1.8} className="text-white" />
-                    <span className="fw-medium text-white">Email: </span>
+                    <span className="fw-medium text-white sub-title">Email: </span>
                     <a
                       href="mailto:info@example.com"
-                      className="text-white link fw-normal"
+                      className="text-white link fw-normal sub-title"
                     >
                       info@lalchnd.com
                     </a>
@@ -245,10 +245,10 @@ export default function Footer2() {
 
                   <li className="text-caption d-flex align-items-center gap-2">
                     <Phone size={16} strokeWidth={1.8} className="text-white" />
-                    <span className="fw-medium text-white">Phone: </span>
+                    <span className="fw-medium text-white sub-title">Phone: </span>
                     <a
                       href="tel:18002108383"
-                      className="text-white link fw-normal"
+                      className="text-white link fw-normal sub-title"
                     >
                       0674 - 2534016 / 17 / 18
                     </a>
@@ -256,8 +256,8 @@ export default function Footer2() {
 
                   <li className="text-caption d-flex align-items-center gap-2">
                     <Clock size={16} strokeWidth={1.8} className="text-white" />
-                    <span className="fw-medium text-white">Hours: </span>
-                    <span className="text-white fw-normal">
+                    <span className="fw-medium text-white sub-title">Hours: </span>
+                    <span className="text-white fw-normal sub-title">
                       11:00AM - 8:30PM
                     </span>
                   </li>
@@ -272,7 +272,7 @@ export default function Footer2() {
                       target="_blank"
                       rel="noopener noreferrer"
                       href="#"
-                      className="text-white link fw-normal"
+                      className="text-white link fw-normal sub-title"
                     >
                       Station Square, Unit- 3, Bhubaneswar
                     </a>
@@ -282,10 +282,10 @@ export default function Footer2() {
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
-                      href="#"
-                      className="text-white link fw-normal"
+                      href="/our-stores"
+                      className="text-white link fw-normal sub-title"
                     >
-                      9:00AM - 9:00PM <i className="icon-arrow-right-2 fs-16" />
+                      9:00AM - 9:00PM
                     </a>
                   </li>
                 </ul>
@@ -293,7 +293,7 @@ export default function Footer2() {
             </div>
 
             <div className="footer-col-block">
-              <p className="footer-heading footer-heading-mobile text-white font-2">
+              <p className="footer-heading-mobile text-white sub-title mb-4" style={{fontSize: "19px"}}>
                 Store Information
               </p>
 
@@ -307,7 +307,7 @@ export default function Footer2() {
                         strokeWidth={1.8}
                         className="text-white"
                       />
-                      <span className="fw-medium text-white">Bhubaneswar</span>
+                      <span className="fw-medium text-white sub-title">Bhubaneswar</span>
                     </div>
 
                     <ul className="ps-4">
@@ -315,7 +315,7 @@ export default function Footer2() {
                         <Link
                           rel="noopener noreferrer"
                           href="/master-canteen"
-                          className="text-white link fw-normal"
+                          className="text-white link fw-normal sub-title" style={{fontSize: "14px"}}
                         >
                           Master Canteen
                         </Link>
@@ -325,7 +325,7 @@ export default function Footer2() {
                         <Link
                           rel="noopener noreferrer"
                           href="/raghunathpur"
-                          className="text-white link fw-normal"
+                          className="text-white link fw-normal sub-title" style={{fontSize: "14px"}}
                         >
                           Raghunathpur
                         </Link>
@@ -341,7 +341,7 @@ export default function Footer2() {
                         strokeWidth={1.8}
                         className="text-white"
                       />
-                      <span className="fw-medium text-white">Cuttack</span>
+                      <span className="fw-medium text-white sub-title">Cuttack</span>
                     </div>
 
                     <ul className="ps-4">
@@ -349,7 +349,7 @@ export default function Footer2() {
                         <Link
                           rel="noopener noreferrer"
                           href="/cda"
-                          className="text-white link fw-normal"
+                          className="text-white link fw-normal sub-title" style={{fontSize: "14px"}}
                         >
                           CDA
                         </Link>
@@ -359,7 +359,7 @@ export default function Footer2() {
                         <Link
                           rel="noopener noreferrer"
                           href="/cantonmentroad"
-                          className="text-white link fw-normal"
+                          className="text-white link fw-normal sub-title" style={{fontSize: "14px"}}
                         >
                           Cantonment Road
                         </Link>
@@ -375,7 +375,7 @@ export default function Footer2() {
                       className="text-white link d-flex align-items-center gap-2"
                     >
                       <MapPin size={17} strokeWidth={1.8} />
-                      <span className="fw-medium">Berhampur</span>
+                      <span className="fw-medium sub-title">Berhampur</span>
                     </Link>
                   </li>
 
@@ -387,7 +387,7 @@ export default function Footer2() {
                       className="text-white link d-flex align-items-center gap-2"
                     >
                       <MapPin size={17} strokeWidth={1.8} />
-                      <span className="fw-medium">Delhi</span>
+                      <span className="fw-medium sub-title">Delhi</span>
                     </Link>
                   </li>
                 </ul>
@@ -399,7 +399,7 @@ export default function Footer2() {
       <div className="footer-bottom">
         <div className="container-full-2">
           <div className="footer-bottom-wrap">
-            <p className="text-nocopy text-white footer-app-title">
+            <p className="text-nocopy text-white footer-app-title sub-title">
               All Rights Reserved By <strong>Lalchnd Groups</strong> || Powered by{" "}
               <a
                 href="https://crushaderstech.com/"
