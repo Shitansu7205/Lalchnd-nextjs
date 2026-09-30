@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -172,15 +172,15 @@ export default function FloatingActions() {
 
 
             {/* WHATSAPP */}
-<a
-    href="https://wa.me/919937296745"
-    className="lalchnd-floating-button lalchnd-call-button"
-    aria-label="WhatsApp us"
-    target="_blank"
-    rel="noopener noreferrer"
->
-    <FaWhatsapp />
-</a>
+            <a
+                href="https://wa.me/919937296745"
+                className="lalchnd-floating-button lalchnd-call-button"
+                aria-label="WhatsApp us"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <FaWhatsapp />
+            </a>
 
         </div>
     );
