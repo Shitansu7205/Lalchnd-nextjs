@@ -71,7 +71,7 @@ export default function BlogSingleComponent({
                                 {details?.intro && (
                                     <div className="box-text">
                                         <div
-                                            className="text-main-4 text-justify"
+                                            className="text-main-4 text-justify sub-title"
                                             dangerouslySetInnerHTML={{
                                                 __html: details.intro,
                                             }}
@@ -106,7 +106,7 @@ export default function BlogSingleComponent({
 
                             {details?.content && (
                                 <div
-                                    className="box-text blog-detail-content"
+                                    className="box-text blog-detail-content sub-title"
                                     dangerouslySetInnerHTML={{
                                         __html: details.content,
                                     }}
@@ -122,7 +122,7 @@ export default function BlogSingleComponent({
                                             <li key={tag}>
                                                 <Link
                                                     href="#"
-                                                    className="text-caption"
+                                                    className="tf-btn btn-fill animate-btn"
                                                 >
                                                     {tag}
                                                 </Link>
@@ -342,7 +342,7 @@ export default function BlogSingleComponent({
                                 <li>
                                     <Link
                                         href="#"
-                                        className="text-main-4 link"
+                                        className="text-main-4 link sub-title"
                                     >
                                         {blogEntry.category || "Jewellery"}
                                     </Link>
@@ -417,7 +417,7 @@ export default function BlogSingleComponent({
                                         <li>
                                             <Link
                                                 href="#"
-                                                className="text-body text-main-4 link"
+                                                className="text-body text-main-4 link sub-title"
                                             >
                                                 {tag}
                                             </Link>

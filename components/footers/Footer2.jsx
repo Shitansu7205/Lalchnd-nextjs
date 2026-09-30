@@ -431,7 +431,7 @@ export default function Footer2() {
                     height={34}
                   /> */}
                   <div>
-                    <p className="footer-app-title">Download Here</p>
+                    <p className="footer-app-title sub-title">Download Here</p>
                   </div>
                 </div>
                 <a
