@@ -144,7 +144,7 @@ export default function NewsLetter() {
                   alt="Lalchnd Jewellers Exclusive Collection"
                   width={876}
                   height={1120}
-                  src="/images/lalchnd/pay-online/popup.webp"
+                  src="/images/lalchnd/banner/pop-up-image.webp"
                 />
               </div>
 
