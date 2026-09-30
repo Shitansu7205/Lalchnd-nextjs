@@ -20,7 +20,7 @@ export default function FloatingActions() {
 
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-
+  
     useEffect(() => {
         const fetchGoldRates = async () => {
             try {
