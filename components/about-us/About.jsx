@@ -18,7 +18,7 @@ export default function About() {
                 <p className="sub-title text-main-4">
                   The Lalchnd Group’s founding and flagship company, Lalchnd Jewellers, is a long-established market leader in its space. Boasting three of the largest jewellery showrooms in eastern India, Lalchnd Jewellers offers the widest range of the very finest jewellery and jewellery designs in Odisha – what with all its core products either conceptualised and crafted, or inspired and sourced from not just across its home state and country, but from various corners of the globe. Combining that with customer service that follows global best practices while still being in tune with Indian sensibilities, Lalchnd Jewellers has earned its position as the most trusted luxury brand in Odisha.
                 </p>
-                <Link href={`/shop-default`} className="home-cta-btn tf-btn btn-fill animate-btn">
+                <Link href={`/products`} className="home-cta-btn tf-btn btn-fill animate-btn">
                   Shop Now
                   <i className="icon-arrow-right-2 fs-24" />
                 </Link>

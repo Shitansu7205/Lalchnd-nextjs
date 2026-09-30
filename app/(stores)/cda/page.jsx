@@ -10,8 +10,11 @@ import CdaDetails from "@/components/stores/cda/CdaDetails";
 import CdaDescription from "@/components/stores/cda/CdaDescription";
 import Partion from "@/components/common/Partion";
 export const metadata = {
-    title: "Product Details || Vemus - Jewelry Ecommerce React Nextjs Template",
-    description: "Vemus - Jewelry Ecommerce React Nextjs Template",
+  title: "Best Jewellery Store in CDA – Lalchnd Jewellers",
+  description: "Explore the finest gold & diamond jewellery at Lalchnd Jewellers, the premier showroom in CDA. Each piece is crafted with exceptional quality, blending luxury and elegance for any special occasion.",
+  alternates: {
+    canonical: "https://lalchnd.com/cda/"
+  },
 };
 export default async function ProductDetailPage({ params }) {
     const { id } = await params;

@@ -10,8 +10,11 @@ import RaghunathpurDetails from "@/components/stores/raghunathpur/RaghunathpurDe
 import RaghunathpurDescription from "@/components/stores/raghunathpur/RaghunathpurDescription";
 import Partion from "@/components/common/Partion";
 export const metadata = {
-    title: "Product Details || Vemus - Jewelry Ecommerce React Nextjs Template",
-    description: "Vemus - Jewelry Ecommerce React Nextjs Template",
+  title: "Best Jewellery Store in Raghunathpur at Lalchnd Jewellers",
+  description: "Lalchnd Jewellers the foremost Showroom in Raghunathpur. Find the Best Jewellers & Gold Jewellery Shop for stunning designs & quality pieces.",
+  alternates: {
+    canonical: "https://lalchnd.com/raghunathpur/"
+  },
 };
 export default async function ProductDetailPage({ params }) {
     const { id } = await params;

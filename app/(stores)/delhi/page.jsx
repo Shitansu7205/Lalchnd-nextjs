@@ -9,8 +9,11 @@ import DelhiDetails from "@/components/stores/delhi/DelhiDetails";
 import DelhiDescription from "@/components/stores/delhi/DelhiDescription";
 import Partion from "@/components/common/Partion";
 export const metadata = {
-    title: "Product Details || Vemus - Jewelry Ecommerce React Nextjs Template",
-    description: "Vemus - Jewelry Ecommerce React Nextjs Template",
+  title: "Best Jewellery Shop in Lajpat Nagar Delhi – Lalchnd Jewellers",
+  description: "Explore the best jewellery shop in Lajpat Nagar, Delhi, offering stunning gold, diamond, and silver jewellery. Famous for quality craftsmanship. Visit our store for the finest collections!",
+  alternates: {
+    canonical: "https://lalchnd.com/delhi/"
+  },
 };
 export default async function ProductDetailPage({ params }) {
     const { id } = await params;

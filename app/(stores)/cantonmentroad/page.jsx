@@ -10,8 +10,11 @@ import CantonmentRoadDetails from "@/components/stores/cantonmentroad/Cantonment
 import CantonmentRoadDescription from "@/components/stores/cantonmentroad/CantonmentRoadDescription";
 import Partion from "@/components/common/Partion";
 export const metadata = {
-    title: "Product Details || Vemus - Jewelry Ecommerce React Nextjs Template",
-    description: "Vemus - Jewelry Ecommerce React Nextjs Template",
+  title: "Best Jewellery Store & Shop in Cantonment Road—Lalchnd Jewellers",
+  description: "Shop Gold jewelry at our Cantonment Road store. Enjoy beautiful designs and competitive prices. Come to Lalchnd Jewellers",
+  alternates: {
+    canonical: "https://lalchnd.com/cantonmentroad/"
+  },
 };
 export default async function ProductDetailPage({ params }) {
     const { id } = await params;

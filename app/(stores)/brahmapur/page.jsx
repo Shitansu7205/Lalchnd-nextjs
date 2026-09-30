@@ -10,8 +10,11 @@ import BrahmapurDetails from "@/components/stores/brahmapur/BrahmapurDetails";
 import BrahmapurDescription from "@/components/stores/brahmapur/BrahmapurDescription";
 import Partion from "@/components/common/Partion";
 export const metadata = {
-    title: "Product Details || Vemus - Jewelry Ecommerce React Nextjs Template",
-    description: "Vemus - Jewelry Ecommerce React Nextjs Template",
+  title: "Best Jewellery Shop & Gold Showroom in Brahmapur – Lalchnd Jeweller",
+  description: "Explore the allure of Lalchnd, your go to for 22 Carat Gold Jewellery in Brahmapur. Visit our jewellery showroom the best in town and find exquisite gold jewellery.",
+  alternates: {
+    canonical: "https://lalchnd.com/brahmapur/"
+  },
 };
 export default async function ProductDetailPage({ params }) {
     const { id } = await params;
