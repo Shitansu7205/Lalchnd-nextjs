@@ -108,49 +108,49 @@ export default function Details1({ product }) {
                   <div className="tf-zoom-main sticky-top" />
                   <div className="tf-product-info-list other-image-zoom">
                     <div className="lalchnd-product-info">
-<div className="page-title border-0 mb-3">
+                      <div className="page-title border-0 mb-3">
                         <div className="breadcrumbs">
-                            <ul className="bread-wrap mb-0 d-flex align-items-center">
-                                {/* Home */}
-                                <li className="font-size-mobile-11">
-                                    <Link
-                                        href="/"
-                                        className="text-main-4 link d-flex align-items-center gap-1"
-                                    >
-                                        <Home size={14} strokeWidth={1.7} />
-                                        <span>Home</span>
-                                    </Link>
-                                </li>
+                          <ul className="bread-wrap mb-0 d-flex align-items-center">
+                            {/* Home */}
+                            <li className="font-size-mobile-11">
+                              <Link
+                                href="/"
+                                className="text-main-4 link d-flex align-items-center gap-1"
+                              >
+                                <Home size={14} strokeWidth={1.7} />
+                                <span>Home</span>
+                              </Link>
+                            </li>
 
-                                {/* Separator */}
-                                <li className="d-flex align-items-center mx-1">
-                                    <ChevronRight size={14} strokeWidth={1.5} />
-                                </li>
+                            {/* Separator */}
+                            <li className="d-flex align-items-center mx-1">
+                              <ChevronRight size={14} strokeWidth={1.5} />
+                            </li>
 
-                                {/* Products */}
-                                <li className="font-size-mobile-11">
-                                    <Link
-                                        href="/products"
-                                        className="text-main-4 link"
-                                    >
-                                        Products
-                                    </Link>
-                                </li>
+                            {/* Products */}
+                            <li className="font-size-mobile-11">
+                              <Link
+                                href="/products"
+                                className="text-main-4 link"
+                              >
+                                Products
+                              </Link>
+                            </li>
 
-                                {/* Separator */}
-                                <li className="d-flex align-items-center mx-1">
-                                    <ChevronRight size={14} strokeWidth={1.5} />
-                                </li>
+                            {/* Separator */}
+                            <li className="d-flex align-items-center mx-1">
+                              <ChevronRight size={14} strokeWidth={1.5} />
+                            </li>
 
-                                {/* Current Product */}
-                                <li className="font-size-mobile-11">
-                                    <p className="mb-0">
-                                        {product.name}
-                                    </p>
-                                </li>
-                            </ul>
+                            {/* Current Product */}
+                            <li className="font-size-mobile-11">
+                              <p className="mb-0">
+                                {product.name}
+                              </p>
+                            </li>
+                          </ul>
                         </div>
-                    </div>
+                      </div>
                       {/* Rating */}
                       <div className="lalchnd-product-rating">
                         <ul className="product-info-rate rate-wrap mb-0">
@@ -312,6 +312,17 @@ export default function Details1({ product }) {
                         />
                       </div>
 
+
+                      {/* Description */}
+                      <div className="lalchnd-product-description">
+                        <p className="product-infor-sub mb-0" style={{ color: "#e4562e" }}>
+                          {getAttributeValue("Purity") || "—"}{" "}
+                          {getAttributeValue("Color") || ""}{" "}
+                          |{" "}
+                          {getAttributeValue("Gross Weight (Grs)") || "—"}  Gross wt.
+                        </p>
+                      </div>
+
                       <div className="d-flex flex-row justify-content-between align-items-center">
                         {/* Price */}
                         <div className="lalchnd-product-price">
@@ -345,12 +356,40 @@ export default function Details1({ product }) {
                       </HomeButton>
 
                       <ButtomBorder
-                        href="#enquiry"
+                        href="#askQuestions"
+                        data-bs-toggle="offcanvas"
                         className="type-large border-1 btn-blue"
                       >
                         Enquire Now
                       </ButtomBorder>
                     </div>
+
+      
+
+                    <div className="tf-product-info-extra-link">
+                      <div className="extra-link-divider" />
+
+                      <div className="extra-link-items">
+                        <a
+                          href="#whyLalchnd"
+                          data-bs-toggle="offcanvas"
+                          className="product-extra-icon link text-caption"
+                        >
+                          <i className="icon icon-description fs-14" />
+                          <span>Why Choose Lalchnd</span>
+                        </a>
+
+                        <a
+                          href="/privacy-policy"
+                          className="product-extra-icon link text-caption"
+                        >
+                          <i className="icon icon-delivery-2 fs-20" />
+                          <span>Lalchnd Policy</span>
+                        </a>
+                      </div>
+                    </div>
+
+
 
                   </div>
                 </div>
@@ -364,7 +403,7 @@ export default function Details1({ product }) {
         className="lalchnd-details-section"
       >
         <div className="container-full-2">
-          <div className="row"  style={{ justifyContent: "center" }}>
+          <div className="row" style={{ justifyContent: "center" }}>
             {/* LEFT SIDE - IMAGE */}
             <div className="col-md-4">
               <div className="lalchnd-details-image">
@@ -413,7 +452,7 @@ export default function Details1({ product }) {
                         <tbody>
                           {[
                             ["Color", getAttributeValue("Color")],
-                            ["Size", getAttributeValue("Size")],
+                            ["Size", getAttributeValue("Size") || "Free Size"],
                             ["Gender", getAttributeValue("Gender")],
                             ["Occasion", getAttributeValue("Occasion")],
                             ["Product Code", getAttributeValue("Product Code")],

@@ -5,3 +5,44 @@
 .section-image-zoom.zoom-active .tf-image-zoom {
   cursor: zoom-in !important;
 }
+
+.tf-product-info-extra-link {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.extra-link-divider {
+  width: 100%;
+  height: 1px;
+  background: #e5e5e5;
+  margin-bottom: 5px;
+}
+
+.extra-link-items {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.extra-link-items .product-extra-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.extra-link-items .product-extra-icon:hover {
+  color: #8b6b2f;
+}
+
+.extra-link-items .product-extra-icon i {
+  flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+  .extra-link-items {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+}

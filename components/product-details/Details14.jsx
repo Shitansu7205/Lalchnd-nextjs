@@ -238,7 +238,7 @@ export default function Details14({ product }) {
                         SHIPPING
                       </a>
                       <a
-                        href="#askQuestion"
+                        href="#askQuestions"
                         data-bs-toggle="offcanvas"
                         className="product-extra-icon link text-caption"
                       >
