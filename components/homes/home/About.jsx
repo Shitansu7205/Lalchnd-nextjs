@@ -6,7 +6,7 @@ export default function About() {
   return (
     <div className="deep-bg section-padding-bottom-40 section-padding-top-40">
       <div className="container">
-        <div className="banner_V05 style-2" style={{ gap: "0px" }}>
+        <div className="banner_V05 style-2 about-section" style={{ gap: "40px" }}>
           <div className="shape-image wow fadeInUp">
             <div className="image" style={{ borderRadius: "0 60px 0 60px" }}>
               <Image

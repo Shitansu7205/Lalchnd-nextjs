@@ -112,6 +112,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 10px 20px;
+    padding: 0 30px;
 
     @include res(sm) {
         justify-content: center;
@@ -424,4 +425,10 @@
         width: 100%;
         min-width: 0;
     }
+}
+
+@media (max-width: 767px) {
+    p.text-nocopy.text-white.footer-app-title.sub-title {
+    text-align: center;
+}
 }
