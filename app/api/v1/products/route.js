@@ -157,7 +157,7 @@ export async function GET(request) {
         const metalRatesData = await getMetalRates();
         const goldRate = metalRatesData?.gold?.["22k"];
 
-        console.log("Gold rate:", goldRate);
+        // console.log("Gold rate:", goldRate);
 
         // =========================
         // Pagination information
