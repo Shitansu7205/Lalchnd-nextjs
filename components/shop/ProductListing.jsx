@@ -19,7 +19,8 @@ const mapProduct = (product) => ({
     title: product.name || "",
     slug: product.slug || "",
 
-    price: Number(product.prices?.price || 0) / 100,
+    price: Number(product.pricing?.finalPrice || 0),
+    pricing: product.pricing || null,
 
     oldPrice: product.on_sale
         ? Number(product.prices?.regular_price || 0) / 100
@@ -239,13 +240,15 @@ function ProductListingContent({ defaultLayout = 4 }) {
                                     </Link>
                                     <div className="price-wrap">
                                         <span className="price-tag-listing">
-                                            ₹{product.price.toFixed(2)} (Approx)
+                                            <strong>
+                                                ₹
+                                                {product.price.toLocaleString("en-IN", {
+                                                    minimumFractionDigits: 2,
+                                                    maximumFractionDigits: 2,
+                                                })}
+                                            </strong>{" "}
+                                            <span>(Approx)</span>
                                         </span>
-                                        {product.oldPrice && (
-                                            <span className="price-old fw-normal">
-                                                ${product.oldPrice.toFixed(2)}
-                                            </span>
-                                        )}
                                     </div>
                                 </div>
                             </div>

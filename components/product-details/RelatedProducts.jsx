@@ -90,12 +90,12 @@ export default function RelatedProducts({ product, containerFull = false }) {
             const hoverImage =
               product.images?.[1]?.src || image;
 
-            const price =
-              Number(product.prices?.price || 0) / 100;
+            // const price =
+            //   Number(product.prices?.price || 0) / 100;
 
-            const regularPrice =
-              Number(product.prices?.regular_price || 0) / 100;
-
+            // const regularPrice =
+            //   Number(product.prices?.regular_price || 0) / 100;
+            const price = Number(product.pricing?.finalPrice || 0);
             return (
               <SwiperSlide
                 className="swiper-slide"
@@ -156,21 +156,20 @@ export default function RelatedProducts({ product, containerFull = false }) {
                         ₹
                         {price.toLocaleString("en-IN", {
                           minimumFractionDigits: 2,
+                          maximumFractionDigits: 2,
                         })}
                       </span>
 
-                      {product.on_sale &&
-                        regularPrice > price && (
-                          <span className="price-old fw-normal">
-                            ₹
-                            {regularPrice.toLocaleString(
-                              "en-IN",
-                              {
-                                minimumFractionDigits: 2,
-                              }
-                            )}
-                          </span>
-                        )}
+                      <span
+                        className="lalchnd-price-note"
+                        style={{
+                          fontSize: "15px",
+                          color: "#6c6969",
+                          marginLeft: "5px",
+                        }}
+                      >
+                        (Approx)
+                      </span>
                     </div>
                   </div>
                 </div>
