@@ -3,13 +3,13 @@ import { calculateGoldPrice } from "@/lib/pricing";
 
 
 
-function getAttributeValue(product, taxonomy) {
-    const attribute = product.attributes?.find(
-        (item) => item.taxonomy === taxonomy
-    );
+// function getAttributeValue(product, taxonomy) {
+//     const attribute = product.attributes?.find(
+//         (item) => item.taxonomy === taxonomy
+//     );
 
-    return attribute?.terms?.[0]?.name || null;
-}
+//     return attribute?.terms?.[0]?.name || null;
+// }
 
 export async function GET(request) {
     try {
@@ -136,18 +136,18 @@ export async function GET(request) {
         const products = await response.json();
 
 
-        ///////
-        const metalRatesResponse = await fetch(
-            `${new URL(request.url).origin}/api/v1/metal-rates`
-        );
+        // ///////
+        // const metalRatesResponse = await fetch(
+        //     `${new URL(request.url).origin}/api/v1/metal-rates`
+        // );
 
-        if (!metalRatesResponse.ok) {
-            throw new Error("Failed to fetch metal rates");
-        }
+        // if (!metalRatesResponse.ok) {
+        //     throw new Error("Failed to fetch metal rates");
+        // }
 
-        const metalRatesData = await metalRatesResponse.json();
-        const goldRate = metalRatesData?.gold?.["22k"];
-        //////
+        // const metalRatesData = await metalRatesResponse.json();
+        // const goldRate = metalRatesData?.gold?.["22k"];
+        // //////
 
         // =========================
         // Pagination information
@@ -166,39 +166,39 @@ export async function GET(request) {
         // =========================
         // Products with pricing calculation
         // =========================
-        const productsWithPricing = products.map((product) => {
-            const metal = getAttributeValue(product, "pa_metal");
-            const purity = getAttributeValue(product, "pa_purity");
+        // const productsWithPricing = products.map((product) => {
+        //     const metal = getAttributeValue(product, "pa_metal");
+        //     const purity = getAttributeValue(product, "pa_purity");
 
-            const netWeight = getAttributeValue(
-                product,
-                "pa_net-weight-net"
-            );
+        //     const netWeight = getAttributeValue(
+        //         product,
+        //         "pa_net-weight-net"
+        //     );
 
-            let pricing = null;
+        //     let pricing = null;
 
-            // =========================
-            // Gold 22K pricing
-            // =========================
+        //     // =========================
+        //     // Gold 22K pricing
+        //     // =========================
 
-            if (
-                metal?.toLowerCase() === "gold" &&
-                purity?.toLowerCase() === "22k" &&
-                netWeight
-            ) {
-                const weight = parseFloat(netWeight);
+        //     if (
+        //         metal?.toLowerCase() === "gold" &&
+        //         purity?.toLowerCase() === "22k" &&
+        //         netWeight
+        //     ) {
+        //         const weight = parseFloat(netWeight);
 
-                pricing = calculateGoldPrice({
-                    netWeight: weight,
-                    goldRate,
-                });
-            }
+        //         pricing = calculateGoldPrice({
+        //             netWeight: weight,
+        //             goldRate,
+        //         });
+        //     }
 
-            return {
-                ...product,
-                pricing,
-            };
-        });
+        //     return {
+        //         ...product,
+        //         pricing,
+        //     };
+        // });
 
 
         // =========================
@@ -206,7 +206,8 @@ export async function GET(request) {
         // =========================
 
         return NextResponse.json({
-            products: productsWithPricing,
+            // products: productsWithPricing,
+            products,
             pagination: {
                 page: Number(page),
                 per_page: Number(perPage),
