@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { calculateGoldPrice } from "@/lib/pricing";
+import { getMetalRates } from "@/lib/metal-rates";
 
 function getAttributeValue(product, taxonomy) {
     const attribute = product.attributes?.find(
@@ -50,19 +51,11 @@ export async function GET(request, { params }) {
 
         const product = products[0];
 
+        // =========================
         // Get live metal rates
-        const metalRatesResponse = await fetch(
-            `${new URL(request.url).origin}/api/v1/metal-rates`,
-            {
-                cache: "no-store",
-            }
-        );
+        // =========================
 
-        if (!metalRatesResponse.ok) {
-            throw new Error("Failed to fetch metal rates");
-        }
-
-        const metalRates = await metalRatesResponse.json();
+        const metalRates = await getMetalRates();
 
 
         // =========================
