@@ -10,7 +10,7 @@ export default function Categories() {
     <section className="section-padding-bottom-40 section-padding-top-40 light-bg">
       <div className="container-full-2">
         <div className="sect-top center text-center wow fadeInUp">
-          <h2 className="heading-font">
+          <h2 className="heading-font pb-0">
             Gorgeous <span className="highlight-font">Collections</span>
           </h2>
           <p className="s-sub-title">

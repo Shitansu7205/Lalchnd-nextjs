@@ -172,7 +172,6 @@ export async function GET(request) {
         );
 
 
-
         // =========================
         // Products with pricing calculation
         // =========================
