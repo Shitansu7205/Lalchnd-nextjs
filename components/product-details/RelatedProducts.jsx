@@ -124,7 +124,7 @@ export default function RelatedProducts({ product, containerFull = false }) {
                       />
                     </Link>
 
-                    <ul className="list-product-btn">
+                    {/* <ul className="list-product-btn">
                       <li className="wishlist">
                         <AddtoWishlist product={product} />
                       </li>
@@ -140,7 +140,7 @@ export default function RelatedProducts({ product, containerFull = false }) {
                       <li className="compare">
                         <AddtoCompare product={product} />
                       </li>
-                    </ul>
+                    </ul> */}
                   </div>
 
                   <div className="card_product-info">

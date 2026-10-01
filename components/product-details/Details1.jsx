@@ -479,7 +479,7 @@ export default function Details1({ product }) {
                             ["Gender", getAttributeValue("Gender")],
                             ["Occasion", getAttributeValue("Occasion")],
                             ["Product Code", getAttributeValue("Product Code")],
-                            ["Stone", getAttributeValue("Stone")],
+                            ["Stone", getAttributeValue("Stone") || "No Stone"],
                           ].map(([label, value]) => (
                             <tr key={label}>
                               <td>{label}</td>
