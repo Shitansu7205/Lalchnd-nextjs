@@ -213,7 +213,7 @@ function ProductListingContent({ defaultLayout = 4 }) {
                                             height={900}
                                         />
                                     </Link>
-                                    {!product.outOfStock && (
+                                    {/* {!product.outOfStock && (
                                         <ul className="list-product-btn">
                                             <li className="wishlist">
                                                 <AddtoWishlist product={product} />
@@ -228,7 +228,7 @@ function ProductListingContent({ defaultLayout = 4 }) {
                                                 <AddtoCompare product={product} />
                                             </li>
                                         </ul>
-                                    )}
+                                    )} */}
                                 </div>
                                 <div className="card_product-info">
                                     <Link

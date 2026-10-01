@@ -265,11 +265,11 @@ export const allJewlleryPages = [
         label: "Kids",
         icon: "kids",
       },
-      {
-        href: "/products?gender=unisex",
-        label: "Unisex",
-        icon: "unisex",
-      },
+      // {
+      //   href: "/products?gender=unisex",
+      //   label: "Unisex",
+      //   icon: "unisex",
+      // },
     ],
   },
   {
@@ -302,7 +302,7 @@ export const giftingPages = [
       { href: "#", label: " Him" },
       { href: "#", label: " Her" },
       { href: "#", label: "Kids" },
-     
+
     ],
   },
   {
@@ -417,11 +417,11 @@ export const goldJewlleryPages = [
         label: "Kids",
         icon: "kids",
       },
-      {
-        href: "/products?metal=gold&gender=unisex",
-        label: "Unisex",
-        icon: "unisex",
-      },
+      // {
+      //   href: "/products?metal=gold&gender=unisex",
+      //   label: "Unisex",
+      //   icon: "unisex",
+      // },
     ],
   },
 
@@ -548,11 +548,11 @@ export const silverJewlleryPages = [
         label: "Kids",
         icon: "kids",
       },
-      {
-        href: "/products?metal=silver&gender=unisex",
-        label: "Unisex",
-        icon: "unisex",
-      },
+      // {
+      //   href: "/products?metal=silver&gender=unisex",
+      //   label: "Unisex",
+      //   icon: "unisex",
+      // },
     ],
   },
 
@@ -679,11 +679,11 @@ export const diamondJewlleryPages = [
         image: "/images/lalchnd/jewellery-menu/kids.webp",
         url: "/products?metal=diamond&gender=kids",
       },
-      {
-        name: "Unisex",
-        image: "/images/lalchnd/jewellery-menu/unisex.webp",
-        url: "/products?metal=diamond&gender=unisex",
-      },
+      // {
+      //   name: "Unisex",
+      //   image: "/images/lalchnd/jewellery-menu/unisex.webp",
+      //   url: "/products?metal=diamond&gender=unisex",
+      // },
     ],
   },
 
