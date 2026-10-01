@@ -45,8 +45,8 @@ export default async function ProductDetailPage({ params }) {
 
     const data = await response.json();
     const product = data.product;
-    console.log("Fetched product:", data.product?.name);
-    console.log("Fetched pricing:", data.product?.pricing);
+    // console.log("Fetched product:", data.product?.name);
+    // console.log("Fetched pricing:", data.product?.pricing);
     return (
         <>
             <Topbar1 parentClass="tf-topbar bg-dark-blue" />

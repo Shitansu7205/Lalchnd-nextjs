@@ -64,22 +64,25 @@ export async function GET(request, { params }) {
 
         const metalRates = await metalRatesResponse.json();
 
+
+        // =========================
         // Product attributes
+        // =========================
         const metal = getAttributeValue(product, "pa_metal");
         const purity = getAttributeValue(product, "pa_purity");
         const netWeight = getAttributeValue(
             product,
             "pa_net-weight-net"
         );
-        const stone = getAttributeValue(product, "pa_stone");
 
-        const stoneWeight = stone
-            ? parseFloat(stone)
-            : 0;
-
+        // =========================
+        // Product pricing
+        // =========================
         let pricing = null;
 
+        // =========================
         // Gold 22K pricing
+        // =========================
         if (
             metal?.toLowerCase() === "gold" &&
             purity?.toLowerCase() === "22k" &&
@@ -92,7 +95,6 @@ export async function GET(request, { params }) {
             pricing = calculateGoldPrice({
                 netWeight: weight,
                 goldRate,
-                stoneWeight,
             });
         }
 

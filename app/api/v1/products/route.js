@@ -162,21 +162,24 @@ export async function GET(request) {
         );
 
 
+
+        // =========================
+        // Products with pricing calculation
+        // =========================
         const productsWithPricing = products.map((product) => {
             const metal = getAttributeValue(product, "pa_metal");
             const purity = getAttributeValue(product, "pa_purity");
+
             const netWeight = getAttributeValue(
                 product,
                 "pa_net-weight-net"
             );
-            const stone = getAttributeValue(
-                product,
-                "pa_stone"
-            );
-            const stoneWeight = stone
-                ? parseFloat(stone)
-                : 0;
+
             let pricing = null;
+
+            // =========================
+            // Gold 22K pricing
+            // =========================
 
             if (
                 metal?.toLowerCase() === "gold" &&
@@ -188,7 +191,6 @@ export async function GET(request) {
                 pricing = calculateGoldPrice({
                     netWeight: weight,
                     goldRate,
-                    stoneWeight,
                 });
             }
 

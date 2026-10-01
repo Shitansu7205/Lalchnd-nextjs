@@ -84,11 +84,11 @@ export default function Details1({ product }) {
 
 
 
-  console.log("Product:", product.name);
-  console.log("Pricing:", product.pricing);
-  console.log("Final price:", product.pricing?.finalPrice);
+  // console.log("Product:", product.name);
+  // console.log("Pricing:", product.pricing);
+  // console.log("Final price:", product.pricing?.finalPrice);
 
-  
+
   return (
     <>
       <section className="themesFlat section-padding-bottom-40 bg-transparent-svg2">
@@ -342,18 +342,19 @@ export default function Details1({ product }) {
                                   }
                                 )}
                               </strong>
-
-                              <span
-                                className="lalchnd-code-label"
-                                style={{
-                                  fontSize: "16px",
-                                  color: "#6c6969",
-                                  marginLeft: "5px",
-                                }}
-                              >
-                                (Approx)
-                              </span>
                             </span>
+                          </div>
+
+                          <div
+                            className="lalchnd-price-note"
+                            style={{
+                              fontSize: "16px",
+                              color: "#6c6969",
+                              marginLeft: "5px",
+                            }}
+                          >
+                            * Approximate (excluding taxes, GST
+                            {getAttributeValue("Stone") && " and stone charges"})
                           </div>
                         </div>
 
