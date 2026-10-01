@@ -4,13 +4,13 @@ import { getMetalRates } from "@/lib/metal-rates";
 
 
 
-// function getAttributeValue(product, taxonomy) {
-//     const attribute = product.attributes?.find(
-//         (item) => item.taxonomy === taxonomy
-//     );
+function getAttributeValue(product, taxonomy) {
+    const attribute = product.attributes?.find(
+        (item) => item.taxonomy === taxonomy
+    );
 
-//     return attribute?.terms?.[0]?.name || null;
-// }
+    return attribute?.terms?.[0]?.name || null;
+}
 
 export async function GET(request) {
     try {
@@ -155,7 +155,6 @@ export async function GET(request) {
         // =========================
 
         const metalRatesData = await getMetalRates();
-
         const goldRate = metalRatesData?.gold?.["22k"];
 
         console.log("Gold rate:", goldRate);
@@ -177,39 +176,39 @@ export async function GET(request) {
         // =========================
         // Products with pricing calculation
         // =========================
-        // const productsWithPricing = products.map((product) => {
-        //     const metal = getAttributeValue(product, "pa_metal");
-        //     const purity = getAttributeValue(product, "pa_purity");
+        const productsWithPricing = products.map((product) => {
+            const metal = getAttributeValue(product, "pa_metal");
+            const purity = getAttributeValue(product, "pa_purity");
 
-        //     const netWeight = getAttributeValue(
-        //         product,
-        //         "pa_net-weight-net"
-        //     );
+            const netWeight = getAttributeValue(
+                product,
+                "pa_net-weight-net"
+            );
 
-        //     let pricing = null;
+            let pricing = null;
 
-        //     // =========================
-        //     // Gold 22K pricing
-        //     // =========================
+            // =========================
+            // Gold 22K pricing
+            // =========================
 
-        //     if (
-        //         metal?.toLowerCase() === "gold" &&
-        //         purity?.toLowerCase() === "22k" &&
-        //         netWeight
-        //     ) {
-        //         const weight = parseFloat(netWeight);
+            if (
+                metal?.toLowerCase() === "gold" &&
+                purity?.toLowerCase() === "22k" &&
+                netWeight
+            ) {
+                const weight = parseFloat(netWeight);
 
-        //         pricing = calculateGoldPrice({
-        //             netWeight: weight,
-        //             goldRate,
-        //         });
-        //     }
+                pricing = calculateGoldPrice({
+                    netWeight: weight,
+                    goldRate,
+                });
+            }
 
-        //     return {
-        //         ...product,
-        //         pricing,
-        //     };
-        // });
+            return {
+                ...product,
+                pricing,
+            };
+        });
 
 
         // =========================
@@ -217,8 +216,7 @@ export async function GET(request) {
         // =========================
 
         return NextResponse.json({
-            // products: productsWithPricing,
-            products,
+            products: productsWithPricing,
             pagination: {
                 page: Number(page),
                 per_page: Number(perPage),
