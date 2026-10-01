@@ -220,6 +220,7 @@ export async function GET(request) {
         return NextResponse.json(
             {
                 message: "Failed to fetch products",
+                error: error.message,
             },
             { status: 500 }
         );
