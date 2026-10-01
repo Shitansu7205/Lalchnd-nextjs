@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { calculateGoldPrice } from "@/lib/pricing";
+import { getMetalRates } from "@/lib/metal-rates";
 
 
 
@@ -153,17 +154,8 @@ export async function GET(request) {
         // Get metal rates
         // =========================
 
-        const metalRatesResponse = await fetch(
-            `${new URL(request.url).origin}/api/v1/metal-rates`
-        );
+        const metalRatesData = await getMetalRates();
 
-        if (!metalRatesResponse.ok) {
-            throw new Error(
-                `Metal rates API error: ${metalRatesResponse.status}`
-            );
-        }
-
-        const metalRatesData = await metalRatesResponse.json();
         const goldRate = metalRatesData?.gold?.["22k"];
 
         console.log("Gold rate:", goldRate);
