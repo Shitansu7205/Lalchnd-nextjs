@@ -16,6 +16,7 @@ import { Home, ChevronRight, CheckCircle } from "lucide-react";
 
 import ButtomBorder from "../common/ButtomBorder";
 import HomeOnlyButton from "../common/HomeOnlyButton";
+import ProductFoms from "../common/ProductFoms";
 export default function Details1({ product }) {
   const [activeColor, setActiveColor] = useState("gold");
   const getAttributeValue = (name) => {
@@ -545,6 +546,9 @@ export default function Details1({ product }) {
 
         </div>
       </section>
+
+      {/* Product Enquiry Form */}
+      <ProductFoms product={product} />
     </>
   );
 }
