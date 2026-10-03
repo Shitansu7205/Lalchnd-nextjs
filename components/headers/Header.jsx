@@ -65,7 +65,7 @@ export default function Header({ parentClass = "tf-header line-bt-2" }) {
                             </li>
                             <li className="d-inline-flex">
                                 <Link
-                                    href="telto:"
+                                    href="tel:06742534016"
                                     data-bs-toggle="offcanvas"
                                     className="nav-icon-item text-black link"
                                 >

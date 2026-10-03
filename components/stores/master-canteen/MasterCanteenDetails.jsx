@@ -113,7 +113,7 @@ export default function StoreDetails() {
                                             <li className="inner-page-btn">
                                                 <Link
                                                     href="#review"
-                                                    className="home-cta-btn tf-btn btn-fill animate-btn type-large"
+                                                    className="home-cta-btn tf-btn btn-fill animate-btn type-large" target="_blank" rel="noopener noreferrer"
                                                 style={{width: "100%"}}>
                                                     Write a Review
                                                     <ArrowRight size={24} strokeWidth={1.8} />

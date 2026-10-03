@@ -174,26 +174,45 @@ export default function MobileNav() {
           <span className="btn-open-sub" />
         </a>
         <div id="dropdown-menu-blog" className="collapse">
-          <ul className="sub-nav-menu">
-            {morePages.map((section, index) => (
-              <li key={index} className="nav-mb-item">
-                <div className="sub-nav-link sub-title">
-                  {section.heading}
-                </div>
+  <ul className="sub-nav-menu">
+    {morePages.map((section, index) => (
+      <li key={index} className="nav-mb-item">
+        <div className="sub-nav-link sub-title">
+          {section.heading}
+        </div>
 
+        <ul className="sub-nav-menu">
+          {section.links.map((link, linkIndex) => (
+            <li key={linkIndex} className="nav-mb-item">
+              <Link
+                href={link.href}
+                className="sub-nav-link sub-title"
+              >
+                {link.label}
+              </Link>
+
+              {/* Nested Store Links */}
+              {link.children && link.children.length > 0 && (
                 <ul className="sub-nav-menu">
-                  {section.links.map((link, linkIndex) => (
-                    <li key={linkIndex}>
-                      <Link href={link.href} className="sub-nav-link sub-title">
-                        {link.label}
+                  {link.children.map((child, childIndex) => (
+                    <li key={childIndex}>
+                      <Link
+                        href={child.href}
+                        className="sub-nav-link sub-title"
+                      >
+                        {child.label}
                       </Link>
                     </li>
                   ))}
                 </ul>
-              </li>
-            ))}
-          </ul>
-        </div>
+              )}
+            </li>
+          ))}
+        </ul>
+      </li>
+    ))}
+  </ul>
+</div>
       </li>
     </>
   );

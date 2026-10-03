@@ -1,0 +1,505 @@
+
+
+/* =========================================
+   SCHEMES GRID
+========================================= */
+
+.schemesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.schemeCard {
+  position: relative;
+  display: grid;
+  grid-template-columns: 43% 57%;
+  min-height: 260px;
+  overflow: hidden;
+
+  text-decoration: none;
+  color: inherit;
+
+  background: #ffffff;
+  border: 1px solid #e9e2d7;
+  border-radius: 10px;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.schemeCard:hover {
+  /* transform: translateY(-5px); */
+  border-color: #AE873E;
+  box-shadow: 0 18px 45px rgba(24, 44, 68, 0.1);
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.imageWrapper {
+  position: relative;
+  min-height: 260px;
+  overflow: hidden;
+}
+
+.schemeImage {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.schemeCard:hover .schemeImage {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 60%,
+      rgba(255, 255, 255, 0.1)
+    );
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.schemeContent {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 30px 30px 28px;
+
+  background:
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(197, 154, 85, 0.06),
+      transparent 30%
+    ),
+    #ffffff;
+}
+
+/* =========================================
+   ICON
+========================================= */
+
+.iconBox {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 17px;
+
+  color: #AE873E;
+
+  border: 1px solid rgba(174, 135, 62, 0.35);
+  border-radius: 50%;
+
+  background: #fffdf9;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.schemeCard:hover .iconBox {
+  color: #ffffff;
+  background: #AE873E;
+  /* transform: rotate(5deg); */
+}
+
+/* =========================================
+   CATEGORY
+========================================= */
+
+.category {
+  margin-bottom: 8px;
+
+  color: #7b8490;
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.schemeTitle {
+  max-width: 280px;
+  margin: 0;
+
+  color: #102b49;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+/* =========================================
+   GOLD LINE
+========================================= */
+
+.goldLine {
+  width: 30px;
+  height: 1px;
+
+  margin: 15px 0 13px;
+
+  background: #AE873E;
+
+  transition: width 0.35s ease;
+}
+
+.schemeCard:hover .goldLine {
+  width: 48px;
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.description {
+  max-width: 290px;
+  margin: 0;
+
+  color: #687584;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* =========================================
+   VIEW DETAILS
+========================================= */
+
+.viewDetails {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: auto;
+  padding-top: 20px;
+
+  color: #AE873E;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+
+  transition: gap 0.3s ease;
+}
+
+.schemeCard:hover .viewDetails {
+  gap: 14px;
+}
+
+/* =========================================
+   DECORATIVE
+========================================= */
+
+.decorativeLeaf {
+  position: absolute;
+  right: 17px;
+  bottom: 13px;
+
+  color: rgba(194, 149, 77, 0.25);
+  font-size: 36px;
+  line-height: 1;
+
+  transform: rotate(-20deg);
+}
+
+/* =========================================
+   BOTTOM CTA
+========================================= */
+
+.bottomCta {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 55px;
+  padding: 35px 55px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      #fffaf1 0%,
+      #fffdf9 50%,
+      #fffaf1 100%
+    );
+
+  border: 1px solid #eee3d2;
+  border-radius: 6px;
+}
+
+/* =========================================
+   CTA DECORATION
+========================================= */
+
+.ctaDecoration {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #AE873E;
+
+  border: 1px solid rgba(174, 135, 62, 0.35);
+  border-radius: 50%;
+
+  font-size: 33px;
+}
+
+/* =========================================
+   CTA CONTENT
+========================================= */
+
+.ctaContent {
+  flex: 1;
+}
+
+.ctaSmallTitle {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #AE873E;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+}
+
+.ctaContent h2 {
+  margin: 0 0 5px;
+
+  color: #102b49;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.ctaContent p {
+  margin: 0;
+
+  color: #718090;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+  .schemesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .schemeCard {
+    display: block;
+    min-height: auto;
+  }
+
+  .imageWrapper {
+    height: 210px;
+    min-height: 210px;
+  }
+
+  .schemeContent {
+    min-height: 240px;
+    padding: 25px;
+  }
+
+  .schemeTitle {
+    font-size: 23px;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+
+  .bottomCta {
+    padding: 30px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+  .schemesGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .schemeCard {
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    min-height: 210px;
+  }
+
+  .imageWrapper {
+    height: auto;
+    min-height: 210px;
+  }
+
+  .schemeContent {
+    min-height: 210px;
+    padding: 20px 18px;
+  }
+
+  .iconBox {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 12px;
+  }
+
+  .iconBox svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .category {
+    margin-bottom: 6px;
+    font-size: 8px;
+    letter-spacing: 1.2px;
+  }
+
+  .schemeTitle {
+    font-size: 20px;
+    line-height: 1.15;
+  }
+
+  .goldLine {
+    margin: 11px 0 10px;
+  }
+
+  .description {
+    font-size: 11px;
+    line-height: 1.55;
+  }
+
+  .viewDetails {
+    padding-top: 14px;
+    font-size: 11px;
+  }
+
+  .decorativeLeaf {
+    right: 10px;
+    bottom: 8px;
+    font-size: 27px;
+  }
+
+  /* CTA */
+
+  .bottomCta {
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 35px;
+    padding: 30px 20px;
+
+    text-align: center;
+    gap: 18px;
+  }
+
+  .ctaDecoration {
+    width: 50px;
+    height: 50px;
+  }
+
+  .ctaSmallTitle {
+    font-size: 8px;
+    letter-spacing: 1.3px;
+  }
+
+  .ctaContent h2 {
+    font-size: 22px;
+  }
+
+  .ctaContent p {
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .schemeCard {
+    grid-template-columns: 38% 62%;
+  }
+
+  .imageWrapper {
+    min-height: 190px;
+  }
+
+  .schemeContent {
+    min-height: 190px;
+    padding: 17px 15px;
+  }
+
+  .iconBox {
+    width: 38px;
+    height: 38px;
+  }
+
+  .schemeTitle {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .viewDetails {
+    font-size: 10px;
+    gap: 6px;
+  }
+
+  .viewDetails svg {
+    width: 14px;
+  }
+}

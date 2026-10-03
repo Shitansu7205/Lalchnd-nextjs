@@ -7,7 +7,7 @@ import { storeLocations } from "@/data/storeDetails";
 import { ArrowRight, Rotate3D } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-export default function CantonmentRoadDetails() {
+export default function CuttackDetails() {
     const [activeColor, setActiveColor] = useState("gold");
     const [quantity, setQuantity] = useState(1);
     const {
@@ -34,7 +34,7 @@ export default function CantonmentRoadDetails() {
                                             width={1000}
                                             height={900}
                                             className="lazyload"
-                                            src="/images/lalchnd/store/cuttack/cantonment/2.jpg"
+                                            src="/images/lalchnd/store/store-img.webp"
                                             style={{ color: "transparent" }}
                                         />
                                     </div>
@@ -64,10 +64,19 @@ export default function CantonmentRoadDetails() {
                                             </li>
                                         </ul>
                                         <h3>
-                                            Explore Our Jewellery Showroom on <span className="highlight-font" style={{fontSize: "38px"}}>Cantonment Road</span>
+                                          Unveiling the Latest Jewellery Collection Showroom in <span className="highlight-font" style={{fontSize: "38px"}}>Cuttack - Lalchnd</span>
                                         </h3>
                                         <p className="sub-title">
-                                            Lalchnd Jewellers stands as the leading jewellery shop on Cantonment Road, known for its transparent pricing, personalized service, and a wide selection of exquisite designs. Each piece in our collection is meticulously crafted with precision, ensuring unmatched quality and timeless elegance. From stunning bridal sets to everyday accessories, we offer a diverse range of gold, diamond, and gemstone jewellery that caters to every style and occasion. Whether you’re seeking classic pieces or the latest trends, our extensive collection of gold necklaces, bangles, earrings, and rings combines modern craftsmanship with traditional charm. At Lalchnd Jewellers, we don’t just sell jewellery—we create lasting memories. Visit us today and experience jewellery shopping like never before.
+                                            Lalchnd Jewellers, your ultimate destination for the finest gold jewellery in Cuttack! As the 
+                                            Best Gold Jewellery Shop in Cuttack, we take pride in offering a captivating array of exquisite 
+                                            designs that blend traditional craftsmanship with contemporary elegance. What sets us apart as 
+                                            the premier Jewellery Shop in Cuttack is our commitment to quality and craftsmanship. Each 
+                                            piece is crafted with precision, using the finest materials to ensure longevity and timeless 
+                                            beauty. Our skilled artisans infuse passion and dedication into every creation, making Lalchnd 
+                                            Jewellers a name synonymous with trust and excellence. Step into the world of Lalchnd Jewellers, 
+                                            where every piece tells a story of craftsmanship, elegance, and everlasting beauty. Discover the 
+                                            allure of our Best Gold Jewellery Shop in Cuttack and let us adorn your life’s special moments 
+                                            with the brilliance of gold.
                                         </p>
 
 
@@ -112,7 +121,7 @@ export default function CantonmentRoadDetails() {
                                         <ul className="entry_tag tag-wrap d-flex align-items-center inner-btn">
                                             <li className="inner-page-btn">
                                                 <Link
-                                                    href="google.com/maps/place/Lalchnd+Gems+and+Jewellers/data=!4m2!3m1!1s0x0:0xbc04869ee1b9d77c?sa=X&ved=1t:2428&ictx=111"
+                                                    href="https://www.google.com/maps/place/Lalchnd+Jewellers+CDA/@20.4794162,85.8396722,17z/data=!3m1!4b1!4m6!3m5!1s0x3a191166ffa7db7b:0x5fe1ccac866b17f6!8m2!3d20.4794162!4d85.8396722!16s%2Fg%2F11vxqt9psy?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
                                                     className="home-cta-btn tf-btn btn-fill animate-btn type-large" target="_blank" rel="noopener noreferrer"
                                                 style={{width: "100%"}}
                                                 >
@@ -123,7 +132,7 @@ export default function CantonmentRoadDetails() {
 
                                             <li className="inner-page-btn">
                                                 <Link
-                                                    href="https://www.google.com/local/place/fid/0x3a19120c10c56f8d:0xbc04869ee1b9d77c/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3DKKWfggHY4FU5zohO3BgdYQ%26cb_client%3Dsearch.gws-prod.gps%26yaw%3D186.58835%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&ik=CAISFktLV2ZnZ0hZNEZVNXpvaE8zQmdkWVE%3D&sa=X&ved=2ahUKEwium9OxqvWWAxVlleEIHaqaEe0Qpx96BAgcEBI"
+                                                    href="https://www.google.com/local/place/fid/0x3a191166ffa7db7b:0x5fe1ccac866b17f6/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3DwZ4rrwvLxdUVQCxfu08onw%26cb_client%3Dsearch.gws-prod.gps%26yaw%3D90.04523%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&ik=CAISFndaNHJyd3ZMeGRVVlFDeGZ1MDhvbnc%3D&sa=X&ved=2ahUKEwjtzYGzqfWWAxWhkOEIHRHvNX0Qpx96BAgWEBI"
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     className="tf-btn btn-fill-white store-map-button"

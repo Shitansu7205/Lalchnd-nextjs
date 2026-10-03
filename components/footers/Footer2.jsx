@@ -247,7 +247,7 @@ export default function Footer2() {
                     <Phone size={16} strokeWidth={1.8} className="text-white" />
                     <span className="fw-medium text-white sub-title">Phone: </span>
                     <a
-                      href="tel:18002108383"
+                      href="tel:06742534016"
                       className="text-white link fw-normal sub-title"
                     >
                       0674 - 2534016 / 17 / 18

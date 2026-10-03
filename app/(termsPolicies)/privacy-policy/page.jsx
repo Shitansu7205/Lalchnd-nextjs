@@ -6,6 +6,7 @@ import Link from "next/link";
 import React from "react";
 import Header from "@/components/headers/Header";
 import BreadcrumbBanner from "@/components/common/BreadcrumbBanner";
+import Partion from "@/components/common/Partion";
 
 export const metadata = {
   title: "Privacy Policy - Lalchnd Jewellers",
@@ -25,6 +26,7 @@ export default function page() {
         current="Privacy Policy"
         image="/images/lalchnd/banner/gallery-banner.webp"
       />
+      <Partion />
       <PrivacyPolicy />
       <Footer2 />
     </>

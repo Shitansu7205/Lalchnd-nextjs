@@ -80,12 +80,12 @@ export default function ProductsImage() {
 
                       {/* Quick View - Same Position as Play Button */}
                       <a
-                        href="#quickView"
+                        href="/products?metal=gold&category=necklaces"
                         data-bs-toggle="modal"
                         onClick={() => setQuickViewItem(product)}
                         className="focus-quick-view"
                       >
-                        QUICK VIEW
+                        VIEW More
                       </a>
                     </div>
 
