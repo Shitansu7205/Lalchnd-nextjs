@@ -1,0 +1,209 @@
+
+.lalchnd-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Replace with your existing overlay background */
+  background:
+    linear-gradient(
+      rgba(248, 243, 234, 0.88),
+      rgba(248, 243, 234, 0.88)
+    ),
+    url("/images/lalchnd/loader-bg.jpg") center / cover no-repeat;
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.lalchnd-loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  padding: 30px 20px;
+}
+
+.lalchnd-loader-brand {
+  margin-bottom: 42px;
+  animation: brand-appear 1s ease both;
+}
+
+.lalchnd-loader-logo {
+  display: block;
+  width: 190px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Main jewellery animation */
+.jewellery-loader {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin-bottom: 30px;
+}
+
+.jewellery-gem {
+  width: 78px;
+  height: 78px;
+  display: grid;
+  place-items: center;
+  color: #06366f;
+
+  animation: gem-glow 2s ease-in-out infinite;
+}
+
+.jewellery-gem svg {
+  filter: drop-shadow(0 0 8px rgba(190, 145, 52, 0.25));
+}
+
+/* Rotating gold rings */
+.jewellery-orbit {
+  position: absolute;
+  inset: 7px;
+  border: 1px solid transparent;
+  border-top-color: #06366f;
+  border-bottom-color: #06366f;
+  border-radius: 50%;
+}
+
+.jewellery-orbit-one {
+  animation: orbit-rotate 3s linear infinite;
+}
+
+.jewellery-orbit-two {
+  inset: 19px;
+  border-top-color: #06366f;
+  border-bottom-color: #06366f;
+  animation: orbit-rotate 4s linear infinite reverse;
+}
+
+/* Floating sparkles */
+.jewellery-sparkle {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  color: #06366f;
+}
+
+.sparkle-one {
+  top: 13px;
+  right: 8px;
+  animation: sparkle 1.6s ease-in-out infinite;
+}
+
+.sparkle-two {
+  bottom: 13px;
+  left: 8px;
+  animation: sparkle 1.6s ease-in-out infinite 0.8s;
+}
+
+.lalchnd-loader-label {
+  margin: 0;
+  color: #55483b;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  animation: label-pulse 2s ease-in-out infinite;
+}
+
+.lalchnd-loader-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+  color: #06366f;
+}
+
+.lalchnd-loader-divider span {
+  width: 55px;
+  height: 1px;
+  background: #06366f;
+}
+
+/* Keyframes */
+@keyframes orbit-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gem-glow {
+  0%, 100% {
+    transform: scale(0.92);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(0.6) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2) rotate(25deg);
+    opacity: 1;
+  }
+}
+
+@keyframes label-pulse {
+  0%, 100% {
+    opacity: 0.65;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes brand-appear {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 576px) {
+  .lalchnd-loader-logo {
+    width: 155px;
+  }
+
+  .lalchnd-loader-brand {
+    margin-bottom: 32px;
+  }
+
+  .jewellery-loader {
+    width: 125px;
+    height: 125px;
+  }
+
+  .lalchnd-loader-label {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lalchnd-loader *,
+  .lalchnd-loader *::before,
+  .lalchnd-loader *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

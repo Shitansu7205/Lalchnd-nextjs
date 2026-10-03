@@ -1,4 +1,14 @@
 import { NextResponse } from "next/server";
+import { calculateGoldPrice } from "@/lib/pricing";
+import { getMetalRates } from "@/lib/metal-rates";
+
+function getAttributeValue(product, taxonomy) {
+    const attribute = product.attributes?.find(
+        (item) => item.taxonomy === taxonomy
+    );
+
+    return attribute?.terms?.[0]?.name || null;
+}
 
 export async function GET(request, { params }) {
     try {
@@ -13,11 +23,11 @@ export async function GET(request, { params }) {
             );
         }
 
+        // WooCommerce product
         const wooUrl = new URL(
             "https://test-vps.testctsl.in/wp-json/wc/store/v1/products"
         );
 
-        // Send slug to WooCommerce
         wooUrl.searchParams.set("slug", slug);
 
         const response = await fetch(wooUrl.toString());
@@ -30,7 +40,6 @@ export async function GET(request, { params }) {
 
         const products = await response.json();
 
-        // WooCommerce returns an array for ?slug=
         if (!products.length) {
             return NextResponse.json(
                 {
@@ -40,11 +49,53 @@ export async function GET(request, { params }) {
             );
         }
 
-        // Since slug should identify one product
         const product = products[0];
 
-        return NextResponse.json({
+        // =========================
+        // Get live metal rates
+        // =========================
+
+        const metalRates = await getMetalRates();
+
+
+        // =========================
+        // Product attributes
+        // =========================
+        const metal = getAttributeValue(product, "pa_metal");
+        const purity = getAttributeValue(product, "pa_purity");
+        const netWeight = getAttributeValue(
             product,
+            "pa_net-weight-net"
+        );
+
+        // =========================
+        // Product pricing
+        // =========================
+        let pricing = null;
+
+        // =========================
+        // Gold 22K pricing
+        // =========================
+        if (
+            metal?.toLowerCase() === "gold" &&
+            purity?.toLowerCase() === "22k" &&
+            netWeight
+        ) {
+            const weight = parseFloat(netWeight);
+
+            const goldRate = metalRates?.gold?.["22k"];
+
+            pricing = calculateGoldPrice({
+                netWeight: weight,
+                goldRate,
+            });
+        }
+
+        return NextResponse.json({
+            product: {
+                ...product,
+                pricing,
+            },
         });
     } catch (error) {
         console.error("Product detail API error:", error);

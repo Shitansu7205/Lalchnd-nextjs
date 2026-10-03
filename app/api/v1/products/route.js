@@ -1,4 +1,16 @@
 import { NextResponse } from "next/server";
+import { calculateGoldPrice } from "@/lib/pricing";
+import { getMetalRates } from "@/lib/metal-rates";
+
+
+
+function getAttributeValue(product, taxonomy) {
+    const attribute = product.attributes?.find(
+        (item) => item.taxonomy === taxonomy
+    );
+
+    return attribute?.terms?.[0]?.name || null;
+}
 
 export async function GET(request) {
     try {
@@ -124,6 +136,29 @@ export async function GET(request) {
 
         const products = await response.json();
 
+
+        // ///////
+        // const metalRatesResponse = await fetch(
+        //     `${new URL(request.url).origin}/api/v1/metal-rates`
+        // );
+
+        // if (!metalRatesResponse.ok) {
+        //     throw new Error("Failed to fetch metal rates");
+        // }
+
+        // const metalRatesData = await metalRatesResponse.json();
+        // const goldRate = metalRatesData?.gold?.["22k"];
+        // //////
+
+        // =========================
+        // Get metal rates
+        // =========================
+
+        const metalRatesData = await getMetalRates();
+        const goldRate = metalRatesData?.gold?.["22k"];
+
+        // console.log("Gold rate:", goldRate);
+
         // =========================
         // Pagination information
         // =========================
@@ -136,12 +171,51 @@ export async function GET(request) {
             response.headers.get("X-WP-TotalPages") || 0
         );
 
+
+        // =========================
+        // Products with pricing calculation
+        // =========================
+        const productsWithPricing = products.map((product) => {
+            const metal = getAttributeValue(product, "pa_metal");
+            const purity = getAttributeValue(product, "pa_purity");
+
+            const netWeight = getAttributeValue(
+                product,
+                "pa_net-weight-net"
+            );
+
+            let pricing = null;
+
+            // =========================
+            // Gold 22K pricing
+            // =========================
+
+            if (
+                metal?.toLowerCase() === "gold" &&
+                purity?.toLowerCase() === "22k" &&
+                netWeight
+            ) {
+                const weight = parseFloat(netWeight);
+
+                pricing = calculateGoldPrice({
+                    netWeight: weight,
+                    goldRate,
+                });
+            }
+
+            return {
+                ...product,
+                pricing,
+            };
+        });
+
+
         // =========================
         // API response
         // =========================
 
         return NextResponse.json({
-            products,
+            products: productsWithPricing,
             pagination: {
                 page: Number(page),
                 per_page: Number(perPage),
@@ -155,6 +229,7 @@ export async function GET(request) {
         return NextResponse.json(
             {
                 message: "Failed to fetch products",
+                error: error.message,
             },
             { status: 500 }
         );

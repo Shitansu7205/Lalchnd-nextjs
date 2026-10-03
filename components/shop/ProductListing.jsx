@@ -19,7 +19,8 @@ const mapProduct = (product) => ({
     title: product.name || "",
     slug: product.slug || "",
 
-    price: Number(product.prices?.price || 0) / 100,
+    price: Number(product.pricing?.finalPrice || 0),
+    pricing: product.pricing || null,
 
     oldPrice: product.on_sale
         ? Number(product.prices?.regular_price || 0) / 100
@@ -71,14 +72,43 @@ function ProductListingContent({ defaultLayout = 4 }) {
         router.push(params.toString() ? `?${params.toString()}` : "?");
     };
     const clearFilters = () => router.push("?");
+
+    // const sortedProducts = [...products].sort((a, b) => {
+    //     if (sort === "Price Ascending") return a.price - b.price;
+    //     if (sort === "Price Descending") return b.price - a.price;
+    //     if (sort === "Title Ascending") return a.title.localeCompare(b.title);
+    //     if (sort === "Title Descending") return b.title.localeCompare(a.title);
+    //     return 0;
+    // });
+    
     const sortedProducts = [...products].sort((a, b) => {
-        if (sort === "Price Ascending") return a.price - b.price;
-        if (sort === "Price Descending") return b.price - a.price;
-        if (sort === "Title Ascending") return a.title.localeCompare(b.title);
-        if (sort === "Title Descending") return b.title.localeCompare(a.title);
+        // Products with images first
+        const aHasImage = !!a.imgSrc;
+        const bHasImage = !!b.imgSrc;
+
+        if (aHasImage !== bHasImage) {
+            return aHasImage ? -1 : 1;
+        }
+
+        // Keep your normal sorting after image priority
+        if (sort === "Price Ascending") {
+            return a.price - b.price;
+        }
+
+        if (sort === "Price Descending") {
+            return b.price - a.price;
+        }
+
+        if (sort === "Title Ascending") {
+            return a.title.localeCompare(b.title);
+        }
+
+        if (sort === "Title Descending") {
+            return b.title.localeCompare(a.title);
+        }
+
         return 0;
     });
-
     return <>
         <div className="flat-spacing pt-0  api-product-listing " style={{ backgroundColor: "#fff9f3" }} >
             <div className="container-full-2">
@@ -184,7 +214,7 @@ function ProductListingContent({ defaultLayout = 4 }) {
                                             height={900}
                                         />
                                     </Link>
-                                    {!product.outOfStock && (
+                                    {/* {!product.outOfStock && (
                                         <ul className="list-product-btn">
                                             <li className="wishlist">
                                                 <AddtoWishlist product={product} />
@@ -199,7 +229,7 @@ function ProductListingContent({ defaultLayout = 4 }) {
                                                 <AddtoCompare product={product} />
                                             </li>
                                         </ul>
-                                    )}
+                                    )} */}
                                 </div>
                                 <div className="card_product-info">
                                     <Link
@@ -210,13 +240,15 @@ function ProductListingContent({ defaultLayout = 4 }) {
                                     </Link>
                                     <div className="price-wrap">
                                         <span className="price-tag-listing">
-                                            ₹{product.price.toFixed(2)} (Approx)
+                                            <strong>
+                                                ₹
+                                                {product.price.toLocaleString("en-IN", {
+                                                    minimumFractionDigits: 2,
+                                                    maximumFractionDigits: 2,
+                                                })}
+                                            </strong>{" "}
+                                            <span>(Approx)</span>
                                         </span>
-                                        {product.oldPrice && (
-                                            <span className="price-old fw-normal">
-                                                ${product.oldPrice.toFixed(2)}
-                                            </span>
-                                        )}
                                     </div>
                                 </div>
                             </div>
