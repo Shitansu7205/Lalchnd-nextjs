@@ -80,7 +80,7 @@ function ProductListingContent({ defaultLayout = 4 }) {
     //     if (sort === "Title Descending") return b.title.localeCompare(a.title);
     //     return 0;
     // });
-    
+
     const sortedProducts = [...products].sort((a, b) => {
         // Products with images first
         const aHasImage = !!a.imgSrc;
@@ -214,22 +214,7 @@ function ProductListingContent({ defaultLayout = 4 }) {
                                             height={900}
                                         />
                                     </Link>
-                                    {/* {!product.outOfStock && (
-                                        <ul className="list-product-btn">
-                                            <li className="wishlist">
-                                                <AddtoWishlist product={product} />
-                                            </li>
-                                            <li>
-                                                <AddtoCart product={product} />
-                                            </li>
-                                            <li>
-                                                <QuickView product={product} />
-                                            </li>
-                                            <li className="compare">
-                                                <AddtoCompare product={product} />
-                                            </li>
-                                        </ul>
-                                    )} */}
+
                                 </div>
                                 <div className="card_product-info">
                                     <Link
@@ -239,16 +224,23 @@ function ProductListingContent({ defaultLayout = 4 }) {
                                         {product.title}
                                     </Link>
                                     <div className="price-wrap">
-                                        <span className="price-tag-listing">
-                                            <strong>
-                                                ₹
-                                                {product.price.toLocaleString("en-IN", {
-                                                    minimumFractionDigits: 2,
-                                                    maximumFractionDigits: 2,
-                                                })}
-                                            </strong>{" "}
-                                            <span>(Approx)</span>
-                                        </span>
+                                        {product.pricing ? (
+                                            <span className="price-tag-listing">
+                                                <strong>
+                                                    ₹
+                                                    {product.price.toLocaleString("en-IN", {
+                                                        minimumFractionDigits: 2,
+                                                        maximumFractionDigits: 2,
+                                                    })}
+
+                                                </strong>{" "}
+                                                <span>(Approx)</span>
+                                            </span>
+                                        ) : (
+                                            <span className="price-tag-listing">
+                                                <span>₹ Price unavailable</span>
+                                            </span>
+                                        )}
                                     </div>
                                 </div>
                             </div>

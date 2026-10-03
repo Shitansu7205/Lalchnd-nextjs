@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
-import { calculateGoldPrice } from "@/lib/pricing";
+import {
+    calculateGoldPrice,
+    calculateSilverPrice,
+} from "@/lib/pricing";
 import { getMetalRates } from "@/lib/metal-rates";
 
 
@@ -155,7 +158,9 @@ export async function GET(request) {
         // =========================
 
         const metalRatesData = await getMetalRates();
+
         const goldRate = metalRatesData?.gold?.["22k"];
+        const silverRate = metalRatesData?.silver?.rate;
 
         // console.log("Gold rate:", goldRate);
 
@@ -200,6 +205,22 @@ export async function GET(request) {
                 pricing = calculateGoldPrice({
                     netWeight: weight,
                     goldRate,
+                });
+            }
+
+            // =========================
+            // Silver pricing
+            // =========================
+
+            if (
+                metal?.toLowerCase() === "silver" &&
+                netWeight
+            ) {
+                const weight = parseFloat(netWeight);
+
+                pricing = calculateSilverPrice({
+                    netWeight: weight,
+                    silverRate,
                 });
             }
 

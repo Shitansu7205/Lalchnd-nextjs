@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
-import { calculateGoldPrice } from "@/lib/pricing";
+import {
+    calculateGoldPrice,
+    calculateSilverPrice,
+} from "@/lib/pricing";
 import { getMetalRates } from "@/lib/metal-rates";
 
 function getAttributeValue(product, taxonomy) {
@@ -88,6 +91,23 @@ export async function GET(request, { params }) {
             pricing = calculateGoldPrice({
                 netWeight: weight,
                 goldRate,
+            });
+        }
+
+        // =========================
+        // Silver pricing
+        // =========================
+        if (
+            metal?.toLowerCase() === "silver" &&
+            netWeight
+        ) {
+            const weight = parseFloat(netWeight);
+
+            const silverRate = metalRates?.silver?.rate;
+
+            pricing = calculateSilverPrice({
+                netWeight: weight,
+                silverRate,
             });
         }
 
