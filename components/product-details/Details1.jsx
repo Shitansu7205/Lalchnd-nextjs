@@ -12,14 +12,8 @@ import AddtoWishlist from "../common/AddtoWishlist";
 import AddtoCompare from "../common/AddtoCompare";
 import SizePicker from "./SizeSelect";
 import HomeButton from "../common/HomeButton";
-import { Home, ChevronRight } from "lucide-react";
-import {
-  Facebook,
-  Instagram,
-  MessageCircle,
-  Send,
-  Share2,
-} from "lucide-react";
+import { Home, ChevronRight, CheckCircle } from "lucide-react";
+
 import ButtomBorder from "../common/ButtomBorder";
 import HomeOnlyButton from "../common/HomeOnlyButton";
 export default function Details1({ product }) {
@@ -156,8 +150,8 @@ export default function Details1({ product }) {
                         </div>
                       </div>
                       {/* Rating */}
-                      <div className="lalchnd-product-rating">
-                        <ul className="product-info-rate rate-wrap mb-0">
+                      <div className="lalchnd-product-rating d-flex align-items-center gap-2">
+                        <ul className="product-info-rate rate-wrap mb-0 d-flex align-items-center">
                           {[1, 2, 3, 4, 5].map((star) => (
                             <li key={star}>
                               <i
@@ -167,6 +161,12 @@ export default function Details1({ product }) {
                             </li>
                           ))}
                         </ul>
+
+                        <span style={{
+                          fontSize: "14px",
+                          color: "#6c6969b9",
+                          marginLeft: "2px",
+                        }}>(4.9/5 • 18 Reviews)</span>
                       </div>
 
                       {/* Product Name + Share */}
@@ -279,31 +279,42 @@ export default function Details1({ product }) {
                           </button>
                         </div>
                       </div>
-
                       {/* Product Code */}
                       <div className="lalchnd-product-code">
-                        {/* <span className="lalchnd-code-label">
-                          Product Code:
-                        </span> */}
+                        <div className="d-flex align-items-center gap-3">
+                          <span className="lalchnd-code-value">
+                            {getAttributeValue("Product Code") || "—"}
+                          </span>
 
-                        <span className="lalchnd-code-value">
-                          {getAttributeValue("Product Code") || "—"}
-                        </span>
+                          {getAttributeValue("Product Code") && (
+                            <button
+                              type="button"
+                              className="lalchnd-copy-code"
+                              onClick={() =>
+                                navigator.clipboard.writeText(
+                                  getAttributeValue("Product Code")
+                                )
+                              }
+                              aria-label="Copy product code"
+                            >
+                              <i className="icon-clip-board" />
+                            </button>
+                          )}
 
-                        {getAttributeValue("Product Code") && (
-                          <button
-                            type="button"
-                            className="lalchnd-copy-code"
-                            onClick={() =>
-                              navigator.clipboard.writeText(
-                                getAttributeValue("Product Code")
-                              )
-                            }
-                            aria-label="Copy product code"
-                          >
-                            <i className="icon-clip-board" />
-                          </button>
-                        )}
+                          {product?.is_in_stock && (
+                            <span
+                              className="d-inline-flex align-items-center gap-1"
+                              style={{
+                                color: "#198754",
+                                fontSize: "14px",
+                                fontWeight: "500",
+                              }}
+                            >
+                              <CheckCircle size={16} strokeWidth={2.5} />
+                              In Stock
+                            </span>
+                          )}
+                        </div>
                       </div>
 
                       {/* Description */}
@@ -349,17 +360,28 @@ export default function Details1({ product }) {
                             className="lalchnd-price-note"
                             style={{
                               fontSize: "16px",
-                              color: "#6c6969",
+                              color: "#6c6969b9",
                               marginLeft: "5px",
                             }}
                           >
                             * Approximate (excluding taxes, GST
                             {getAttributeValue("Stone") && " and stone charges"})
                           </div>
+
+                          <div
+                            className="lalchnd-price-note"
+                            style={{
+                              fontSize: "16px",
+                              color: "#6c6969b9",
+                              marginLeft: "5px",
+                            }}
+                          >
+                            * Prices may vary with market fluctuations. Please visit our store for the latest pricing.
+                          </div>
                         </div>
 
                         {/* Stock */}
-                        <div className="lalchnd-product-stock">
+                        {/* <div className="lalchnd-product-stock">
                           <h6 className="text-hurry-up fw-normal mb-2">
                             In stock
                           </h6>
@@ -367,7 +389,7 @@ export default function Details1({ product }) {
                           <div className="progress-cart">
                             <ProgressBarComponent max={70} />
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                     <div className="lalchnd-product-actions">
