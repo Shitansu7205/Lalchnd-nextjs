@@ -76,7 +76,7 @@ export default function Gallery() {
                     )}
                   </Link>
 
-                  <ul className="list-product-btn">
+                  {/* <ul className="list-product-btn">
                     <li className="wishlist">
                       <AddtoWishlist product={product} />
                     </li>
@@ -92,7 +92,7 @@ export default function Gallery() {
                     <li className="compare">
                       <AddtoCompare product={product} />
                     </li>
-                  </ul>
+                  </ul> */}
 
                   {product.badge && (
                     <div className="badge-box">
@@ -188,7 +188,7 @@ export default function Gallery() {
                     )}
                   </Link>
 
-                  <ul className="list-product-btn">
+                  {/* <ul className="list-product-btn">
                     <li className="wishlist">
                       <AddtoWishlist product={product} />
                     </li>
@@ -204,7 +204,7 @@ export default function Gallery() {
                     <li className="compare">
                       <AddtoCompare product={product} />
                     </li>
-                  </ul>
+                  </ul> */}
 
                   {product.badge && (
                     <div className="badge-box">

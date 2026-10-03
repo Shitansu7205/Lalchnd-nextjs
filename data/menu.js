@@ -168,28 +168,40 @@ export const morePages = [
     heading: "LALCHND STORES",
     links: [
       {
-        href: "/master-canteen",
-        label: "Master Canteen - Bhubaneswar",
+        label: "Bhubaneswar",
+        href: "/bhubaneswar",
+        children: [
+          {
+            label: "Master Canteen",
+            href: "/master-canteen",
+          },
+          {
+            label: "Raghunathpur",
+            href: "/raghunathpur",
+          },
+        ],
       },
       {
-        href: "/raghunathpur",
-        label: "Raghunathpur - Bhubaneswar",
+        label: "Cuttack",
+        href: "/cuttack",
+        children: [
+          {
+            label: "CDA",
+            href: "/cda",
+          },
+          {
+            label: "Cantonment Road",
+            href: "/cantonmentroad",
+          },
+        ],
       },
       {
-        href: "/cda",
-        label: "CDA - Cuttack",
-      },
-      {
-        href: "/cantonmentroad",
-        label: "Cantonment Road - Cuttack",
-      },
-      {
-        href: "/brahmapur",
         label: "Berhampur",
+        href: "/brahmapur",
       },
       {
-        href: "/delhi",
         label: "Delhi",
+        href: "/delhi",
       },
     ],
   },

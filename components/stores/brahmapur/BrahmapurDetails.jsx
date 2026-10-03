@@ -113,7 +113,7 @@ export default function BrahmapurDetails() {
                                             <li className="inner-page-btn">
                                                 <Link
                                                     href="https://www.google.com/maps/place/Lalchnd+Jewellers/@19.3103271,84.7824868,17z/data=!3m1!4b1!4m6!3m5!1s0x3a3d512e59d1b0fd:0xe6ddc87d80f14020!8m2!3d19.3103221!4d84.7850617!16s%2Fg%2F11q4jr1d0_?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
-                                                   className="home-cta-btn tf-btn btn-fill animate-btn type-large"
+                                                   className="home-cta-btn tf-btn btn-fill animate-btn type-large" target="_blank" rel="noopener noreferrer"
                                                 style={{width: "100%"}}
                                                 >
                                                     Write a Review

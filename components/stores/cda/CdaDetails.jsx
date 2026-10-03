@@ -113,7 +113,7 @@ export default function CdaDetails() {
                                             <li className="inner-page-btn">
                                                 <Link
                                                     href="https://www.google.com/maps/place/Lalchnd+Jewellers+CDA/@20.4794162,85.8396722,17z/data=!3m1!4b1!4m6!3m5!1s0x3a191166ffa7db7b:0x5fe1ccac866b17f6!8m2!3d20.4794162!4d85.8396722!16s%2Fg%2F11vxqt9psy?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
-                                                    className="home-cta-btn tf-btn btn-fill animate-btn type-large"
+                                                    className="home-cta-btn tf-btn btn-fill animate-btn type-large" target="_blank" rel="noopener noreferrer"
                                                 style={{width: "100%"}}
                                                 >
                                                     Write a Review

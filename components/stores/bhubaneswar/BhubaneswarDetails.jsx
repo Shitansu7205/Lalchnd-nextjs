@@ -7,7 +7,7 @@ import { storeLocations } from "@/data/storeDetails";
 import { ArrowRight, Rotate3D } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-export default function CantonmentRoadDetails() {
+export default function BhubaneswarDetails() {
     const [activeColor, setActiveColor] = useState("gold");
     const [quantity, setQuantity] = useState(1);
     const {
@@ -34,7 +34,7 @@ export default function CantonmentRoadDetails() {
                                             width={1000}
                                             height={900}
                                             className="lazyload"
-                                            src="/images/lalchnd/store/cuttack/cantonment/2.jpg"
+                                            src="/images/lalchnd/store/store-img.webp"
                                             style={{ color: "transparent" }}
                                         />
                                     </div>
@@ -64,10 +64,14 @@ export default function CantonmentRoadDetails() {
                                             </li>
                                         </ul>
                                         <h3>
-                                            Explore Our Jewellery Showroom on <span className="highlight-font" style={{fontSize: "38px"}}>Cantonment Road</span>
+                                           Unveiling the Latest Jewellery Collection Showroom in <span className="highlight-font" style={{fontSize: "38px"}}>Bhubaneswar - Lalchnd </span>
                                         </h3>
                                         <p className="sub-title">
-                                            Lalchnd Jewellers stands as the leading jewellery shop on Cantonment Road, known for its transparent pricing, personalized service, and a wide selection of exquisite designs. Each piece in our collection is meticulously crafted with precision, ensuring unmatched quality and timeless elegance. From stunning bridal sets to everyday accessories, we offer a diverse range of gold, diamond, and gemstone jewellery that caters to every style and occasion. Whether you’re seeking classic pieces or the latest trends, our extensive collection of gold necklaces, bangles, earrings, and rings combines modern craftsmanship with traditional charm. At Lalchnd Jewellers, we don’t just sell jewellery—we create lasting memories. Visit us today and experience jewellery shopping like never before.
+                                            Welcome to Lalchnd, your go-to destination for the latest and finest jewellery collections in Bhubaneswar. As the premier Gold Jewellery Shop in Bhubaneswar, we take pride in offering a diverse range of 22-carat gold jewellery that reflects timeless elegance and craftsmanship. Step into our Jewellery Showroom in Bhubaneswar, where every piece tells a story of artistry and sophistication. Lalchnd stands out as the Best Jewellery Shop in Bhubaneswar, known for curating 
+                                            the most exquisite designs to cater to the diverse tastes of our esteemed customers. Our commitment to excellence has earned us the reputation of being one of the top Jewellers in Bhubaneswar. At Lalchnd, we understand that gold is not just a 
+                                            metal; it’s a symbol of tradition, wealth, and beauty. That’s why we take immense pride in being recognized as the Best Gold Jewellery Shop in Bhubaneswar.<br /><br />
+
+Indulge in the opulence of Lalchnd, where the Best Gold Ring Design Showroom in Bhubaneswar awaits you. Our curated collection is not just jewellery; it’s a statement of your unique style and taste. At Lalchnd, we go beyond the ordinary, offering a Diamond Jewellery Store in Bhubaneswar for those who seek brilliance in every facet. Explore the Best Bangles Design Collection in Bhubaneswar and adorn yourself with timeless elegance.
                                         </p>
 
 
@@ -112,10 +116,9 @@ export default function CantonmentRoadDetails() {
                                         <ul className="entry_tag tag-wrap d-flex align-items-center inner-btn">
                                             <li className="inner-page-btn">
                                                 <Link
-                                                    href="google.com/maps/place/Lalchnd+Gems+and+Jewellers/data=!4m2!3m1!1s0x0:0xbc04869ee1b9d77c?sa=X&ved=1t:2428&ictx=111"
-                                                    className="home-cta-btn tf-btn btn-fill animate-btn type-large" target="_blank" rel="noopener noreferrer"
-                                                style={{width: "100%"}}
-                                                >
+                                                    href="#review"
+                                                    className="home-cta-btn tf-btn btn-fill animate-btn type-large"
+                                                style={{width: "100%"}}>
                                                     Write a Review
                                                     <ArrowRight size={24} strokeWidth={1.8} />
                                                 </Link>
@@ -123,7 +126,7 @@ export default function CantonmentRoadDetails() {
 
                                             <li className="inner-page-btn">
                                                 <Link
-                                                    href="https://www.google.com/local/place/fid/0x3a19120c10c56f8d:0xbc04869ee1b9d77c/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3DKKWfggHY4FU5zohO3BgdYQ%26cb_client%3Dsearch.gws-prod.gps%26yaw%3D186.58835%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&ik=CAISFktLV2ZnZ0hZNEZVNXpvaE8zQmdkWVE%3D&sa=X&ved=2ahUKEwium9OxqvWWAxVlleEIHaqaEe0Qpx96BAgcEBI"
+                                                    href="https://www.google.com/maps/place/Lalchnd+Jewellers/@20.2692697,85.8413965,64a,75y,42.4h,90.71t/data=!3m7!1e1!3m5!1sXwwXc-hkIUEjfN_psqt37g!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-0.7077242045555465%26panoid%3DXwwXc-hkIUEjfN_psqt37g%26yaw%3D42.39953924068941!7i16384!8i8192!4m14!1m7!3m6!1s0x3a19a744227e1903:0xb7b54fad41895a76!2sLalchnd+Jewellers!8m2!3d20.2691643!4d85.8415713!16s%2Fg%2F11g1lmdlp6!3m5!1s0x3a19a744227e1903:0xb7b54fad41895a76!8m2!3d20.2691643!4d85.8415713!16s%2Fg%2F11g1lmdlp6?entry=ttu"
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     className="tf-btn btn-fill-white store-map-button"

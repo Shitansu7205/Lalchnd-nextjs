@@ -113,7 +113,7 @@ export default function RaghunathpurDetails() {
                                             <li className="inner-page-btn">
                                                 <Link
                                                     href="https://www.google.com/maps/place/Lalchnd+Jewellers/@20.3727489,85.8288903,17z/data=!4m16!1m7!3m6!1s0x3a1909b3b7641cfb:0x242ea86a13dc1dca!2sLalchnd+Jewellers!8m2!3d20.3728465!4d85.8315898!16s%2Fg%2F11h_14__8h!3m7!1s0x3a1909b3b7641cfb:0x242ea86a13dc1dca!8m2!3d20.3728465!4d85.8315898!9m1!1b1!16s%2Fg%2F11h_14__8h?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
-                                                    className="home-cta-btn tf-btn btn-fill animate-btn type-large"
+                                                    className="home-cta-btn tf-btn btn-fill animate-btn type-large" target="_blank" rel="noopener noreferrer"
                                                 style={{width: "100%"}}
                                                 >
                                                     Write a Review

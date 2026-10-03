@@ -110,7 +110,7 @@ export default function DelhiDetails() {
                                             <li className="inner-page-btn">
                                                 <Link
                                                     href="https://www.google.com/maps/place/Lalchnd+Jewellers+lajpat+nagar/@28.5712406,77.2381729,17z/data=!4m8!3m7!1s0x390ce309090603d7:0x1d5ca51e53fb3038!8m2!3d28.5712406!4d77.2381729!9m1!1b1!16s%2Fg%2F11k9kftb01!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDkxNS4wIKXMDSoASAFQAw%3D%3D"
-                                                    className="home-cta-btn tf-btn btn-fill animate-btn type-large"
+                                                    className="home-cta-btn tf-btn btn-fill animate-btn type-large" target="_blank" rel="noopener noreferrer"
                                                 style={{width: "100%"}}
                                                 >
                                                     Write a Review

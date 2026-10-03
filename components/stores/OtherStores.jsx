@@ -11,7 +11,7 @@ import { storeLocations } from "@/data/storeDetails";
 
 export default function OtherStores({ containerFull = false }) {
     return (
-        <section className="section-padding-bottom-40 section-padding-top-40 light-bg">
+        <section className="section-padding-bottom-40 section-padding-top-40 light-bg bg-transparent-svg1">
             <div className="container-full-2">
                 <div className="sect-top wow fadeInUp">
                     <h3 className="heading-font">Our Other <span className="highlight-font">Stores</span></h3>

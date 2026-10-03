@@ -848,30 +848,51 @@ export default function Menu({ megaMarginRight = true }) {
                     </p>
                     <ul className="menu-list">
                       {section.links.map((link, linkIndex) => (
-                        <li key={linkIndex}>
-                          <Link
-                            href={link.href2 ? link.href2 : link.href}
-                            className={`menu-link-text link ${
-                              isMenuActive(link) ? "active" : ""
-                            }`}
-                          >
-                            <>
-                              <span className="sub-title" style={{ fontSize: "13px" }}>
-  {link.label}
-</span>
-                              {link.badge && (
-                                <span
-                                  className={`demo-label ${
-                                    link.badgeType || ""
-                                  }`.trim()}
-                                >
-                                  {link.badge}
-                                </span>
-                              )}
-                            </>
-                          </Link>
-                        </li>
-                      ))}
+  <li key={linkIndex}>
+    <Link
+      href={link.href2 ? link.href2 : link.href}
+      className={`menu-link-text link ${
+        isMenuActive(link) ? "active" : ""
+      }`}
+    >
+      <span className="sub-title" style={{ fontSize: "13px" }}>
+        {link.label}
+      </span>
+
+      {link.badge && (
+        <span
+          className={`demo-label ${
+            link.badgeType || ""
+          }`.trim()}
+        >
+          {link.badge}
+        </span>
+      )}
+    </Link>
+
+    {link.children && link.children.length > 0 && (
+      <ul className="menu-list store-sub-list">
+        {link.children.map((child, childIndex) => (
+          <li key={childIndex}>
+            <Link
+              href={child.href}
+              className={`menu-link-text link ${
+                isMenuActive(child) ? "active" : ""
+              }`}
+            >
+              <span
+                className="sub-title"
+                style={{ fontSize: "13px" }}
+              >
+                {child.label}
+              </span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    )}
+  </li>
+))}
                     </ul>
                   </div>
                 ))}
