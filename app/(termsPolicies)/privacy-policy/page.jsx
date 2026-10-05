@@ -9,9 +9,9 @@ import BreadcrumbBanner from "@/components/common/BreadcrumbBanner";
 import Partion from "@/components/common/Partion";
 
 export const metadata = {
-  title: "Privacy Policy - Lalchnd Jewellers",
+  title: "Privacy Policy | Lalchnd Jewellers",
   description:
-    "Read the privacy policy of Lalchnd Jewellers.",
+    "Understand how Lalchnd Jewellers collects, uses and protects your personal information. Learn about data security, privacy practices and your choices when using our website.",
   alternates: {
     canonical: "https://lalchnd.com/privacy-policy/",
   },

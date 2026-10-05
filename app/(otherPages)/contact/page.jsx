@@ -6,9 +6,9 @@ import ContactUs from "@/components/otherPages/ContactUs";
 import Header from "@/components/headers/Header";
 import Partion from "@/components/common/Partion";
 export const metadata = {
-  title: "Contact - Lalchnd Jewellers",
+  title: "Contact Lalchnd Jewellers | Stores & Contact Details",
   description:
-    "Get in touch with Lalchnd Jewellers for jewellery enquiries, store information, and assistance from our team. We’re here to help you find the perfect jewellery.",
+    "Contact Lalchnd Jewellers for store locations, contact details and assistance across Bhubaneswar, Cuttack, Berhampur and New Delhi.",
   alternates: {
     canonical: "https://lalchnd.com/contact/",
   },

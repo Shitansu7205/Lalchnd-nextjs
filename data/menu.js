@@ -196,7 +196,7 @@ export const morePages = [
         ],
       },
       {
-        label: "Berhampur",
+        label: "Brahmapur",
         href: "/brahmapur",
       },
       {

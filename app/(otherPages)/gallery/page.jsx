@@ -6,9 +6,9 @@ import Footer2 from "@/components/footers/Footer2";
 import Header from "@/components/headers/Header";
 import Partion from "@/components/common/Partion";
 export const metadata = {
-  title: "Gallery - Lalchnd Jewellers",
+  title: "Lalchnd Jewellers Gallery | Special Moments & Events",
   description:
-    "Browse Lalchnd Jewellers' jewellery gallery featuring exquisite designs, fine craftsmanship, elegant collections, and timeless pieces created for every occasion.",
+    "Lalchnd Jewellers’ gallery features photographs of special moments, events, celebrations and memorable occasions from across the brand’s journey.",
   alternates: {
     canonical: "https://lalchnd.com/gallery/",
   },

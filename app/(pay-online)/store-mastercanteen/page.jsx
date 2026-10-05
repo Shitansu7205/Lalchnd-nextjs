@@ -8,8 +8,11 @@ import Link from "next/link";
 import Partion from "@/components/common/Partion";
 import Topbar1 from "@/components/headers/Topbar1";
 export const metadata = {
-  title: "Master Canteen || Lalchnd - Jewelry Ecommerce React Nextjs Template",
-  description: "Lalchnd - Jewelry Ecommerce React Nextjs Template",
+  title: "Lalchnd Master Canteen Store | Online Payment & Monthly Scheme",
+  description: "Online advance payment and monthly jewellery scheme options available at Lalchnd Master Canteen store in Bhubaneswar.",
+  alternates: {
+    canonical: "https://lalchnd.com/store-mastercanteen/",
+  },
 };
 export default function page() {
   return (

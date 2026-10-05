@@ -6,9 +6,9 @@ import Footer2 from "@/components/footers/Footer2";
 import Header from "@/components/headers/Header";
 import Partion from "@/components/common/Partion";
 export const metadata = {
-  title: "Media - Lalchnd Jewellers",
+  title: "Lalchnd Jewellers in Media | Press & Recognition",
   description:
-    "Explore Lalchnd Jewellers' media coverage, latest stories, events, and features that highlight our jewellery craftsmanship, heritage, and timeless designs.",
+    "Lalchnd Jewellers’ media coverage, press releases and recognitions featuring the brand’s achievements, milestones and presence in the jewellery industry.",
   alternates: {
     canonical: "https://lalchnd.com/media/",
   },
