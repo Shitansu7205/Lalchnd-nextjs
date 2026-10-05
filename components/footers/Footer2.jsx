@@ -52,7 +52,7 @@ export default function Footer2() {
                 <Link href={`/`} className="logo-site d-inline-block">
                   <Image
                     alt=""
-                    src="/images/lalchnd/blogs/logo.png"
+                    src="/images/lalchnd/logo/footer-logo.png"
                     width={122}
                     height={31}
                   />
