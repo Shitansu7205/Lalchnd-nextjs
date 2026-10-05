@@ -31,7 +31,7 @@ export default function Features() {
             <div className="col-xxl-5 col-md-6">
               <div className="visual-content mb-xl-0">
                 <Image
-                  src="/images/lalchnd/about/about-img.webp"
+                  src="/images/lalchnd/about/mission-vission.webp"
                   alt=""
                   className="lazyload img-visual"
                   width={1000}

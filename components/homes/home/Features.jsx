@@ -5,11 +5,11 @@ import { boxFeatures } from "@/data/features";
 
 export default function Features() {
   return (
-    <section className="lalchnd-promises">
+    <section id="lalchnd-promises" className="lalchnd-promises">
       <div className="container-full-2">
         <div className="lalchnd-promises-heading">
           <h2 className="title heading-font fw-normal" >
-            The Lalchnd <span className="highlight-font">     Promises</span>
+            The Lalchnd <span className="highlight-font">Promises</span>
           </h2>
         </div>
 

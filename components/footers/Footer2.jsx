@@ -203,8 +203,8 @@ export default function Footer2() {
                     </Link>
                   </li>
                   <li>
-                    <Link href={`/awards`} className="text-white link sub-title">
-                      Awards
+                    <Link href={`/award`} className="text-white link sub-title">
+                      Award
                     </Link>
                   </li>
 

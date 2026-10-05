@@ -68,7 +68,7 @@ export default function CuttackDetails() {
                                         </h3>
                                         <p className="sub-title">
                                             Lalchnd Jewellers, your ultimate destination for the finest gold jewellery in Cuttack! As the 
-                                            Best Gold Jewellery Shop in Cuttack, we take pride in offering a captivating array of exquisite 
+                                            <a href="/" style={{fontWeight: "600"}}>Best Gold Jewellery Shop in Cuttack</a>, we take pride in offering a captivating array of exquisite 
                                             designs that blend traditional craftsmanship with contemporary elegance. What sets us apart as 
                                             the premier Jewellery Shop in Cuttack is our commitment to quality and craftsmanship. Each 
                                             piece is crafted with precision, using the finest materials to ensure longevity and timeless 
