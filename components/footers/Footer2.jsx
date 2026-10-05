@@ -367,7 +367,7 @@ export default function Footer2() {
                     </ul>
                   </li>
 
-                  {/* Berhampur */}
+                  {/* Brahmapur */}
                   <li className="store-location">
                     <Link
                       rel="noopener noreferrer"
@@ -375,7 +375,7 @@ export default function Footer2() {
                       className="text-white link d-flex align-items-center gap-2"
                     >
                       <MapPin size={17} strokeWidth={1.8} />
-                      <span className="fw-medium sub-title">Berhampur</span>
+                      <span className="fw-medium sub-title">Brahmapur</span>
                     </Link>
                   </li>
 
