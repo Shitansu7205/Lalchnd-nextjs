@@ -497,11 +497,11 @@ export default function Details1({ product }) {
                       <table className="lalchnd-product-spec-table mb-0">
                         <tbody>
                           {[
-                            ["Color", getAttributeValue("Color")],
+                            ["Color", getAttributeValue("Color") || "No Color"],
                             ["Size", getAttributeValue("Size") || "Free Size"],
-                            ["Gender", getAttributeValue("Gender")],
-                            ["Occasion", getAttributeValue("Occasion")],
-                            ["Product Code", getAttributeValue("Product Code")],
+                            ["Gender", getAttributeValue("Gender") || "Unisex"],
+                            ["Occasion", getAttributeValue("Occasion") || "All Occasion"],
+                            ["Product Code", getAttributeValue("Product Code") || "N/A"],
                             ["Stone", getAttributeValue("Stone") || "No Stone"],
                           ].map(([label, value]) => (
                             <tr key={label}>
