@@ -16,6 +16,7 @@ import { Home, ChevronRight, CheckCircle } from "lucide-react";
 
 import ButtomBorder from "../common/ButtomBorder";
 import HomeOnlyButton from "../common/HomeOnlyButton";
+import ProductFoms from "../common/ProductFoms";
 export default function Details1({ product }) {
   const [activeColor, setActiveColor] = useState("gold");
   const getAttributeValue = (name) => {
@@ -496,11 +497,11 @@ export default function Details1({ product }) {
                       <table className="lalchnd-product-spec-table mb-0">
                         <tbody>
                           {[
-                            ["Color", getAttributeValue("Color")],
+                            ["Color", getAttributeValue("Color") || "No Color"],
                             ["Size", getAttributeValue("Size") || "Free Size"],
-                            ["Gender", getAttributeValue("Gender")],
-                            ["Occasion", getAttributeValue("Occasion")],
-                            ["Product Code", getAttributeValue("Product Code")],
+                            ["Gender", getAttributeValue("Gender") || "Unisex"],
+                            ["Occasion", getAttributeValue("Occasion") || "All Occasion"],
+                            ["Product Code", getAttributeValue("Product Code") || "N/A"],
                             ["Stone", getAttributeValue("Stone") || "No Stone"],
                           ].map(([label, value]) => (
                             <tr key={label}>
@@ -545,6 +546,9 @@ export default function Details1({ product }) {
 
         </div>
       </section>
+
+      {/* Product Enquiry Form */}
+      <ProductFoms product={product} />
     </>
   );
 }
