@@ -9,9 +9,9 @@ import BreadcrumbBanner from "@/components/common/BreadcrumbBanner";
 import Partion from "@/components/common/Partion";
 
 export const metadata = {
-  title: "Terms & Condition - Lalchnd Jewellers",
+  title: "Terms & Conditions | Lalchnd Jewellers",
   description:
-    "Read the terms and conditions of Lalchnd Jewellers.",
+    "Terms and conditions governing the use of the Lalchnd Jewellers website, services, offers and related transactions.",
   alternates: {
     canonical: "https://lalchnd.com/terms-condition/",
   },

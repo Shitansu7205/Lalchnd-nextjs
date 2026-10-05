@@ -8,8 +8,11 @@ import Partion from "@/components/common/Partion";
 import StoreRaghunathpur from "@/components/pay-online/StoreRaghunathpur";
 import Topbar1 from "@/components/headers/Topbar1";
 export const metadata = {
-  title: "Master Canteen || Lalchnd - Jewelry Ecommerce React Nextjs Template",
-  description: "Lalchnd - Jewelry Ecommerce React Nextjs Template",
+  title: "Lalchnd Raghunathpur Store | Online Payment & Monthly Scheme",
+  description: "Online advance payment and monthly jewellery scheme options available at Lalchnd Raghunathpur store in Bhubaneswar.",
+  alternates: {
+    canonical: "https://lalchnd.com/store-raghunathpur/",
+  },
 };
 export default function page() {
   return (

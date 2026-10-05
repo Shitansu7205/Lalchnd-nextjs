@@ -9,8 +9,11 @@ import Banner from "@/components/our-web-app-launch/Banner";
 import TopBanner from "@/components/our-web-app-launch/TopBanner";
 import Installation from "@/components/our-web-app-launch/Installation";
 export const metadata = {
-  title: "Our Stores || Vemus - Jewelry Ecommerce React Nextjs Template",
-  description: "Vemus - Jewelry Ecommerce React Nextjs Template",
+  title: "Lalchnd Jewellers App – Download Our Jewellery App",
+  description: "Download the Lalchnd Jewellers App to manage your Sone Pe Suhaga account, view your scheme details, and pay your monthly instalments securely and conveniently.",
+  alternates: {
+    canonical: "https://lalchnd.com/our-web-app-launch/",
+  },
 };
 export default function page() {
   return (

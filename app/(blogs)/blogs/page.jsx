@@ -8,9 +8,9 @@ import "@/public/css/blogs/blogs.css"
 import Partion from "@/components/common/Partion";
 
 export const metadata = {
-  title: "Blogs || Lalchnd Jewellers",
+  title: "Jewellery Guides & Tips | Gold, Diamond & Bridal Jewellery",
   description:
-    "Explore jewellery insights, trends, buying guides and stories from Lalchnd Jewellers.",
+    "Jewellery guides and tips on gold, diamond, bridal jewellery, jewellery designs, gemstones, styling, buying and jewellery care from Lalchnd Jewellers.",
   alternates: {
     canonical: "https://lalchnd.com/blogs/",
   },

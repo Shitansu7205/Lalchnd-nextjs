@@ -12,8 +12,11 @@ import Partion from "@/components/common/Partion";
 import Topbar1 from "@/components/headers/Topbar1";
 
 export const metadata = {
-    title: "About Us || Lalchnd - Jewelry Ecommerce React Nextjs Template",
-    description: "Lalchnd - Jewelry Ecommerce React Nextjs Template",
+    title: "About Lalchnd Jewellers | Our Story & Legacy",
+    description: "Lalchnd Jewellers’ story, from its beginnings to its journey as a trusted jewellery brand with a lasting legacy.",
+    alternates: {
+    canonical: "https://lalchnd.com/about-us/",
+  },
 };
 export default function page() {
     return (

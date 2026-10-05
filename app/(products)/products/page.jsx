@@ -5,8 +5,8 @@ import Header from "@/components/headers/Header";
 import TopBar from "@/components/headers/TopBar";
 import ProductListing from "@/components/shop/ProductListing";
 export const metadata = {
-  title: "Online Diamond Sellers,Necklace & Gold Ring Shopping Stores India",
-  description: "Lalchnd is the online jewellery shopping store & diamond seller in India where well designed necklace, gold ring and artificial earrings near me are available.",
+  title: "Jewellery Collection | Rings, Bangles, Earrings & More | Lalchnd Jewellers",
+  description: "Explore all jewellery collections at Lalchnd, from rings and bangles to earrings, necklaces and more in gold, diamond and silver jewellery.",
   alternates: {
     canonical: "https://lalchnd.com/products/"
   },

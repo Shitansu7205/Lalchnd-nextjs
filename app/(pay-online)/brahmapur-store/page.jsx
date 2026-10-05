@@ -8,8 +8,11 @@ import Partion from "@/components/common/Partion";
 import BrahmapurStore from "@/components/pay-online/BrahmapurStore";
 import Topbar1 from "@/components/headers/Topbar1";
 export const metadata = {
-  title: "Master Canteen || Lalchnd - Jewelry Ecommerce React Nextjs Template",
-  description: "Lalchnd - Jewelry Ecommerce React Nextjs Template",
+  title: "Lalchnd Brahmapur Store | Online Payment & Monthly Scheme",
+  description: "Online advance payment and monthly jewellery scheme options available at Lalchnd Brahmapur store.",
+  alternates: {
+    canonical: "https://lalchnd.com/brahmapur-store/",
+  },
 };
 export default function page() {
   return (

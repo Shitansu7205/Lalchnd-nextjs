@@ -6,9 +6,9 @@ import Footer2 from "@/components/footers/Footer2";
 import Header from "@/components/headers/Header";
 import Partion from "@/components/common/Partion";
 export const metadata = {
-  title: "Awards & Achievements | Lalchnd Jewellers",
+  title: "Lalchnd Jewellers Awards & Recognition | Achievements",
   description:
-    "Explore the awards and achievements that reflect Lalchnd Jewellers' excellence in jewellery craftsmanship, trusted service, and timeless design.",
+    "Lalchnd Jewellers’ awards and recognition for excellence in jewellery and trusted brand leadership, reflecting its achievements and industry presence.",
   alternates: {
     canonical: "https://lalchnd.com/award/",
   },

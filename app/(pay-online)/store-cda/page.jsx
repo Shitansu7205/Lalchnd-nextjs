@@ -8,8 +8,11 @@ import Partion from "@/components/common/Partion";
 import StoreCDA from "@/components/pay-online/StoreCDA";
 import Topbar1 from "@/components/headers/Topbar1";
 export const metadata = {
-  title: "Master Canteen || Lalchnd - Jewelry Ecommerce React Nextjs Template",
-  description: "Lalchnd - Jewelry Ecommerce React Nextjs Template",
+  title: "Lalchnd CDA Store | Online Payment & Monthly Scheme",
+  description: "Online advance payment and monthly jewellery scheme options available at Lalchnd CDA store in Cuttack.",
+   alternates: {
+    canonical: "https://lalchnd.com/store-cda/",
+  },
 };
 export default function page() {
   return (
