@@ -7,19 +7,19 @@ import Image from "next/image";
 const fourthSliderData = [
   {
     desktopImage: "/images/lalchnd/home/banner-2.webp",
-    mobileImage: "/images/lalchnd/home/banner-2-mobile.webp",
+    mobileImage: "/images/lalchnd/home/banner-2-mobile.png",
     imageWidth: 2790,
     imageHeight: 1226,
   },
   {
     desktopImage: "/images/lalchnd/home/banner-3.webp",
-    mobileImage: "/images/lalchnd/home/banner-3-mobile.webp",
+    mobileImage: "/images/lalchnd/home/banner-3-mobile.png",
     imageWidth: 2790,
     imageHeight: 1226,
   },
   {
     desktopImage: "/images/lalchnd/home/banner-4.webp",
-    mobileImage: "/images/lalchnd/home/banner-4-mobile.webp",
+    mobileImage: "/images/lalchnd/home/banner-4-mobile.png",
     imageWidth: 2790,
     imageHeight: 1226,
   },
