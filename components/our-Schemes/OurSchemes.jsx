@@ -15,47 +15,15 @@ const schemesData = [
   {
     id: 1,
     category: "MONTHLY INSTALMENT",
-    title: "Monthly Instalment Scheme",
+    title: "Sone Pe Suhaga",
     description:
       "Turn your dreams into timeless jewellery with our easy monthly instalment plan. Make your favourite pieces yours, without the wait.",
     image:
       "/images/OurSchemes/mangalsutra.webp",
     icon: CalendarDays,
-    url: "#",
+    url: "/sone-pe-suhaga",
   },
-  {
-    id: 2,
-    category: "GOLD EXCHANGE",
-    title: "Gold Exchange Scheme",
-    description:
-      "Upgrade your old gold and get the best value towards your new jewellery collection.",
-    image:
-      "/images/OurSchemes/earrings.webp",
-    icon: RefreshCcw,
-    url: "#",
-  },
-  {
-    id: 3,
-    category: "DIAMOND PURCHASE",
-    title: "Diamond Purchase Scheme",
-    description:
-      "Step into a world of brilliance with our exclusive diamond jewellery scheme designed for your special moments.",
-    image:
-      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=85",
-    icon: Gem,
-    url: "#",
-  },
-  {
-    id: 4,
-    category: "SPECIAL OFFERS",
-    title: "Special Offers",
-    description:
-      "Enjoy limited-time offers and exclusive benefits on your favourite jewellery pieces.",
-    image:
-      "/images/OurSchemes/bracelet.webp",
-    icon: Gift,
-    url: "#",
-  },
+  
 ];
 
 export default function OurSchemes() {
@@ -66,7 +34,7 @@ export default function OurSchemes() {
     href="/css/schemes-section/schemesSection.css"
   />
 
-  <section className="section-padding-bottom-40 section-padding-top-40 bg-white">
+  <section className="section-padding-bottom-40 section-padding-top-40 bg-white bg-transparent-svg1">
     <div className="container-full-2">
 
       {/* Schemes Grid */}

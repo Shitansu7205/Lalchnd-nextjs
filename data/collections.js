@@ -135,14 +135,19 @@ export const collectionsGallery = [
   { image: "/images/lalchnd/gallery/15.webp", delay: "1.4s" },
   { image: "/images/lalchnd/gallery/16.webp", delay: "1.5s" },
   { image: "/images/lalchnd/gallery/17.webp", delay: "1.6s" },
-  { image: "/images/lalchnd/gallery/21.webp", delay: "1.7s" },
+  { image: "/images/lalchnd/gallery/18.webp", delay: "1.7s" },
   { image: "/images/lalchnd/gallery/19.webp", delay: "1.8s" },
   { image: "/images/lalchnd/gallery/20.webp", delay: "1.9s" },
+  { image: "/images/lalchnd/gallery/21.webp", delay: "2s" },
+  { image: "/images/lalchnd/gallery/22.webp", delay: "2.1s" },
+  { image: "/images/lalchnd/gallery/20.webp", delay: "2.2s" },
 ];
 
 
 
 export const collectionsAwards = [
+  { image: "/images/lalchnd/award/38.webp", delay: "" },
+  { image: "/images/lalchnd/award/37.webp", delay: "" },
   { image: "/images/lalchnd/award/1.webp", delay: "" },
   { image: "/images/lalchnd/award/2.webp", delay: "0.1s" },
   { image: "/images/lalchnd/award/3.webp", delay: "0.2s" },
@@ -227,4 +232,5 @@ export const collectionsMedia = [
   { image: "/images/lalchnd/media/43.webp", delay: "4.2s" },
   { image: "/images/lalchnd/media/44.webp", delay: "4.3s" },
   { image: "/images/lalchnd/media/45.webp", delay: "4.4s" },
+  { image: "/images/lalchnd/media/47.webp", delay: "4.5s" },
 ];

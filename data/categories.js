@@ -32,7 +32,7 @@ export const categories = [
     image: "/images/lalchnd/home/kids-wear.webp",
     width: 800,
     height: 800,
-    url: "/products?category=watches"
+    url: "/products?gender=kids"
   },
   {
     label: "GIFT IDEAS",
