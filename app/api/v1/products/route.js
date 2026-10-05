@@ -159,7 +159,8 @@ export async function GET(request) {
 
         const metalRatesData = await getMetalRates();
 
-        const goldRate = metalRatesData?.gold?.["22k"];
+        const gold22kRate = metalRatesData?.gold?.["22k"];
+        const gold24kRate = metalRatesData?.gold?.["24k"];
         const silverRate = metalRatesData?.silver?.rate;
 
         // console.log("Gold rate:", goldRate);
@@ -197,15 +198,32 @@ export async function GET(request) {
 
             if (
                 metal?.toLowerCase() === "gold" &&
-                purity?.toLowerCase() === "22k" &&
+                purity &&
                 netWeight
             ) {
-                const weight = parseFloat(netWeight);
+                const normalizedPurity = purity
+                    .toLowerCase()
+                    .replace(/\s/g, "");
 
-                pricing = calculateGoldPrice({
-                    netWeight: weight,
-                    goldRate,
-                });
+                let goldRate = null;
+
+                if (normalizedPurity === "22k") {
+                    goldRate = gold22kRate;
+                }
+
+                if (normalizedPurity === "24k") {
+                    goldRate = gold24kRate;
+                }
+
+                if (goldRate) {
+                    const weight = parseFloat(netWeight);
+
+                    pricing = calculateGoldPrice({
+                        netWeight: weight,
+                        goldRate,
+                        purity: normalizedPurity,
+                    });
+                }
             }
 
             // =========================

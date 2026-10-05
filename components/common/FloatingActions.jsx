@@ -20,12 +20,13 @@ export default function FloatingActions() {
 
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-  
+
     useEffect(() => {
         const fetchGoldRates = async () => {
             try {
                 const response = await fetch(
-                    "https://snapdata.dev/api/v1/gold/in/latest.json"
+                    // "https://snapdata.dev/api/v1/gold/in/latest.json"
+                    "/api/v1/metal-rates"
                 );
 
                 if (!response.ok) {
@@ -44,15 +45,10 @@ export default function FloatingActions() {
         fetchGoldRates();
     }, []);
 
-    const getRate = (instrument) => {
-        return goldData?.observations?.find(
-            (item) => item.instrument === instrument
-        );
-    };
 
-    const rate18K = getRate("XAU.18K");
-    const rate22K = getRate("XAU.22K");
-    const rate24K = getRate("XAU.24K");
+    const rate18K = goldData?.gold?.["18k"];
+    const rate22K = goldData?.gold?.["22k"];
+    const rate24K = goldData?.gold?.["24k"];
 
     const formatRate = (value) => {
         if (!value) return "—";
@@ -64,13 +60,11 @@ export default function FloatingActions() {
         }).format(value);
     };
 
-    const formattedDate = goldData?.generated_at
-        ? new Date(goldData.generated_at).toLocaleDateString("en-IN", {
-            day: "2-digit",
-            month: "2-digit",
-            year: "numeric",
-        })
-        : "—";
+    const formattedDate = new Date().toLocaleDateString("en-IN", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+    });
 
     if (!showFloatingActions) return null;
 
@@ -102,7 +96,7 @@ export default function FloatingActions() {
                             <strong>
                                 {loading
                                     ? "Loading..."
-                                    : formatRate(rate24K?.value)}
+                                    : formatRate(rate24K)}
                             </strong>
                             <small>/gm</small>
                         </div>
@@ -113,7 +107,7 @@ export default function FloatingActions() {
                             <strong>
                                 {loading
                                     ? "Loading..."
-                                    : formatRate(rate22K?.value)}
+                                    : formatRate(rate22K)}
                             </strong>
                             <small>/gm</small>
                         </div>
@@ -124,7 +118,7 @@ export default function FloatingActions() {
                             <strong>
                                 {loading
                                     ? "Loading..."
-                                    : formatRate(rate18K?.value)}
+                                    : formatRate(rate18K)}
                             </strong>
                             <small>/gm</small>
                         </div>
