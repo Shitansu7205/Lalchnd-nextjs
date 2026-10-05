@@ -71,26 +71,32 @@ export default function MobileNav() {
           <span className="btn-open-sub" />
         </a>
         <div id="dropdown-menu-shop" className="collapse">
-          <ul className="sub-nav-menu">
-            {goldJewlleryPages.map((section, index) => (
-              <li key={index} className="nav-mb-item">
-                <div className="sub-nav-link sub-title">
-                  {section.heading}
-                </div>
-
-                <ul className="sub-nav-menu">
-                  {section.links.map((link, linkIndex) => (
-                    <li key={linkIndex}>
-                      <Link href={link.href} className="sub-nav-link sub-title" style={{fontSize: "13px"}}>
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ))}
-          </ul>
+  <ul className="sub-nav-menu">
+    {goldJewlleryPages.map((section, index) => (
+      <li key={index} className="nav-mb-item">
+        
+        <div className="sub-nav-link sub-title">
+          {section.heading}
         </div>
+
+        <ul className="sub-nav-menu">
+          {section.links.map((link, linkIndex) => (
+            <li key={linkIndex}>
+              <Link
+                href={link.url || "#"}
+                className="sub-nav-link sub-title"
+                style={{ fontSize: "13px" }}
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+      </li>
+    ))}
+  </ul>
+</div>
       </li>
       <li className="nav-mb-item">
   <a
@@ -141,26 +147,30 @@ export default function MobileNav() {
           <span className="btn-open-sub" />
         </a>
         <div id="dropdown-menu-pages" className="collapse">
-          <ul className="sub-nav-menu">
-            {silverJewlleryPages.map((section, index) => (
-              <li key={index} className="nav-mb-item">
-                <div className="sub-nav-link sub-title">
-                  {section.heading}
-                </div>
-
-                <ul className="sub-nav-menu">
-                  {section.links.map((link, linkIndex) => (
-                    <li key={linkIndex}>
-                      <Link href={link.href} className="sub-nav-link sub-title" style={{fontSize: "13px"}}>
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ))}
-          </ul>
+  <ul className="sub-nav-menu">
+    {silverJewlleryPages.map((section, index) => (
+      <li key={index} className="nav-mb-item">
+        <div className="sub-nav-link sub-title">
+          {section.heading}
         </div>
+
+        <ul className="sub-nav-menu">
+          {section.links.map((link, linkIndex) => (
+            <li key={linkIndex}>
+              <Link
+                href={link.url || "#"}
+                className="sub-nav-link sub-title"
+                style={{ fontSize: "13px" }}
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </li>
+    ))}
+  </ul>
+</div>
       </li>
       <li className="nav-mb-item">
         <a
