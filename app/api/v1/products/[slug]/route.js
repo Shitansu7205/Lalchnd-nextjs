@@ -77,21 +77,37 @@ export async function GET(request, { params }) {
         let pricing = null;
 
         // =========================
-        // Gold 22K pricing
+        // Gold pricing
+        // Supports 22K and 24K
         // =========================
         if (
             metal?.toLowerCase() === "gold" &&
-            purity?.toLowerCase() === "22k" &&
+            purity &&
             netWeight
         ) {
-            const weight = parseFloat(netWeight);
+            const normalizedPurity = purity
+                .toLowerCase()
+                .replace(/\s/g, "");
 
-            const goldRate = metalRates?.gold?.["22k"];
+            let goldRate = null;
 
-            pricing = calculateGoldPrice({
-                netWeight: weight,
-                goldRate,
-            });
+            if (normalizedPurity === "22k") {
+                goldRate = metalRates?.gold?.["22k"];
+            }
+
+            if (normalizedPurity === "24k") {
+                goldRate = metalRates?.gold?.["24k"];
+            }
+
+            if (goldRate) {
+                const weight = parseFloat(netWeight);
+
+                pricing = calculateGoldPrice({
+                    netWeight: weight,
+                    goldRate,
+                    purity: normalizedPurity,
+                });
+            }
         }
 
         // =========================
