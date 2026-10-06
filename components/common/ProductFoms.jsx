@@ -305,9 +305,18 @@ export default function ProductFoms({ product }) {
                         className="tf-btn btn-fill fw-medium w-100 animate-btn home-cta-btn"
                         disabled={loading}
                     >
-                        {loading
-                            ? "Submitting..."
-                            : "Submit Now"}
+                        {loading ? (
+                            <>
+                                <span
+                                    className="spinner-border spinner-border-sm me-2"
+                                    role="status"
+                                    aria-hidden="true"
+                                />
+                                Submitting...
+                            </>
+                        ) : (
+                            "Submit Now"
+                        )}
                     </button>
                 </form>
             </div>

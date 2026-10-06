@@ -69,9 +69,13 @@ const storeLocations = [
 
 
 export default function ContactUs() {
-
+    const [submitting, setSubmitting] = React.useState(false);
     const handleSubmit = async (event) => {
         event.preventDefault();
+
+        if (submitting) return;
+
+        setSubmitting(true);
 
         const form = event.currentTarget;
         const formData = new FormData(form);
@@ -84,7 +88,6 @@ export default function ContactUs() {
             subject: formData.get("subject"),
             message: formData.get("message"),
         };
-
 
         try {
             const response = await fetch("/api/v1/enquiry/contact", {
@@ -113,6 +116,8 @@ export default function ContactUs() {
                 error.message ||
                 "Unable to send your message right now."
             );
+        } finally {
+            setSubmitting(false);
         }
     };
 
@@ -203,18 +208,18 @@ export default function ContactUs() {
                                 <div className="form-content">
                                     <div className="cols tf-grid-layout sm-col-2">
                                         <fieldset>
-                                            <input type="text" placeholder="Name *"  name="name"
-                                        required />
+                                            <input type="text" placeholder="Name *" name="name"
+                                                required />
                                         </fieldset>
                                         <fieldset>
-                                            <input type="tel" placeholder="Phone *"  name="phone"
-                                        required />
+                                            <input type="tel" placeholder="Phone *" name="phone"
+                                                required />
                                         </fieldset>
                                     </div>
                                     <div className="cols tf-grid-layout sm-col-2">
                                         <fieldset>
-                                            <input type="email" placeholder="Email *"  name="email"
-                                        required />
+                                            <input type="email" placeholder="Email *" name="email"
+                                                required />
                                         </fieldset>
                                         <fieldset className="contact-select-field">
                                             <select
@@ -244,10 +249,24 @@ export default function ContactUs() {
                                 </div>
                                 <button
                                     type="submit"
+                                    disabled={submitting}
                                     className="home-cta-btn tf-btn btn-fill animate-btn type-large"
                                 >
-                                    <Send size={15} strokeWidth={1.8} />
-                                    Send Message
+                                    {submitting ? (
+                                        <>
+                                            <span
+                                                className="spinner-border spinner-border-sm me-2"
+                                                role="status"
+                                                aria-hidden="true"
+                                            />
+                                            Submitting...
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Send size={15} strokeWidth={1.8} />
+                                            Send Message
+                                        </>
+                                    )}
                                 </button>
                             </form>
                         </div>

@@ -11,6 +11,7 @@ export default function NewsLetter() {
   const modalInstance = useRef(null);
 
   const [email, setEmail] = useState("");
+  const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
     let timer;
@@ -86,7 +87,9 @@ export default function NewsLetter() {
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    if (!email.trim()) return;
+    if (!email.trim() || submitting) return;
+
+    setSubmitting(true);
 
     try {
       const response = await fetch("/api/v1/enquiry/newsletter", {
@@ -120,6 +123,8 @@ export default function NewsLetter() {
         error?.message ||
         "Unable to subscribe right now. Please try again."
       );
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -183,10 +188,21 @@ export default function NewsLetter() {
                   <div className="btn-group">
                     <HomeOnlyButton
                       href="#"
-                      className="type-large"
+                      className={`type-large ${submitting ? "disabled" : ""}`}
                       onClick={sendEmail}
                     >
-                      Submit Now
+                      {submitting ? (
+                        <>
+                          <span
+                            className="spinner-border spinner-border-sm me-2"
+                            role="status"
+                            aria-hidden="true"
+                          />
+                          Submitting...
+                        </>
+                      ) : (
+                        "Submit Now"
+                      )}
                     </HomeOnlyButton>
                   </div>
                 </form>
