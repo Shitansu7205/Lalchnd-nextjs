@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 export default function ProductFoms({ product }) {
     // ---------------------------------------------------------
@@ -9,7 +10,6 @@ export default function ProductFoms({ product }) {
     const [loading, setLoading] = useState(false);
 
     // Success/error message shown below the form
-    const [message, setMessage] = useState("");
 
     // ---------------------------------------------------------
     // Customer form fields
@@ -68,8 +68,9 @@ export default function ProductFoms({ product }) {
         // Prevent duplicate submissions
         if (loading) return;
 
+        const offcanvas = e.currentTarget.closest(".offcanvas");
         setLoading(true);
-        setMessage("");
+
 
         // -----------------------------------------------------
         // Prepare product information
@@ -132,7 +133,7 @@ export default function ProductFoms({ product }) {
             // -------------------------------------------------
             // Send enquiry to our Next.js API
             // -------------------------------------------------
-            const response = await fetch("/api/v1/enquiry", {
+            const response = await fetch("/api/v1/enquiry/product", {
                 method: "POST",
 
                 headers: {
@@ -157,9 +158,9 @@ export default function ProductFoms({ product }) {
             // -------------------------------------------------
             // Success
             // -------------------------------------------------
-            setMessage(
+            toast.success(
                 result?.message ||
-                    "Your enquiry has been submitted successfully!"
+                "Enquiry submitted successfully!"
             );
 
             // Clear the form after successful submission
@@ -169,15 +170,19 @@ export default function ProductFoms({ product }) {
                 phone: "",
                 message: "",
             });
+
+            offcanvas
+                ?.querySelector('[data-bs-dismiss="offcanvas"]')
+                ?.click();
         } catch (error) {
             // -------------------------------------------------
             // Handle frontend/API/network errors
             // -------------------------------------------------
             console.error("Product enquiry error:", error);
 
-            setMessage(
+            toast.error(
                 error?.message ||
-                    "Something went wrong. Please try again."
+                "Something went wrong. Please try again."
             );
         } finally {
             // Re-enable submit button
@@ -290,17 +295,7 @@ export default function ProductFoms({ product }) {
                         </fieldset>
                     </div>
 
-                    {/* -------------------------------------------------
-                        Success / Error Message
-                    ------------------------------------------------- */}
-                    {message && (
-                        <p
-                            className="mt-3"
-                            role="status"
-                        >
-                            {message}
-                        </p>
-                    )}
+
 
                     {/* -------------------------------------------------
                         Submit Button
@@ -310,9 +305,18 @@ export default function ProductFoms({ product }) {
                         className="tf-btn btn-fill fw-medium w-100 animate-btn home-cta-btn"
                         disabled={loading}
                     >
-                        {loading
-                            ? "Submitting..."
-                            : "Submit Now"}
+                        {loading ? (
+                            <>
+                                <span
+                                    className="spinner-border spinner-border-sm me-2"
+                                    role="status"
+                                    aria-hidden="true"
+                                />
+                                Submitting...
+                            </>
+                        ) : (
+                            "Submit Now"
+                        )}
                     </button>
                 </form>
             </div>
