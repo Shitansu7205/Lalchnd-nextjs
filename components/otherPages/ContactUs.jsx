@@ -15,7 +15,7 @@ import {
     ShieldCheck,
     Share2,
 } from "lucide-react";
-
+import toast from "react-hot-toast";
 const storeLocations = [
     {
         title: "Master Canteen",
@@ -67,33 +67,61 @@ const storeLocations = [
     },
 ];
 
-const socialLinks = [
-    {
-        label: "Facebook",
-        href: "https://www.facebook.com/LalchndJewellersPvtLtd",
-        Icon: Share2,
-    },
-    {
-        label: "Instagram",
-        href: "https://www.instagram.com/lalchnd.jewellers/",
-        Icon: Camera,
-    },
-    { label: "Website", href: "https://lalchnd.com/", Icon: Globe },
-];
 
 export default function ContactUs() {
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        const form = event.currentTarget;
+        const formData = new FormData(form);
+
+        const data = {
+            name: formData.get("name"),
+            phone: formData.get("phone"),
+            email: formData.get("email"),
+            storeCity: formData.get("storeCity"),
+            subject: formData.get("subject"),
+            message: formData.get("message"),
+        };
+
+
+        try {
+            const response = await fetch("/api/v1/enquiry/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.message || "Something went wrong.");
+            }
+
+            console.log("Contact submitted:", result);
+
+            form.reset();
+
+            toast.success(result.message);
+        } catch (error) {
+            console.error("Contact form error:", error);
+
+            toast.error(
+                error.message ||
+                "Unable to send your message right now."
+            );
+        }
+    };
+
     return (
         <>
             <link rel="stylesheet" href="/css/contact/contact-us.css" />
             <section className="s-contact-us section-padding-bottom-40 section-padding-top-40">
                 <div className="container-full-2">
-                    {/* <div className="store-section-heading">
-          <h3 className="title fw-normal">Visit Our Stores</h3>
-          <p className="text-main-4">
-            Find a Lalchnd Jewellers showroom near you and experience our
-            collections in person.
-          </p>
-        </div> */}
+
 
                     <div className="contact-store-grid">
                         {storeLocations.map((store) => (
@@ -170,24 +198,28 @@ export default function ContactUs() {
                             </p>
                             <form
                                 className="form-contact style-border"
-                                onSubmit={(event) => event.preventDefault()}
+                                onSubmit={handleSubmit}
                             >
                                 <div className="form-content">
                                     <div className="cols tf-grid-layout sm-col-2">
                                         <fieldset>
-                                            <input type="text" placeholder="Name *" required />
+                                            <input type="text" placeholder="Name *"  name="name"
+                                        required />
                                         </fieldset>
                                         <fieldset>
-                                            <input type="tel" placeholder="Phone *" required />
+                                            <input type="tel" placeholder="Phone *"  name="phone"
+                                        required />
                                         </fieldset>
                                     </div>
                                     <div className="cols tf-grid-layout sm-col-2">
                                         <fieldset>
-                                            <input type="email" placeholder="Email *" required />
+                                            <input type="email" placeholder="Email *"  name="email"
+                                        required />
                                         </fieldset>
                                         <fieldset className="contact-select-field">
                                             <select
                                                 defaultValue=""
+                                                name="storeCity"
                                                 required
                                                 aria-label="Select store city"
                                             >
@@ -206,9 +238,9 @@ export default function ContactUs() {
                                         </fieldset>
                                     </div>
                                     <fieldset>
-                                        <input type="text" placeholder="Subject" />
+                                        <input type="text" placeholder="Subject" name="subject" />
                                     </fieldset>
-                                    <textarea placeholder="Message" defaultValue={""} required />
+                                    <textarea placeholder="Message" defaultValue={""} name="message" required />
                                 </div>
                                 <button
                                     type="submit"

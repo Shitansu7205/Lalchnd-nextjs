@@ -13,6 +13,7 @@ import AddtoCompare from "../common/AddtoCompare";
 import SizePicker from "./SizeSelect";
 import HomeButton from "../common/HomeButton";
 import { Home, ChevronRight, CheckCircle } from "lucide-react";
+import toast from "react-hot-toast";
 
 import ButtomBorder from "../common/ButtomBorder";
 import HomeOnlyButton from "../common/HomeOnlyButton";
@@ -291,11 +292,17 @@ export default function Details1({ product }) {
                             <button
                               type="button"
                               className="lalchnd-copy-code"
-                              onClick={() =>
-                                navigator.clipboard.writeText(
-                                  getAttributeValue("Product Code")
-                                )
-                              }
+                              onClick={async () => {
+                                try {
+                                  await navigator.clipboard.writeText(
+                                    getAttributeValue("Product Code")
+                                  );
+                                  toast.success("Product code copied!");
+                                } catch (error) {
+                                  console.error("Copy product code error:", error);
+                                  toast.error("Unable to copy product code.");
+                                }
+                              }}
                               aria-label="Copy product code"
                             >
                               <i className="icon-clip-board" />

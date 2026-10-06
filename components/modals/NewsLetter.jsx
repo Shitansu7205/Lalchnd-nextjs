@@ -4,13 +4,13 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import HomeOnlyButton from "../common/HomeOnlyButton";
+import toast from "react-hot-toast";
 
 export default function NewsLetter() {
   const modalElement = useRef(null);
   const modalInstance = useRef(null);
 
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
 
   useEffect(() => {
     let timer;
@@ -83,44 +83,49 @@ export default function NewsLetter() {
     }, 300);
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 
     if (!email.trim()) return;
 
-    setMessage("Thank you! You have successfully subscribed.");
+    try {
+      const response = await fetch("/api/v1/enquiry/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email.trim(),
+        }),
+      });
 
-    closeModal();
+      const result = await response.json();
 
-    setEmail("");
+      if (!response.ok) {
+        throw new Error(
+          result?.message || "Unable to subscribe right now."
+        );
+      }
 
-    setTimeout(() => {
-      setMessage("");
-    }, 3000);
+      toast.success(
+        result?.message || "Successfully subscribed!"
+      );
+
+      closeModal();
+      setEmail("");
+    } catch (error) {
+      console.error("Newsletter subscription error:", error);
+
+      toast.error(
+        error?.message ||
+        "Unable to subscribe right now. Please try again."
+      );
+    }
   };
 
   return (
     <>
-      {message && (
-        <div
-          style={{
-            position: "fixed",
-            top: "30px",
-            left: "50%",
-            transform: "translateX(-50%)",
-            zIndex: 9999,
-            background: "#fff",
-            padding: "14px 25px",
-            borderRadius: "4px",
-            boxShadow: "0 5px 25px rgba(0, 0, 0, 0.15)",
-            color: "#34a853",
-            fontSize: "15px",
-            textAlign: "center",
-          }}
-        >
-          {message}
-        </div>
-      )}
+
 
       <div
         className="modal modalCentered fade auto-popup modal-auto-newletter"
@@ -189,7 +194,7 @@ export default function NewsLetter() {
                 <p className="privacy text-main-6">
                   Your information will be used in accordance with our{" "}
                   <Link
-                    href="/privacy"
+                    href="/privacy-policy"
                     className="tf-btn-line style-line-2 text-main link"
                   >
                     <span className="text-body">Privacy Policy</span>
