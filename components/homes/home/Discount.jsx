@@ -29,8 +29,8 @@ export default function Discount() {
           exclusive deals and limited-time offers—your moment to shine is now!
         </p>
 
-        <ButtomBorder href="/about-us" className="type-large">
-          Explore for More
+        <ButtomBorder href="/our-schemes" className="type-large">
+          Explore Our Schemes
         </ButtomBorder>
       </div>
     </div>

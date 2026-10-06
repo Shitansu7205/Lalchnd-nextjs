@@ -8,8 +8,11 @@ import Topbar1 from "@/components/headers/Topbar1";
 import OurSchemes from "@/components/our-Schemes/OurSchemes";
 
 export const metadata = {
-    title: "Our Schemes || Lalchnd - Jewelry Ecommerce",
-    description: "Lalchnd - Jewelry Ecommerce",
+    title: "Our Jewellery Schemes | Gold, Diamond & Savings | Lalchnd",
+    description: "Explore Lalchnd’s jewellery schemes, including monthly instalments, gold exchange, diamond purchase plans and special offers. Find the right scheme for your jewellery needs.",
+    alternates: {
+    canonical: "https://lalchnd.com/our-schemes/",
+  },
 };
 export default function page() {
     return (

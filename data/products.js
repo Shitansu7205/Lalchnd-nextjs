@@ -61,7 +61,7 @@ export const products3 = [
     oldPrice: null,
     textColor: "",
     badge: null,
-    url: "/products"
+    url: "/products?metal=gold"
   },
   {
     id: 8,
@@ -72,7 +72,7 @@ export const products3 = [
     oldPrice: 3999,
     textColor: "text-secondary",
     badge: "30% OFF",
-    url: "/products"
+    url: "/products?metal=diamond"
   },
   {
     id: 9,
@@ -83,18 +83,18 @@ export const products3 = [
     oldPrice: 2899,
     textColor: "text-secondary",
     badge: "30% OFF",
-    url: "/products"
+    url: "/products?metal=silver"
   },
   {
     id: 10,
-    imgSrc: "/images/lalchnd/home/kids.webp",
-    hoverImgSrc: "/images/lalchnd/home/kids-image.webp",
+    imgSrc: "/images/lalchnd/home/kids-wear.webp",
+    hoverImgSrc: "/images/lalchnd/home/kid-wear-01.webp",
     title: "White Sapphire Ring in 10K White Gold",
     price: 4199,
     oldPrice: null,
     textColor: "",
     badge: null,
-    url: "/products"
+    url: "/products?gender=kids"
   },
 ];
 
