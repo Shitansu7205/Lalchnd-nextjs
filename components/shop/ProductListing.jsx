@@ -43,18 +43,48 @@ function ProductListingContent({ defaultLayout = 4 }) {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
+    const [pagination, setPagination] = useState({
+        page: 1,
+        per_page: 20,
+        total: 0,
+        total_pages: 1,
+    });
     const [sort, setSort] = useState("Sort by (Default)");
     const router = useRouter();
     const searchParams = useSearchParams();
     const { fetchProducts } = useContextElement();
-    const filters = Object.fromEntries(filterKeys.map((key) => [key, searchParams.get(key) || ""]));
+    const filters = Object.fromEntries(
+        filterKeys.map((key) => [
+            key,
+            searchParams.get(key) || "",
+        ])
+    );
+
+    const currentPage = Number(
+        searchParams.get("page") || 1
+    );
 
     useEffect(() => {
         let cancelled = false;
         setLoading(true);
         setError(false);
-        fetchProducts(filters).then((result) => {
-            if (!cancelled) setProducts((result.products || []).map(mapProduct));
+        fetchProducts({
+            ...filters,
+            page: currentPage,
+            per_page: 20,
+        }).then((result) => {
+            if (!cancelled) {
+                setProducts((result.products || []).map(mapProduct));
+
+                setPagination(
+                    result.pagination || {
+                        page: 1,
+                        per_page: 20,
+                        total: 0,
+                        total_pages: 1,
+                    }
+                );
+            }
         }).catch(() => {
             if (!cancelled) {
                 setProducts([]);
@@ -68,8 +98,19 @@ function ProductListingContent({ defaultLayout = 4 }) {
 
     const updateFilter = (key, value) => {
         const params = new URLSearchParams(searchParams.toString());
-        value ? params.set(key, value) : params.delete(key);
-        router.push(params.toString() ? `?${params.toString()}` : "?");
+
+        value
+            ? params.set(key, value)
+            : params.delete(key);
+
+        // Reset pagination when filters change
+        params.delete("page");
+
+        router.push(
+            params.toString()
+                ? `?${params.toString()}`
+                : "?"
+        );
     };
     const clearFilters = () => router.push("?");
 
@@ -246,7 +287,10 @@ function ProductListingContent({ defaultLayout = 4 }) {
                             </div>
                         ))}
                         <div className="wd-full tempo">
-                            <Pagination />
+                            <Pagination
+                                currentPage={pagination.page}
+                                totalPages={pagination.total_pages}
+                            />
                         </div>
                     </div>
                 </div>
