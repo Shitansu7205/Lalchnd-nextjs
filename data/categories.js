@@ -1,35 +1,35 @@
 export const categories = [
   {
     label: "EARRINGS",
-    image: "/images/lalchnd/home/category-01.webp",
+    image: "/images/lalchnd/home/earrings.webp",
     width: 800,
     height: 800,
     url: "/products?metal=gold&category=earrings"
   },
   {
     label: "BANGLES",
-    image: "/images/lalchnd/home/category-02.webp",
+    image: "/images/lalchnd/home/bangels.webp",
     width: 800,
     height: 800,
     url: "/products?metal=gold&category=bangles"
   },
   {
     label: "BRACELETS",
-    image: "/images/lalchnd/home/category-03.webp",
+    image: "/images/lalchnd/home/BRACELETS.webp",
     width: 800,
     height: 800,
     url: "/products?metal=gold&category=bracelets"
   },
   {
     label: "RINGS",
-    image: "/images/lalchnd/home/category-05.webp",
+    image: "/images/lalchnd/home/ring-1.webp",
     width: 800,
     height: 800,
     url: "/products?metal=gold&category=rings"
   },
   {
     label: "Kid's Wear",
-    image: "/images/lalchnd/home/kids-wear.webp",
+    image: "/images/lalchnd/home/kids-verity.webp",
     width: 800,
     height: 800,
     url: "/products?gender=kids"

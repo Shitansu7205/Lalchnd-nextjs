@@ -527,11 +527,11 @@ export const silverJewlleryPages = [
   {
     heading: "By Gender",
     links: [
-      {
-        name: "Men",
-        image: "/images/lalchnd/jewellery-menu/men.webp",
-        url: "/products?metal=silver&gender=male",
-      },
+      // {
+      //   name: "Men",
+      //   image: "/images/lalchnd/jewellery-menu/men.webp",
+      //   url: "/products?metal=silver&gender=male",
+      // },
       {
         name: "Women",
         image: "/images/lalchnd/jewellery-menu/women.webp",

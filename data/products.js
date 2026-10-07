@@ -1208,37 +1208,73 @@ export const productsImage = [
 export const jewelleryLocations = [
   {
     id: 1,
-    name: " Master Canteen",
+    name: (
+    <>
+      Master Canteen,
+      <br />
+      Bhubaneswar, Odisha
+    </>
+  ),
     image: "/images/lalchnd/home/first.webp",
     link: "/master-canteen",
   },
   {
     id: 2,
-    name: "Raghunathpur",
+    name: (
+    <>
+      Raghunathpur,
+      <br />
+      Bhubaneswar, Odisha
+    </>
+  ),
     image: "/images/lalchnd/home/second.webp",
     link: "/raghunathpur",
   },
   {
     id: 3,
-    name: "CDA",
+    name: (
+    <>
+      CDA,
+      <br />
+      Cuttack, Odisha
+    </>
+  ),
     image: "/images/lalchnd/home/third.webp",
     link: "/cda",
   },
   {
     id: 4,
-    name: "Cantonment Road",
+     name: (
+    <>
+      Cantonment Road,
+      <br />
+      Cuttack, Odisha
+    </>
+  ),
     image: "/images/lalchnd/home/fourth.webp",
     link: "/cantonmentroad",
   },
   {
     id: 5,
-    name: "Brahmapur",
+     name: (
+    <>
+      Brahmapur,
+      <br />
+      Odisha
+    </>
+  ),
     image: "/images/lalchnd/home/fifth.webp",
     link: "/brahmapur",
   },
   {
     id: 6,
-    name: "New Delhi",
+     name: (
+    <>
+      Lajpat Nagar,
+      <br />
+      New Delhi
+    </>
+  ),
     image: "/images/lalchnd/home/sixth.webp",
     link: "/delhi",
   },

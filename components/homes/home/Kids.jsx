@@ -129,7 +129,7 @@ export default function Kids() {
                         </div>
 
                         <div className="btn-group">
-                            <HomeButton href="/products?category=watches" className="type-large">
+                            <HomeButton href="/products?gender=kids" className="type-large">
                                 EXPLORE KIDS' COLLECTION
                             </HomeButton>
 
@@ -138,7 +138,7 @@ export default function Kids() {
                     <div className="bn_image play-area-2">
                         <div className="img p-0">
                             <Image
-                                src="/images/lalchnd/home/kids-image.webp"
+                                src="/images/lalchnd/home/kid-wear-01.webp"
                                 alt=""
                                 className="lazyload"
                                 width={1084}
