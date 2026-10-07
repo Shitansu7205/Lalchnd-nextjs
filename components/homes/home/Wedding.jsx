@@ -5,7 +5,7 @@ import Image from "next/image";
 import HomeButton from "@/components/common/HomeButton";
 import gsap from "gsap";
 import CountdownTimer from "@/components/common/Countdown";
-export default function Kids() {
+export default function Wedding() {
     useEffect(() => {
         const playArea = document.querySelector(".play-area-2");
         const dodger = document.querySelector(".dodger-2");
@@ -113,33 +113,33 @@ export default function Kids() {
         };
     }, []);
     return (
-        <div className="section-padding-bottom-40 section-padding-top-40 light-bg">
+        <>
+        <link rel="stylesheet" href="/css/wedding/wedding.css" />
+        <div className="section-padding-bottom-40 section-padding-top-40 light-bg wedding-section">
             <div className="container">
                 <div className="banner_countdown-v2" style={{ gap: "80px" }}>
 
                     <div className="bn_content wow fadeInUp">
-                        <div className="heading">
+                        <div>
                             <Image alt="" src="/icon/luxury.svg" width={48} height={48} />
-                            <h2 className="heading-font">
-                               <span className="highlight-font">Kids</span> Jewellery Designed for Comfort
-
-                            </h2>
-                            <p className="sub-title">
-                                Lalchnd’s kids’ jewellery combines thoughtful design, careful craftsmanship and 
-                                comfortable styles made with little ones in mind. With smooth detailing and child-friendly designs, each piece reflects Lalchnd’s commitment to quality, from first jewellery to birthdays, naming ceremonies and special occasions.
-
-                            </p>
+                            <h2 className="title heading-font fw-normal mb-3" style={{ color: "#fff" }}>
+              Infinity <span className="highlight-font">Bridal</span> Options
+            </h2>
+            <p className="sub-title text-main-4 text-white mb-5">
+              For your big day and the delightful occasions around it, never compromise. Adorn yourself with the absolute best 
+              in the world of jewellery – only from Lalchnd.
+            </p>
                         </div>
 
                         <div className="btn-group">
-                            <HomeButton href="/products?gender=kids" className="type-large">
-                                EXPLORE KIDS' COLLECTION
+                            <HomeButton href="/products?gender=bridal" className="border-cta-btn tf-btn btn-fill animate-btn type-large">
+                                View Bridal Collection
                             </HomeButton>
 
                         </div>
                     </div>
                     <div className="bn_image play-area-2">
-                        <div className="img p-0">
+                        {/* <div className="img p-0">
                             <Image
                                 src="/images/lalchnd/home/kid-wear-01.webp"
                                 alt=""
@@ -147,10 +147,11 @@ export default function Kids() {
                                 width={1084}
                                 height={1084}
                             />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
         </div>
+        </>
     );
 }

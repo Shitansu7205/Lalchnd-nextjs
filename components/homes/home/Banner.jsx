@@ -60,11 +60,9 @@ export default function Banner() {
     <div className="banner_V04">
       <div className="bn-content">
         <h3 className="mb-3" style={{color: "#fff"}}>
-          Every piece tells a story—crafted with timeless{" "}
-          <span className="highlight-font">
-            Elegance
-          </span>
-          , made to be treasured for a lifetime.
+          Enhance your Presence with <span className="highlight-font">
+            Lalchnd 
+          </span> Jewellery, Where Style Meets Substance to Define Elegance
         </h3>
 
         <ButtomBorder href="/contact" className="type-large">

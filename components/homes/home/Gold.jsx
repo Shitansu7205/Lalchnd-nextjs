@@ -132,10 +132,15 @@ export default function Gold() {
             <div className="heading">
               <Image alt="" src="/icon/luxury.svg" width={48} height={48} />
               <h2 className="heading-font">
-                Timeless <span className="highlight-font">Gold</span>, Crafted With Elegance
+                <span className="highlight-font">Gold</span> Jewellery Crafted With Trust 
+
               </h2>
               <p className="sub-title">
-                Discover exquisite gold jewellery designed to celebrate every moment. From classic essentials to statement pieces, find timeless craftsmanship that adds a touch of elegance to every occasion.
+                Lalchnd offers gold jewellery in a range of traditional and contemporary styles, 
+                including pieces designed for different occasions and personal preferences. The 
+                collection combines skilled workmanship with thoughtful detailing, offering gold 
+                jewellery that reflects timeless appeal and lasting value.
+
               </p>
             </div>
 

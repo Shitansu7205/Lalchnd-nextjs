@@ -11,13 +11,10 @@ export default function Categories() {
       <div className="container-full-2">
         <div className="sect-top center text-center wow fadeInUp">
           <h2 className="heading-font pb-0">
-            Gorgeous <span className="highlight-font">Collections</span>
+            Exceeding <span className="highlight-font">Expectations</span>
           </h2>
           <p className="s-sub-title">
-            Explore our collection of sophisticated, modern designs that make a
-            statement without saying a word.
-            <br className="d-none d-xl-block" />
-            Find your signature look today.
+            Lalchnd Jewellery is not just about ornaments. It’s about making a statement.
           </p>
         </div>
         <Swiper

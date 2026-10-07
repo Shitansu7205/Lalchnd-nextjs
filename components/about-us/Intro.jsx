@@ -31,7 +31,16 @@ export default function Intro() {
               Our Founder-<span className="highlight-font">Chairman</span>
             </h2>
             <p className="brand-intro_text">
-             After venturing into the jewellery business with a humble silver gifts store in Bhubaneswar well over three decades ago, Dr Sunjoy Hans endeavoured tirelessly during the early years to raise awareness among the people of Odisha about the importance of buying pure gold and to introduce them to the endlessly eclectic possibilities of fine jewellery designs. This made Lalchnd Jewellers a household name – in both rural and urban Odisha. Working just as hard now as the Founder Chairman of the Lalchnd Group of Companies – which includes Lalchnd Jewellers, Lalchnd Builders, Lalchnd Resorts and LCJ Developers, among others – Sunjoy is one of the state’s most popular and influential entrepreneurs.
+            After venturing into the jewellery business with a humble silver gifts store in Bhubaneswar 
+            well over three decades ago, Dr Sunjoy Hans endeavoured tirelessly during the early 
+            years to raise awareness among the people of Odisha about the importance of buying pure 
+            gold and to introduce them to the endlessly eclectic possibilities of fine jewellery 
+            designs. This made Lalchnd Jewellers a household name – in both rural and urban Odisha. 
+            Working just as hard now as the Founder Chairman of the Lalchnd Group of Companies – 
+            which includes Lalchnd Jewellers, Lalchnd Builders, Lalchnd Resorts and LCJ Developers, 
+            among others – Dr. Sunjoy Hans is one of the state’s most popular and influential 
+            entrepreneurs.
+
             </p>
             <span className="br-line" />
             <div className="brand-intro_author flex-sm-nowrap">

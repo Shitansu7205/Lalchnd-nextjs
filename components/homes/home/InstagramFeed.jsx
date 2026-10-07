@@ -39,8 +39,9 @@ export default function InstagramFeed() {
           <h2 className="heading-font">Follow Us</h2>
 
           <p className="instagram-feed-description sub-title">
-            All the business growth and profit revolve around effective catchy
-            marketing sales always in the limelight.
+            Stay connected with Lalchnd for jewellery inspiration, new collections, 
+            special moments and the latest updates from our world of craftsmanship.
+
           </p>
         </div>
 

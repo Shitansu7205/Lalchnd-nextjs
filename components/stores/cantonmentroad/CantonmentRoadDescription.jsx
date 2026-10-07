@@ -20,7 +20,7 @@ export default function CantonmentRoadDescription() {
                     <div id="description" className="collapse widget-desc">
                         <div className="accordion-body">
                             <p className="sub-title">
-                                Lalchnd Jewellers stands as the leading jewellery shop on Cantonment Road, known for its transparent pricing, personalized service, and a wide selection of exquisite designs. Each piece in our collection is meticulously crafted with precision, ensuring unmatched quality and timeless elegance. From stunning bridal sets to everyday accessories, we offer a diverse range of gold, diamond, and gemstone jewellery that caters to every style and occasion. Whether you’re seeking classic pieces or the latest trends, our extensive collection of gold necklaces, bangles, earrings, and rings combines modern craftsmanship with traditional charm. At Lalchnd Jewellers, we don’t just sell jewellery—we create lasting memories. Visit us today and experience jewellery shopping like never before.
+                               The Cantonment Road showroom is an important part of Lalchnd’s journey in Cuttack. Its long-standing presence has made it a recognisable Lalchnd address in the city. The showroom reflects the brand’s growth over the years while maintaining its connection with Cuttack.
                             </p>
                         </div>
                     </div>

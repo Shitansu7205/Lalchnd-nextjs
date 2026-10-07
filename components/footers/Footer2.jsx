@@ -307,7 +307,13 @@ export default function Footer2() {
                         strokeWidth={1.8}
                         className="text-white"
                       />
-                      <span className="fw-medium text-white sub-title">Bhubaneswar</span>
+                      <span className="fw-medium text-white sub-title"> <Link
+                          rel="noopener noreferrer"
+                          href="/bhubaneswar"
+                          className="text-white link fw-normal sub-title" style={{fontSize: "14px"}}
+                        >
+                          Bhubaneswar
+                        </Link></span>
                     </div>
 
                     <ul className="ps-4">
@@ -341,7 +347,13 @@ export default function Footer2() {
                         strokeWidth={1.8}
                         className="text-white"
                       />
-                      <span className="fw-medium text-white sub-title">Cuttack</span>
+                      <span className="fw-medium text-white sub-title"> <Link
+                          rel="noopener noreferrer"
+                          href="/cuttack"
+                          className="text-white link fw-normal sub-title" style={{fontSize: "14px"}}
+                        >
+                          Cuttack
+                        </Link></span>
                     </div>
 
                     <ul className="ps-4">

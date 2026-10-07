@@ -64,10 +64,13 @@ export default function BrahmapurDetails() {
                                             </li>
                                         </ul>
                                         <h3>
-                                            Unveiling the Best Jewellery Shops and Gold Showrooms in <span className="highlight-font" style={{fontSize: "38px"}}>Brahmapur</span>
+                                           Unveiling the Best Jewellery Shops and Gold Showrooms in <span className="highlight-font" style={{fontSize: "38px"}}>Brahmapur</span> - Lalchnd Jewellers 
                                         </h3>
                                         <p className="sub-title">
-                                            Welcome to Lalchnd Jewellers, your go-to destination for exquisite jewellery in Brahmapur! We take pride in being recognized as the best jewellery shop in the city, offering a wide array of stunning options to cater to your discerning taste. At Lalchnd Jewellers, we are synonymous with quality, craftsmanship, and a commitment to providing the finest pieces for every occasion. Our Gold Jewellery Shop in Brahmapur stands out as a beacon of luxury and elegance. We understand that jewellery is not just an accessory; it’s an expression of your style and personality. With this in mind, our collection is thoughtfully curated to meet the diverse preferences of our valued customers.
+                                           Welcome to Lalchnd Jewellers, your go-to destination for exquisite jewellery in Brahmapur! We take pride in being recognized as the best jewellery shop in the city, offering a wide array of stunning options to cater to your discerning taste. At Lalchnd Jewellers, we are synonymous with quality, craftsmanship, and a commitment to providing the finest pieces for every occasion. Our Gold Jewellery Shop in Brahmapur stands out as a beacon of luxury and elegance. We understand that jewellery is not just an accessory; it’s an expression of your style and personality. With this in mind, our collection is thoughtfully curated to meet the diverse preferences of our valued customers.
+<br /><br />As the <b>Best Jewellery Shopping Store in Brahmapur</b>, Lalchnd Jewellers takes pride in offering a seamless and enjoyable shopping experience. Whether you’re searching for the ideal engagement ring, a gift for a loved one, or a piece to mark a special milestone, our collection has something for everyone.
+When it comes to Jewellery Shops in Brahmapur, Lalchnd Jewellers is the name that stands out. We are honored to be recognized as the Best Jewellers in Brahmapur, and our Gold Showroom in Brahmapur is a testament to the legacy we’ve built over the years.
+
                                         </p>
 
 

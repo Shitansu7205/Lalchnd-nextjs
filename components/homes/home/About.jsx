@@ -28,17 +28,18 @@ export default function About() {
 
           </div>
           <div className="bn-content wow fadeInUp">
-            <h6 className="text-uppercase short-line-heding ">Our Promise</h6>
+            <h6 className="text-uppercase short-line-heding ">WHY LALCHND</h6>
             <h2 className="title heading-font fw-normal" style={{ color: "#fff" }}>
-              Responsibly Produced <span className="highlight-font">Jewelry</span>
+              Odisha's Top Trusted 
+ <span className="highlight-font">Jewellery</span> Brand
             </h2>
             <p className="sub-title text-main-4 text-white">
-              At Lalchnd, we believe every piece tells a story. Founded on passion
-              and precision, our curated collections blend traditional
-              craftsmanship with modern design. We create jewelry that not only
-              complements your style but also celebrates the moments that
-              matter. Discover our journey of beauty, innovation, and unwavering
-              quality.
+              Since 1948, Lalchnd has built a legacy of quality, craftsmanship and trust in jewellery. 
+              Our collections include gold, diamond and silver jewellery, created with careful
+               attention to every piece. With skilled artisans and a commitment to customer 
+               satisfaction, Lalchnd continues to uphold the values that have shaped its reputation 
+               over the years.
+
             </p>
             <ButtomBorder href="/about-us" className="type-large">
               our story

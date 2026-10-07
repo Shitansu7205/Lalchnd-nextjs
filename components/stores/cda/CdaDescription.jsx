@@ -20,7 +20,7 @@ export default function CdaDescription() {
                     <div id="description" className="collapse widget-desc">
                         <div className="accordion-body">
                             <p className="sub-title">
-                                At Lalchnd Jewellers, we pride ourselves on being the best jewellery shop in CDA. Our reputation is built on unparalleled quality, customer service, and trust. With years of expertise, we bring you jewellery that reflects elegance, durability, and the highest standards of craftsmanship. From delicate gold necklaces to intricately designed diamond rings, our collection showcases the finest pieces for every taste and occasion. Whether you’re shopping for an engagement ring, a festive set, or a custom design, we have something truly special waiting for you. We are committed to offering a luxurious selection of fine jewellery that combines timeless craftsmanship with modern designs.
+                                CDA Sector VI is an active part of Cuttack, with established residential areas, local businesses and regular shopping activity. Lalchnd has its showroom here, giving the area a dedicated jewellery destination within the locality. The CDA branch is also well known in the area, making it a notable part of the local jewellery scene and Lalchnd’s presence in Cuttack.
 
                             </p>
                         </div>

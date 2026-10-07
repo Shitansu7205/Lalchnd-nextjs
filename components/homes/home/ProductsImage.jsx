@@ -17,7 +17,7 @@ export default function ProductsImage() {
           <div className="sect-border mt-0" style={{ border: "none" }}>
             <div className="sect-head wow fadeInUp">
               <h2 className="heading-font">
-                Designed for Everyday <span className="highlight-font">Glamour</span>
+                Designed to Feel <span className="highlight-font">Glamour</span>
               </h2>
             </div>
 
