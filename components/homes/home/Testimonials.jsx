@@ -18,17 +18,14 @@ export default function Testimonials() {
             <div className="col-lg-4 col-md-12">
               <div className="wow fadeInUp review-content">
                 <h2 className="heading-font" style={{ color: "#fff" }}>
-                  We Value Each Of
-                  <br />
-                  Our <span className="highlight-font">Customers</span>
+                  Bespoke <span className="highlight-font">Brilliance</span>
                 </h2>
 
                 <p
                   className="sub-title wow fadeInUp review-description"
                   style={{ color: "#fff" }}
                 >
-                  Your experience matters to us. Share your feedback and help others
-                  discover the Lalchnd experience.
+                  Add a touch of rare class to your appearance with customised hand-made jewellery from Lalchnd.
                 </p>
 
                 <Link

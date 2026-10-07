@@ -362,11 +362,12 @@ header {
 
 .logo-site {
   img {
-    width: 122px;
+    width: 110px;
   }
 
   display: flex;
   align-items: center;
+  padding: 5px 0px;
 
   @include res(md) {
     img {

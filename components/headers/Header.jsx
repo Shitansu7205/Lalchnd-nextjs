@@ -23,7 +23,7 @@ export default function Header({ parentClass = "tf-header line-bt-2" }) {
                                 alt=""
                                 width={122}
                                 height={32}
-                                src="/images/lalchnd/blogs/logo.png"
+                                src="/images/logo/header-logo.png"
                             />
                         </Link>
                     </div>

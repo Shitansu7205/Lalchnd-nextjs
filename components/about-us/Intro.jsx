@@ -31,7 +31,7 @@ export default function Intro() {
               Our Founder-<span className="highlight-font">Chairman</span>
             </h2>
             <p className="brand-intro_text">
-              The Lalchnd Group’s founding and flagship company, Lalchnd Jewellers, is a long-established market leader in its space. Boasting three of the largest jewellery showrooms in eastern India, Lalchnd Jewellers offers the widest range of the very finest jewellery and jewellery designs in Odisha – what with all its core products either conceptualised and crafted, or inspired and sourced from not just across its home state and country, but from various corners of the globe. Combining that with customer service that follows global best practices while still being in tune with Indian sensibilities, Lalchnd Jewellers has earned its position as the most trusted luxury brand in Odisha.
+             After venturing into the jewellery business with a humble silver gifts store in Bhubaneswar well over three decades ago, Dr Sunjoy Hans endeavoured tirelessly during the early years to raise awareness among the people of Odisha about the importance of buying pure gold and to introduce them to the endlessly eclectic possibilities of fine jewellery designs. This made Lalchnd Jewellers a household name – in both rural and urban Odisha. Working just as hard now as the Founder Chairman of the Lalchnd Group of Companies – which includes Lalchnd Jewellers, Lalchnd Builders, Lalchnd Resorts and LCJ Developers, among others – Sunjoy is one of the state’s most popular and influential entrepreneurs.
             </p>
             <span className="br-line" />
             <div className="brand-intro_author flex-sm-nowrap">

@@ -29,7 +29,7 @@ export const categories = [
   },
   {
     label: "Kid's Wear",
-    image: "/images/lalchnd/home/kids-wear.webp",
+    image: "/images/lalchnd/home/kids-verity.webp",
     width: 800,
     height: 800,
     url: "/products?gender=kids"
