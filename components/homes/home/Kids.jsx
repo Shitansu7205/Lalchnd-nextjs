@@ -129,7 +129,7 @@ export default function Kids() {
                         </div>
 
                         <div className="btn-group">
-                            <HomeButton href="/products?category=watches" className="type-large">
+                            <HomeButton href="/products?gender=kids" className="type-large">
                                 EXPLORE KIDS' COLLECTION
                             </HomeButton>
 
