@@ -41,183 +41,127 @@ export default function Gallery() {
         </div>
 
         {/* Collection Layout */}
-        <div className="collection-five-layout">
+       <div className="collection-five-layout">
 
-          {/* LEFT - TWO VERTICAL IMAGES */}
-          <div className="collection-side-column">
+  {/* LEFT - TWO VERTICAL IMAGES */}
+  <div className="collection-side-column">
+    {products3.slice(0, 2).map((product) => (
+      <div
+        className="card_product--V01 style-2 wow fadeInUp"
+        key={product.id}
+      >
+        <div className="card_product-wrapper aspect-ratio-1">
 
-            {products3.slice(0, 2).map((product) => (
-              <div
-                className="card_product--V01 style-2 wow fadeInUp"
-                key={product.id}
-              >
-                <div className="card_product-wrapper aspect-ratio-1">
-
-                  <Link
-                    href={product.url}
-                    className="product-img"
-                  >
-                    <Image
-                      src={product.imgSrc}
-                      alt={product.title}
-                      className="lazyload img-product"
-                      width={714}
-                      height={900}
-                    />
-
-                    {product.hoverImgSrc && (
-                      <Image
-                        src={product.hoverImgSrc}
-                        alt={product.title}
-                        className="lazyload img-hover"
-                        width={714}
-                        height={900}
-                      />
-                    )}
-                  </Link>
-
-                  {/* <ul className="list-product-btn">
-                    <li className="wishlist">
-                      <AddtoWishlist product={product} />
-                    </li>
-
-                    <li>
-                      <AddtoCart product={product} />
-                    </li>
-
-                    <li>
-                      <QuickView product={product} />
-                    </li>
-
-                    <li className="compare">
-                      <AddtoCompare product={product} />
-                    </li>
-                  </ul> */}
-
-                  {product.badge && (
-                    <div className="badge-box">
-                      <span className="badge-item sale">
-                        {product.badge}
-                      </span>
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-
-          </div>
-
-
-          {/* CENTER - LARGE IMAGE */}
-          <div
-            className="collection-center-image wow fadeInUp"
-            onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}
-            onMouseMove={handleMouseMove}
+          <Link
+            href={product.url}
+            className="product-img product-zoom"
           >
-            <Link href="/products" className="collection-image-link">
-              <div className="box_image--V01 style-2 hover-img">
+            <Image
+              src={product.imgSrc}
+              alt={product.title}
+              className="lazyload img-product"
+              width={714}
+              height={900}
+            />
+          </Link>
 
-                <div className="image img-style">
-                  <Image
-                    src="/images/lalchnd/home/second-image.webp"
-                    alt="Exquisite Jewelry Collection"
-                    className="lazyload"
-                    width={1488}
-                    height={1900}
-                  />
-                </div>
+          {product.badge && (
+            <div className="badge-box">
+              <span className="badge-item sale">
+                {product.badge}
+              </span>
+            </div>
+          )}
 
-                <div className="content wow fadeInUp">
-                  <h3
-                    className="title fw-medium font-2"
-                    style={{ color: "#fff" }}
-                  >
-                    Shine with Seasonal Picks
-                  </h3>
-                </div>
-
-                {/* VIEW ALL CURSOR */}
-                {isHovering && (
-                  <span
-                    className="view-all-cursor"
-                    style={{
-                      left: `${cursor.x}px`,
-                      top: `${cursor.y}px`,
-                    }}
-                  >
-                    VIEW ALL
-                  </span>
-                )}
-
-              </div>
-            </Link>
-          </div>
-
-
-          {/* RIGHT - TWO VERTICAL IMAGES */}
-          <div className="collection-side-column">
-
-            {products3.slice(2, 4).map((product) => (
-              <div
-                className="card_product--V01 style-2 wow fadeInUp"
-                key={product.id}
-              >
-                <div className="card_product-wrapper aspect-ratio-1">
-
-                  <Link
-                    href={product.url}
-                    className="product-img"
-                  >
-                    <Image
-                      src={product.imgSrc}
-                      alt={product.title}
-                      className="lazyload img-product"
-                      width={714}
-                      height={900}
-                    />
-
-                    {product.hoverImgSrc && (
-                      <Image
-                        src={product.hoverImgSrc}
-                        alt={product.title}
-                        className="lazyload img-hover"
-                        width={714}
-                        height={900}
-                      />
-                    )}
-                  </Link>
-
-                  {/* <ul className="list-product-btn">
-                    <li className="wishlist">
-                      <AddtoWishlist product={product} />
-                    </li>
-
-                    <li>
-                      <AddtoCart product={product} />
-                    </li>
-
-                    <li>
-                      <QuickView product={product} />
-                    </li>
-
-                    <li className="compare">
-                      <AddtoCompare product={product} />
-                    </li>
-                  </ul> */}
-
-                  {product.badge && (
-                    <div className="badge-box">
-                      <span className="badge-item sale">
-                        {product.badge}
-                      </span>
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
+      </div>
+    ))}
+  </div>
+
+
+  {/* CENTER - LARGE IMAGE */}
+  <div
+    className="collection-center-image wow fadeInUp"
+    onMouseEnter={() => setIsHovering(true)}
+    onMouseLeave={() => setIsHovering(false)}
+    onMouseMove={handleMouseMove}
+  >
+    <Link href="/products" className="collection-image-link">
+      <div className="box_image--V01 style-2">
+
+        <div className="image img-style">
+          <Image
+            src="/images/lalchnd/home/second-image.webp"
+            alt="Exquisite Jewelry Collection"
+            className="lazyload"
+            width={1488}
+            height={1900}
+          />
+        </div>
+
+        <div className="content wow fadeInUp">
+          <h3
+            className="title fw-medium font-2"
+            style={{ color: "#fff" }}
+          >
+            Shine with Seasonal Picks
+          </h3>
+        </div>
+
+        {/* VIEW ALL CURSOR */}
+        {isHovering && (
+          <span
+            className="view-all-cursor"
+            style={{
+              left: `${cursor.x}px`,
+              top: `${cursor.y}px`,
+            }}
+          >
+            VIEW ALL
+          </span>
+        )}
+
+      </div>
+    </Link>
+  </div>
+
+
+  {/* RIGHT - TWO VERTICAL IMAGES */}
+  <div className="collection-side-column">
+    {products3.slice(2, 4).map((product) => (
+      <div
+        className="card_product--V01 style-2 wow fadeInUp"
+        key={product.id}
+      >
+        <div className="card_product-wrapper aspect-ratio-1">
+
+          <Link
+            href={product.url}
+            className="product-img product-zoom"
+          >
+            <Image
+              src={product.imgSrc}
+              alt={product.title}
+              className="lazyload img-product"
+              width={714}
+              height={900}
+            />
+          </Link>
+
+          {product.badge && (
+            <div className="badge-box">
+              <span className="badge-item sale">
+                {product.badge}
+              </span>
+            </div>
+          )}
+
+        </div>
+      </div>
+    ))}
+  </div>
+
+</div>
       </div>
     </section>
   );

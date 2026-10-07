@@ -55,46 +55,45 @@ export const products3 = [
   {
     id: 7,
     imgSrc: "/images/lalchnd/home/gold-necklaces.webp",
-    hoverImgSrc: "/images/lalchnd/home/gold-necklace2.webp",
     title: "Engagement Necklaces in 18k Yellow Gold",
     price: 2499,
     oldPrice: null,
     textColor: "",
     badge: null,
-    url: "/products?metal=gold"
+    url: "/products?metal=gold",
   },
+
   {
     id: 8,
     imgSrc: "/images/lalchnd/home/diamond-necklaces.webp",
-    hoverImgSrc: "/images/lalchnd/home/diamond-necklace2.webp",
     title: "Diamond Necklaces",
     price: 2999,
     oldPrice: 3999,
     textColor: "text-secondary",
-    badge: "30% OFF",
-    url: "/products?metal=diamond"
+    badge: null,
+    url: "/products?metal=diamond",
   },
+
   {
     id: 9,
     imgSrc: "/images/lalchnd/home/silver-ring.webp",
-    hoverImgSrc: "/images/lalchnd/home/silver-ring2.webp",
     title: "Silver Ring",
     price: 1199,
     oldPrice: 2899,
     textColor: "text-secondary",
-    badge: "30% OFF",
-    url: "/products?metal=silver"
+    badge: null,
+    url: "/products?metal=silver",
   },
+
   {
     id: 10,
-    imgSrc: "/images/lalchnd/home/kids-wear.webp",
-    hoverImgSrc: "/images/lalchnd/home/kid-wear-01.webp",
+    imgSrc: "/images/lalchnd/home/kids-verity.webp",
     title: "White Sapphire Ring in 10K White Gold",
     price: 4199,
     oldPrice: null,
     textColor: "",
     badge: null,
-    url: "/products?gender=kids"
+    url: "/products?gender=kids",
   },
 ];
 
