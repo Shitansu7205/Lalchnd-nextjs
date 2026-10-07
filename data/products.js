@@ -1268,7 +1268,13 @@ export const jewelleryLocations = [
   },
   {
     id: 6,
-    name: "New Delhi",
+     name: (
+    <>
+      Lajpat Nagar,
+      <br />
+      New Delhi
+    </>
+  ),
     image: "/images/lalchnd/home/sixth.webp",
     link: "/delhi",
   },
