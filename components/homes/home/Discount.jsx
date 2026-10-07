@@ -18,15 +18,17 @@ export default function Discount() {
       </div>
       <div className="bn-content deep-bg text-white-2">
 
-        <h6 className="text-uppercase short-line-heding mb-4">discount code: vemus20off</h6>
+        <h6 className="text-uppercase short-line-heding mb-4">LIMITED OFFER & DISCOUNTS
+</h6>
 
         <h2 className="heading-font wow fadeInUp text-white" >
-          <span className="highlight-font">Unveil</span> Your Sparkle
+          Enjoy <span className="highlight-font">Special Deals 
+</span>
         </h2>
         <p className="sub-title wow fadeInUp">
-          Discover our handcrafted jewelry collection designed to elevate your
-          style. Enjoy
-          exclusive deals and limited-time offers—your moment to shine is now!
+          Discover exclusive offers and discounts on our handcrafted jewellery collection. 
+          Limited-time offers are live - explore now and know more about our discounts! 
+
         </p>
 
         <ButtomBorder href="/our-schemes" className="type-large">

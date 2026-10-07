@@ -12,15 +12,14 @@ export default function JewelleryLocations() {
         <div className="jewellery-location-content">
 
           <div className="pb-4">
-            <h6 className="text-uppercase short-line-heding " style={{ color: "#06273F" }}>Attractve jewellery Found Here</h6>
+            <h6 className="text-uppercase short-line-heding " style={{ color: "#06273F" }}>Points of Pure Perfection</h6>
             <h2 className="heading-font pb-2">
               Lalchnd in Your <span className="highlight-font">City</span>
             </h2>
 
             <p className="sub-title jewellery-location-description">
-              Discover exquisite jewelry pieces at unbeatable prices. With our <br />
-              limited-time offer, every second counts—shop now before the
-              timer runs out!
+             Three of the largest jewellery showrooms in Eastern India, right here in Odisha,
+where top-notch product quality is well matched by world-class customer service.
             </p>
           </div>
 

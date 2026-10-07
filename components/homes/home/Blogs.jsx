@@ -11,11 +11,11 @@ export default function Blogs() {
       <div className="container-full-2">
         <div className="sect-top center text-center wow fadeInUp">
           <h2 className="heading-font">
-            <span className="highlight-font">Behind</span> the brand
+            <span className="highlight-font">Blogs</span> By Lalchnd
           </h2>
           <p className="s-sub-title">
-            Explore our journey, values, and the stories behind our collections.
-            Discover what makes our brand unique.
+            Discover our latest jewellery stories, guides and insights, bringing you closer to the world of Lalchnd.
+
           </p>
         </div>
         <Swiper

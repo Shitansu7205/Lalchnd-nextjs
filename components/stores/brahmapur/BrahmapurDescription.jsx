@@ -20,9 +20,8 @@ export default function BrahmapurDescription() {
                     <div id="description" className="collapse widget-desc">
                         <div className="accordion-body">
                             <p className="sub-title">
-                                As the Best Jewellery Shopping Store in Brahmapur, Lalchnd Jewellers takes pride in offering a seamless and enjoyable shopping experience. Whether you’re searching for the ideal engagement ring, a gift for a loved one, or a piece to mark a special milestone, our collection has something for everyone.
-                                <br></br>
-                                When it comes to Jewellery Shops in Brahmapur, Lalchnd Jewellers is the name that stands out. We are honored to be recognized as the Best Jewellers in Brahmapur, and our Gold Showroom in Brahmapur is a testament to the legacy we’ve built over the years.
+                               The Brahmapur showroom marks an important chapter in Lalchnd’s presence beyond the state’s major urban centres. Located in Dharma Nagar, Alakapur, it has helped bring the Lalchnd name closer to jewellery shoppers in Brahmapur and the surrounding areas. The showroom is an important part of the brand’s wider reach in Odisha, extending its presence to one of the state’s prominent southern cities.
+
                             </p>
                         </div>
                     </div>

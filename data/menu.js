@@ -209,7 +209,7 @@ export const morePages = [
     heading: "TERMS & POLICIES",
     links: [
       { href: "/#lalchnd-promises", label: "Lalchnd Promises" },
-      { href: "/privacy-policy", label: "Terms and Conditions" },
+      { href: "/terms-condition", label: "Terms and Conditions" },
       { href: "/privacy-policy", label: "Privacy Policy" },
     ],
   },

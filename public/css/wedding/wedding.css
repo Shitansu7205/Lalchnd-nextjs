@@ -1,0 +1,12 @@
+.wedding-section{
+    background-image: url('/images/lalchnd/home/wedding-section.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 550px;
+    display: flex;
+    align-items: center;
+}
+.wedding-style{
+    width: 50%;
+}

@@ -775,7 +775,7 @@ export const blogGrids = [
     excerpt:
       "Weddings and engagements are among the most special occasions, making couple jewellery an increasingly popular choice.",
     date: "March 2026",
-    metaTitle: "Trending ‘Couple Jewellery’ Ideas for Weddings andEngagements - Lalchnd Jewellers",
+    metaTitle: "Trending ‘Couple Jewellery’ Ideas for Weddings and Engagements - Lalchnd Jewellers",
     metaDescription:
       "Weddings and engagements are among the most special occasions, making couple jewellery an increasingly popular choice.",
     canonicalUrl:

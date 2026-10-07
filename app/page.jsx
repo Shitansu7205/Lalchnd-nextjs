@@ -22,6 +22,7 @@ import Banner from "@/components/homes/home/Banner";
 import Watch from "@/components/homes/home/Watch";
 import SonePeSuhagaBanner from "@/components/homes/home/SonePeSuhagaBanner";
 import Kids from "@/components/homes/home/Kids";
+import Wedding from "@/components/homes/home/Wedding";
 
 
 export const metadata = {
@@ -43,6 +44,7 @@ export default function Home() {
           <About />
           {/* <TextSlider /> */}
           <Categories />
+          <Wedding />
           <Gold />
           <Diamond />
          <SonePeSuhagaBanner />

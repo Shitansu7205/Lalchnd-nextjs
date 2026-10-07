@@ -132,10 +132,12 @@ export default function Silver() {
             <div className="heading">
               <Image alt="" src="/icon/luxury.svg" width={48} height={48} />
               <h2 className="heading-font">
-                <span className="highlight-font">Silver</span> Elegance That Shines With Grace
+                <span className="highlight-font">Silver</span> Jewellery That Shines With Grace
               </h2>
               <p className="sub-title">
-              Explore beautifully crafted silver jewellery that blends timeless charm with contemporary style. Discover versatile pieces made to complement your everyday moments and special occasions.
+              Find beautifully crafted silver jewellery featuring graceful designs, refined detailing 
+              and timeless appeal. Each piece is made to complement your look with effortless elegance and become a cherished addition to your jewellery collection.
+
               </p>
             </div>
 

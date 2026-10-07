@@ -27,7 +27,7 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `${blogEntry.metaTitle || blogEntry.title} || Lalchnd Jewellers`,
+    title: `${blogEntry.metaTitle || blogEntry.title}`,
 
     description:
       blogEntry.metaDescription ||

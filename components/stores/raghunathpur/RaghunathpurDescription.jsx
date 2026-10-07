@@ -20,7 +20,7 @@ export default function RaghunathpurDescription() {
                     <div id="description" className="collapse widget-desc">
                         <div className="accordion-body">
                             <p className="sub-title">
-                                Welcome to Lalchnd Jewellers, your ultimate destination for exquisite gold, diamond, and designer jewellery. Renowned as the best jewellery showroom in Raghunathpur, we specialize in crafting jewellery that blends tradition with contemporary elegance. Whether you’re looking for a perfect bridal set or a special piece to celebrate your moments, our expert team is here to assist you in choosing the perfect piece. the best jewellery shop in Raghunathpur, our collection includes intricately designed gold necklaces, stunning diamond sets, and elegant bangles, each piece reflecting impeccable craftsmanship. With a legacy of trust and excellence, Lalchnd Jewellers is committed to making your moments special. Visit us today to explore our latest collections and indulge in a jewellery shopping experience like no other.
+                                Raghunathpur has grown into an important shopping and residential stretch of Bhubaneswar, and Lalchnd’s showroom on Nandankanan Road has a visible presence in the locality. The showroom is a familiar choice for people from Raghunathpur and nearby areas who prefer visiting a recognised jewellery store within their neighbourhood. Its location makes jewellery shopping more convenient for families and local residents in this part of the city. 
                             </p>
                         </div>
                     </div>

@@ -121,10 +121,14 @@ export default function Diamond() {
             <div className="heading">
               <Image alt="" src="/icon/luxury.svg" width={48} height={48} />
               <h2 className="heading-font">
-                Where <span className="highlight-font">Diamond</span> Brilliance Meets Elegance
+                <span className="highlight-font">Diamond</span> Collections to Cherish Always 
+
               </h2>
               <p className="sub-title">
-                Discover exquisite diamond jewellery crafted to capture every sparkle. From elegant classics to stunning statement pieces, find designs that make your most cherished moments unforgettable.
+                From graceful everyday pieces to striking designs for life’s special moments, 
+                our diamond collection brings together captivating brilliance, distinctive styles and 
+                timeless elegance. Find a piece that feels as special as the moment you choose it. 
+
               </p>
             </div>
 

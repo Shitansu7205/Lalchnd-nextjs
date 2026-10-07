@@ -20,7 +20,8 @@ export default function MasterCanteenDescription() {
                     <div id="description" className="collapse widget-desc">
                         <div className="accordion-body">
                             <p className="sub-title">
-                                Our showroom is your one-stop destination for a vast collection of high-quality jewellery, crafted to suit your individual taste and style. Whether you are looking for exquisite gold jewellery, elegant diamond pieces, or customized designs, we offer everything under one roof. With years of expertise in the jewellery industry, we pride ourselves on our legacy of delivering excellence in both product and service. Our jewellery shop in Master Canteen, you can rest assured that you are buying certified jewellery that guarantees purity and authenticity. Whether it’s a simple pendant or a sophisticated necklace, we provide the finest selection that reflects our attention to detail and passion for craftsmanship.
+                                Situated in one of Bhubaneswar’s well-known commercial areas, the Lalchnd Master Canteen showroom has become a familiar name for jewellery shoppers in and around the locality. Its accessible location makes it a convenient destination for those visiting the area to explore jewellery in person. The showroom adds to the vibrant shopping presence of Master Canteen while continuing Lalchnd’s longstanding connection with jewellery buyers in Odisha.
+
                             </p>
                         </div>
                     </div>

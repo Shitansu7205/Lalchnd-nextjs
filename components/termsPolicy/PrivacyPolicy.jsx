@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
                                     1. Information We Collect
                                 </h4>
                                 <h6 className="text-uppercase">
-                                    1. A) Information you provide directly
+                                    A) Information you provide directly
                                 </h6>
                                 <p className="sub-title">When you use the Services (for example, registering, submitting an enquiry, participating in offers/loyalty programs, or contacting customer support), you may provide information such as:
                                 </p>
@@ -46,7 +46,7 @@ export default function PrivacyPolicy() {
 
 
                                 <h6 className="text-uppercase">
-                                    1. B) Information collected automatically
+                                    B) Information collected automatically
                                 </h6>
                                 <p className="sub-title">When you access the Website or App, some information may be collected automatically, such as:
                                 </p>
@@ -62,7 +62,7 @@ export default function PrivacyPolicy() {
 
 
                                 <h6 className="text-uppercase">
-                                    1. C) Information from other sources
+                                    C) Information from other sources
                                 </h6>
                                 <p className="sub-title">Where permitted by law, we may receive information from:
 
@@ -83,7 +83,7 @@ export default function PrivacyPolicy() {
 
                                 </p>
                                 <h6 className="text-uppercase">
-                                    1. A) To provide and operate the Services
+                                    A) To provide and operate the Services
                                 </h6>
 
                                 <ul className="list-info sub-title" style={{ gap: 3 }}>
@@ -96,7 +96,7 @@ export default function PrivacyPolicy() {
 
 
                                 <h6 className="text-uppercase">
-                                    1. B) To send service updates and promotional communications
+                                     B) To send service updates and promotional communications
                                 </h6>
 
                                 <ul className="list-info sub-title" style={{ gap: 3 }}>
@@ -105,7 +105,7 @@ export default function PrivacyPolicy() {
                                 </ul>
 
                                 <h6 className="text-uppercase">
-                                    1. C) For analytics, research, and improvements
+                                    C) For analytics, research, and improvements
                                 </h6>
 
                                 <ul className="list-info sub-title" style={{ gap: 3 }}>
@@ -117,7 +117,7 @@ export default function PrivacyPolicy() {
 
 
                                 <h6 className="text-uppercase">
-                                    1. D) To protect Lalchnd and users
+                                    D) To protect Lalchnd and users
                                 </h6>
 
                                 <ul className="list-info sub-title" style={{ gap: 3 }}>
@@ -126,7 +126,7 @@ export default function PrivacyPolicy() {
                                     <li>comply with legal obligations</li>
                                 </ul>
                                 <h6 className="text-uppercase">
-                                    1. E) Public content (if you choose to post it)
+                                    E) Public content (if you choose to post it)
                                 </h6>
                                 <p className="sub-title">If you submit reviews/comments/content and mark it as public, we may display it on our Services and related Lalchnd channels (including marketing), as allowed by you and applicable law.</p>
 
@@ -142,7 +142,7 @@ export default function PrivacyPolicy() {
 
                                 </p>
                                 <h6 className="text-uppercase">
-                                    1. A) Service providers (processors)
+                                    A) Service providers (processors)
                                 </h6>
                                 <p className="sub-title">We may share data with trusted third parties who help us operate our Services, such as:
 
@@ -160,7 +160,7 @@ export default function PrivacyPolicy() {
 
 
                                 <h6 className="text-uppercase">
-                                    1. B) Legal requirements
+                                    B) Legal requirements
                                 </h6>
                                 <p className="sub-title">We may disclose information if required to:
 
@@ -172,7 +172,7 @@ export default function PrivacyPolicy() {
                                 </ul>
 
                                 <h6 className="text-uppercase">
-                                    1. C) Business transfers
+                                    C) Business transfers
                                 </h6>
                                 <p className="sub-title">If Lalchnd is involved in a merger, acquisition, reorganization, or sale of assets, user information may be transferred as part of that transaction, subject to applicable law.</p>
 
