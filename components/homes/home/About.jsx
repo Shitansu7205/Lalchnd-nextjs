@@ -10,7 +10,7 @@ export default function About() {
           <div className="shape-image wow fadeInUp">
             <div className="image" style={{ borderRadius: "0 60px 0 60px" }}>
               <Image
-                src="/images/lalchnd/home/image-1.png"
+                src="/images/lalchnd/home/image-1.webp"
                 alt="Banner"
                 className="lazyload"
                 width={1000}
