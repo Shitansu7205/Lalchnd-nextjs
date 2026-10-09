@@ -78,6 +78,7 @@ export const products3 = [
     id: 9,
     imgSrc: "/images/lalchnd/home/silver.webp",
     title: "Silver Ring",
+    title: "Silver",
     price: 1199,
     oldPrice: 2899,
     textColor: "text-secondary",
