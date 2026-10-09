@@ -23,6 +23,7 @@ import Watch from "@/components/homes/home/Watch";
 import SonePeSuhagaBanner from "@/components/homes/home/SonePeSuhagaBanner";
 import Kids from "@/components/homes/home/Kids";
 import Wedding from "@/components/homes/home/Wedding";
+import TestimonialsTwo from "@/components/homes/home/TestimonialsTwo";
 
 
 export const metadata = {
@@ -59,6 +60,7 @@ export default function Home() {
           <Banner />
           <Features />
           <Testimonials />
+          <TestimonialsTwo />
           <Blogs />
           <InstagramFeed />
           <Footer2 />

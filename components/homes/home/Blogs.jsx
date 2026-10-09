@@ -7,7 +7,7 @@ import Image from "next/image";
 import { Pagination } from "swiper/modules";
 export default function Blogs() {
   return (
-    <section className="section-padding-bottom-40 section-padding-top-40 bg-white">
+    <section className="section-padding-bottom-40 section-padding-top-40 light-bg">
       <div className="container-full-2">
         <div className="sect-top center text-center wow fadeInUp">
           <h2 className="heading-font">
