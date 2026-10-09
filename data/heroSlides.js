@@ -24,7 +24,7 @@ export const sliderData = [
 
 export const secondSliderData = [
   {
-    image: "/images/lalchnd/home/home-banner.jpg",
+    image: "/images/lalchnd/home/home-banner.webp",
     imageWidth: 1924,
     imageHeight: 1872,
   },

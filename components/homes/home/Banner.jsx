@@ -57,7 +57,7 @@ export default function Banner() {
   }, []);
 
   return (
-    <div className="banner_V04">
+    <div className="banner_V04 banner_V04-cta">
       <div className="bn-content">
         <h3 className="mb-3" style={{color: "#fff"}}>
           Enhance your Presence with <span className="highlight-font">

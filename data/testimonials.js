@@ -45,7 +45,7 @@ export const testimonialData = [
   {
   delay: "0s",
   name: "Sanjeev Khatoi",
-  title: "LOVE IT!",
+  // title: "LOVE IT!",
   text: `I finally found the perfect Panchmukhi Hanuman Ji idol for my car dashboard!
 
 My priority was to get something I could keep with me for a very long time, preferably a silver idol. I searched high and low—through countless online and offline stores—looking for something that truly spoke to me. Most of them were just silver-coated, and the ones I found were not looking great, with poor detailing work.
@@ -61,7 +61,7 @@ Having him on my dashboard not only brings positivity and protection but also a 
   {
     delay: "0.1s",
     name: "Aparna Rout",
-    title: "RECOMMEND!",
+    // title: "RECOMMEND!",
     text: `Me and my mother went to lalchnd jeweller's in the morning hr and bought an earing, they have very beautiful collection of jewelleries✨️
 I had a little inconvenient experience earlier, However, after posting my review, the store promptly reached out to me, and assured that they would take necessary action to improve their customer service. I truly appreciate their quick response and willingness to address the issue.
 Hoping for a much better experience in the future.
@@ -72,7 +72,7 @@ Thank you 🌸`,
   {
     delay: "0.2s",
     name: "SANTHOJI RAO M",
-    title: "RECOMMEND!",
+    // title: "RECOMMEND!",
     text: `Good location near to the Bhubaneswar railway station. Lift facility available. Veriety of Silver, Gold and Diamond ornaments available.`,
     image: "/images/avatar/user.webp",
     productName: "Sculpted Pearl Drop Earrings",
@@ -80,7 +80,7 @@ Thank you 🌸`,
   {
     delay: "0.3s",
     name: "David Ngo",
-    title: "LOVE IT!",
+    // title: "LOVE IT!",
     text: "These minimalist hoops add the perfect touch of elegance to any outfit. Designed for everyday wear with a sleek, modern finish",
     image: "/images/avatar/user.webp",
     productName: "Brushed Metal Cuff Bracelet",
@@ -88,7 +88,7 @@ Thank you 🌸`,
   {
     delay: "0s",
     name: "Aarthi Moorthy",
-    title: "LOVE IT!",
+    // title: "LOVE IT!",
     text: `We had the most fun shopping here. They have an extensive collection of everything silver.
 We went here to buy the Odisha famous filigree silver work jewellery. They had such a huge collections of them that it was heaven for shopping lovers like me.
 The staff were very courteous and Knowledgeable they asked us the right questions and showed us the perfect things we could choose from.
@@ -128,3 +128,47 @@ export const testimonialsV05 = [
   },
   // Add more testimonial entries as needed
 ];
+
+
+
+
+export const testimonialsTwo = [
+  {
+    id: 1,
+    name: "SK Mohapatra",
+    review:
+      "This place offers the best jewellery shopping experience, superb showroom and wide range of jewellery and excellent customer service, keep it up",
+   
+  },
+  {
+    id: 2,
+    name: "Priyadarsini Panda",
+    review:
+      "This is best jewellery shop of Odisha.. All products best quality forever and staff behavior and responsibilities is very good.",
+  
+  },
+  {
+    id: 3,
+    name: "Sandip Harichandan",
+    review:
+      "One of the best Jewellery Store in Odisha, with varieties of designs to choose from... I am not sure whether one will find what he/she looks for... but I am sure they will find better than what they are looking for...",
+   
+  },
+
+  {
+    id: 4,
+    name: "Jyotirmaya Mohanty",
+    review:
+      "Being a regular purchaser from Lalchnd, service quality is always good, happy with Archita panda response, involvement and dedication towards my parents thoughts is perfect, thank u Archita.",
+   
+  },
+  {
+    id: 5,
+    name: "Manoj Kumar Sahoo",
+    review:
+      "Top-class customer service, world-class showroom and Jewellers design that you will not find anywhere else in the state.",
+   
+  },
+  
+];
+
