@@ -372,7 +372,7 @@ export const goldJewlleryPages = [
       {
         name: "Chains",
         image: "/images/lalchnd/jewellery-menu/chains.webp",
-        url: "/products?metal=gold&category=chains",
+        url: "/products?metal=gold&category=chain",
       },
       {
         name: "Coins",
@@ -458,7 +458,7 @@ export const silverJewlleryPages = [
       {
         name: "Anklet",
         image: "/images/lalchnd/jewellery-menu/anklet.webp",
-        url: "/products?metal=silver&category=anklets",
+        url: "/products?metal=silver&category=anklet",
       },
       {
         name: "Bracelets",
@@ -488,12 +488,12 @@ export const silverJewlleryPages = [
       {
         name: "Waists Chains",
         image: "/images/lalchnd/jewellery-menu/waists-chains.webp",
-        url: "/products?metal=silver&category=waists-chains",
+        url: "/products?metal=silver&category=waist-chain",
       },
       {
         name: "Chains",
         image: "/images/lalchnd/jewellery-menu/chains.webp",
-        url: "/products?metal=silver&category=chains",
+        url: "/products?metal=silver&category=chain",
       },
     ],
   },

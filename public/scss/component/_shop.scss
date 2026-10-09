@@ -652,8 +652,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .tf-check {
     &.style-2 {
       &:checked {
-        border-color: var(--main);
-        background-color: var(--main);
+        border-color: #06273f !important;
+        background-color: #06273f !important;
 
         &::before {
           opacity: 1;
@@ -803,6 +803,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
+    color: white;
   }
 
   .filter-tag {
@@ -811,8 +812,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     text-transform: capitalize;
     gap: 10px;
     padding: 6px 20px;
-    border-radius: 30px;
-    background-color: var(--bg-18);
+    border-radius: 5px;
+    background-color: var(--primary);
     @include transition3;
     cursor: pointer;
 
@@ -821,7 +822,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     }
 
     &:hover {
-      background-color: var(--main);
+      // background-color: var(--main);
+      background-color: #06273f !important;
       color: var(--white);
     }
   }

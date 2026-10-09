@@ -12,6 +12,7 @@ import LoadingSpinner from "../common/LoadingSpinner";
 import LayoutHandler from "./LayoutHandler";
 import ApiFilterSidebar from "./ApiFilterSidebar";
 import { useContextElement } from "@/context/Context";
+import { PackageOpen } from "lucide-react";
 
 const filterKeys = ["category", "metal", "gender", "occasion", "purity"];
 const mapProduct = (product) => ({
@@ -226,8 +227,36 @@ function ProductListingContent({ defaultLayout = 4 }) {
                             </div>
                         )}
                         {!loading && !error && !sortedProducts.length && (
-                            <div className="wd-full text-center">
-                                No products found.
+                            <div className="wd-full text-center py-5">
+                                <div className="no-products-found">
+
+                                    <div className="mb-4">
+                                        <PackageOpen
+                                            size={54}
+                                            strokeWidth={1.2}
+                                            className="text-main-4"
+                                        />
+                                    </div>
+
+                                    <h4 className="mb-2">
+                                        Nothing Matching Your Selection
+                                    </h4>
+
+                                    <p className="text-main-4 mb-4">
+                                        We couldn't find jewellery matching your current filters.
+                                        <br />
+                                        Try changing your selection to discover more pieces.
+                                    </p>
+
+                                    <button
+                                        type="button"
+                                        className="tf-btn"
+                                        onClick={clearFilters}
+                                    >
+                                        Change Filters
+                                    </button>
+
+                                </div>
                             </div>
                         )}
                         {sortedProducts.map((product) => (
