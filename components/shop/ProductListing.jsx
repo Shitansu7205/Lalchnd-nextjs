@@ -243,17 +243,14 @@ function ProductListingContent({ defaultLayout = 4 }) {
                                     </h4>
 
                                     <p className="text-main-4 mb-4">
-                                        We couldn't find jewellery matching your current filters.
-                                        <br />
-                                        Try changing your selection to discover more pieces.
+                                        Try adjusting your filters to find more jewellery.
                                     </p>
 
                                     <button
                                         type="button"
                                         className="tf-btn"
                                         onClick={clearFilters}
-                                    >
-                                        Change Filters
+                                    > Reset Your Filters
                                     </button>
 
                                 </div>

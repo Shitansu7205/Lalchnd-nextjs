@@ -308,10 +308,10 @@ export const giftingPages = [
   {
     heading: "Gift For",
     links: [
-      { href: "#", label: " Him" },
-      { href: "#", label: " Her" },
-      { href: "#", label: "Kids" },
-
+      { href: "/products?metal=gold&gender=male", label: " Him" },
+      { href: "/products?occasion=wedding&metal=gold&gender=female", label: " Her" },
+      { href: "/products?metal=gold&gender=kids", label: "Kids" },
+      { href: "/products?category=gift-items", label: "All Gifts" },
     ],
   },
   {
@@ -347,7 +347,7 @@ export const goldJewlleryPages = [
       {
         name: "Necklace Set",
         image: "/images/lalchnd/jewellery-menu/all.webp",
-        url: "/products?metal=gold&category=necklaces",
+        url: "/products?metal=gold&category=necklace-set",
       },
       {
         name: "Mangalasutra",
@@ -364,7 +364,7 @@ export const goldJewlleryPages = [
         image: "/images/lalchnd/jewellery-menu/bracelets.webp",
         url: "/products?metal=gold&category=bracelets",
       },
-       {
+      {
         name: "Pendants",
         image: "/images/lalchnd/jewellery-menu/pendants.webp",
         url: "/products?metal=gold&category=pendants",
@@ -468,7 +468,7 @@ export const silverJewlleryPages = [
       {
         name: "Toe Rings",
         image: "/images/lalchnd/jewellery-menu/toe-rings.webp",
-        url: "/products?metal=silver&category=toe-rings",
+        url: "/products?metal=silver&category=toe-ring",
       },
       {
         name: "Earrings",
@@ -558,11 +558,7 @@ export const silverJewlleryPages = [
         image: "/images/lalchnd/jewellery-menu/heavyOccasion.webp",
         url: "/products?metal=silver&occasion=wedding",
       },
-      {
-        name: "Light Occasions",
-        image: "/images/lalchnd/jewellery-menu/lightOccasion.webp",
-        url: "/products?metal=silver&occasion=light-occasion",
-      },
+
     ],
   },
 ];
@@ -589,7 +585,7 @@ export const diamondJewlleryPages = [
       {
         name: "Necklace Set",
         image: "/images/lalchnd/jewellery-menu/all.webp",
-        url: "/products?metal=diamond&category=necklaces",
+        url: "/products?metal=diamond&category=necklace-set",
       },
       {
         name: "Mangalasutra",
@@ -643,16 +639,7 @@ export const diamondJewlleryPages = [
         image: "/images/lalchnd/jewellery-menu/women.webp",
         url: "/products?metal=diamond&gender=female",
       },
-      {
-        name: "Kids",
-        image: "/images/lalchnd/jewellery-menu/kids.webp",
-        url: "/products?metal=diamond&gender=kids",
-      },
-      // {
-      //   name: "Unisex",
-      //   image: "/images/lalchnd/jewellery-menu/unisex.webp",
-      //   url: "/products?metal=diamond&gender=unisex",
-      // },
+     
     ],
   },
 
@@ -669,11 +656,7 @@ export const diamondJewlleryPages = [
         image: "/images/lalchnd/jewellery-menu/heavyOccasion.webp",
         url: "/products?metal=diamond&occasion=wedding",
       },
-      {
-        name: "Light Occasions",
-        image: "/images/lalchnd/jewellery-menu/lightOccasion.webp",
-        url: "/products?metal=diamond&occasion=light-occasion",
-      },
+     
     ],
   },
 ];
