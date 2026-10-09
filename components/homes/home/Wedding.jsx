@@ -115,7 +115,7 @@ export default function Wedding() {
     return (
         <>
         <link rel="stylesheet" href="/css/wedding/wedding.css" />
-        <div className="section-padding-bottom-40 section-padding-top-40 light-bg wedding-section">
+        <div className="wedding-section">
             <div className="container">
                 <div className="banner_countdown-v2" style={{ gap: "80px" }}>
 
