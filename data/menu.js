@@ -311,7 +311,7 @@ export const giftingPages = [
       { href: "/products?metal=gold&gender=male", label: " Him" },
       { href: "/products?occasion=wedding&metal=gold&gender=female", label: " Her" },
       { href: "/products?metal=gold&gender=kids", label: "Kids" },
-      { href: "/products?category=gift-items", label: "All Gifts" },
+      { href: "/products?category=gift-items", label: "Gift Items" },
     ],
   },
   {
