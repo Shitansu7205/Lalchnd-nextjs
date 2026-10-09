@@ -132,7 +132,7 @@ export default function Wedding() {
                         </div>
 
                         <div className="btn-group">
-                            <HomeButton href="/products?occasion=wedding" className="border-cta-btn tf-btn btn-fill animate-btn type-large">
+                            <HomeButton href="/products?occasion=wedding&metal=gold" className="border-cta-btn tf-btn btn-fill animate-btn type-large">
                                 View Bridal Collection
                             </HomeButton>
 
