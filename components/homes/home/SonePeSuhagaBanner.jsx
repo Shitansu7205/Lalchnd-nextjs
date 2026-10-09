@@ -61,7 +61,7 @@ export default function SonePeSuhagaBanner() {
     <>
     <link rel="stylesheet" href="/css/sonepesuhagabanner/sonepesuhagabanner.css" />
     <div className="banner_V04 sonepesuhagabanner">
-      <div className="bn-content" style={{padding: "30px 10px"}}>
+      <div className="bn-content sonepesuhagabanner-bg" style={{padding: "30px 10px"}}>
          <Image
       src="/images/lalchnd/sone-pe-suhag/sone-pe-suhaga-img.webp"
       alt="Sone Pe Suhaga"
@@ -69,7 +69,8 @@ export default function SonePeSuhagaBanner() {
       height={50}
       className="sone-pe-suhaga-title mb-5"
     />
-        <h3 className="mb-4" style={{color: "#fff"}}>Plan Your <span className="highlight-font">Jewellery</span> Purchase With Our <span className="highlight-font">Monthly Scheme</span>  </h3>
+        <h3 className="mb-4" style={{color: "#fff"}}>Plan Your <span className="highlight-font">Jewellery</span> Purchase</h3>
+        <h3 className="mb-4" style={{color: "#fff"}}> With Our <span className="highlight-font">Monthly Scheme</span>  </h3>
 
         <ButtomBorder href="/sone-pe-suhaga" className="type-large">
           For More Information
