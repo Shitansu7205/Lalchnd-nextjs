@@ -224,6 +224,50 @@ export default function MobileNav() {
   </ul>
 </div>
       </li>
+      
+<li className="nav-mb-item">
+  <a
+    href="#dropdown-menu-pay-online"
+    className="collapsed mb-menu-link"
+    data-bs-toggle="collapse"
+    aria-expanded="false"
+    aria-controls="dropdown-menu-pay-online"
+  >
+    <span className="sub-title">Pay Online</span>
+    <span className="btn-open-sub" />
+  </a>
+
+  <div id="dropdown-menu-pay-online" className="collapse">
+    <ul className="sub-nav-menu">
+      {payOnlineMenuLinks.map((link, index) => (
+        <li key={index} className="nav-mb-item">
+          <Link
+            href={link.href}
+            className="sub-nav-link sub-title"
+          >
+            {link.label}
+          </Link>
+
+          {link.children && link.children.length > 0 && (
+            <ul className="sub-nav-menu">
+              {link.children.map((child, childIndex) => (
+                <li key={childIndex} className="nav-mb-item">
+                  <Link
+                    href={child.href}
+                    className="sub-nav-link sub-title"
+                  >
+                    {child.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+  </div>
+</li>
+
     </>
   );
 }

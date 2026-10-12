@@ -221,7 +221,7 @@ export default function ContactUs() {
                         </div>
                     </div>
 
-                    <div className="contact-trust-section">
+                    {/* <div className="contact-trust-section">
                         <div className="contact-trust-mark" aria-hidden="true">
                             <Gem size={30} strokeWidth={1.5} />
                         </div>
@@ -247,7 +247,7 @@ export default function ContactUs() {
                                 <span>Personal service</span>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </section>
         </>

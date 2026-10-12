@@ -21,68 +21,35 @@ export default function WhyByForm() {
                 <ul className="des-list">
                     <li>
                         <h5 className="title h5 fw-normal text-uppercase">
-                            Crafted With Excellence
+                            Assured Jewellery Quality
                         </h5>
 
                         <p className="text text-main-4">
-                            At Lalchnd, every piece of jewellery is thoughtfully crafted
-                            with attention to detail, timeless design, and refined
-                            craftsmanship. From everyday essentials to statement pieces,
-                            our jewellery is created to celebrate your most meaningful
-                            moments.
+                            Hallmarked gold, certified diamonds and finely crafted silver, each made to the highest standard of purity and workmanship. Every piece comes with the quality details you need to buy with complete confidence.
+
                         </p>
                     </li>
 
                     <li>
                         <h5 className="title h5 fw-normal text-uppercase">
-                            Purity & Authenticity
+                            Transparent Pricing
                         </h5>
 
                         <p className="text text-main-4">
-                            We place a strong emphasis on quality and authenticity. Our
-                            gold jewellery is crafted according to the specified purity,
-                            with relevant hallmarking and certification provided where
-                            applicable, giving you greater confidence in every purchase.
+                           Gold value, stone value and making charges are itemised clearly on every bill. You always know exactly what you are paying for, with no hidden costs.
                         </p>
                     </li>
 
                     <li>
                         <h5 className="title h5 fw-normal text-uppercase">
-                            Designed For Every Occasion
+                            Easy, Fair Exchange
                         </h5>
 
                         <p className="text text-main-4">
-                            Discover jewellery designed to complement every occasion.
-                            Whether it is a wedding, festive celebration, special occasion,
-                            or everyday elegance, Lalchnd offers thoughtfully designed
-                            pieces that become part of your personal story.
+                            Your old jewellery is valued clearly and fairly, with every deduction explained and friendly help at every Lalchnd showroom.
                         </p>
                     </li>
 
-                    <li>
-                        <h5 className="title h5 fw-normal text-uppercase">
-                            A Trusted Jewellery Experience
-                        </h5>
-
-                        <p className="text text-main-4">
-                            From selecting the perfect design to receiving your jewellery,
-                            we aim to make every step of your experience simple, transparent,
-                            and dependable. Our team is committed to helping you find
-                            jewellery that you can cherish for years to come.
-                        </p>
-                    </li>
-
-                    <li>
-                        <h5 className="title h5 fw-normal text-uppercase">
-                            Made To Be Cherished
-                        </h5>
-
-                        <p className="text text-main-4">
-                            Jewellery is more than an accessory — it carries memories,
-                            emotions, and milestones. At Lalchnd, we create pieces designed
-                            to be treasured today and passed down for generations.
-                        </p>
-                    </li>
                 </ul>
             </div>
         </div>
