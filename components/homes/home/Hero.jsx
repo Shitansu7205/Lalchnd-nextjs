@@ -5,12 +5,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 
 const fourthSliderData = [
-  // {
-  //   desktopImage: "/images/lalchnd/home/banner-second.webp",
-  //   mobileImage: "/images/lalchnd/home/banner-2-mobile.png",
-  //   imageWidth: 2790,
-  //   imageHeight: 1226,
-  // },
+  {
+    desktopImage: "/images/lalchnd/home/new-banner.webp",
+    mobileImage: "/images/lalchnd/home/new-banner.webp",
+    imageWidth: 2790,
+    imageHeight: 1226,
+  },
   {
     desktopImage: "/images/lalchnd/home/banner-third.webp",
     mobileImage: "/images/lalchnd/home/banner-3-mobile.png",
