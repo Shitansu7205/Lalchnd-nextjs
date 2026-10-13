@@ -209,6 +209,7 @@ export const morePages = [
     heading: "TERMS & POLICIES",
     links: [
       { href: "/#lalchnd-promises", label: "Lalchnd Promises" },
+      { href: "/our-web-app-launch", label: "Our Web App Launch" },
       { href: "/terms-condition", label: "Terms and Conditions" },
       { href: "/privacy-policy", label: "Privacy Policy" },
     ],
@@ -696,7 +697,7 @@ export const moreMenuImages = [
   {
     id: 1,
     imgSrc: "/images/lalchnd/jewellery-menu/header-img-2.webp",
-    hoverImgSrc: "/images/lalchnd/jewellery-menu/header-img-1.webp",
+    // hoverImgSrc: "/images/lalchnd/jewellery-menu/header-img-1.webp",
     title: "Explore Lalchnd",
   },
 ]
