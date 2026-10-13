@@ -26,9 +26,9 @@ export default function Gallery() {
         {/* Header */}
         <div className="bn-content wow fadeInUp mb-5 home-second">
           <div>
-            <h6 className="short-line-heding-dark">Jewellery That Becomes Part of Your Story</h6>
-            <h2 className="heading-font">
-              <span className="highlight-font">Exquisite</span> Jewellery
+            <h6 className="short-line-heding-dark">TRENDING COLLECTION AT LALCHND</h6>
+            <h2 className="heading-font">Step into our <span className="highlight-font">Jewellery World
+</span>
             </h2>
           </div>
 

@@ -2,7 +2,7 @@ export const masterCanteenData = {
   heading: "Master Canteen",
   headingHighlight: "Store",
 
-  subtitle: "Experience seamless services designed around your jewellery journey.",
+  subtitle: "Experience our special services to make your jewellery purchase more convenient.",
 
   cards: [
     {
@@ -74,7 +74,7 @@ export const raghunathpurData = {
   heading: "Raghunathpur",
   headingHighlight: "Store",
 
-  subtitle: "Experience seamless services designed around your jewellery journey.",
+  subtitle: "Experience our special services to make your jewellery purchase more convenient.",
 
   cards: [
     {
@@ -151,7 +151,7 @@ export const cdaData = {
   heading: "CDA",
   headingHighlight: "Store",
 
-  subtitle: "Experience seamless services designed around your jewellery journey.",
+  subtitle: "Experience our special services to make your jewellery purchase more convenient.",
 
   cards: [
     {
@@ -228,7 +228,7 @@ export const cantonmentroadData = {
   heading: "Cantonment Road",
   headingHighlight: "Store",
 
-  subtitle: "Experience seamless services designed around your jewellery journey.",
+  subtitle: "Experience our special services to make your jewellery purchase more convenient.",
 
   cards: [
     {
@@ -305,7 +305,7 @@ export const BrahmapurData = {
   heading: "Brahmapur",
   headingHighlight: "Store",
 
-  subtitle: "Experience seamless services designed around your jewellery journey.",
+  subtitle: "Experience our special services to make your jewellery purchase more convenient.",
 
   cards: [
     {
@@ -382,7 +382,7 @@ export const DelhiData = {
   heading: "New Delhi",
   headingHighlight: "Store",
 
-  subtitle: "Experience seamless services designed around your jewellery journey.",
+  subtitle: "Experience our special services to make your jewellery purchase more convenient.",
 
   cards: [
     {

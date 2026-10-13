@@ -58,22 +58,8 @@ export default function Footer2() {
                   />
                 </Link>
                 <p className="text-main-5 lt-sp-nor sub-title">
-                  <span className="text-white">Discover</span> our exquisite
-                  collections crafted to{" "}
-                  <span className="text-white">
-                    elevate every <br className="d-none d-xl-block" />
-                    occasion
-                  </span>
-                  , from <span className="text-white">
-                    timeless classics
-                  </span>{" "}
-                  to <span className="text-white">contemporary designs</span>.
-                  Explore <br className="d-none d-xl-block" />
-                  and find the <span className="text-white">
-                    perfect jewel
-                  </span>{" "}
-                  to express your <span className="text-white">unique</span>{" "}
-                  style.
+                  <span className="text-white">Pure Quality. Perfect Craftsmanship. <br />Pleased Customers.
+</span>
                 </p>
               </div>
               <ul className="tf-social-icon style-white">

@@ -78,20 +78,20 @@ export const featureItems = [
 export const boxFeatures = [
   {
     image: "/images/lalchnd/icons/exchange.webp",
-    title: "Easy Exchange",
-    text: "Enjoy a seamless, transparent, and hassle-free jewellery exchange experience, with dedicated assistance to make every exchange simple and convenient.",
+    title: "Assured Jewellery Quality",
+    text: "Hallmarked gold, certified diamonds and finely crafted silver, each made to the highest standard of purity and workmanship. Every piece comes with the quality details you need to buy with complete confidence.",
     delay: "",
   },
   {
     image: "/images/lalchnd/icons/certificate.webp",
-    title: "Certified Jewellery",
-    text: "Every piece comes with authenticity and quality certification, ensuring you can shop with complete confidence in the purity, craftsmanship, and value of your jewellery.",
+    title: "Transparent Pricing",
+    text: "Gold value, stone value and making charges are itemised clearly on every bill. You always know exactly what you are paying for, with no hidden costs.",
     delay: "0.1s",
   },
   {
     image: "/images/lalchnd/icons/pricing.webp",
-    title: "Personalized Experiences",
-    text: "Discover custom designs and bespoke jewellery experiences created especially for you, thoughtfully crafted to reflect your unique style, personality, and cherished moments.",
+    title: "Easy, Fair Exchange",
+    text: "Your old jewellery is valued clearly and fairly, with every deduction explained and friendly help at every Lalchnd showroom.",
     delay: "0.2s",
   },
 ];
