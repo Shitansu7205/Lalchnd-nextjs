@@ -76,6 +76,21 @@ export async function GET(request, { params }) {
         // =========================
         let pricing = null;
 
+
+        // =========================
+        // Diamond pricing from WooCommerce
+        // =========================
+        if (metal?.toLowerCase() === "diamond") {
+            const wooPrice = product.prices?.price;
+
+            if (wooPrice != null && wooPrice !== "") {
+                pricing = {
+                    finalPrice: Number(wooPrice) / 100,
+                    source: "woocommerce",
+                };
+            }
+        }
+
         // =========================
         // Gold pricing
         // Supports 22K and 24K

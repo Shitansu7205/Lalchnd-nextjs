@@ -291,6 +291,18 @@ export async function GET(request) {
 
             let pricing = null;
 
+            // Diamond: use the price supplied by WooCommerce
+            if (metal?.toLowerCase() === "diamond") {
+                const wooPrice = Number(product.prices?.price);
+
+                if (product.prices?.price != null && product.prices.price !== "") {
+                    pricing = {
+                        finalPrice: wooPrice / 100,
+                        source: "woocommerce",
+                    };
+                }
+            }
+
             // =========================
             // Gold 22K pricing
             // =========================
