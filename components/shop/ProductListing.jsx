@@ -14,7 +14,7 @@ import ApiFilterSidebar from "./ApiFilterSidebar";
 import { useContextElement } from "@/context/Context";
 import { PackageOpen } from "lucide-react";
 
-const filterKeys = ["category", "metal", "gender", "occasion", "purity"];
+const filterKeys = ["category", "metal", "gender", "occasion", "purity", "price"];
 const mapProduct = (product) => ({
     id: product.id,
     title: product.name || "",

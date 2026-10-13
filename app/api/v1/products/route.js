@@ -15,6 +15,57 @@ function getAttributeValue(product, taxonomy) {
     return attribute?.terms?.[0]?.name || null;
 }
 
+async function fetchProductRange(baseUrl, offset, count) {
+    const result = [];
+    let currentOffset = offset;
+
+    while (result.length < count) {
+        const url = new URL(baseUrl);
+        const page = Math.floor(currentOffset / 100) + 1;
+        const startIndex = currentOffset % 100;
+
+        url.searchParams.set("page", String(page));
+        url.searchParams.set("per_page", "100");
+
+        const response = await fetch(url.toString());
+
+        if (!response.ok) {
+            throw new Error(
+                `WooCommerce API error: ${response.status}`
+            );
+        }
+
+        const batch = await response.json();
+        const chunk = batch.slice(
+            startIndex,
+            startIndex + count - result.length
+        );
+
+        result.push(...chunk);
+        currentOffset += chunk.length;
+
+        if (chunk.length === 0 || batch.length < 100) {
+            break;
+        }
+    }
+
+    return result;
+}
+
+
+function getPriceRange(price) {
+    const ranges = {
+        "under-25k": { min: 0, max: 25000 },
+        "25k-50k": { min: 25000, max: 50000 },
+        "50k-1l": { min: 50000, max: 100000 },
+        "1l-2l": { min: 100000, max: 200000 },
+        "above-2l": { min: 200000, max: 10000000 },
+    };
+
+    return ranges[price] || null;
+}
+
+
 export async function GET(request) {
     try {
         const { searchParams } = new URL(request.url);
@@ -29,7 +80,7 @@ export async function GET(request) {
         const occasion = searchParams.get("occasion");
         const purity = searchParams.get("purity");
         const search = searchParams.get("search");
-
+        const price = searchParams.get("price");
         const page = searchParams.get("page") || "1";
         const perPage = searchParams.get("per_page") || "20";
 
@@ -47,6 +98,9 @@ export async function GET(request) {
 
         wooUrl.searchParams.set("page", page);
         wooUrl.searchParams.set("per_page", perPage);
+
+        // wooUrl.searchParams.set("featured", "true");
+
 
         // =========================
         // Category
@@ -129,15 +183,85 @@ export async function GET(request) {
         // Fetch WooCommerce
         // =========================
 
-        const response = await fetch(wooUrl.toString());
+        const requestedPage = Math.max(1, Number(page));
+        const requestedPerPage = Math.min(
+            100,
+            Math.max(1, Number(perPage))
+        );
 
-        if (!response.ok) {
-            throw new Error(
-                `WooCommerce API error: ${response.status}`
-            );
+        const offset = (requestedPage - 1) * requestedPerPage;
+
+        // Create featured and regular queries using existing filters
+        const featuredUrl = new URL(wooUrl);
+        featuredUrl.searchParams.delete("page");
+        featuredUrl.searchParams.delete("per_page");
+        featuredUrl.searchParams.set("featured", "true");
+
+        const regularUrl = new URL(wooUrl);
+        regularUrl.searchParams.delete("page");
+        regularUrl.searchParams.delete("per_page");
+        regularUrl.searchParams.set("featured", "false");
+
+        async function getProductTotal(url) {
+            url.searchParams.set("page", "1");
+            url.searchParams.set("per_page", "1");
+
+            const res = await fetch(url.toString());
+
+            if (!res.ok) {
+                throw new Error(`WooCommerce API error: ${res.status}`);
+            }
+
+            return Number(res.headers.get("X-WP-Total") || 0);
         }
 
-        const products = await response.json();
+        const [featuredTotal, regularTotal] = await Promise.all([
+            getProductTotal(new URL(featuredUrl)),
+            getProductTotal(new URL(regularUrl)),
+        ]);
+
+        const catalogTotal = featuredTotal + regularTotal;
+        const priceRange = getPriceRange(price);
+        const shouldFilterByPrice = Boolean(priceRange);
+
+
+
+        const featuredCount = shouldFilterByPrice
+            ? featuredTotal
+            : Math.min(
+                requestedPerPage,
+                Math.max(0, featuredTotal - offset)
+            );
+
+        const regularCount = shouldFilterByPrice
+            ? regularTotal
+            : Math.min(
+                requestedPerPage - featuredCount,
+                Math.max(
+                    0,
+                    regularTotal - Math.max(0, offset - featuredTotal)
+                )
+            );
+
+        const [featuredProducts, regularProducts] = await Promise.all([
+            featuredCount > 0
+                ? fetchProductRange(
+                    featuredUrl,
+                    shouldFilterByPrice ? 0 : offset,
+                    featuredCount
+                )
+                : Promise.resolve([]),
+
+            regularCount > 0
+                ? fetchProductRange(
+                    regularUrl,
+                    shouldFilterByPrice ? 0 : Math.max(0, offset - featuredTotal),
+                    regularCount
+                )
+                : Promise.resolve([]),
+        ]);
+
+        const products = [...featuredProducts, ...regularProducts];
 
 
         // ///////
@@ -169,13 +293,13 @@ export async function GET(request) {
         // Pagination information
         // =========================
 
-        const total = Number(
-            response.headers.get("X-WP-Total") || 0
-        );
+        // const total = Number(
+        //     response.headers.get("X-WP-Total") || 0
+        // );
 
-        const totalPages = Number(
-            response.headers.get("X-WP-TotalPages") || 0
-        );
+        // const totalPages = Number(
+        //     response.headers.get("X-WP-TotalPages") || 0
+        // );
 
 
         // =========================
@@ -191,6 +315,18 @@ export async function GET(request) {
             );
 
             let pricing = null;
+
+            // Diamond: use the price supplied by WooCommerce
+            if (metal?.toLowerCase() === "diamond") {
+                const wooPrice = Number(product.prices?.price);
+
+                if (product.prices?.price != null && product.prices.price !== "") {
+                    pricing = {
+                        finalPrice: wooPrice / 100,
+                        source: "woocommerce",
+                    };
+                }
+            }
 
             // =========================
             // Gold 22K pricing
@@ -249,18 +385,53 @@ export async function GET(request) {
         });
 
 
+        let finalProducts = productsWithPricing;
+        let total = catalogTotal;
+
+        if (priceRange) {
+            finalProducts = productsWithPricing.filter((product) => {
+                const finalPrice = Number(product.pricing?.finalPrice);
+
+                if (
+                    product.pricing?.finalPrice == null ||
+                    !Number.isFinite(finalPrice)
+                ) {
+                    return false;
+                }
+
+                return (
+                    finalPrice >= priceRange.min &&
+                    finalPrice < priceRange.max
+                );
+            });
+
+            total = finalProducts.length;
+
+            // Paginate only after applying the price filter.
+            finalProducts = finalProducts.slice(
+                offset,
+                offset + requestedPerPage
+            );
+        }
+
+        const totalPages = Math.ceil(total / requestedPerPage);
+
+
+
         // =========================
         // API response
         // =========================
 
         return NextResponse.json({
-            products: productsWithPricing,
+            products: finalProducts,
+
             pagination: {
-                page: Number(page),
-                per_page: Number(perPage),
+                page: requestedPage,
+                per_page: requestedPerPage,
                 total,
                 total_pages: totalPages,
             },
+
         });
     } catch (error) {
         console.error("Products API error:", error);

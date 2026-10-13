@@ -235,23 +235,28 @@ export const allJewlleryPages = [
     heading: "By Price",
     links: [
       {
-        href: "#",
+        href: "/products?price=under-25k",
         label: "Under ₹25K",
         icon: "under25k",
       },
       {
-        href: "#",
-        label: "₹25K - 50K",
+        href: "/products?price=25k-50k",
+        label: "₹25K - ₹50K",
         icon: "range25k50k",
       },
       {
-        href: "#",
+        href: "/products?price=50k-1l",
         label: "₹50K - 1L",
         icon: "range50k1l",
       },
       {
-        href: "#",
+        href: "/products?price=1l-2l",
         label: "₹1L - 2L",
+        icon: "range1l2l",
+      },
+      {
+        href: "/products?price=above-2l",
+        label: "Above ₹2L",
         icon: "range1l2l",
       },
     ],
@@ -317,10 +322,10 @@ export const giftingPages = [
   {
     heading: "By Price",
     links: [
-      { href: "#", label: "Under ₹10K" },
-      { href: "#", label: "₹10K - 25K" },
-      { href: "#", label: "₹25K - 50K" },
-      { href: "#", label: "Above 50K" },
+      { href: "/products?price=under-25k", label: "Under ₹25K" },
+      { href: "/products?price=25k-50k", label: "₹25K - 50K" },
+      { href: "/products?price=50k-1l", label: "₹50K - 1L" },
+      { href: "/products?price=above-2l", label: "Above ₹2L" },
     ],
   },
 ]
@@ -404,6 +409,11 @@ export const goldJewlleryPages = [
         name: "₹1L - 2L",
         image: "/images/lalchnd/jewellery-menu/range1l2l.webp",
         url: "/products?metal=gold&price=1l-2l",
+      },
+      {
+        name: "Above ₹2L",
+        image: "/images/lalchnd/jewellery-menu/range1l2l.webp",
+        url: "/products?metal=gold&price=above-2l",
       },
     ],
   },
@@ -502,24 +512,29 @@ export const silverJewlleryPages = [
     heading: "By Price",
     links: [
       {
-        name: "Under ₹5K",
+        name: "Under ₹25K",
         image: "/images/lalchnd/jewellery-menu/under25k.webp",
-        url: "/products?metal=silver&price=under-5k",
+        url: "/products?metal=silver&price=under-25k",
       },
       {
-        name: "₹5K - 10K",
+        name: "₹25K - 50K",
         image: "/images/lalchnd/jewellery-menu/range25k50k.webp",
-        url: "/products?metal=silver&price=5k-10k",
+        url: "/products?metal=silver&price=25k-50k",
       },
       {
-        name: "₹10K - 25K",
+        name: "₹50K - 1L",
         image: "/images/lalchnd/jewellery-menu/range50k1l.webp",
-        url: "/products?metal=silver&price=10k-25k",
+        url: "/products?metal=silver&price=50k-1l",
       },
       {
-        name: "₹25K+",
+        name: "₹1L - 2L",
         image: "/images/lalchnd/jewellery-menu/range1l2l.webp",
-        url: "/products?metal=silver&price=25k-plus",
+        url: "/products?metal=silver&price=1l-2l",
+      },
+      {
+        name: "Above ₹2L",
+        image: "/images/lalchnd/jewellery-menu/range1l2l.webp",
+        url: "/products?metal=silver&price=above-2l",
       },
     ],
   },
@@ -623,6 +638,11 @@ export const diamondJewlleryPages = [
         image: "/images/lalchnd/jewellery-menu/range1l2l.webp",
         url: "/products?metal=diamond&price=1l-2l",
       },
+      {
+        name: "Above ₹2L",
+        image: "/images/lalchnd/jewellery-menu/range1l2l.webp",
+        url: "/products?metal=diamond&price=above-2l",
+      },
     ],
   },
 
@@ -639,7 +659,7 @@ export const diamondJewlleryPages = [
         image: "/images/lalchnd/jewellery-menu/women.webp",
         url: "/products?metal=diamond&gender=female",
       },
-     
+
     ],
   },
 
@@ -656,7 +676,7 @@ export const diamondJewlleryPages = [
         image: "/images/lalchnd/jewellery-menu/heavyOccasion.webp",
         url: "/products?metal=diamond&occasion=wedding",
       },
-     
+
     ],
   },
 ];
