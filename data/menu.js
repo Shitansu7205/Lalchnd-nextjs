@@ -696,8 +696,8 @@ export const payOnlineMenuLinks = [
 export const moreMenuImages = [
   {
     id: 1,
-    imgSrc: "/images/lalchnd/jewellery-menu/header-img-2.webp",
-    // hoverImgSrc: "/images/lalchnd/jewellery-menu/header-img-1.webp",
+    imgSrc: "/images/lalchnd/jewellery-menu/header-img-1.webp",
+    hoverImgSrc: "/images/lalchnd/jewellery-menu/header-img-2.webp",
     title: "Explore Lalchnd",
   },
 ]
