@@ -7,7 +7,7 @@ import Image from "next/image";
 const fourthSliderData = [
   {
     desktopImage: "/images/lalchnd/home/new-banner.webp",
-    mobileImage: "/images/lalchnd/home/new-banner.webp",
+    mobileImage: "/images/lalchnd/home/new-banner-mobile.webp",
     imageWidth: 2790,
     imageHeight: 1226,
   },
