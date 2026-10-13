@@ -53,6 +53,19 @@ async function fetchProductRange(baseUrl, offset, count) {
 }
 
 
+function getPriceRange(price) {
+    const ranges = {
+        "under-25k": { min: 0, max: 25000 },
+        "25k-50k": { min: 25000, max: 50000 },
+        "50k-1l": { min: 50000, max: 100000 },
+        "1l-2l": { min: 100000, max: 200000 },
+        "above-2l": { min: 200000, max: 10000000 },
+    };
+
+    return ranges[price] || null;
+}
+
+
 export async function GET(request) {
     try {
         const { searchParams } = new URL(request.url);
@@ -67,7 +80,7 @@ export async function GET(request) {
         const occasion = searchParams.get("occasion");
         const purity = searchParams.get("purity");
         const search = searchParams.get("search");
-
+        const price = searchParams.get("price");
         const page = searchParams.get("page") || "1";
         const perPage = searchParams.get("per_page") || "20";
 
@@ -207,37 +220,49 @@ export async function GET(request) {
             getProductTotal(new URL(regularUrl)),
         ]);
 
-        const total = featuredTotal + regularTotal;
-        const totalPages = Math.ceil(total / requestedPerPage);
+        const catalogTotal = featuredTotal + regularTotal;
+        const priceRange = getPriceRange(price);
+        const shouldFilterByPrice = Boolean(priceRange);
 
-        const featuredCount = Math.min(
-            requestedPerPage,
-            Math.max(0, featuredTotal - offset)
-        );
 
-        const regularCount = Math.min(
-            requestedPerPage - featuredCount,
-            Math.max(
-                0,
-                regularTotal - Math.max(0, offset - featuredTotal)
-            )
-        );
+
+        const featuredCount = shouldFilterByPrice
+            ? featuredTotal
+            : Math.min(
+                requestedPerPage,
+                Math.max(0, featuredTotal - offset)
+            );
+
+        const regularCount = shouldFilterByPrice
+            ? regularTotal
+            : Math.min(
+                requestedPerPage - featuredCount,
+                Math.max(
+                    0,
+                    regularTotal - Math.max(0, offset - featuredTotal)
+                )
+            );
 
         const [featuredProducts, regularProducts] = await Promise.all([
             featuredCount > 0
-                ? fetchProductRange(featuredUrl, offset, featuredCount)
+                ? fetchProductRange(
+                    featuredUrl,
+                    shouldFilterByPrice ? 0 : offset,
+                    featuredCount
+                )
                 : Promise.resolve([]),
 
             regularCount > 0
                 ? fetchProductRange(
                     regularUrl,
-                    Math.max(0, offset - featuredTotal),
+                    shouldFilterByPrice ? 0 : Math.max(0, offset - featuredTotal),
                     regularCount
                 )
                 : Promise.resolve([]),
         ]);
 
         const products = [...featuredProducts, ...regularProducts];
+
 
         // ///////
         // const metalRatesResponse = await fetch(
@@ -360,12 +385,45 @@ export async function GET(request) {
         });
 
 
+        let finalProducts = productsWithPricing;
+        let total = catalogTotal;
+
+        if (priceRange) {
+            finalProducts = productsWithPricing.filter((product) => {
+                const finalPrice = Number(product.pricing?.finalPrice);
+
+                if (
+                    product.pricing?.finalPrice == null ||
+                    !Number.isFinite(finalPrice)
+                ) {
+                    return false;
+                }
+
+                return (
+                    finalPrice >= priceRange.min &&
+                    finalPrice < priceRange.max
+                );
+            });
+
+            total = finalProducts.length;
+
+            // Paginate only after applying the price filter.
+            finalProducts = finalProducts.slice(
+                offset,
+                offset + requestedPerPage
+            );
+        }
+
+        const totalPages = Math.ceil(total / requestedPerPage);
+
+
+
         // =========================
         // API response
         // =========================
 
         return NextResponse.json({
-            products: productsWithPricing,
+            products: finalProducts,
 
             pagination: {
                 page: requestedPage,
