@@ -210,6 +210,7 @@ export const morePages = [
     links: [
       { href: "/#lalchnd-promises", label: "Lalchnd Promises" },
       { href: "/our-web-app-launch", label: "Our Web App Launch" },
+      { href: "/our-franchise", label: "Our Franchise" },
       { href: "/terms-condition", label: "Terms and Conditions" },
       { href: "/privacy-policy", label: "Privacy Policy" },
     ],
