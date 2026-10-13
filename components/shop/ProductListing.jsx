@@ -12,8 +12,9 @@ import LoadingSpinner from "../common/LoadingSpinner";
 import LayoutHandler from "./LayoutHandler";
 import ApiFilterSidebar from "./ApiFilterSidebar";
 import { useContextElement } from "@/context/Context";
+import { PackageOpen } from "lucide-react";
 
-const filterKeys = ["category", "metal", "gender", "occasion", "purity"];
+const filterKeys = ["category", "metal", "gender", "occasion", "purity", "price"];
 const mapProduct = (product) => ({
     id: product.id,
     title: product.name || "",
@@ -43,18 +44,48 @@ function ProductListingContent({ defaultLayout = 4 }) {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
+    const [pagination, setPagination] = useState({
+        page: 1,
+        per_page: 20,
+        total: 0,
+        total_pages: 1,
+    });
     const [sort, setSort] = useState("Sort by (Default)");
     const router = useRouter();
     const searchParams = useSearchParams();
     const { fetchProducts } = useContextElement();
-    const filters = Object.fromEntries(filterKeys.map((key) => [key, searchParams.get(key) || ""]));
+    const filters = Object.fromEntries(
+        filterKeys.map((key) => [
+            key,
+            searchParams.get(key) || "",
+        ])
+    );
+
+    const currentPage = Number(
+        searchParams.get("page") || 1
+    );
 
     useEffect(() => {
         let cancelled = false;
         setLoading(true);
         setError(false);
-        fetchProducts(filters).then((result) => {
-            if (!cancelled) setProducts((result.products || []).map(mapProduct));
+        fetchProducts({
+            ...filters,
+            page: currentPage,
+            per_page: 20,
+        }).then((result) => {
+            if (!cancelled) {
+                setProducts((result.products || []).map(mapProduct));
+
+                setPagination(
+                    result.pagination || {
+                        page: 1,
+                        per_page: 20,
+                        total: 0,
+                        total_pages: 1,
+                    }
+                );
+            }
         }).catch(() => {
             if (!cancelled) {
                 setProducts([]);
@@ -68,8 +99,19 @@ function ProductListingContent({ defaultLayout = 4 }) {
 
     const updateFilter = (key, value) => {
         const params = new URLSearchParams(searchParams.toString());
-        value ? params.set(key, value) : params.delete(key);
-        router.push(params.toString() ? `?${params.toString()}` : "?");
+
+        value
+            ? params.set(key, value)
+            : params.delete(key);
+
+        // Reset pagination when filters change
+        params.delete("page");
+
+        router.push(
+            params.toString()
+                ? `?${params.toString()}`
+                : "?"
+        );
     };
     const clearFilters = () => router.push("?");
 
@@ -80,7 +122,7 @@ function ProductListingContent({ defaultLayout = 4 }) {
     //     if (sort === "Title Descending") return b.title.localeCompare(a.title);
     //     return 0;
     // });
-    
+
     const sortedProducts = [...products].sort((a, b) => {
         // Products with images first
         const aHasImage = !!a.imgSrc;
@@ -185,8 +227,33 @@ function ProductListingContent({ defaultLayout = 4 }) {
                             </div>
                         )}
                         {!loading && !error && !sortedProducts.length && (
-                            <div className="wd-full text-center">
-                                No products found.
+                            <div className="wd-full text-center py-5">
+                                <div className="no-products-found">
+
+                                    <div className="mb-4">
+                                        <PackageOpen
+                                            size={54}
+                                            strokeWidth={1.2}
+                                            className="text-main-4"
+                                        />
+                                    </div>
+
+                                    <h4 className="mb-2">
+                                        Nothing Matching Your Selection
+                                    </h4>
+
+                                    <p className="text-main-4 mb-4">
+                                        Try adjusting your filters to find more jewellery.
+                                    </p>
+
+                                    <button
+                                        type="button"
+                                        className="tf-btn"
+                                        onClick={clearFilters}
+                                    > Reset Your Filters
+                                    </button>
+
+                                </div>
                             </div>
                         )}
                         {sortedProducts.map((product) => (
@@ -214,22 +281,7 @@ function ProductListingContent({ defaultLayout = 4 }) {
                                             height={900}
                                         />
                                     </Link>
-                                    {/* {!product.outOfStock && (
-                                        <ul className="list-product-btn">
-                                            <li className="wishlist">
-                                                <AddtoWishlist product={product} />
-                                            </li>
-                                            <li>
-                                                <AddtoCart product={product} />
-                                            </li>
-                                            <li>
-                                                <QuickView product={product} />
-                                            </li>
-                                            <li className="compare">
-                                                <AddtoCompare product={product} />
-                                            </li>
-                                        </ul>
-                                    )} */}
+
                                 </div>
                                 <div className="card_product-info">
                                     <Link
@@ -239,22 +291,32 @@ function ProductListingContent({ defaultLayout = 4 }) {
                                         {product.title}
                                     </Link>
                                     <div className="price-wrap">
-                                        <span className="price-tag-listing">
-                                            <strong>
-                                                ₹
-                                                {product.price.toLocaleString("en-IN", {
-                                                    minimumFractionDigits: 2,
-                                                    maximumFractionDigits: 2,
-                                                })}
-                                            </strong>{" "}
-                                            <span>(Approx)</span>
-                                        </span>
+                                        {product.pricing ? (
+                                            <span className="price-tag-listing">
+                                                <strong>
+                                                    ₹
+                                                    {product.price.toLocaleString("en-IN", {
+                                                        minimumFractionDigits: 2,
+                                                        maximumFractionDigits: 2,
+                                                    })}
+
+                                                </strong>{" "}
+                                                <span>(Approx)</span>
+                                            </span>
+                                        ) : (
+                                            <span className="price-tag-listing">
+                                                <span>₹ Price unavailable</span>
+                                            </span>
+                                        )}
                                     </div>
                                 </div>
                             </div>
                         ))}
                         <div className="wd-full tempo">
-                            <Pagination />
+                            <Pagination
+                                currentPage={pagination.page}
+                                totalPages={pagination.total_pages}
+                            />
                         </div>
                     </div>
                 </div>

@@ -235,23 +235,28 @@ export const allJewlleryPages = [
     heading: "By Price",
     links: [
       {
-        href: "#",
+        href: "/products?price=under-25k",
         label: "Under ₹25K",
         icon: "under25k",
       },
       {
-        href: "#",
-        label: "₹25K - 50K",
+        href: "/products?price=25k-50k",
+        label: "₹25K - ₹50K",
         icon: "range25k50k",
       },
       {
-        href: "#",
+        href: "/products?price=50k-1l",
         label: "₹50K - 1L",
         icon: "range50k1l",
       },
       {
-        href: "#",
+        href: "/products?price=1l-2l",
         label: "₹1L - 2L",
+        icon: "range1l2l",
+      },
+      {
+        href: "/products?price=above-2l",
+        label: "Above ₹2L",
         icon: "range1l2l",
       },
     ],
@@ -308,19 +313,19 @@ export const giftingPages = [
   {
     heading: "Gift For",
     links: [
-      { href: "#", label: " Him" },
-      { href: "#", label: " Her" },
-      { href: "#", label: "Kids" },
-
+      { href: "/products?metal=gold&gender=male", label: " Him" },
+      { href: "/products?occasion=wedding&metal=gold&gender=female", label: " Her" },
+      { href: "/products?metal=gold&gender=kids", label: "Kids" },
+      { href: "/products?category=gift-items", label: "Gift Items" },
     ],
   },
   {
     heading: "By Price",
     links: [
-      { href: "#", label: "Under ₹10K" },
-      { href: "#", label: "₹10K - 25K" },
-      { href: "#", label: "₹25K - 50K" },
-      { href: "#", label: "Above 50K" },
+      { href: "/products?price=under-25k", label: "Under ₹25K" },
+      { href: "/products?price=25k-50k", label: "₹25K - 50K" },
+      { href: "/products?price=50k-1l", label: "₹50K - 1L" },
+      { href: "/products?price=above-2l", label: "Above ₹2L" },
     ],
   },
 ]
@@ -347,7 +352,7 @@ export const goldJewlleryPages = [
       {
         name: "Necklace Set",
         image: "/images/lalchnd/jewellery-menu/all.webp",
-        url: "/products?metal=gold&category=necklaces",
+        url: "/products?metal=gold&category=necklace-set",
       },
       {
         name: "Mangalasutra",
@@ -364,7 +369,7 @@ export const goldJewlleryPages = [
         image: "/images/lalchnd/jewellery-menu/bracelets.webp",
         url: "/products?metal=gold&category=bracelets",
       },
-       {
+      {
         name: "Pendants",
         image: "/images/lalchnd/jewellery-menu/pendants.webp",
         url: "/products?metal=gold&category=pendants",
@@ -372,7 +377,7 @@ export const goldJewlleryPages = [
       {
         name: "Chains",
         image: "/images/lalchnd/jewellery-menu/chains.webp",
-        url: "/products?metal=gold&category=chains",
+        url: "/products?metal=gold&category=chain",
       },
       {
         name: "Coins",
@@ -404,6 +409,11 @@ export const goldJewlleryPages = [
         name: "₹1L - 2L",
         image: "/images/lalchnd/jewellery-menu/range1l2l.webp",
         url: "/products?metal=gold&price=1l-2l",
+      },
+      {
+        name: "Above ₹2L",
+        image: "/images/lalchnd/jewellery-menu/range1l2l.webp",
+        url: "/products?metal=gold&price=above-2l",
       },
     ],
   },
@@ -458,7 +468,7 @@ export const silverJewlleryPages = [
       {
         name: "Anklet",
         image: "/images/lalchnd/jewellery-menu/anklet.webp",
-        url: "/products?metal=silver&category=anklets",
+        url: "/products?metal=silver&category=anklet",
       },
       {
         name: "Bracelets",
@@ -468,7 +478,7 @@ export const silverJewlleryPages = [
       {
         name: "Toe Rings",
         image: "/images/lalchnd/jewellery-menu/toe-rings.webp",
-        url: "/products?metal=silver&category=toe-rings",
+        url: "/products?metal=silver&category=toe-ring",
       },
       {
         name: "Earrings",
@@ -488,12 +498,12 @@ export const silverJewlleryPages = [
       {
         name: "Waists Chains",
         image: "/images/lalchnd/jewellery-menu/waists-chains.webp",
-        url: "/products?metal=silver&category=waists-chains",
+        url: "/products?metal=silver&category=waist-chain",
       },
       {
         name: "Chains",
         image: "/images/lalchnd/jewellery-menu/chains.webp",
-        url: "/products?metal=silver&category=chains",
+        url: "/products?metal=silver&category=chain",
       },
     ],
   },
@@ -502,24 +512,29 @@ export const silverJewlleryPages = [
     heading: "By Price",
     links: [
       {
-        name: "Under ₹5K",
+        name: "Under ₹25K",
         image: "/images/lalchnd/jewellery-menu/under25k.webp",
-        url: "/products?metal=silver&price=under-5k",
+        url: "/products?metal=silver&price=under-25k",
       },
       {
-        name: "₹5K - 10K",
+        name: "₹25K - 50K",
         image: "/images/lalchnd/jewellery-menu/range25k50k.webp",
-        url: "/products?metal=silver&price=5k-10k",
+        url: "/products?metal=silver&price=25k-50k",
       },
       {
-        name: "₹10K - 25K",
+        name: "₹50K - 1L",
         image: "/images/lalchnd/jewellery-menu/range50k1l.webp",
-        url: "/products?metal=silver&price=10k-25k",
+        url: "/products?metal=silver&price=50k-1l",
       },
       {
-        name: "₹25K+",
+        name: "₹1L - 2L",
         image: "/images/lalchnd/jewellery-menu/range1l2l.webp",
-        url: "/products?metal=silver&price=25k-plus",
+        url: "/products?metal=silver&price=1l-2l",
+      },
+      {
+        name: "Above ₹2L",
+        image: "/images/lalchnd/jewellery-menu/range1l2l.webp",
+        url: "/products?metal=silver&price=above-2l",
       },
     ],
   },
@@ -558,11 +573,7 @@ export const silverJewlleryPages = [
         image: "/images/lalchnd/jewellery-menu/heavyOccasion.webp",
         url: "/products?metal=silver&occasion=wedding",
       },
-      {
-        name: "Light Occasions",
-        image: "/images/lalchnd/jewellery-menu/lightOccasion.webp",
-        url: "/products?metal=silver&occasion=light-occasion",
-      },
+
     ],
   },
 ];
@@ -589,7 +600,7 @@ export const diamondJewlleryPages = [
       {
         name: "Necklace Set",
         image: "/images/lalchnd/jewellery-menu/all.webp",
-        url: "/products?metal=diamond&category=necklaces",
+        url: "/products?metal=diamond&category=necklace-set",
       },
       {
         name: "Mangalasutra",
@@ -627,6 +638,11 @@ export const diamondJewlleryPages = [
         image: "/images/lalchnd/jewellery-menu/range1l2l.webp",
         url: "/products?metal=diamond&price=1l-2l",
       },
+      {
+        name: "Above ₹2L",
+        image: "/images/lalchnd/jewellery-menu/range1l2l.webp",
+        url: "/products?metal=diamond&price=above-2l",
+      },
     ],
   },
 
@@ -643,16 +659,7 @@ export const diamondJewlleryPages = [
         image: "/images/lalchnd/jewellery-menu/women.webp",
         url: "/products?metal=diamond&gender=female",
       },
-      {
-        name: "Kids",
-        image: "/images/lalchnd/jewellery-menu/kids.webp",
-        url: "/products?metal=diamond&gender=kids",
-      },
-      // {
-      //   name: "Unisex",
-      //   image: "/images/lalchnd/jewellery-menu/unisex.webp",
-      //   url: "/products?metal=diamond&gender=unisex",
-      // },
+
     ],
   },
 
@@ -669,11 +676,7 @@ export const diamondJewlleryPages = [
         image: "/images/lalchnd/jewellery-menu/heavyOccasion.webp",
         url: "/products?metal=diamond&occasion=wedding",
       },
-      {
-        name: "Light Occasions",
-        image: "/images/lalchnd/jewellery-menu/lightOccasion.webp",
-        url: "/products?metal=diamond&occasion=light-occasion",
-      },
+
     ],
   },
 ];

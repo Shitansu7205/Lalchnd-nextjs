@@ -56,20 +56,7 @@ export default function Search() {
     };
   }, [search]);
 
-  const formatPrice = (product) => {
-    const price = product.prices;
 
-    if (!price?.price) return "";
-
-    const amount =
-      Number(price.price) /
-      Math.pow(10, Number(price.currency_minor_unit ?? 2));
-
-    return new Intl.NumberFormat("en-IN", {
-      style: "currency",
-      currency: price.currency_code || "INR",
-    }).format(amount);
-  };
 
   return (
     <div
@@ -206,12 +193,6 @@ export default function Search() {
                               >
                                 {product.name}
                               </Link>
-
-                              <div className="price-wrap">
-                                <span className="price-new">
-                                  {formatPrice(product)}
-                                </span>
-                              </div>
                             </div>
                           </div>
                         </li>

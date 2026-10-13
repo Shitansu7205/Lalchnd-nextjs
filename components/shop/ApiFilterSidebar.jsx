@@ -2,17 +2,98 @@
 
 import React from "react";
 
-const filterGroups = [
-  { key: "category", label: "Category", values: ["bangles", "rings", "earrings", "necklaces", "necklace-set", "mangalsutra", "bracelets", "pendants", "chains", "coins", "gift-items"] },
-  { key: "metal", label: "Metal", values: ["gold", "silver", "diamond"] },
-  { key: "gender", label: "Gender", values: ["female", "male", "unisex"] },
-  { key: "occasion", label: "Occasion", values: ["daily-wear", "light-occasion", "wedding"] },
-  { key: "purity", label: "Purity", values: ["22k", "24k"] },
-];
+// const filterGroups = [
+//   { key: "category", label: "Category", values: ["bangles", "rings", "earrings", "necklaces", "necklace-set", "mangalsutra", "bracelets", "pendants", "chain", "coins", "gift-items"] },
+//   { key: "metal", label: "Metal", values: ["gold", "silver", "diamond"] },
+//   { key: "gender", label: "Gender", values: ["female", "male", "unisex"] },
+//   { key: "occasion", label: "Occasion", values: ["daily-wear", "light-occasion", "wedding"] },
+//   { key: "purity", label: "Purity", values: ["22k", "24k"] },
+// ];
 
+
+
+const getFilterGroups = (filters) => {
+  const groups = [
+    {
+      key: "category",
+      label: "Category",
+      values: filters.gender === "male"
+        ? [
+          "bracelets",
+          "chain",
+          "coins",
+          "gift-items",
+          "pendants",
+          "rings",
+        ]
+        : filters.gender === "female"
+          ? [
+            "anklet",
+            "bangles",
+            "bracelets",
+            "chain",
+            "coins",
+            "earrings",
+            "gift-items",
+            "mangalsutra",
+            "necklace-set",
+            "necklaces",
+            "pendants",
+            "rings",
+            "toe-ring",
+            "waist-chain",
+          ]
+          : [
+            "anklet",
+            "bangles",
+            "bracelets",
+            "chain",
+            "coins",
+            "earrings",
+            "gift-items",
+            "mangalsutra",
+            "necklace-set",
+            "necklaces",
+            "pendants",
+            "rings",
+            "toe-ring",
+            "waist-chain",
+          ],
+    },
+    {
+      key: "metal",
+      label: "Metal",
+      values: ["gold", "silver", "diamond"],
+    },
+    {
+      key: "gender",
+      label: "Gender",
+      values: ["female", "male", "unisex"],
+    },
+    {
+      key: "occasion",
+      label: "Occasion",
+      values: ["daily-wear", "light-occasion", "wedding"],
+    },
+    {
+      key: "purity",
+      label: "Purity",
+      values: ["22k", "24k"],
+    },
+  ];
+
+  // If gender is already selected,
+  // don't show the Gender filter again.
+  if (filters.gender) {
+    return groups.filter((group) => group.key !== "gender");
+  }
+
+  return groups;
+};
 const displayValue = (value) => value.split("-").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
 
 export default function ApiFilterSidebar({ filters, updateFilter, clearFilters }) {
+  const filterGroups = getFilterGroups(filters);
   return (
     <div className="offcanvas offcanvas-start canvas-sidebar canvas-filter" id="filterShop">
       <div className="canvas-wrapper">

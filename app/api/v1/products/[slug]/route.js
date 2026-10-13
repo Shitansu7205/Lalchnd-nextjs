@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
-import { calculateGoldPrice } from "@/lib/pricing";
+import {
+    calculateGoldPrice,
+    calculateSilverPrice,
+} from "@/lib/pricing";
 import { getMetalRates } from "@/lib/metal-rates";
 
 function getAttributeValue(product, taxonomy) {
@@ -73,21 +76,69 @@ export async function GET(request, { params }) {
         // =========================
         let pricing = null;
 
+
         // =========================
-        // Gold 22K pricing
+        // Diamond pricing from WooCommerce
+        // =========================
+        if (metal?.toLowerCase() === "diamond") {
+            const wooPrice = product.prices?.price;
+
+            if (wooPrice != null && wooPrice !== "") {
+                pricing = {
+                    finalPrice: Number(wooPrice) / 100,
+                    source: "woocommerce",
+                };
+            }
+        }
+
+        // =========================
+        // Gold pricing
+        // Supports 22K and 24K
         // =========================
         if (
             metal?.toLowerCase() === "gold" &&
-            purity?.toLowerCase() === "22k" &&
+            purity &&
+            netWeight
+        ) {
+            const normalizedPurity = purity
+                .toLowerCase()
+                .replace(/\s/g, "");
+
+            let goldRate = null;
+
+            if (normalizedPurity === "22k") {
+                goldRate = metalRates?.gold?.["22k"];
+            }
+
+            if (normalizedPurity === "24k") {
+                goldRate = metalRates?.gold?.["24k"];
+            }
+
+            if (goldRate) {
+                const weight = parseFloat(netWeight);
+
+                pricing = calculateGoldPrice({
+                    netWeight: weight,
+                    goldRate,
+                    purity: normalizedPurity,
+                });
+            }
+        }
+
+        // =========================
+        // Silver pricing
+        // =========================
+        if (
+            metal?.toLowerCase() === "silver" &&
             netWeight
         ) {
             const weight = parseFloat(netWeight);
 
-            const goldRate = metalRates?.gold?.["22k"];
+            const silverRate = metalRates?.silver?.rate;
 
-            pricing = calculateGoldPrice({
+            pricing = calculateSilverPrice({
                 netWeight: weight,
-                goldRate,
+                silverRate,
             });
         }
 

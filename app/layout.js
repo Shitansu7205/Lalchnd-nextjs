@@ -26,11 +26,20 @@ import OrderDetails from "@/components/modals/OrderDetails";
 import FloatingActions from "@/components/common/FloatingActions";
 import ProductFoms from "@/components/common/ProductFoms";
 import WhyByForm from "@/components/common/WhyByForm";
+import { Toaster } from "react-hot-toast";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <Toaster
+          position="top-right"
+          toastOptions={{
+            style: {
+              padding: "5px 10px",
+            },
+          }}
+        />
         <LayoutWrapper>
           <Context>
             <div id="wrapper">{children}</div>
