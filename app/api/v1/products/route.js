@@ -15,6 +15,44 @@ function getAttributeValue(product, taxonomy) {
     return attribute?.terms?.[0]?.name || null;
 }
 
+async function fetchProductRange(baseUrl, offset, count) {
+    const result = [];
+    let currentOffset = offset;
+
+    while (result.length < count) {
+        const url = new URL(baseUrl);
+        const page = Math.floor(currentOffset / 100) + 1;
+        const startIndex = currentOffset % 100;
+
+        url.searchParams.set("page", String(page));
+        url.searchParams.set("per_page", "100");
+
+        const response = await fetch(url.toString());
+
+        if (!response.ok) {
+            throw new Error(
+                `WooCommerce API error: ${response.status}`
+            );
+        }
+
+        const batch = await response.json();
+        const chunk = batch.slice(
+            startIndex,
+            startIndex + count - result.length
+        );
+
+        result.push(...chunk);
+        currentOffset += chunk.length;
+
+        if (chunk.length === 0 || batch.length < 100) {
+            break;
+        }
+    }
+
+    return result;
+}
+
+
 export async function GET(request) {
     try {
         const { searchParams } = new URL(request.url);
@@ -47,6 +85,9 @@ export async function GET(request) {
 
         wooUrl.searchParams.set("page", page);
         wooUrl.searchParams.set("per_page", perPage);
+
+        // wooUrl.searchParams.set("featured", "true");
+
 
         // =========================
         // Category
@@ -129,16 +170,74 @@ export async function GET(request) {
         // Fetch WooCommerce
         // =========================
 
-        const response = await fetch(wooUrl.toString());
+        const requestedPage = Math.max(1, Number(page));
+        const requestedPerPage = Math.min(
+            100,
+            Math.max(1, Number(perPage))
+        );
 
-        if (!response.ok) {
-            throw new Error(
-                `WooCommerce API error: ${response.status}`
-            );
+        const offset = (requestedPage - 1) * requestedPerPage;
+
+        // Create featured and regular queries using existing filters
+        const featuredUrl = new URL(wooUrl);
+        featuredUrl.searchParams.delete("page");
+        featuredUrl.searchParams.delete("per_page");
+        featuredUrl.searchParams.set("featured", "true");
+
+        const regularUrl = new URL(wooUrl);
+        regularUrl.searchParams.delete("page");
+        regularUrl.searchParams.delete("per_page");
+        regularUrl.searchParams.set("featured", "false");
+
+        async function getProductTotal(url) {
+            url.searchParams.set("page", "1");
+            url.searchParams.set("per_page", "1");
+
+            const res = await fetch(url.toString());
+
+            if (!res.ok) {
+                throw new Error(`WooCommerce API error: ${res.status}`);
+            }
+
+            return Number(res.headers.get("X-WP-Total") || 0);
         }
 
-        const products = await response.json();
+        const [featuredTotal, regularTotal] = await Promise.all([
+            getProductTotal(new URL(featuredUrl)),
+            getProductTotal(new URL(regularUrl)),
+        ]);
 
+        const total = featuredTotal + regularTotal;
+        const totalPages = Math.ceil(total / requestedPerPage);
+
+        const featuredCount = Math.min(
+            requestedPerPage,
+            Math.max(0, featuredTotal - offset)
+        );
+
+        const regularCount = Math.min(
+            requestedPerPage - featuredCount,
+            Math.max(
+                0,
+                regularTotal - Math.max(0, offset - featuredTotal)
+            )
+        );
+
+        const [featuredProducts, regularProducts] = await Promise.all([
+            featuredCount > 0
+                ? fetchProductRange(featuredUrl, offset, featuredCount)
+                : Promise.resolve([]),
+
+            regularCount > 0
+                ? fetchProductRange(
+                    regularUrl,
+                    Math.max(0, offset - featuredTotal),
+                    regularCount
+                )
+                : Promise.resolve([]),
+        ]);
+
+        const products = [...featuredProducts, ...regularProducts];
 
         // ///////
         // const metalRatesResponse = await fetch(
@@ -169,13 +268,13 @@ export async function GET(request) {
         // Pagination information
         // =========================
 
-        const total = Number(
-            response.headers.get("X-WP-Total") || 0
-        );
+        // const total = Number(
+        //     response.headers.get("X-WP-Total") || 0
+        // );
 
-        const totalPages = Number(
-            response.headers.get("X-WP-TotalPages") || 0
-        );
+        // const totalPages = Number(
+        //     response.headers.get("X-WP-TotalPages") || 0
+        // );
 
 
         // =========================
@@ -255,12 +354,14 @@ export async function GET(request) {
 
         return NextResponse.json({
             products: productsWithPricing,
+
             pagination: {
-                page: Number(page),
-                per_page: Number(perPage),
+                page: requestedPage,
+                per_page: requestedPerPage,
                 total,
                 total_pages: totalPages,
             },
+
         });
     } catch (error) {
         console.error("Products API error:", error);
