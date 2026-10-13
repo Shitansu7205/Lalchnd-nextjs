@@ -158,13 +158,13 @@ export default function Menu({ megaMarginRight = true }) {
                           height={900}
                         />
 
-                        <Image
+                        {/* <Image
                           src={product.hoverImgSrc}
                           alt="Image Product"
                           className="lazyload img-hover"
                           width={714}
                           height={900}
-                        />
+                        /> */}
                       </Link>
                     </div>
                   </div>
@@ -532,13 +532,13 @@ export default function Menu({ megaMarginRight = true }) {
                   height={900}
                 />
 
-                <Image
+                {/* <Image
                   src={product.hoverImgSrc}
                   alt="Gold Jewellery"
                   className="lazyload img-hover"
                   width={714}
                   height={900}
-                />
+                /> */}
               </Link>
             </div>
           </div>
@@ -628,13 +628,13 @@ export default function Menu({ megaMarginRight = true }) {
                     height={900}
                   />
 
-                  <Image
+                  {/* <Image
                     src={product.hoverImgSrc}
                     alt="Diamond Jewellery"
                     className="lazyload img-hover"
                     width={714}
                     height={900}
-                  />
+                  /> */}
                 </Link>
               </div>
             </div>
@@ -729,13 +729,13 @@ export default function Menu({ megaMarginRight = true }) {
                   height={900}
                 />
 
-                <Image
+                {/* <Image
                   src={product.hoverImgSrc}
                   alt="Silver Jewellery"
                   className="lazyload img-hover"
                   width={714}
                   height={900}
-                />
+                /> */}
               </Link>
             </div>
           </div>
@@ -825,13 +825,13 @@ export default function Menu({ megaMarginRight = true }) {
                           height={900}
                         />
 
-                        <Image
+                        {/* <Image
                           src={product.hoverImgSrc}
                           alt="Image Product"
                           className="lazyload img-hover"
                           width={714}
                           height={900}
-                        />
+                        /> */}
                       </Link>
                     </div>
                   </div>
@@ -922,13 +922,13 @@ export default function Menu({ megaMarginRight = true }) {
                           width={714}
                           height={900}
                         />
-                        <Image
+                        {/* <Image
                           src={product.hoverImgSrc}
                           alt="Image Product"
                           className="lazyload img-hover"
                           width={714}
                           height={900}
-                        />
+                        /> */}
                       </Link>
                     </div>
                   </div>

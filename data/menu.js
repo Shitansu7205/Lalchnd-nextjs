@@ -585,12 +585,12 @@ export const diamondJewlleryPages = [
     links: [
       {
         name: "Earrings",
-        image: "/images/lalchnd/jewellery-menu/earrings.webp",
+        image: "/images/lalchnd/jewellery-menu/diamond-earrings.webp",
         url: "/products?metal=diamond&category=earrings",
       },
       {
         name: "Rings",
-        image: "/images/lalchnd/jewellery-menu/ring.webp",
+        image: "/images/lalchnd/jewellery-menu/diamond-ring.webp",
         url: "/products?metal=diamond&category=rings",
       },
       {
@@ -697,7 +697,7 @@ export const moreMenuImages = [
   {
     id: 1,
     imgSrc: "/images/lalchnd/jewellery-menu/header-img-1.webp",
-    hoverImgSrc: "/images/lalchnd/jewellery-menu/header-img-2.webp",
+    // hoverImgSrc: "/images/lalchnd/jewellery-menu/header-img-2.webp",
     title: "Explore Lalchnd",
   },
 ]
