@@ -58,7 +58,7 @@ export default function Banner() {
   }, []);
 
   return (
-    <div className="banner_V04">
+    <div className="banner_V04 banner_V04-cta">
       <div className="bn-content" style={{color: "#fff"}}>
         <h3 className="heading-font" style={{color: "#fff"}}>
          Thank you for choosing <span className="highlight-font">Lalchnd Jewellers</span>.

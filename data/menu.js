@@ -209,6 +209,8 @@ export const morePages = [
     heading: "TERMS & POLICIES",
     links: [
       { href: "/#lalchnd-promises", label: "Lalchnd Promises" },
+      { href: "/our-web-app-launch", label: "Our Web App Launch" },
+      { href: "/our-franchise", label: "Our Franchise" },
       { href: "/terms-condition", label: "Terms and Conditions" },
       { href: "/privacy-policy", label: "Privacy Policy" },
     ],
@@ -584,12 +586,12 @@ export const diamondJewlleryPages = [
     links: [
       {
         name: "Earrings",
-        image: "/images/lalchnd/jewellery-menu/earrings.webp",
+        image: "/images/lalchnd/jewellery-menu/diamond-earrings.webp",
         url: "/products?metal=diamond&category=earrings",
       },
       {
         name: "Rings",
-        image: "/images/lalchnd/jewellery-menu/ring.webp",
+        image: "/images/lalchnd/jewellery-menu/diamond-ring.webp",
         url: "/products?metal=diamond&category=rings",
       },
       {
@@ -695,8 +697,8 @@ export const payOnlineMenuLinks = [
 export const moreMenuImages = [
   {
     id: 1,
-    imgSrc: "/images/lalchnd/jewellery-menu/header-img-2.webp",
-    hoverImgSrc: "/images/lalchnd/jewellery-menu/header-img-1.webp",
+    imgSrc: "/images/lalchnd/jewellery-menu/header-img-1.webp",
+    // hoverImgSrc: "/images/lalchnd/jewellery-menu/header-img-2.webp",
     title: "Explore Lalchnd",
   },
 ]
