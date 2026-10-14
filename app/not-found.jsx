@@ -3,9 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Header from "@/components/headers/Header";
 import Footer2 from "@/components/footers/Footer2";
-import TopBar from "@/components/headers/TopBar";
 export const metadata = {
   title: "Page Not Found || Lalchnd Jewellery",
   description: "Page Not Found || Lalchnd Jewellery",
@@ -15,8 +13,7 @@ export default function page() {
      <>
           <div className="bg-surface">
             <div id="wrapper">
-              <TopBar />
-              <Header />
+              
               <div className="wg-404 tf-grid-layout sm-col-2 gap-0 vh-100">
         <div className="image">
           <Image
@@ -28,9 +25,11 @@ export default function page() {
           />
         </div>
         <div className="content">
-          <h1>
-            <span className="highlight-font">Opps! </span> Page not found!
-          </h1>
+          <h1 className="error-title">
+  <span className="highlight-font">Oops!</span>
+  <br />
+  <span>Page not found!</span>
+</h1>
           <p className="sub-head">
             The page you are looking is not available or has been removed. Try
             going to HomePage by using the button below.
@@ -40,7 +39,7 @@ export default function page() {
           </Link>
         </div>
       </div>
-              <Footer2 />
+              
             </div>
           </div>
         </>
