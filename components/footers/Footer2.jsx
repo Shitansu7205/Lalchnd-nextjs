@@ -58,7 +58,9 @@ export default function Footer2() {
                   />
                 </Link>
                 <p className="text-main-5 lt-sp-nor sub-title">
-                  <span className="text-white">Pure Quality. Perfect Craftsmanship. <br />Pleased Customers.
+                  <span className="text-white">Lalchnd - Pure Quality. <br />Perfect Craftsmanship. Pleased Customers. <br />Crafted with care,
+                   delivered with trust, and built to serve<br /> you with passion. Excellence you can rely on, every time.
+
 </span>
                 </p>
               </div>

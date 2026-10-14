@@ -474,7 +474,7 @@ export const silverJewlleryPages = [
       },
       {
         name: "Bracelets",
-        image: "/images/lalchnd/jewellery-menu/bracelets.webp",
+        image: "/images/lalchnd/jewellery-menu/silver-bracelets.webp",
         url: "/products?metal=silver&category=bracelets",
       },
       {
@@ -484,17 +484,17 @@ export const silverJewlleryPages = [
       },
       {
         name: "Earrings",
-        image: "/images/lalchnd/jewellery-menu/earrings.webp",
+        image: "/images/lalchnd/jewellery-menu/silver-earrings.webp",
         url: "/products?metal=silver&category=earrings",
       },
       {
         name: "Coins",
-        image: "/images/lalchnd/jewellery-menu/coins.webp",
+        image: "/images/lalchnd/jewellery-menu/silver-coins.webp",
         url: "/products?metal=silver&category=coins",
       },
       {
         name: "Bangles",
-        image: "/images/lalchnd/jewellery-menu/bangles.webp",
+        image: "/images/lalchnd/jewellery-menu/silver-bangles.webp",
         url: "/products?metal=silver&category=bangles",
       },
       {
@@ -504,7 +504,7 @@ export const silverJewlleryPages = [
       },
       {
         name: "Chains",
-        image: "/images/lalchnd/jewellery-menu/chains.webp",
+        image: "/images/lalchnd/jewellery-menu/silver-chains.webp",
         url: "/products?metal=silver&category=chain",
       },
     ],
@@ -596,22 +596,22 @@ export const diamondJewlleryPages = [
       },
       {
         name: "Necklaces",
-        image: "/images/lalchnd/jewellery-menu/necklaces.webp",
+        image: "/images/lalchnd/jewellery-menu/diamond-necklaces.webp",
         url: "/products?metal=diamond&category=necklaces",
       },
       {
         name: "Necklace Set",
-        image: "/images/lalchnd/jewellery-menu/all.webp",
+        image: "/images/lalchnd/jewellery-menu/diamond-necklace-set.webp",
         url: "/products?metal=diamond&category=necklace-set",
       },
       {
         name: "Mangalasutra",
-        image: "/images/lalchnd/jewellery-menu/mangalsutra.webp",
+        image: "/images/lalchnd/jewellery-menu/diamond-mangalsutra.webp",
         url: "/products?metal=diamond&category=mangalsutra",
       },
       {
         name: "Bracelets",
-        image: "/images/lalchnd/jewellery-menu/bracelets.webp",
+        image: "/images/lalchnd/jewellery-menu/diamond-bracelets.webp",
         url: "/products?metal=diamond&category=bracelets",
       },
     ],

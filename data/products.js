@@ -1195,15 +1195,16 @@ export const productsImage = [
     videoUrl: "https://www.youtube.com/watch?v=MLpWrANjFbI",
     stockLeft: 5,
   },
-  {
+    {
     id: 89,
-    imgSrc: "/images/lalchnd/home/model-6.webp",
+    imgSrc: "/images/lalchnd/home/model-2.webp",
     title: "Sparkling Moon & Star Stud Earrings",
-    price: 2199.0,
-    oldPrice: 3799.0,
+    price: 2499.0,
+    oldPrice: 2899.0,
     videoUrl: "https://www.youtube.com/watch?v=MLpWrANjFbI",
-    stockLeft: 5,
+    stockLeft: 3,
   },
+  
 ];
 export const jewelleryLocations = [
   {
