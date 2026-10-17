@@ -112,7 +112,7 @@ export default function CantonmentRoadDetails() {
                                         <ul className="entry_tag tag-wrap d-flex align-items-center inner-btn">
                                             <li className="inner-page-btn">
                                                 <Link
-                                                    href="google.com/maps/place/Lalchnd+Gems+and+Jewellers/data=!4m2!3m1!1s0x0:0xbc04869ee1b9d77c?sa=X&ved=1t:2428&ictx=111"
+                                                    href="https://www.google.com/search?sca_esv=9d147917e498fe61&sxsrf=APpeQnt43zYx_GSkSwxJ4h_FRD0-EpP06w:1792227512567&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-__LMgkHZtT7lwumcGGFULnhRkNWitB-MFkCNLZgmfle2QO_C5TF__k0peLtnPJ6SiuXlzLi-zMVCCjS-XJX4YTBltqmjMEkoBYzPbJEFQox1fALp_Q%3D%3D&q=Lalchnd+Gems+and+Jewellers+Reviews&sa=X&ved=2ahUKEwiMyPjh18CXAxWiUGwGHVSjHhYQ0bkNegQIMhAH&biw=1517&bih=674&dpr=0.9#lrd=0x3a19120c10c56f8d:0xbc04869ee1b9d77c,3,,,,"
                                                     className="home-cta-btn tf-btn btn-fill animate-btn type-large" target="_blank" rel="noopener noreferrer"
                                                 style={{width: "100%"}}
                                                 >

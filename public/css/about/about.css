@@ -1,6 +1,10 @@
 .shape-image .img-ic-star {
     right: -8%;
 }
+.shape-image{
+        display: flex;
+    justify-content: center;
+}
 @media(max-width: 1280px){
     .shape-image .img-ic-star{
         width: 55% !important;

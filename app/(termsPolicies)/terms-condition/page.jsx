@@ -13,7 +13,7 @@ export const metadata = {
   description:
     "Terms and conditions governing the use of the Lalchnd Jewellers website, services, offers and related transactions.",
   alternates: {
-    canonical: "https://lalchnd.com/terms-condition/",
+    canonical: "https://lalchnd.com/terms-condition",
   },
 };
 export default function page() {

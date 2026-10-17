@@ -13,7 +13,7 @@ export const metadata = {
   title: "Best Jewellery Store & Shop in Cantonment Road—Lalchnd Jewellers",
   description: "Shop Gold jewelry at our Cantonment Road store. Enjoy beautiful designs and competitive prices. Come to Lalchnd Jewellers",
   alternates: {
-    canonical: "https://lalchnd.com/cantonmentroad/"
+    canonical: "https://lalchnd.com/cantonmentroad"
   },
 };
 export default async function ProductDetailPage({ params }) {

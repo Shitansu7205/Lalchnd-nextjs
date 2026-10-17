@@ -12,7 +12,7 @@ export const metadata = {
   description:
     "Jewellery guides and tips on gold, diamond, bridal jewellery, jewellery designs, gemstones, styling, buying and jewellery care from Lalchnd Jewellers.",
   alternates: {
-    canonical: "https://lalchnd.com/blogs/",
+    canonical: "https://lalchnd.com/blogs",
   },
 };
 

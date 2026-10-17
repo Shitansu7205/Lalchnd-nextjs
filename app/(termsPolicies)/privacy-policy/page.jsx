@@ -13,7 +13,7 @@ export const metadata = {
   description:
     "Understand how Lalchnd Jewellers collects, uses and protects your personal information. Learn about data security, privacy practices and your choices when using our website.",
   alternates: {
-    canonical: "https://lalchnd.com/privacy-policy/",
+    canonical: "https://lalchnd.com/privacy-policy",
   },
 };
 export default function page() {

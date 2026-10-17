@@ -45,7 +45,7 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 width: calc(100% - 120px);
-min-height: 355px;
+min-height: 280px;
 padding: 65px 28px;
 border: 2px solid var(--testimonial-border);
 border-radius: 36px;

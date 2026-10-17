@@ -12,7 +12,7 @@ export const metadata = {
   title: "Best Jewellery Shop in Lajpat Nagar Delhi – Lalchnd Jewellers",
   description: "Explore the best jewellery shop in Lajpat Nagar, Delhi, offering stunning gold, diamond, and silver jewellery. Famous for quality craftsmanship. Visit our store for the finest collections!",
   alternates: {
-    canonical: "https://lalchnd.com/delhi/"
+    canonical: "https://lalchnd.com/delhi"
   },
 };
 export default async function ProductDetailPage({ params }) {

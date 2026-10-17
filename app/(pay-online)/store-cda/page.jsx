@@ -11,7 +11,7 @@ export const metadata = {
   title: "Lalchnd CDA Store | Online Payment & Monthly Scheme",
   description: "Online advance payment and monthly jewellery scheme options available at Lalchnd CDA store in Cuttack.",
    alternates: {
-    canonical: "https://lalchnd.com/store-cda/",
+    canonical: "https://lalchnd.com/store-cda",
   },
 };
 export default function page() {

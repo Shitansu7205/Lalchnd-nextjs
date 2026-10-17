@@ -10,7 +10,7 @@ export const metadata = {
   description:
     "Lalchnd Jewellers’ gallery features photographs of special moments, events, celebrations and memorable occasions from across the brand’s journey.",
   alternates: {
-    canonical: "https://lalchnd.com/gallery/",
+    canonical: "https://lalchnd.com/gallery",
   },
 };
 export default function page() {

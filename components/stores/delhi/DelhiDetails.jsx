@@ -109,7 +109,7 @@ export default function DelhiDetails() {
                                         <ul className="entry_tag tag-wrap d-flex align-items-center inner-btn">
                                             <li className="inner-page-btn">
                                                 <Link
-                                                    href="https://www.google.com/maps/place/Lalchnd+Jewellers+lajpat+nagar/@28.5712406,77.2381729,17z/data=!4m8!3m7!1s0x390ce309090603d7:0x1d5ca51e53fb3038!8m2!3d28.5712406!4d77.2381729!9m1!1b1!16s%2Fg%2F11k9kftb01!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDkxNS4wIKXMDSoASAFQAw%3D%3D"
+                                                    href="https://www.google.com/search?q=Lalchnd+Jewellers+lajpat+nagar&biw=1517&bih=674&sca_esv=9d147917e498fe61&sxsrf=APpeQnu6LMpV3UiV4EP_YkvpL9iri5U6pA%3A1792228313236&ei=2TvTaoT5DbHH4-EPhPWPiAg&uact=5&oq=Lalchnd+Jewellers+lajpat+nagar&gs_lp=Egxnd3Mtd2l6LXNlcnAiHkxhbGNobmQgSmV3ZWxsZXJzIGxhanBhdCBuYWdhcjIHEAAYgAQYDTIHEAAYgAQYDTIHEAAYgAQYDTIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeSK8FUABYAHAAeAGQAQCYAaQBoAGkAaoBAzAuMbgBA8gBAPgBAvgBAZgCAaACtgGYAwCSBwMwLjGgB4gKsgcDMC4xuAe2AcIHAzMtMcgHCoAIAQ&sclient=gws-wiz-serp#lrd=0x390ce309090603d7:0x1d5ca51e53fb3038,3,,,,"
                                                     className="home-cta-btn tf-btn btn-fill animate-btn type-large" target="_blank" rel="noopener noreferrer"
                                                 style={{width: "100%"}}
                                                 >

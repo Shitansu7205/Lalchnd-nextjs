@@ -115,7 +115,7 @@ When it comes to Jewellery Shops in Brahmapur, Lalchnd Jewellers is the name tha
                                         <ul className="entry_tag tag-wrap d-flex align-items-center inner-btn">
                                             <li className="inner-page-btn">
                                                 <Link
-                                                    href="https://www.google.com/maps/place/Lalchnd+Jewellers/@19.3103271,84.7824868,17z/data=!3m1!4b1!4m6!3m5!1s0x3a3d512e59d1b0fd:0xe6ddc87d80f14020!8m2!3d19.3103221!4d84.7850617!16s%2Fg%2F11q4jr1d0_?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
+                                                    href="https://www.google.com/search?sca_esv=9d147917e498fe61&sxsrf=APpeQnuVtIAHDuReqb9K7KNTaap-_NIt4g:1792227560098&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_92vYRsQh5l6qz2s2Vq2oMvl8OpADnpCNv8s0trz-gM3oYXxqYTcoeNGPqZHX1MOokBFghSXFSK218PploBbHsZJOR0zzAvvwxBQ0bThJUdyWAXStw%3D%3D&q=Lalchnd+Jewellers+Reviews&sa=X&ved=2ahUKEwjJzs3418CXAxXT1zgGHe4cArsQ0bkNegQILBAI&biw=1517&bih=674&dpr=0.9#lrd=0x3a3d512e59d1b0fd:0xe6ddc87d80f14020,3,,,,"
                                                    className="home-cta-btn tf-btn btn-fill animate-btn type-large" target="_blank" rel="noopener noreferrer"
                                                 style={{width: "100%"}}
                                                 >

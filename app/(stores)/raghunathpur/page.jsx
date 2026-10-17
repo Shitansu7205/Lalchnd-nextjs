@@ -13,7 +13,7 @@ export const metadata = {
   title: "Best Jewellery Store in Raghunathpur at Lalchnd Jewellers",
   description: "Lalchnd Jewellers the foremost Showroom in Raghunathpur. Find the Best Jewellers & Gold Jewellery Shop for stunning designs & quality pieces.",
   alternates: {
-    canonical: "https://lalchnd.com/raghunathpur/"
+    canonical: "https://lalchnd.com/raghunathpur"
   },
 };
 export default async function ProductDetailPage({ params }) {

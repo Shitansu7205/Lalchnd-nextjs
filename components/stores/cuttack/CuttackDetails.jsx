@@ -121,7 +121,7 @@ export default function CuttackDetails() {
                                         <ul className="entry_tag tag-wrap d-flex align-items-center inner-btn">
                                             <li className="inner-page-btn">
                                                 <Link
-                                                    href="https://www.google.com/maps/place/Lalchnd+Jewellers+CDA/@20.4794162,85.8396722,17z/data=!3m1!4b1!4m6!3m5!1s0x3a191166ffa7db7b:0x5fe1ccac866b17f6!8m2!3d20.4794162!4d85.8396722!16s%2Fg%2F11vxqt9psy?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
+                                                    href="https://www.google.com/search?sca_esv=9d147917e498fe61&sxsrf=APpeQns7A0ZsrGO0MY0Baky2Uyw_7W9EEA:1792227142882&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_xSgObs9udxlBhs_EMy2dh0VDZQwK3epNFtCCRlMqgQqNelGhO9NXtyUQjEmD4oQdspgs-VztQZnPwWm42tljxXzq1LnWvYqMh4P4p3hIUmTveh9lg%3D%3D&q=Lalchnd+Jewellers+CDA+Reviews&sa=X&ved=2ahUKEwi-4dSx1sCXAxVVi-EIHQKLL5oQ0bkNegQIKRAI&biw=1517&bih=674&dpr=0.9#lrd=0x3a191166ffa7db7b:0x5fe1ccac866b17f6,3,,,,"
                                                     className="home-cta-btn tf-btn btn-fill animate-btn type-large" target="_blank" rel="noopener noreferrer"
                                                 style={{width: "100%"}}
                                                 >

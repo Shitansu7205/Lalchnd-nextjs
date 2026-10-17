@@ -10,7 +10,7 @@ export const metadata = {
   description:
     "Contact Lalchnd Jewellers for store locations, contact details and assistance across Bhubaneswar, Cuttack, Berhampur and New Delhi.",
   alternates: {
-    canonical: "https://lalchnd.com/contact/",
+    canonical: "https://lalchnd.com/contact",
   },
 };
 export default function page() {

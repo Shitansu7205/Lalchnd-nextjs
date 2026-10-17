@@ -13,7 +13,7 @@ export const metadata = {
   title: "Best Jewellery Store in CDA – Lalchnd Jewellers",
   description: "Explore the finest gold & diamond jewellery at Lalchnd Jewellers, the premier showroom in CDA. Each piece is crafted with exceptional quality, blending luxury and elegance for any special occasion.",
   alternates: {
-    canonical: "https://lalchnd.com/cda/"
+    canonical: "https://lalchnd.com/cda"
   },
 };
 export default async function ProductDetailPage({ params }) {

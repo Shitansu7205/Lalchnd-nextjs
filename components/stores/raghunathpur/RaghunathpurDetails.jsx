@@ -112,7 +112,7 @@ export default function RaghunathpurDetails() {
                                         <ul className="entry_tag tag-wrap d-flex align-items-center inner-btn">
                                             <li className="inner-page-btn">
                                                 <Link
-                                                    href="https://www.google.com/maps/place/Lalchnd+Jewellers/@20.3727489,85.8288903,17z/data=!4m16!1m7!3m6!1s0x3a1909b3b7641cfb:0x242ea86a13dc1dca!2sLalchnd+Jewellers!8m2!3d20.3728465!4d85.8315898!16s%2Fg%2F11h_14__8h!3m7!1s0x3a1909b3b7641cfb:0x242ea86a13dc1dca!8m2!3d20.3728465!4d85.8315898!9m1!1b1!16s%2Fg%2F11h_14__8h?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
+                                                    href="https://www.google.com/search?sca_esv=9d147917e498fe61&sxsrf=APpeQnt3ZTEnvvd4N6SIUX_rCD7Ag2hIIw:1792226996543&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_-bgHtYUNBBcdD4Nj466T1ZZdOA5WO2SfPunfekxedJj-fa0UFelGY60ISrBXlgsA5ATQ7mNlWmbAIn7wj5McDZzPiIyeetDLxpfdLUAIfbqWDT5EQ%3D%3D&q=Lalchnd+Jewellers+Reviews&sa=X&ved=2ahUKEwif4PDr1cCXAxU6j-EIHTjHKRQQ0bkNegQIKhAI&biw=1517&bih=674&dpr=0.9#lrd=0x3a1909b3b7641cfb:0x242ea86a13dc1dca,3,,,,"
                                                     className="home-cta-btn tf-btn btn-fill animate-btn type-large" target="_blank" rel="noopener noreferrer"
                                                 style={{width: "100%"}}
                                                 >

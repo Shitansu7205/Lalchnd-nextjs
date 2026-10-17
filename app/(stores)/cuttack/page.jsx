@@ -12,7 +12,7 @@ export const metadata = {
   title: "Best Gold Jewellery Shop in Cuttack – Lalchnd Jewellers",
   description: "Explore exquisite gold collections at Lalchnd Jewellers, the premier jewellery destination in Cuttack. Unmatched craftsmanship and timeless designs await you.",
   alternates: {
-    canonical: "https://lalchnd.com/cuttack/"
+    canonical: "https://lalchnd.com/cuttack"
   },
 };
 export default async function ProductDetailPage({ params }) {

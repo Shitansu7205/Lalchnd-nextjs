@@ -11,7 +11,7 @@ export const metadata = {
   title: "Lalchnd New Delhi Store | Online Payment & Monthly Scheme",
   description: "Online advance payment and monthly jewellery scheme options available at Lalchnd New Delhi store.",
   alternates: {
-    canonical: "https://lalchnd.com/store-new-delhi/",
+    canonical: "https://lalchnd.com/store-new-delhi",
   },
 };
 export default function page() {

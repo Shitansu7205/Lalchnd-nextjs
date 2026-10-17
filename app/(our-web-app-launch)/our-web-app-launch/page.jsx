@@ -12,7 +12,7 @@ export const metadata = {
   title: "Lalchnd Jewellers App – Download Our Jewellery App",
   description: "Download the Lalchnd Jewellers App to manage your Sone Pe Suhaga account, view your scheme details, and pay your monthly instalments securely and conveniently.",
   alternates: {
-    canonical: "https://lalchnd.com/our-web-app-launch/",
+    canonical: "https://lalchnd.com/our-web-app-launch",
   },
 };
 export default function page() {

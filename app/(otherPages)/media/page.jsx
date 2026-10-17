@@ -10,7 +10,7 @@ export const metadata = {
   description:
     "Lalchnd Jewellers’ media coverage, press releases and recognitions featuring the brand’s achievements, milestones and presence in the jewellery industry.",
   alternates: {
-    canonical: "https://lalchnd.com/media/",
+    canonical: "https://lalchnd.com/media",
   },
 };
 export default function page() {

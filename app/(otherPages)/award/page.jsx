@@ -10,7 +10,7 @@ export const metadata = {
   description:
     "Lalchnd Jewellers’ awards and recognition for excellence in jewellery and trusted brand leadership, reflecting its achievements and industry presence.",
   alternates: {
-    canonical: "https://lalchnd.com/award/",
+    canonical: "https://lalchnd.com/award",
   },
 };
 export default function page() {

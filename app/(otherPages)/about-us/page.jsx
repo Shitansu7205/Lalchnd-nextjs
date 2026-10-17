@@ -15,7 +15,7 @@ export const metadata = {
     title: "About Lalchnd Jewellers | Our Story & Legacy",
     description: "Lalchnd Jewellers’ story, from its beginnings to its journey as a trusted jewellery brand with a lasting legacy.",
     alternates: {
-    canonical: "https://lalchnd.com/about-us/",
+    canonical: "https://lalchnd.com/about-us",
   },
 };
 export default function page() {
