@@ -224,10 +224,9 @@ export default function Footer2() {
                     <Mail size={16} strokeWidth={1.8} className="text-white" />
                     <span className="fw-medium text-white sub-title">Email: </span>
                     <a
-                      href="mailto:info@lalchnd.com"
+                      href="mailto:lalchandjewellers@gmail.com"
                       className="text-white link fw-normal sub-title"
-                    >
-                      info@lalchnd.com
+                    >lalchandjewellers@gmail.com
                     </a>
                   </li>
 
