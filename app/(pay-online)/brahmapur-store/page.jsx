@@ -11,7 +11,7 @@ export const metadata = {
   title: "Lalchnd Brahmapur Store | Online Payment & Monthly Scheme",
   description: "Online advance payment and monthly jewellery scheme options available at Lalchnd Brahmapur store.",
   alternates: {
-    canonical: "https://lalchnd.com/brahmapur-store/",
+    canonical: "https://lalchnd.com/brahmapur-store",
   },
 };
 export default function page() {

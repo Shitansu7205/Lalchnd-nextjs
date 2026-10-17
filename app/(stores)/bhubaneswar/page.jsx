@@ -12,7 +12,7 @@ export const metadata = {
   title: "Best Gold & Diamond Jewellers Shop in Bhubaneswar - Lalchnd Jeweller",
   description: "Find out exquisite 22-carat gold jewellery at Lalchnd, the best showroom in Bhubaneswar. Explore stunning designs and indulge in the luxury of fine craftsmanship.",
   alternates: {
-    canonical: "https://lalchnd.com/bhubaneswar/"
+    canonical: "https://lalchnd.com/bhubaneswar"
   },
 };
 export default async function ProductDetailPage({ params }) {

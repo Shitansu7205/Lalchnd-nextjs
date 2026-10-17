@@ -11,7 +11,7 @@ export const metadata = {
   title: "Lalchnd Master Canteen Store | Online Payment & Monthly Scheme",
   description: "Online advance payment and monthly jewellery scheme options available at Lalchnd Master Canteen store in Bhubaneswar.",
   alternates: {
-    canonical: "https://lalchnd.com/store-mastercanteen/",
+    canonical: "https://lalchnd.com/store-mastercanteen",
   },
 };
 export default function page() {

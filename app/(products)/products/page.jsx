@@ -8,7 +8,7 @@ export const metadata = {
   title: "Jewellery Collection | Rings, Bangles, Earrings & More | Lalchnd Jewellers",
   description: "Explore all jewellery collections at Lalchnd, from rings and bangles to earrings, necklaces and more in gold, diamond and silver jewellery.",
   alternates: {
-    canonical: "https://lalchnd.com/products/"
+    canonical: "https://lalchnd.com/products"
   },
 };
 export default function page() {

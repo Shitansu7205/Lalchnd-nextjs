@@ -115,8 +115,8 @@ export default function MobileMenu() {
               </li>
               <li>
                 Email:
-                <a href="mailto:info@lalchnd.com" className="fw-medium">
-                  info@lalchnd.com
+                <a href="mailto:lalchandjewellers@gmail.com" className="fw-medium">
+                  lalchandjewellers@gmail.com
                 </a>
               </li>
               <li>

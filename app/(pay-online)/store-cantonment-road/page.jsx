@@ -11,7 +11,7 @@ export const metadata = {
   title: "Lalchnd Cantonment Road Store | Online Payment & Monthly Scheme",
   description: "Online advance payment and monthly jewellery scheme options available at Lalchnd Cantonment Road store in Cuttack.",
   alternates: {
-    canonical: "https://lalchnd.com/store-cantonment-road/",
+    canonical: "https://lalchnd.com/store-cantonment-road",
   },
 };
 export default function page() {

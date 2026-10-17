@@ -10,7 +10,7 @@ export const metadata = {
   title: "Gold Savings Scheme – Sone Pe Suhaga | Lalchnd Jewellers",
   description: "Explore Sone Pe Suhaga, Lalchnd Jewellers’ Gold Savings Scheme. Plan your gold jewellery purchase with monthly instalments, scheme benefits and applicable making-charge discounts.",
   alternates: {
-    canonical: "https://lalchnd.com/sone-pe-suhaga/",
+    canonical: "https://lalchnd.com/sone-pe-suhaga",
   },
 };
 export default function page() {

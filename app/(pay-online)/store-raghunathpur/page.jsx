@@ -11,7 +11,7 @@ export const metadata = {
   title: "Lalchnd Raghunathpur Store | Online Payment & Monthly Scheme",
   description: "Online advance payment and monthly jewellery scheme options available at Lalchnd Raghunathpur store in Bhubaneswar.",
   alternates: {
-    canonical: "https://lalchnd.com/store-raghunathpur/",
+    canonical: "https://lalchnd.com/store-raghunathpur",
   },
 };
 export default function page() {

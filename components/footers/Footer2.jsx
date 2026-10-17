@@ -58,7 +58,9 @@ export default function Footer2() {
                   />
                 </Link>
                 <p className="text-main-5 lt-sp-nor sub-title">
-                  <span className="text-white">Pure Quality. Perfect Craftsmanship. <br />Pleased Customers.
+                  <span className="text-white">Lalchnd - Pure Quality. <br />Perfect Craftsmanship. Pleased Customers. <br />Crafted with care,
+                   delivered with trust, and built to serve<br /> you with passion. Excellence you can rely on, every time.
+
 </span>
                 </p>
               </div>
@@ -222,10 +224,9 @@ export default function Footer2() {
                     <Mail size={16} strokeWidth={1.8} className="text-white" />
                     <span className="fw-medium text-white sub-title">Email: </span>
                     <a
-                      href="mailto:info@example.com"
+                      href="mailto:lalchandjewellers@gmail.com"
                       className="text-white link fw-normal sub-title"
-                    >
-                      info@lalchnd.com
+                    >lalchandjewellers@gmail.com
                     </a>
                   </li>
 

@@ -11,7 +11,7 @@ export const metadata = {
     title: "Our Jewellery Schemes | Gold, Diamond & Savings | Lalchnd",
     description: "Explore Lalchnd’s jewellery schemes, including monthly instalments, gold exchange, diamond purchase plans and special offers. Find the right scheme for your jewellery needs.",
     alternates: {
-    canonical: "https://lalchnd.com/our-schemes/",
+    canonical: "https://lalchnd.com/our-schemes",
   },
 };
 export default function page() {

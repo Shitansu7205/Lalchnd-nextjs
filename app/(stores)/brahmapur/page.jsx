@@ -13,7 +13,7 @@ export const metadata = {
   title: "Best Jewellery Shop & Gold Showroom in Brahmapur – Lalchnd Jeweller",
   description: "Explore the allure of Lalchnd, your go to for 22 Carat Gold Jewellery in Brahmapur. Visit our jewellery showroom the best in town and find exquisite gold jewellery.",
   alternates: {
-    canonical: "https://lalchnd.com/brahmapur/"
+    canonical: "https://lalchnd.com/brahmapur"
   },
 };
 export default async function ProductDetailPage({ params }) {

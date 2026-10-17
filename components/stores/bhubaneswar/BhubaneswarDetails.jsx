@@ -116,7 +116,7 @@ Indulge in the opulence of Lalchnd, where the Best Gold Ring Design Showroom in 
                                         <ul className="entry_tag tag-wrap d-flex align-items-center inner-btn">
                                             <li className="inner-page-btn">
                                                 <Link
-                                                    href="#review"
+                                                    href="https://www.google.com/search?sca_esv=9d147917e498fe61&sxsrf=APpeQntizV1hxAGA-t23XJlal-DHkIo8rg:1792221988167&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_zjjh0KYkLYW6xbtPKk6jWZnJMyHZ-gtNYzFjo1KEm-aYUfaEdhBRqfUa7p1Pt4fuZGUtVbRXqZlWt-nuvijiCmXOXvskLa7jgKSbMjT0_jMiW0zyQ%3D%3D&q=Lalchnd+Jewellers+Reviews&sa=X&ved=2ahUKEwjr-NmXw8CXAxV13jgGHSEIFkEQ0bkNegQIKBAI&biw=1517&bih=674&dpr=0.9#lrd=0x3a19a744227e1903:0xb7b54fad41895a76,3,,,,"
                                                     className="home-cta-btn tf-btn btn-fill animate-btn type-large"
                                                 style={{width: "100%"}}>
                                                     Write a Review
