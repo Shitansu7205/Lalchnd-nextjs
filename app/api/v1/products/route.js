@@ -88,9 +88,14 @@ export async function GET(request) {
         // WooCommerce API URL
         // =========================
 
-        const wooUrl = new URL(
-            "https://test-vps.testctsl.in/wp-json/wc/store/v1/products"
-        );
+        const wooProductsApiUrl = process.env.WOOCOMMERCE_PRODUCTS_API_URL;
+        if (!wooProductsApiUrl) {
+            throw new Error(
+                "WOOCOMMERCE_PRODUCTS_API_URL environment variable is required"
+            );
+        }
+
+        const wooUrl = new URL(wooProductsApiUrl);
 
         // =========================
         // Pagination

@@ -1,6 +1,7 @@
 
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { getStoreEmailRecipients } from "@/lib/email-recipients";
 
 // Initialize Resend using the API key from environment variables.
 // Keep the API key server-side and NEVER expose it to the frontend.
@@ -72,7 +73,7 @@ export async function POST(request) {
         // ---------------------------------------------------------
         const { error } = await resend.emails.send({
             from: `Lalchand Enquiries <${process.env.RESEND_FROM_EMAIL}>`,
-            to: [process.env.STORE_EMAIL],
+            to: getStoreEmailRecipients(),
             replyTo: customer.email,
             subject: `Product Enquiry: ${product.name}`,
             html: `
