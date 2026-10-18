@@ -311,26 +311,66 @@ export const allJewlleryPages = [
   },
 ]
 
+
 export const giftingPages = [
   {
     heading: "Gift For",
     links: [
-      { href: "/products?metal=gold&gender=male", label: " Him" },
-      { href: "/products?occasion=wedding&metal=gold&gender=female", label: " Her" },
-      { href: "/products?metal=gold&gender=kids", label: "Kids" },
-      { href: "/products?category=gift-items", label: "Gift Items" },
+      {
+        name: "Him",
+        image: "/images/lalchnd/jewellery-menu/men.webp",
+        url: "/products?metal=gold&gender=male",
+      },
+      {
+        name: "Her",
+        image: "/images/lalchnd/jewellery-menu/women.webp",
+        url: "/products?occasion=wedding&metal=gold&gender=female",
+      },
+      {
+        name: "Kids",
+        image: "/images/lalchnd/jewellery-menu/kids.webp",
+        url: "/products?metal=gold&gender=kids",
+      },
+      {
+        name: "Gift Items",
+        image: "/images/lalchnd/jewellery-menu/gift-box.webp",
+        url: "/products?category=gift-items",
+      },
     ],
   },
+
   {
     heading: "By Price",
     links: [
-      { href: "/products?price=under-25k", label: "Under ₹25K" },
-      { href: "/products?price=25k-50k", label: "₹25K - 50K" },
-      { href: "/products?price=50k-1l", label: "₹50K - 1L" },
-      { href: "/products?price=above-2l", label: "Above ₹2L" },
+      {
+        name: "Under ₹25K",
+        image: "/images/lalchnd/jewellery-menu/under25k.webp",
+        url: "/products?price=under-25k",
+      },
+      {
+        name: "₹25K - 50K",
+        image: "/images/lalchnd/jewellery-menu/range25k50k.webp",
+        url: "/products?price=25k-50k",
+      },
+      {
+        name: "₹50K - 1L",
+        image: "/images/lalchnd/jewellery-menu/range50k1l.webp",
+        url: "/products?price=50k-1l",
+      },
+      {
+        name: "₹1L - 2L",
+        image: "/images/lalchnd/jewellery-menu/range1l2l.webp",
+        url: "/products?metal=gold&price=1l-2l",
+      },
+      {
+        name: "Above ₹2L",
+        image: "/images/lalchnd/jewellery-menu/range1l2l.webp",
+        url: "/products?price=above-2l",
+      },
     ],
   },
-]
+];
+
 
 export const goldJewlleryPages = [
   {
