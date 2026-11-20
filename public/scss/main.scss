@@ -4296,3 +4296,13 @@ ul.menu-list.store-sub-list {
 .banner_V04-cta::after{
     background-image: url(/images/lalchnd/home/cta.webp) !important;
 }
+
+
+@media (max-width: 767px) {
+  .banner_countdown-v2{
+    gap: 40px !important;
+  }
+  .pay-online-banner{
+    background-position: center !important;
+  }
+}

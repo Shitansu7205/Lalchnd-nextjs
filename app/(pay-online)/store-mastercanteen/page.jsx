@@ -22,6 +22,7 @@ export default function page() {
           <Topbar1 />
           <Header />
           <BreadcrumbBanner
+          className="pay-online-banner"
             title="Pay Online"
             current="Master Canteen"
             image="/images/lalchnd/banner/pay-online-banner.webp"

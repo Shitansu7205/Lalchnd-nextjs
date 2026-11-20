@@ -10,3 +10,9 @@
 .wedding-style{
     width: 50%;
 }
+
+@media (max-width: 768px) {
+    .wedding-section {
+    background-position: left;
+}
+}

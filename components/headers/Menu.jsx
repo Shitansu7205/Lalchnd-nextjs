@@ -21,7 +21,7 @@ import {
   shopPages,
   morePages,
 } from "@/data/menu";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import {
   Circle,
   CircleDot,
@@ -68,21 +68,75 @@ const jewelleryImages = {
   elevatedEssentials: "/images/lalchnd/jewellery-menu/elevatedEssentials.webp",
 };
 export default function Menu({ megaMarginRight = true }) {
-  const pathname = usePathname();
+  const pathname = usePathname() || "/";
+  const searchParams = useSearchParams();
+
+  // Keep query parameters because product categories use URLs like
+  // /products?metal=gold&category=earrings.
+  const normalizePath = (value = "") => {
+    const raw = String(value || "");
+    const [rawPath, rawQuery = ""] = raw.split("?");
+    const withLeadingSlash = rawPath.startsWith("/") ? rawPath : `/${rawPath}`;
+    const cleanPath = withLeadingSlash.replace(/\/+$/, "") || "/";
+    const params = new URLSearchParams(rawQuery.split("#")[0]);
+    const sortedParams = [...params.entries()].sort(([a, av], [b, bv]) =>
+      a === b ? av.localeCompare(bv) : a.localeCompare(b)
+    );
+    const query = new URLSearchParams(sortedParams).toString();
+    return query ? `${cleanPath}?${query}` : cleanPath;
+  };
+
+  const currentPath = normalizePath(
+    `${pathname}${searchParams?.toString() ? `?${searchParams.toString()}` : ""}`
+  );
+  const currentPathOnly = normalizePath(pathname).split("?")[0];
+
+  const getLinkPaths = (link = {}) =>
+    [link.href, link.href2, link.url]
+      .filter((value) => typeof value === "string" && value.trim() && value !== "#")
+      .map(normalizePath);
+
+  // Dropdown item is active only when both its path and query match.
   const isMenuActive = (link) => {
-    return link.href?.split("/")[1] == pathname.split("/")[1];
+    return getLinkPaths(link).some((menuPath) => currentPath === menuPath);
   };
-  const isMenuParentActive = (menu) => {
-    return menu.some((elm) => isMenuActive(elm));
+
+  // Parent menu is active when a link in that menu matches the current
+  // product/category URL. Query parameters are considered for /products pages.
+  const isMenuParentActive = (links = []) => {
+    return links.some((link) => {
+      const paths = getLinkPaths(link);
+      const matches = paths.some((menuPath) => {
+        if (menuPath.includes("?")) return currentPath === menuPath;
+        const menuPathOnly = menuPath.split("?")[0];
+        return currentPathOnly === menuPathOnly ||
+          (menuPathOnly !== "/" && currentPathOnly.startsWith(`${menuPathOnly}/`));
+      });
+      if (matches) return true;
+      return Array.isArray(link.children) && isMenuParentActive(link.children);
+    });
   };
-  const isMenuParentActive2 = (menu) => {
-    return menu.some((elm) => isMenuParentActive(elm.links));
+
+  const isMenuParentActive2 = (sections = []) => {
+    return sections.some((section) => isMenuParentActive(section.links || []));
   };
+
+  // Choose ONE parent menu only. Specific categories are checked before All Jewellery,
+  // because All Jewellery may contain the same destination links as category menus.
+  const activeParent =
+    isMenuParentActive2(goldJewlleryPages) ? "gold" :
+    isMenuParentActive2(diamondJewlleryPages) ? "diamond" :
+    isMenuParentActive2(silverJewlleryPages) ? "silver" :
+    isMenuParentActive2(giftingPages) ? "gifting" :
+    isMenuParentActive2(morePages) ? "more" :
+    isMenuParentActive(payOnlineMenuLinks) ? "payOnline" :
+    isMenuParentActive2(allJewlleryPages) ? "allJewellery" :
+    "";
   return (
     <>
       <li
         className={`menu-item ${
-          isMenuParentActive2(allJewlleryPages) ? "active" : ""
+          activeParent === "allJewellery" ? "active" : ""
         }`}
       >
         <a href="#" className="item-link">
@@ -174,282 +228,10 @@ export default function Menu({ megaMarginRight = true }) {
           </div>
         </div>
       </li>
-      {/* <li
-                className={`menu-item  ${isMenuParentActive2(shopPages) ? "active" : ""
-                    }`}
-            >
-                <a href="#" className="item-link">
-                    Shop
-                    <i className="icon icon-arrow-angle-down" />
-                </a>
-                <div
-                    className={`sub-menu mega-menu container-layout-right${megaMarginRight ? "-2" : ""
-                        } mega-menu-shop mega-menu-style-2`}
-                >
-                    <div className="mega-menu-wrap">
-                        <div className="wrapper-sub-menu">
-                            {shopPages.map((section, index) => (
-                                <div className="mega-menu-item" key={index}>
-                                    <p className="text-caption menu-heading">{section.heading}</p>
-                                    <ul className="menu-list">
-                                        {section.links.map((link, linkIndex) => (
-                                            <li key={linkIndex}>
-                                                <Link
-                                                    href={link.href2 ? link.href2 : link.href}
-                                                    className={`menu-link-text link ${isMenuActive(link) ? "active" : ""
-                                                        }`}
-                                                >
-                                                    {link.label}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="wrapper-sub-collection">
-                            <div className="box_image--V01 h-100 hover-img">
-                                <div className="image h-100 img-style">
-                                    <Image
-                                        src="/images/collections/cls-header.jpg"
-                                        alt=""
-                                        className="lazyload"
-                                        width={1188}
-                                        height={914}
-                                    />
-                                </div>
-                                <div className="content">
-                                    <h5 className="box-text fw-medium text-white">
-                                        <span>Flash Sale</span>
-                                        <span className="br-line w-22 bg-white d-block" />
-                                        <span>30% OFF</span>
-                                    </h5>
-                                    <div className="box-btn">
-                                        <Link
-                                            href={`/shop-collection-list`}
-                                            className="tf-btn-line style-white text-uppercase"
-                                        >
-                                            <span className="text-caption lh-28">Shop Now</span>
-                                            <i className="icon-arrow-top-right-2 fs-10" />
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li> */}
-      {/* <li
-                className={`menu-item   ${isMenuParentActive2(productDetailPages) ? "active" : ""
-                    }`}
-            >
-                <a href="#" className="item-link">
-                    Products
-                    <i className="icon icon-arrow-angle-down" />
-                </a>
-                <div className="sub-menu mega-menu mega-menu-product">
-                    <div className="container-layout-right">
-                        <div className="mega-menu-wrap">
-                            <div className="wrapper-sub-menu">
-                                {productDetailPages.map((section, sectionIndex) => (
-                                    <div className="mega-menu-item" key={sectionIndex}>
-                                        <p className="text-caption menu-heading">
-                                            {section.heading}
-                                        </p>
-                                        <ul className="menu-list">
-                                            {section.links.map((link, linkIndex) => (
-                                                <li key={linkIndex}>
-                                                    <Link
-                                                        href={link.href2 ? link.href2 : link.href}
-                                                        className={`menu-link-text link ${isMenuActive(link) ? "active" : ""
-                                                            }`}
-                                                    >
-                                                        <>
-                                                            {link.label}
-                                                            {link.badge && (
-                                                                <span
-                                                                    className={`demo-label ${link.badgeType || ""
-                                                                        }`.trim()}
-                                                                >
-                                                                    {link.badge}
-                                                                </span>
-                                                            )}
-                                                        </>
-                                                    </Link>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                ))}
-                            </div>
-                            <div className="wrapper-sub-collection">
-                                {products5.slice(0, 2).map((product, i) => (
-                                    <div key={i} className="card_product--V01">
-                                        <div className="card_product-wrapper aspect-ratio-1">
-                                            <Link
-                                                href={`/product-default/${product.id}`}
-                                                className="product-img"
-                                            >
-                                                <Image
-                                                    src={product.imgSrc}
-                                                    alt="Image Product"
-                                                    className="lazyload img-product"
-                                                    width={714}
-                                                    height={900}
-                                                />
-                                                <Image
-                                                    src={product.hoverImgSrc}
-                                                    alt="Image Product"
-                                                    className="lazyload img-hover"
-                                                    width={714}
-                                                    height={900}
-                                                />
-                                            </Link>
-                                            <ul className="list-product-btn center">
-                                                <li>
-                                                    <QuickView product={product} />
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div className="card_product-info">
-                                            <Link
-                                                href={`/product-default/${product.id}`}
-                                                className="name-product h5 fw-normal link text-line-clamp-2"
-                                            >
-                                                Engagement Ring in 18k Yellow Gold
-                                            </Link>
-                                            <div className="price-wrap">
-                                                <span className="price-new h5">
-                                                    ${product.price.toFixed(2)}
-                                                </span>
-                                                {product.oldPrice && (
-                                                    <span className="price-old fw-normal">
-                                                        {" "}
-                                                        ${product.oldPrice.toFixed(2)}
-                                                    </span>
-                                                )}
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li
-                className={`sub-menu mega-menu mega-menu-page container-layout-right${megaMarginRight ? "-3" : ""
-                    } mega-menu-style-2`}
-            >
-                <a href="#" className="item-link">
-                    Pages
-                    <i className="icon icon-arrow-angle-down" />
-                </a>
-                <div className="sub-menu mega-menu mega-menu-page container-layout-right-3 mega-menu-style-2">
-                    <div className="mega-menu-wrap">
-                        <div className="wrapper-sub-menu">
-                            <div className="mega-menu-item">
-                                <p className="text-caption menu-heading">PAGES</p>
-                                <ul className="menu-list">
-                                    {otherPages.map((link, index) => (
-                                        <li key={index}>
-                                            <Link
-                                                href={link.href}
-                                                className={`menu-link-text link ${isMenuActive(link) ? "active" : ""
-                                                    }`}
-                                            >
-                                                {link.label}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="wrapper-sub-collection gap-0">
-                            <div className="box_image--V01 h-100 hover-img">
-                                <div className="image h-100 img-style">
-                                    <Image
-                                        src="/images/collections/cls-header-2.jpg"
-                                        alt=""
-                                        className="lazyload"
-                                        width={792}
-                                        height={914}
-                                    />
-                                </div>
-                                <div className="content">
-                                    <h5 className="box-text fw-medium text-white">Most Gifted</h5>
-                                    <div className="box-btn">
-                                        <Link
-                                            href={`/shop-collection-list`}
-                                            className="tf-btn-line style-white text-uppercase"
-                                        >
-                                            <span className="text-caption lh-28">Shop Now</span>
-                                            <i className="icon-arrow-top-right-2 fs-10" />
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="box_image--V01 h-100 hover-img">
-                                <div className="image h-100 img-style">
-                                    <Image
-                                        src="/images/collections/cls-header-3.jpg"
-                                        alt=""
-                                        className="lazyload"
-                                        width={792}
-                                        height={914}
-                                    />
-                                </div>
-                                <div className="content">
-                                    <h5 className="box-text fw-medium text-white">
-                                        <span>Flash Sale</span>
-                                        <span className="br-line w-22 bg-white d-block" />
-                                        <span>30% OFF</span>
-                                    </h5>
-                                    <div className="box-btn">
-                                        <Link
-                                            href={`/shop-collection-list`}
-                                            className="tf-btn-line style-white text-uppercase"
-                                        >
-                                            <span className="text-caption lh-28">Shop Now</span>
-                                            <i className="icon-arrow-top-right-2 fs-10" />
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li> */}
-      {/* <li
-                className={`menu-item position-relative   ${isMenuParentActive(blogMenuLinks) ? "active" : ""
-                    }`}
-            >
-                <a href="#" className="item-link">
-                    Blogs
-                    <i className="icon icon-arrow-angle-down" />
-                </a>
-                <div className="sub-menu">
-                    <div className="mega-menu-item">
-                        <p className="text-caption menu-heading">BLOGS</p>
-                        <ul className="menu-list">
-                            {blogMenuLinks.map((link, index) => (
-                                <li key={index}>
-                                    <Link
-                                        href={link.href}
-                                        className={`menu-link-text link ${isMenuActive(link) ? "active" : ""
-                                            }`}
-                                    >
-                                        {link.label}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-            </li> */}
+      
       <li
         className={`menu-item ${
-          isMenuParentActive2(goldJewlleryPages) ? "active" : ""
+          activeParent === "gold" ? "active" : ""
         }`}
       >
         <a href="#" className="item-link">
@@ -551,7 +333,7 @@ export default function Menu({ megaMarginRight = true }) {
       </li>
       <li
   className={`menu-item ${
-    isMenuParentActive2(diamondJewlleryPages) ? "active" : ""
+    activeParent === "diamond" ? "active" : ""
   }`}
 >
   <a href="#" className="item-link">
@@ -647,7 +429,7 @@ export default function Menu({ megaMarginRight = true }) {
 </li>
       <li
         className={`menu-item ${
-          isMenuParentActive2(silverJewlleryPages) ? "active" : ""
+          activeParent === "silver" ? "active" : ""
         }`}
       >
         <a href="#" className="item-link">
@@ -748,7 +530,7 @@ export default function Menu({ megaMarginRight = true }) {
       </li>
       <li
         className={`menu-item ${
-          isMenuParentActive2(allJewlleryPages) ? "active" : ""
+          activeParent === "gifting" ? "active" : ""
         }`}
       >
         <a href="#" className="item-link">
@@ -851,7 +633,7 @@ export default function Menu({ megaMarginRight = true }) {
       </li>
       <li
         className={`menu-item   ${
-          isMenuParentActive2(productDetailPages) ? "active" : ""
+          activeParent === "more" ? "active" : ""
         }`}
       >
         <a href="#" className="item-link">
@@ -949,7 +731,7 @@ export default function Menu({ megaMarginRight = true }) {
 
       <li
         className={`menu-item position-relative   ${
-          isMenuParentActive(payOnlineMenuLinks) ? "active" : ""
+          activeParent === "payOnline" ? "active" : ""
         }`}
       >
         <a href="#" className="item-link">

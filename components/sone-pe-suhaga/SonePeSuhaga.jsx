@@ -670,11 +670,11 @@ export default function SonePeSuhaga() {
             
 
             <h1 className="heading-font">
-              Gold Savings <span className="highlight-font">Scheme</span>
+              Your Jewellery  <span className="highlight-font">Plan</span>
             </h1>
 
             <p className="s-sub-title">
-              Small Steps. Bigger Dreams. Your Golden Future Starts Here.
+              Pay Monthly. Save Smartly. Your Jewellery Dream Awaits You.
             </p>
 
             

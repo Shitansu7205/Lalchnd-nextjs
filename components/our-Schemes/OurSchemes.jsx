@@ -14,10 +14,10 @@ import {
 const schemesData = [
   {
     id: 1,
-    category: "MONTHLY INSTALMENT",
+    category: "MONTHLY SAVINGS PLAN",
     title: "Sone Pe Suhaga",
     description:
-      "Turn your dreams into timeless jewellery with our easy monthly instalment plan. Make your favourite pieces yours, without the wait.",
+      "Put aside a little each month for 11 months, then pick the jewellery you love and pay less on making charges. No rush, no big one-time payment.",
     image:
       "/images/OurSchemes/mangalsutra.webp",
     icon: CalendarDays,
@@ -90,7 +90,7 @@ export default function OurSchemes() {
 
                 {/* Button */}
                 <span className="viewDetails sub-title">
-                  View Details
+                   Know More
                   <ArrowRight
                     size={17}
                     strokeWidth={1.5}
@@ -118,15 +118,15 @@ export default function OurSchemes() {
         <div className="ctaContent">
 
           <span className="ctaSmallTitle sub-title">
-            YOUR SPECIAL MOMENTS, OUR PRIORITY
+           WE ARE HERE TO HELP
           </span>
 
           <h2>
-            Find the Perfect Scheme for You
+             Let Us Find the Right Scheme for You
           </h2>
 
           <p className="sub-title">
-            Because every moment deserves a little more sparkle.
+             Tell us what you are saving for, a wedding, a festival or a gift, and we will help you pick the one that fits.
           </p>
 
         </div>
@@ -135,7 +135,8 @@ export default function OurSchemes() {
           href="/contact"
           className="home-cta-btn tf-btn btn-fill animate-btn type-large"
         >
-          Contact Us
+          Talk to Us
+
           <ArrowRight size={17} />
         </Link>
 

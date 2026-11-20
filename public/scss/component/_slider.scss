@@ -436,11 +436,11 @@
 .tf-slideshow {
   .slider_wrap {
     @include res(xxl) {
-      height: 700px;
+      height: 600px;
     }
 
     @include res(md) {
-      height: 600px;
+      height: 650px;
     }
 
     @include res(sm) {
@@ -645,4 +645,14 @@
 
 .tes-slider-2 {
   padding: 38px 15px;
+}
+
+
+
+
+/* Tablet Devices */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .tf-slideshow .slider_wrap {
+    height: auto !important;
+  }
 }
